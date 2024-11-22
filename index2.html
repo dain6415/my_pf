@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* 부모 컨테이너 설정 */
+section {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  position: relative; /* 라인을 이너 콘텐츠에 종속 */
+  /* background: #eee; */
+}
+/* Vertical Lines */
+.h-line {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: 100%; /* 끝과 끝 */
+  width: 1px;
+  background: #000;
+}
+
+.h-line1 {
+  left: 25%; /* 4분할 기준 */
+}
+
+.h-line2 {
+  left: 50%;
+}
+
+.h-line3 {
+  left: 75%;
+}
+
+.h-line4 {
+  right: 0; /* 맨 오른쪽 */
+}
+/* 가로선 */
+.w-line {
+  position: absolute;
+  z-index: -1;
+  width: 100vw; /* 화면 전체 끝과 끝 */
+  height: 1px;
+  background: #000;
+}
+
+.w-line1 {
+  top: 0; /* 첫 번째 줄 */
+}
+
+.w-line2 {
+  top: 101px; /* 120px 높이만큼 아래 */
+}
+
+.w-line3 {
+  top: 201px; /* 2번째 아이템 끝 */
+}
+
+.w-line4 {
+  top: 301px; /* 3번째 아이템 끝 */
+}
+
+.w-line5 {
+  top: 401px; /* 4번째 아이템 끝 */
+}
+
+/* 필요에 따라 추가 가능 */
+
+.grid{
+  display: grid;
+  max-height: 800px;
+  border: 1px solid #000;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,100px);
+}
+.item1{
+  grid-column: 1/span 2;
+  background: #fff;
+
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <!-- 라인: 화면 전체 끝과 끝 -->
+    <div class="w-line w-line1"></div>
+    <div class="w-line w-line2"></div>
+    <div class="w-line w-line3"></div>
+    <div class="w-line w-line4"></div>
+    <div class="w-line w-line5"></div>
+  
+    <div class="h-line h-line1"></div>
+    <div class="h-line h-line2"></div>
+    <div class="h-line h-line3"></div>
+    <div class="h-line h-line4"></div>
+    <div class="h-line h-line5"></div>
+  
+    <!-- 이너 콘텐츠 -->
+    <section id="project">
+      <div class="grid">
+        <div class="item item1">
+          <p class="item__title">project.</p>
+        </div>
+        <div class="item item2"></div>
+        <div class="item item3">
+          <div class="summary">
+            <p class="number">1</p>
+            <p class="txt">설명을 작성하세요.</p>
+          </div>
+        </div>
+        <div class="item item4">
+          <div class="summary">
+            <p class="number">2</p>
+            <p class="txt">설명을 작성하세요.</p>
+          </div>
+        </div>
+        <div class="item item5">
+          <div class="summary">
+            <p class="number">3</p>
+            <p class="txt">설명을 작성하세요.</p>
+          </div>
+        </div>
+        <div class="item item6">
+          <div class="summary">
+            <p class="number">4</p>
+            <p class="txt">설명을 작성하세요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+</body>
+</html>

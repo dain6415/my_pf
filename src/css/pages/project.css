@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@media only screen and (min-width: 900px) {
+  main .line_box {
+    position: relative;
+    height: 100%;
+  }
+  main .line_box .w-line {
+    position: absolute;
+    z-index: -1;
+    width: 0; /* 화면 전체 너비 */
+    height: 1px;
+    background: var(--black600);
+  }
+  main .line_box .w-line.w-line1 {
+    top: 0; /* 맨 위 */
+    transition: 1s;
+  }
+  main .line_box .w-line.w-line2 {
+    top: 150px; /* 4등분 */
+    z-index: 99;
+    transition: 1.5s;
+  }
+  main .line_box .w-line.w-line3 {
+    top: 300px;
+    z-index: 99;
+    transition: 2.4s;
+  }
+  main .line_box .w-line.w-line4 {
+    top: 450px;
+    transition: 1.9s;
+  }
+  main .line_box .w-line.w-line5 {
+    top: 600px;
+    z-index: 99;
+    transition: 3s;
+  }
+  main .line_box .w-line.w-line6 {
+    top: 750px;
+    transition: 2.4s;
+  }
+  main .line_box .w-line.w-line7 {
+    top: 900px;
+    transition: 1.8s;
+  }
+  main .line_box .h-line {
+    position: absolute;
+    z-index: -1;
+    height: 0;
+    width: 1px;
+    background: var(--black600);
+  }
+  main .line_box .h-line.h-line1 {
+    left: calc(50% - 700px);
+    z-index: 99;
+    transition: 1.4s;
+  }
+  main .line_box .h-line.h-line2 {
+    left: calc(50% - 350px);
+    z-index: 90;
+    transition: 2s;
+  }
+  main .line_box .h-line.h-line3 {
+    left: 50%; /* 정중앙 */
+    z-index: 99;
+    transition: 1.8s;
+  }
+  main .line_box .h-line.h-line4 {
+    left: calc(50% + 350px);
+    z-index: 99;
+    transition: 1s;
+  }
+  main .line_box .h-line.h-line5 {
+    left: calc(50% + 700px);
+    z-index: 99;
+    transition: 1.3s;
+  }
+  main .line_box #project {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+  }
+  main .line_box #project .grid {
+    display: grid;
+    height: 900px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  main .line_box #project .grid .item {
+    padding: 20px;
+    position: relative;
+  }
+  main .line_box #project .grid .item.item1 {
+    grid-column: 1/span 2;
+    grid-row: 2/span 1;
+    background: var(--white);
+    z-index: 91;
+    opacity: 0;
+    transition: 1s ease-out;
+    overflow: hidden;
+    color: #555;
+    position: relative;
+  }
+  main .line_box #project .grid .item.item1 p {
+    font-size: 100px;
+    font-weight: 600;
+    opacity: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+    position: absolute;
+    left: -350px;
+    transition: 1.5s ease;
+  }
+  main .line_box #project .grid .item.item3 {
+    grid-column: 1/span 1;
+    grid-row: 3/span 2;
+    background: var(--mainBg-color);
+  }
+  main .line_box #project .grid .item.item3 .sticker {
+    left: 0;
+    top: 0;
+  }
+  main .line_box #project .grid .item.item4 {
+    grid-column: 2/span 1;
+    grid-row: 3/span 2;
+    background: var(--mainBg-color);
+  }
+  main .line_box #project .grid .item.item5 {
+    grid-column: 3/span 1;
+    grid-row: 3/span 2;
+    background: var(--mainBg-color);
+  }
+  main .line_box #project .grid .item.item6 {
+    grid-column: 4/span 1;
+    grid-row: 3/span 2;
+    background: var(--mainBg-color);
+  }
+  main .line_box #project .grid .item .sticker {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .line_box #project .grid .item .sticker img {
+    width: 80%;
+  }
+  main .line_box #project .grid .item .summary {
+    height: 100%;
+  }
+  main .line_box #project .grid .item .summary .number {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  main .line_box #project .grid .item .summary .txt .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  main .line_box #project .grid .item .summary.flex-sb {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .line_box #project .grid .item .summary.flex-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}/*# sourceMappingURL=project.css.map */

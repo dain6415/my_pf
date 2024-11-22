@@ -1,0 +1,16 @@
+@media only screen and (min-width: 900px) {
+  main section {
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
+  main section#intro {
+    height: 100vh;
+  }
+  main section#intro p.title {
+    font-size: 240px;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 100px;
+  }
+}/*# sourceMappingURL=intro.css.map */
