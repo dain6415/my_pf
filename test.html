@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
+    <script src="https://kit.fontawesome.com/2e471157d2.js" crossorigin="anonymous"></script>
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
@@ -35,6 +36,7 @@
 
       .swiper-slide {
         padding: 30px;
+        /* border-top: 1px solid #000; */
         border-bottom: 1px solid #000;
         /* height: calc((100% - 30px) / 2) !important; */
       }
@@ -56,7 +58,7 @@
         <div class="sect_inner">
           <div class="sect_title">
             <div class="po_ab">
-              <p>project</p>
+              <p>project.</p>
             </div>
           </div>
 
@@ -67,8 +69,11 @@
                 <div class="summary flex-sb">
                   <div class="number"><p>1</p></div>
                   <div class="txt">
-                    <p class="title">Nns</p>
-                    <p>그리드를 활</p>
+                    <p class="title">identity</p>
+                    <p>
+                      나는 누구인가?<br />
+                      나의 특징을 모아 고양이에 비유한<br />아이덴티티 디자인
+                    </p>
                   </div>
                 </div>
                 <div class="sticker">
@@ -81,14 +86,14 @@
                   <div class="txt">
                     <p class="title">NewJeans</p>
                     <p>
-                      그리드를 활용한<br />
+                      <span>그리드</span>를 활용한<br />
                       뉴진스의 &lt;Supernatural&gt; 앨범 발매 기념<br />
-                      공식 홈페이지 리뉴얼
+                      공식 <span class="delay">홈페이지 리뉴얼</span>
                     </p>
                   </div>
                 </div>
                 <div class="sticker">
-                  <img src="./src/img/SVG/nj2.svg" alt="" />
+                  <img src="./src/img/SVG/nj4.svg" alt="" />
                 </div>
               </div>
               <div class="swiper-slide slide3">
@@ -122,8 +127,12 @@
           </div>
 
           <div class="swiper_btn">
-            <div class="swp_btn swiper-button-next"></div>
-            <div class="swp_btn swiper-button-prev"></div>
+            <div class="btn_box">
+              <div class="swp_btn swiper-button-next"></div>
+            </div>
+            <div class="btn_box">
+              <div class="swp_btn swiper-button-prev"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -176,6 +185,24 @@
           }, 300); // 페이지 로드 후 300ms 대기
         }
       });
+
+      // --------------------------------------------------
+      // const spans = document.querySelectorAll("p span");
+
+      // spans.forEach((span, index) => {
+      //   span.addEventListener("mouseenter", () => {
+      //     span.classList.add("hovered");
+      //   });
+
+      //   span.addEventListener("mouseleave", () => {
+      //     span.classList.remove("hovered");
+      //   });
+
+      //   if (index === 1) {
+      //     // 두 번째 span에만 딜레이
+      //     span.style.transitionDelay = "0.2s";
+      //   }
+      // });
     </script>
   </body>
 </html>
