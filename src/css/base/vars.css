@@ -1,10 +1,11 @@
 @import url(./font.css);
 :root {
   --mainEng-font: Pretendard Variable;
-  --mainKor-font: "Cormorant Garamond";
+  --subEng-font: GmarketSansMedium;
+  --mainKor-font: Pretendard Variable;
   --mainNum: "Cormorant Garamond";
 
-  --mainBg-color: #F5F5F5;
+  --mainBg-color: #f5f5f5;
   --mainBg100-color: #333;
   --mainBg200-color: #333;
   --mainBg300-color: #333;
@@ -24,21 +25,25 @@
 
   --black: #000;
   --black100: #222325;
-  --black200: #333;
+  --black200_txt: #333;
   --black300: #555;
   --black400: #666;
   --black500: #888;
   --black600: #999;
+  --black700: #bbb;
+  --black800: #ddd;
+  --black900: #eee;
 }
 
-body{
-  font-family: var(--mainEng-font);
+body {
+  font-family: var(--mainKor-font);
   font-size: 16px;
   line-height: 1.5rem;
   font-weight: 400;
-  
+  color: var(--black200_txt);
+
   text-rendering: optimizeLegibility;
-  -webkit-font-smooting:antialiased;
+  -webkit-font-smooting: antialiased;
   -webkit-text-size-adjust: 100%;
   color: var(--black200r);
   background-color: var(--mainBg-color);

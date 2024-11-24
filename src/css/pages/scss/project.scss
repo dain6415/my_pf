@@ -1,3 +1,4 @@
+// @import "~swiper/swiper-bundle.min.css";
 @mixin po-c {
   position: absolute;
   left: 50%;
@@ -9,199 +10,180 @@
   justify-content: $justify;
   align-items: center;
 }
+.item2 {
+  display: none;
+}
+header {
+  height: 100px;
+  background: #0000006d;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 크기 계산에 border 포함
+}
+.line {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  .h-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--black600);
+    &.h-line1 {
+      left: 5%;
+    }
+    &.h-line2 {
+      left: 27.5%;
+    }
+    &.h-line3 {
+      left: 50%;
+    }
+    &.h-line4 {
+      right: 27.5%;
+    }
+    &.h-line5 {
+      right: 5%;
+    }
+  }
+}
+section{
+  .sect_title {
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid var(--black600);
+    .po_ab{
+      position: relative;
+      background: var(--white);
+      overflow: hidden;
+      p {
+        font-family: var(--subEng-font);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--black200_txt);
+        transition: 1s;
+        opacity: 0;
+      }
+    }
+  }
+  .sticker{
+    @include flex-c();
+  }
+}
+
 // ***************************************************************************************************************************
 
-@media only screen and (max-width: 600px) {
-}
-// ----------------------------------------------------------------------
+//----------------------------------------------------------------------
 
-@media only screen and (min-width: 601px) {
-}
-// ----------------------------------------------------------------------
+//----------------------------------------------------------------------
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1300px) {
   main {
-    .line_box {
-      position: relative;
-      height: 100%;
-      // line's --------------------
-      .w-line {
-        position: absolute;
-        z-index: -1;
-        width: 0; /* 화면 전체 너비 */
-        height: 1px;
-        background: var(--black600);
-
-        &.w-line1 {
-          top: 0; /* 맨 위 */
-          transition: 1s;
-        }
-        &.w-line2 {
-          top: 150px; /* 4등분 */
-          z-index: 99;
-          transition: 1.5s;
-        }
-        &.w-line3 {
-          top: 300px;
-          z-index: 99;
-          transition: 2.4s;
-        }
-        &.w-line4 {
-          top: 450px;
-          transition: 1.9s;
-        }
-        &.w-line5 {
-          top: 600px;
-          z-index: 99;
-          transition: 3s;
-        }
-        &.w-line6 {
-          top: 750px;
-          transition: 2.4s;
-        }
-        &.w-line7 {
-          top: 900px;
-          transition: 1.8s;
-          // opacity: 0;
-        }
-      }
-      .h-line {
-        position: absolute;
-        z-index: -1;
-        height: 0;
-        width: 1px;
-        background: var(--black600);
-        &.h-line1 {
-          left: calc(50% - 700px);
-          z-index: 99;
-          transition: 1.4s;
-        }
-
-        &.h-line2 {
-          left: calc(50% - 350px);
-          z-index: 90;
-          transition: 2s;
-        }
-
-        &.h-line3 {
-          left: 50%; /* 정중앙 */
-          z-index: 99;
-          transition: 1.8s;
-        }
-
-        &.h-line4 {
-          left: calc(50% + 350px);
-          z-index: 99;
-          transition: 1s;
-        }
-
-        &.h-line5 {
-          left: calc(50% + 700px);
-          z-index: 99;
-          transition: 1.3s;
-        }
-      }
-      #project {
-        // display: none;
-        max-width: 1400px;
-        margin: auto;
-
-        position: relative;
-
-        // inner content --------------------
-        .grid {
+    #project {
+      padding: 12rem 5% 0;
+      .sect_inner {
+        .sect_title {
+          font-size: 5rem;
+          font-weight: 600;
+          height: 150px;
           display: grid;
-          height: 900px;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: repeat(6, 1fr);
-          .item {
-            padding: 20px;
+          grid-template-columns: 2fr 2fr;
+          p{
+            line-height: normal;
+            left: -400px;
+          }
+        }
+        .swiper {
+          padding-bottom: 100px;
+          .swiper-slide {
             position: relative;
-            &.item1 {
-              grid-column: 1 / span 2;
-              grid-row: 2 / span 1;
-              background: var(--white);
-              z-index: 91;
-              opacity: 0;
-              transition: 1s ease-out;
-              overflow: hidden;
-              color: #555;
-              position: relative;
-              p {
-                font-size: 100px;
-                font-weight: 600;
-                opacity: 0;
-                line-height: 1.1;
-                text-transform: uppercase;
-
-                position: absolute;
-                left: -350px;
-                transition: 1.5s ease;
-              }
-            }
-            &.item3 {
-              grid-column: 1 / span 1;
-              grid-row: 3 / span 2;
-              background: var(--mainBg-color);
-              .sticker {
-                left: 0;
-                top: 0;
-              }
-            }
-            &.item4 {
-              grid-column: 2 / span 1;
-              grid-row: 3 / span 2;
-              background: var(--mainBg-color);
-            }
-            &.item5 {
-              grid-column: 3 / span 1;
-              grid-row: 3 / span 2;
-              background: var(--mainBg-color);
-            }
-            &.item6 {
-              grid-column: 4 / span 1;
-              grid-row: 3 / span 2;
-              background: var(--mainBg-color);
-            }
-            .sticker {
-              position: absolute;
-              width: 200px;
-              height: 200px;
-              background: #000;
-              @include flex-c();
-              img {
-                width: 80%;
-              }
-            }
-
-            .summary {
-              height: 100%;
-              .number {
-                width: 20px;
-                height: 20px;
-                padding: 5px;
-                border: 1px solid #000;
-                border-radius: 99px;
-                @include flex-c();
-                margin-bottom: 15px;
-              }
-              .txt {
-                .title {
-                  font-size: 1.5rem;
-                  font-weight: 700;
-                  padding-bottom: 10px;
-                }
-              }
-              &.flex-sb {
+            height: 350px;
+            &.slide1 {
+              .summary{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
               }
-              &.flex-end {
+              .sticker {
+                left: 20px;
+                top: 0;
+              }
+            }
+            &.slide2 {
+              .sticker {
+                width: 400px;
+                left: 0px;
+                bottom: -30px;
+                transform: rotate(-15deg);
+              }
+            }
+            &.slide3 {
+              .summary{
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
               }
+              .sticker {
+                left: 60px;
+                top: -30px;
+                transform: rotate(-15deg);
+                z-index: 99;
+                img{
+                  width: 80%;
+                }
+              }
+            }
+            &.slide4 {
+              .summary{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+              }
+              .sticker {
+                left: 20px;
+                top: 0;
+              }
+            }
+            .summary {
+              height: 100%;
+              .number{
+                width: 30px;
+                height: 30px;
+                @include flex-c();
+                border: 1px solid #000;
+                border-radius: 99px;
+              }
+              .txt{
+                .title{
+                  font-size: 1.5rem;
+                  font-weight: 600;
+                  padding-top: 20px;
+                }
+                p{
+                  &:nth-child(2){
+                    padding-top: 10px;
+                  }
+                }
+              }
+            }
+            .sticker {
+              position: absolute;
+              width: 300px;
             }
           }
         }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+            html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: var( --mainBg-color);
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        border: 1px solid #000;
+        height: calc((100% - 30px) / 2) !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="line">
+      <div class="h-line h-line1"></div>
+      <div class="h-line h-line2"></div>
+      <div class="h-line h-line3"></div>
+      <div class="h-line h-line4"></div>
+      <div class="h-line h-line5"></div>
+      <div class="h-line h-line6"></div>
+    </div>
+    <header></header>
+    <!-- Swiper -->
+    <main>
+      <section id="project">
+        <div class="sect_inner">
+          <div class="sect_title">
+            <div class="po_ab">
+              <p>project</p>
+            </div>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1">
+                <div class="summary flex-sb">
+                  <div class="number"><p>1</p></div>
+                  <div class="txt">
+                    <p class="title">Nns</p>
+                    <p>그리드를 활</p>
+                  </div>
+                </div>
+                <div class="sticker">
+                  <!-- <img src="./src/img/SVG/sel.svg" alt="" /> -->
+                </div>
+              </div>
+              <div class="swiper-slide slide2">
+                <div class="summary flex-sb">
+                  <div class="number"><p>2</p></div>
+                  <div class="txt">
+                    <p class="title">NewJeans</p>
+                    <p>
+                      그리드를 활용한<br />
+                      뉴진스의 &lt;Supernatural&gt; 앨범 발매 기념<br />
+                      공식 홈페이지 리뉴얼
+                    </p>
+                  </div>
+                </div>
+                <div class="sticker">
+                  <img src="./src/img/SVG/nj2.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide slide3">
+                <div class="summary flex-sb">
+                  <div class="number"><p>3</p></div>
+                  <div class="txt">
+                    <p class="title">서울시립미술관 SeMA</p>
+                    <p>서울시립미술관 홈페이지 리뉴얼 디자인</p>
+                  </div>
+                </div>
+                <div class="sticker">
+                  <img src="./src/img/SVG/sema.svg" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide slide4">
+                <div class="summary flex-sb">
+                  <div class="number"><p>4</p></div>
+                  <div class="txt">
+                    <p class="title">selmin</p>
+                    <p>
+                      약을 복용하는 사람들을 위한 관리앱으로<br />
+                      공식 홈페이지 리뉴얼
+                    </p>
+                  </div>
+                </div>
+                <div class="sticker">
+                  <img src="./src/img/SVG/selmin.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper_btn">
+            <div class="swp_btn swiper-button-next"></div>
+            <div class="swp_btn swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <!-- <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        // spaceBetween: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    641: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+      });
+    </script> -->
+    <script>
+      const mySwiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            // spaceBetween: 10,
+          },
+          641: {
+            slidesPerView: 2,
+            // spaceBetween: 10,
+          },
+          1000: {
+            slidesPerView: 4,
+            // spaceBetween: 60,
+          },
+        },
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const poAbText = document.querySelector(".po_ab p"); // p 태그 선택
+
+        if (poAbText) {
+          setTimeout(() => {
+            poAbText.style.left = "30px"; // 최종 위치
+            poAbText.style.opacity = "1"; // 보이도록 설정
+          }, 300); // 페이지 로드 후 300ms 대기
+        }
+      });
+    </script>
+  </body>
+</html>

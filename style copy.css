@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* stting */
+@import url(./src/css/base/reset.css);
+
+.w-line, h-line{display: none;}
+#project{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #000;
+}
+=
