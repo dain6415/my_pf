@@ -35,8 +35,6 @@
       }
 
       .swiper-slide {
-        padding: 30px;
-        /* border-top: 1px solid #000; */
         border-bottom: 1px solid #000;
         /* height: calc((100% - 30px) / 2) !important; */
       }
@@ -52,7 +50,32 @@
       <div class="h-line h-line5"></div>
       <div class="h-line h-line6"></div>
     </div>
-    <header></header>
+    <header id="header" role="banner">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#">portfolio<em>ux/ui / pulisher</em></a>
+        </div>
+        <nav class="header__nav" role="navigation" aria-label="메인메뉴">
+          <ul>
+            <li class="on"><a href="#intro">intro</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#uxui">ux/ui</a></li>
+            <li><a href="#about">about</a></li>
+          </ul>
+        </nav>
+        <div
+          class="header__nav_mobile"
+          id="headerToggle"
+          aria-controls="primary-menu"
+          aria-expanded="flase"
+          role="button"
+        >
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!-- ************************ -->
     <main>
       <section id="project">
         <div class="sect_inner">
@@ -66,73 +89,104 @@
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide slide1">
-                <div class="summary flex-sb">
-                  <div class="number"><p>1</p></div>
-                  <div class="txt">
-                    <p class="title">identity</p>
-                    <p>
-                      나는 누구인가?<br />
-                      나의 특징을 모아 고양이에 비유한<br />아이덴티티 디자인
-                    </p>
+                <a href="" target="_blank">
+                  <div class="summary flex-sb">
+                    <div class="number"><p>1</p></div>
+                    <div class="txt">
+                      <p class="title">identity</p>
+                      <p>
+                        "나는 누구인가?"<br />
+                        <span>나의 특징</span>을 모아 고양이에 비유한<br />아이덴티티 디자인
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="sticker">
-                  <!-- <img src="./src/img/SVG/sel.svg" alt="" /> -->
-                </div>
+                  <div class="keyword">
+                    <p>IDENTITY</p>
+                    <p>LOGO</p>
+                    <p>기획</p>
+                    <p>개인프로젝트</p>
+                  </div>
+                  <div class="sticker">
+                    <img src="" alt="아이덴티티 이미지" />
+                  </div>
+                </a>
               </div>
               <div class="swiper-slide slide2">
-                <div class="summary flex-sb">
-                  <div class="number"><p>2</p></div>
-                  <div class="txt">
-                    <p class="title">NewJeans</p>
-                    <p>
-                      <span>그리드</span>를 활용한<br />
-                      뉴진스의 &lt;Supernatural&gt; 앨범 발매 기념<br />
-                      공식 <span class="delay">홈페이지 리뉴얼</span>
-                    </p>
+                <a href="" target="_blank">
+                  <div class="summary flex-sb">
+                    <div class="number"><p>2</p></div>
+                    <div class="txt">
+                      <p class="title">NewJeans</p>
+                      <p>
+                        <span>그리드</span>를 활용한<br />
+                        뉴진스의 &lt;Supernatural&gt; 앨범 발매 기념<br />
+                        공식 <span class="delay">홈페이지 리뉴얼</span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="sticker">
-                  <img src="./src/img/SVG/nj4.svg" alt="" />
-                </div>
+                  <div class="keyword">
+                    <p>WEB</p>
+                    <p>renewal</p>
+                    <p>개인프로젝트</p>
+                  </div>
+                  <div class="sticker">
+                    <img src="./src/img/SVG/nj4.svg" alt="뉴진스의 슈퍼내추럴 로고" />
+                  </div>
+                </a>
               </div>
               <div class="swiper-slide slide3">
-                <div class="summary flex-sb">
-                  <div class="number"><p>3</p></div>
-                  <div class="txt">
-                    <p class="title">서울시립미술관 SeMA</p>
-                    <p>서울시립미술관 홈페이지 리뉴얼 디자인</p>
+                <a href="" target="_blank">
+                  <div class="summary flex-sb">
+                    <div class="number"><p>3</p></div>
+                    <div class="txt">
+                      <p class="title">서울시립미술관 SeMA</p>
+                      <p>서울시립미술관 홈페이지 리뉴얼 디자인</p>
+                    </div>
                   </div>
-                </div>
-                <div class="sticker">
-                  <img src="./src/img/SVG/sema.svg" alt="" />
-                </div>
+                  <div class="keyword">
+                    <p>WEB</p>
+                    <p>renewal</p>
+                    <p>기획</p>
+                    <p>개인프로젝트</p>
+                  </div>
+                  <div class="sticker">
+                    <img src="./src/img/SVG/sema.svg" alt="서울시립미술관 로고" />
+                  </div>
+                </a>
               </div>
               <div class="swiper-slide slide4">
-                <div class="summary flex-sb">
-                  <div class="number"><p>4</p></div>
-                  <div class="txt">
-                    <p class="title">selmin</p>
-                    <p>
-                      약을 복용하는 사람들을 위한 관리앱으로<br />
-                      공식 홈페이지 리뉴얼
-                    </p>
+                <a href="" target="_blank">
+                  <div class="summary flex-sb">
+                    <div class="number"><p>4</p></div>
+                    <div class="txt">
+                      <p class="title">selmin</p>
+                      <p>
+                        복용 알림과 기록을 통해<br />
+                        <span>건강 관리를 간편하게</span> 관리하는<br />
+                        효율적인 <span>복약 관리 앱</span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="sticker">
-                  <img src="./src/img/SVG/selmin.svg" alt="" />
-                </div>
+                  <div class="keyword">
+                    <p>APP</p>
+                    <p>기획</p>
+                    <p>개인프로젝트</p>
+                  </div>
+                  <div class="sticker">
+                    <img src="./src/img/SVG/selmin.svg" alt="앱 이미지" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="swiper_btn">
-            <div class="btn_box">
-              <div class="swp_btn swiper-button-next"></div>
-            </div>
-            <div class="btn_box">
-              <div class="swp_btn swiper-button-prev"></div>
-            </div>
+        </div>
+        <div class="swiper_btn">
+          <div class="btn_box">
+            <div class="swp_btn swiper-button-prev"></div>
+          </div>
+          <div class="btn_box">
+            <div class="swp_btn swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -141,68 +195,7 @@
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="./src/js/project.js"></script>
     <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          600: {
-            slidesPerView: 1,
-            // spaceBetween: 10,
-          },
-          601: {
-            slidesPerView: 2,
-            // spaceBetween: 10,
-          },
-          1000: {
-            slidesPerView: 3,
-            // spaceBetween: 60,
-          },
-          1300: {
-            slidesPerView: 4,
-            // spaceBetween: 60,
-          },
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const poAbText = document.querySelector(".po_ab p"); // p 태그 선택
-
-        if (poAbText) {
-          setTimeout(() => {
-            poAbText.style.left = "30px"; // 최종 위치
-            poAbText.style.opacity = "1"; // 보이도록 설정
-          }, 300); // 페이지 로드 후 300ms 대기
-        }
-      });
-
-      // --------------------------------------------------
-      // const spans = document.querySelectorAll("p span");
-
-      // spans.forEach((span, index) => {
-      //   span.addEventListener("mouseenter", () => {
-      //     span.classList.add("hovered");
-      //   });
-
-      //   span.addEventListener("mouseleave", () => {
-      //     span.classList.remove("hovered");
-      //   });
-
-      //   if (index === 1) {
-      //     // 두 번째 span에만 딜레이
-      //     span.style.transitionDelay = "0.2s";
-      //   }
-      // });
-    </script>
   </body>
 </html>

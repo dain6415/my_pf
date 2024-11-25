@@ -17,8 +17,34 @@
 
 /* ------------------------------------------------------------------ */
 
-body{
-    color: var(--black200_txt);
+body {
+  color: var(--black200_txt);
+}
+.line {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  .h-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--black600);
+    &.h-line1 {
+      left: 5%;
+    }
+    &.h-line2 {
+      left: 27.5%;
+    }
+    &.h-line3 {
+      left: 50%;
+    }
+    &.h-line4 {
+      right: 27.5%;
+    }
+    &.h-line5 {
+      right: 5%;
+    }
+  }
 }
 section {
   width: 100%;

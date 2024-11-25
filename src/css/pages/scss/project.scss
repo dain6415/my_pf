@@ -1,4 +1,3 @@
-// @import "~swiper/swiper-bundle.min.css";
 @mixin po-c {
   position: absolute;
   left: 50%;
@@ -10,15 +9,9 @@
   justify-content: $justify;
   align-items: center;
 }
+
 .item2 {
   display: none;
-}
-header {
-  height: 100px;
-  background: #0000006d;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
 }
 
 html,
@@ -29,250 +22,430 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box; // 크기 계산에 border 포함
 }
-.line {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  .h-line {
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    background: var(--black600);
-    &.h-line1 {
-      left: 5%;
-    }
-    &.h-line2 {
-      left: 27.5%;
-    }
-    &.h-line3 {
-      left: 50%;
-    }
-    &.h-line4 {
-      right: 27.5%;
-    }
-    &.h-line5 {
-      right: 5%;
-    }
-  }
-}
+
 section {
-  padding: 12rem 5% 0;
-  .sect_title {
-    width: 100%;
-    text-transform: uppercase;
-    border: 1px solid var(--black600);
-    .po_ab {
-      position: relative;
-      background: var(--white);
-      overflow: hidden;
-      p {
-        font-family: var(--subEng-font);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--black200_txt);
-        transition: 1s;
-        opacity: 0;
-      }
-    }
-  }
-  .swiper-slide {
-    .summary {
-      height: 100%;
-      .number {
-        @include flex-c();
-        border: 1px solid #000;
-        border-radius: 99px;
-      }
-      .txt {
-        p {
-          &:nth-child(2) {
-            color: var(--black500);
-            span {
-              position: relative;
-              &::before {
-                position: absolute;
-                left: 0;
-                bottom: -2px;
-                content: "";
-                width: 0;
-                height: 1px;
-                background: var(--white);
-                transition: 0.5s;
-              }
-            }
-          }
-        }
-      }
-    }
-    &.slide1 {
-      .summary {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .sticker {
-        left: 20px;
-        top: 0;
-      }
-    }
-    &.slide2 {
-      .sticker {
-        left: -15px;
-        top: 190px;
-        transform: rotate(-15deg);
-        img {
-          width: 95%;
-        }
-      }
-    }
-    &.slide3 {
-      .summary {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-      .sticker {
-        left: 70px;
-        top: -30px;
-        transform: rotate(-15deg);
-        z-index: 99;
-        img {
-          width: 80%;
-        }
-      }
-    }
-    &.slide4 {
-      .summary {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .sticker {
-        border-radius: 60px;
-        right: 30px;
-        top: 20px;
-        transform: rotate(15deg);
+  position: relative;
+  .sect_inner {
+    padding: 12rem 5% 0;
+    .sect_title {
+      width: 100%;
+      text-transform: uppercase;
+      border: 1px solid var(--black600);
+      .po_ab {
+        position: relative;
+        background: var(--white);
         overflow: hidden;
-        img {
-          width: 100%;
+        p {
+          font-family: var(--subEng-font);
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--black200_txt);
+          transition: 1s;
+          opacity: 0;
         }
       }
     }
-    .sticker {
-      @include flex-c();
-      filter: grayscale(1);
-    }
-    &:hover {
-      background: var(--black);
-      color: var(--white);
+    .swiper-slide {
+      border-bottom: 1px solid var(--black600);
       .summary {
+        height: 100%;
         .number {
-          // border: 1px solid var(--white);
-          background: var(--white);
-          color: var(--black);
+          @include flex-c();
+          border: 1px solid #000;
+          border-radius: 99px;
         }
         .txt {
+          .title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding-top: 15px;
+          }
           p {
             &:nth-child(2) {
-              color: var(--black700);
-              font-weight: 200;
+              padding-top: 5px;
+              color: var(--black500);
               span {
                 position: relative;
-                color: var(--white);
-                font-weight: 500;
                 &::before {
                   position: absolute;
                   left: 0;
-                  bottom: -4px;
+                  bottom: -2px;
                   content: "";
-                  width: 100%;
+                  width: 0;
                   height: 1px;
                   background: var(--white);
+                  transition: 0.5s;
                 }
               }
             }
           }
         }
       }
+      .keyword {
+        display: flex;
+        margin-top: 50px;
+        gap: 10px;
+        opacity: 0;
+        transition: 0.15s;
+        flex-wrap: wrap;
+        p {
+          padding: 5px 15px;
+          display: inline-block;
+          background: var(--black800);
+          // border: 1px solid #000;
+          border-radius: 99px;
+          font-size: 0.8rem;
+          color: var(--black300);
+        }
+      }
+      &.slide1 {
+        .summary {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .sticker {
+          left: 20px;
+          top: 0;
+        }
+      }
+      &.slide2 {
+        .sticker {
+          left: -15px;
+          top: 190px;
+          transform: rotate(-15deg);
+          img {
+            width: 95%;
+          }
+        }
+      }
+      &.slide3 {
+        .summary {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          .title {
+            .swp_btn.swiper-button-prev::after {
+              width: 2px;
+              height: 2px;
+              content: "";
+              display: block;
+              border: solid var(--black200_txt);
+              border-width: 0 2px 2px 0;
+              padding: 8px;
+              position: absolute;
+              top: 50%;
+              left: 55%;
+              transform: translate(-50%, -50%) rotate(135deg);
+            }
+            .swp_btn.swiper-button-next::after {
+              width: 2px;
+              height: 2px;
+              content: "";
+              display: block;
+              border: solid var(--black200_txt);
+              border-width: 0 2px 2px 0;
+              padding: 8px;
+              position: absolute;
+              top: 50%;
+              left: 45%;
+              transform: translate(-50%, -50%) rotate(-45deg);
+            }
+          }
+        }
+        .sticker {
+          left: 34%;
+          top: -30px;
+          transform: rotate(-15deg);
+          img {
+            width: 80%;
+          }
+        }
+      }
+      &.slide4 {
+        .summary {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .sticker {
+          border-radius: 60px;
+          right: 30px;
+          top: 20px;
+          transform: rotate(15deg);
+          overflow: hidden;
+          box-shadow: 0.5px 1px 1px rgba($color: #000, $alpha: 0.2);
+          img {
+            width: 100%;
+          }
+        }
+      }
       .sticker {
-        filter: grayscale(0);
+        @include flex-c();
+        position: absolute;
+        filter: grayscale(1);
+        z-index: 99;
+      }
+      &:hover {
+        background: var(--black);
+        color: var(--white);
+        .summary {
+          .number {
+            // border: 1px solid var(--white);
+            background: var(--white);
+            color: var(--black);
+          }
+          .txt {
+            p {
+              &:nth-child(2) {
+                color: var(--black700);
+                font-weight: 400;
+                span {
+                  position: relative;
+                  color: var(--mainBg100-color);
+                  font-weight: 700;
+                  // &::before {
+                  //   position: absolute;
+                  //   left: 0;
+                  //   bottom: -4px;
+                  //   content: "";
+                  //   width: 100%;
+                  //   height: 1px;
+                  //   background: var(--white);
+                  // }
+                }
+              }
+            }
+          }
+        }
+        .keyword {
+          opacity: 1;
+        }
+        .sticker {
+          filter: grayscale(0);
+        }
       }
     }
   }
-
   // swiper btn
   .swiper_btn {
-    display: flex;
-    position: relative;
+    @include flex-c(space-between);
+    width: 98%;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+    z-index: 1;
     .btn_box {
-      width: 150px;
-      height: 150px;
-      border: 1px solid #000;
-      .swiper-button-next,
-      .swiper-button-prev {
-        @include po-c();
-        background: none;
-        color: #000;
-      }
-      .swp_btn i {
-        font-size: 24px; /* 아이콘 크기 */
-        color: #333; /* 아이콘 색상 */
-      }
-
-      .swp_btn.swiper-button-next i {
-        content: "\f054"; /* Font Awesome 오른쪽 화살표 */
-      }
-
-      .swp_btn.swiper-button-prev i {
-        content: "\f053"; /* Font Awesome 왼쪽 화살표 */
-      }
-
-      /* 위치 조정 */
+      width: 80px;
+      height: 80px;
+      position: relative;
       .swp_btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px; /* 버튼 크기 */
-        height: 40px; /* 버튼 크기 */
-        background: #f5f5f5; /* 버튼 배경색 */
-        border-radius: 50%; /* 버튼 둥글게 */
+        display: none;
+        height: 80px;
+        width: 80px;
+        @include flex-c();
+        @include po-c();
+        background: #f5f5f5;
+        color: #000;
+        border: 1px solid var(--black200_txt);
+        border-radius: 99px;
+        // border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          // background: var(--black200_txt);
+          &.swp_btn.swiper-button-prev::after {
+            border: solid var(--mainBg100-color);
+            border-width: 0 2px 2px 0;
+          }
+          &.swp_btn.swiper-button-next::after {
+            border: solid var(--mainBg100-color);
+            border-width: 0 2px 2px 0;
+          }
+        }
+      }
+      .swp_btn.swiper-button-prev::after {
+        width: 2px;
+        height: 2px;
+        content: "";
+        display: block;
+        border: solid var(--black200_txt);
+        border-width: 0 2px 2px 0;
+        padding: 8px;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
+        left: 55%;
+        transform: translate(-50%, -50%) rotate(135deg);
       }
-
-      .swp_btn.swiper-button-next {
-        right: 10px; /* 오른쪽 버튼 위치 */
+      .swp_btn.swiper-button-next::after {
+        width: 2px;
+        height: 2px;
+        content: "";
+        display: block;
+        border: solid var(--black200_txt);
+        border-width: 0 2px 2px 0;
+        padding: 8px;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%) rotate(-45deg);
       }
-
-      .swp_btn.swiper-button-prev {
-        left: 10px; /* 왼쪽 버튼 위치 */
-      }
-
-      // .swp_btn {
-      //   border-radius: 99px;
-      //   border: 1px solid #000;
-      //   padding: 10px;
-      //   background: none;
-      //   color: none;
-      //   // display: none;
-      // }
     }
   }
 }
-
 // ***************************************************************************************************************************
+@media only screen and (max-width: 700px) {
+  .line {
+    .h-line {
+      &.h-line2 {
+        display: none;
+      }
+      &.h-line3 {
+        display: none;
+      }
+      &.h-line4 {
+        display: none;
+      }
+    }
+  }
 
+  main {
+    #project {
+      .sect_inner {
+        .sect_title {
+          font-size: 3.5rem;
+          font-weight: 600;
+          height: 150px;
+          display: grid;
+          position: relative;
+          p {
+            width: 90%;
+            line-height: normal;
+            left: 50%;
+            text-align: center;
+          }
+        }
+        .swiper {
+          margin-top: -50px;
+          padding-top: 50px;
+          padding-bottom: 100px;
+          .swiper-slide {
+            padding: 30px 80px;
+            position: relative;
+            height: 350px;
+            &.slide1 {
+              .sticker {
+                left: 20px;
+                top: 0;
+              }
+            }
+            &.slide2 {
+              .sticker {
+                left: 50%;
+                top: 54%;
+                transform: translateX(-50%) rotate(-15deg);
+                width: 350px;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+            &.slide3 {
+              .sticker {
+                left: 150px;
+                top: -10px;
+                transform: rotate(-15deg);
+                img {
+                  width: 60%;
+                }
+              }
+            }
+            &.slide4 {
+              .sticker {
+                width: 160px;
+                height: 160px;
+                right: 70px;
+                top: 40px;
+                transform: rotate(15deg);
+                img {
+                  width: 100%;
+                }
+              }
+            }
+            .summary {
+              .number {
+                width: 30px;
+                height: 30px;
+              }
+            }
+            .sticker {
+              position: absolute;
+              width: 300px;
+            }
+          }
+        }
+      }
+      .swiper_btn {
+        width: 90%;
+        .swp_btn {
+          width: 60px;
+          height: 60px;
+        }
+        .swp_btn.swiper-button-prev::after {
+          width: 2px;
+          height: 2px;
+          content: "";
+          display: block;
+          border: solid var(--black200_txt);
+          border-width: 0 2px 2px 0;
+          padding: 6px;
+          position: absolute;
+          top: 50%;
+          left: 55%;
+          transform: translate(-50%, -50%) rotate(135deg);
+        }
+        .swp_btn.swiper-button-next::after {
+          width: 2px;
+          height: 2px;
+          content: "";
+          display: block;
+          border: solid var(--black200_txt);
+          border-width: 0 2px 2px 0;
+          padding: 6px;
+          position: absolute;
+          top: 50%;
+          left: 45%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
 //----------------------------------------------------------------------
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
+  .line {
+    .h-line {
+      &.h-line2 {
+        display: none;
+      }
+      &.h-line4 {
+        display: none;
+      }
+    }
+  }
+
   main {
     #project {
       .sect_inner {
@@ -285,6 +458,8 @@ section {
           p {
             line-height: normal;
             left: -400px;
+            top: 50%;
+            transform: translateY(-50%);
           }
         }
         .swiper {
@@ -294,6 +469,7 @@ section {
           .swiper-slide {
             position: relative;
             height: 350px;
+            padding: 30px 45px;
             &.slide1 {
               .sticker {
                 left: 20px;
@@ -302,7 +478,10 @@ section {
             }
             &.slide2 {
               .sticker {
-                width: 400px;
+                width: 380px;
+                left: 50%;
+                top: 200px;
+                transform: translateX(-50%) rotate(-15deg);
                 img {
                   width: 95%;
                 }
@@ -310,6 +489,9 @@ section {
             }
             &.slide3 {
               .sticker {
+                left: 30%;
+                top: -10px;
+                transform: rotate(-15deg);
                 img {
                   width: 80%;
                 }
@@ -329,21 +511,8 @@ section {
                 width: 30px;
                 height: 30px;
               }
-              .txt {
-                .title {
-                  font-size: 1.5rem;
-                  font-weight: 600;
-                  padding-top: 20px;
-                }
-                p {
-                  &:nth-child(2) {
-                    padding-top: 10px;
-                  }
-                }
-              }
             }
             .sticker {
-              position: absolute;
               width: 300px;
             }
           }
@@ -356,6 +525,19 @@ section {
 //----------------------------------------------------------------------
 
 @media only screen and (min-width: 1300px) {
+  .line {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    .h-line {
+      &.h-line2 {
+        display: block;
+      }
+      &.h-line4 {
+        display: block;
+      }
+    }
+  }
   main {
     #project {
       .sect_inner {
@@ -368,6 +550,7 @@ section {
           p {
             line-height: normal;
             left: -400px;
+            top: 55%;
           }
         }
         .swiper {
@@ -375,6 +558,7 @@ section {
           padding-top: 50px;
           padding-bottom: 100px;
           .swiper-slide {
+            padding: 30px 40px;
             position: relative;
             height: 350px;
             &.slide1 {
@@ -393,6 +577,7 @@ section {
             }
             &.slide3 {
               .sticker {
+                left: 34%;
                 img {
                   width: 80%;
                 }
@@ -412,18 +597,6 @@ section {
                 width: 30px;
                 height: 30px;
               }
-              .txt {
-                .title {
-                  font-size: 1.5rem;
-                  font-weight: 600;
-                  padding-top: 20px;
-                }
-                p {
-                  &:nth-child(2) {
-                    padding-top: 10px;
-                  }
-                }
-              }
             }
             .sticker {
               position: absolute;
@@ -431,6 +604,9 @@ section {
             }
           }
         }
+      }
+      .swiper_btn {
+        width: 95%;
       }
     }
   }
