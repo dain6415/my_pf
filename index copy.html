@@ -6,68 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="./style.css" />
-    <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
-
-      .swiper {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #ba97978d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      /* .sect_inner {
-        width: 100%;
-        height: 100%;
-      }
-      .sect_inner p {
-        padding: 10px;
-      }
-      .title {
-        width: 100%;
-        font-size: 3rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-      }
-      .title p {
-        display: flex;
-        justify-content: flex-start;
-        background: #000;
-        padding: 20px;
-        color: #eee;
-      } */
-    </style>
   </head>
   <body>
-    <div class="line">
-      <div class="h-line h-line1"></div>
-      <div class="h-line h-line2"></div>
-      <div class="h-line h-line3"></div>
-      <div class="h-line h-line4"></div>
-      <div class="h-line h-line5"></div>
-      <div class="h-line h-line6"></div>
-    </div>
     <header id="header" role="banner">
       <div class="header__inner">
         <div class="header__logo">
@@ -128,44 +68,98 @@
       </section> -->
       
       <!-- project -->
-      <section id="project">
-        <div class="sect_inner">
-          <div class="title"><p>project</p></div>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="summary flex-sb">
-                  <div class="number"><p>1</p></div>
-                  <div class="txt">
-                    <p class="title">NewJeans</p>
-                    <p>
-                      그리드를 활용한<br />
-                      공식 홈페이지 리뉴얼
-                    </p>
-                  </div>
-                </div>
-                <div class="sticker">
-                  <img src="./src/img/SVG/sel.svg" alt="" />
+      <div class="line_box">
+        <!-- 라인: 화면 전체 끝과 끝 -->
+        <div class="w-line w-line1"></div>
+        <div class="w-line w-line2"></div>
+        <div class="w-line w-line3"></div>
+        <div class="w-line w-line4"></div>
+        <div class="w-line w-line5"></div>
+        <div class="w-line w-line6"></div>
+        <div class="w-line w-line7"></div>
+        <!-- heigh -->
+        <div class="h-line h-line1"></div>
+        <div class="h-line h-line2"></div>
+        <div class="h-line h-line3"></div>
+        <div class="h-line h-line4"></div>
+        <div class="h-line h-line5"></div>
+        <!-- <div class="h-line h-line6"></div> -->
+        <section id="project">
+          <!-- inner content -->
+          <div class="grid swiper">
+            <div class="item item1">
+              <p class="item__title">project.</p>
+            </div>
+            <div class="item item2"></div>
+            <div class="item item3">
+              <div class="summary flex-sb">
+                <div class="number"><p>1</p></div>
+                <div class="txt">
+                  <p class="title">NewJeans</p>
+                  <p>
+                    그리드를 활용한<br />
+          
+                    공식 홈페이지 리뉴얼
+                  </p>
                 </div>
               </div>
-              <div class="swiper-slide"><div class="inner">Slide 2</div></div>
-              <div class="swiper-slide"><div class="inner">Slide 3</div></div>
-              <div class="swiper-slide"><div class="inner">Slide 4</div></div>
+              <div class="sticker">
+                <img src="./src/img/SVG/sel.svg" alt="" />
+              </div>
+            </div>
+            <div class="item item4">
+              <div class="summary">
+                <div class="number"><p>2</p></div>
+                <div class="txt">
+                  <p class="title">NewJeans</p>
+                  <p>
+                    그리드를 활용한<br />
+                    뉴진스의 &lt;Supernatural&gt; 앨범 발매 기념<br />
+                    공식 홈페이지 리뉴얼
+                  </p>
+                </div>
+              </div>
+              <div class="sticker">
+                <img src="./src/img/SVG/nj.svg" alt="" />
+              </div>
+            </div>
+            <div class="item item5">
+              <div class="summary flex-end">
+                <div class="number"><p>3</p></div>
+                <div class="txt">
+                  <p class="title">SeMA</p>
+                  <p>서울시립미술관 홈페이지 리뉴얼 디자인<br /></p>
+                </div>
+              </div>
+              <div class="sticker">
+                <img src="./src/img/SVG/sema.svg" alt="" />
+              </div>
+            </div>
+            <div class="item item6">
+              <div class="summary flex-sb">
+                <div class="number"><p>4</p></div>
+                <div class="txt">
+                  <p class="title">selmin</p>
+                  <p>
+                    약을 복용하는 사람들을 위한 관리앱으로
+          
+                  </p>
+                </div>
+              </div>
+              <div class="sticker">
+                <img src="./src/img/SVG/selmin.svg" alt="" />
+              </div>
             </div>
           </div>
-          <!-- 밖을 빼야 위치를 내 마음대로 할 수 있음
-          안에 있으며 그 안에서만 가능 -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- ux/ui -->
       <!-- <section id="ux/ui"></section> -->
     </main>
 
     <!-- <footer id="footer" role="contentinfo"></footer> -->
 
-    <!-- <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
     <script>
       window.addEventListener("load", function () {
         const lines = document.querySelectorAll(".w-line");
@@ -200,21 +194,6 @@
           line.style.left = "20px"; // 페이지 로딩 후 너비를 100vw로 설정
           line.style.opacity = "1";
         });
-      });
-    </script> -->
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
-        // spaceBetween: 1,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
       });
     </script>
   </body>

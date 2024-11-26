@@ -9,6 +9,15 @@
   justify-content: $justify;
   align-items: center;
 }
+
+section{
+  &#intro{
+    .sect_inner{
+      padding: 12rem 5% 0;
+
+    }
+  }
+}
 // ***************************************************************************************************************************
 
 @media only screen and (max-width:600px){
@@ -52,7 +61,12 @@
           font-weight: 900;
           margin-top: 100px;
         }
-
+        .img_box{
+          img{
+            width: 20%;
+            filter: drop-shadow(5px 5px 5px red);
+          }
+        }
       }
     }
   }

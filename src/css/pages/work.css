@@ -1,33 +1,48 @@
+#work ::selection {
+  background-color: var(--sub-color-Oyellow);
+  color: #ffffff;
+}
+
+#work ::-moz-selection {
+  background-color: var(--sub-color-Oyellow);
+  color: #ffffff;
+}
+
 section#work .sect_inner {
-  padding: 0 5%;
+  padding: 12rem 5% 0;
 }
 section#work .sect_inner .work_top_list {
   display: grid;
   border: 1px solid var(--black600);
 }
 section#work .sect_inner .work_top_list .sect_title {
-  width: 100%;
-  height: 100%;
   text-transform: uppercase;
-  border-right: 1px solid var(--black600);
 }
 section#work .sect_inner .work_top_list .sect_title .po_ab {
-  position: relative;
-  background: var(--white);
-  overflow: hidden;
+  padding: 20px;
+  width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 section#work .sect_inner .work_top_list .sect_title .po_ab p {
-  font-family: var(--subEng-font);
-  position: absolute;
-  top: 55%;
-  left: 30px;
-  transform: translateY(-50%);
-  color: var(--black200_txt);
+  line-height: 1.5;
   transition: 1s;
 }
+section#work .sect_inner .work_top_list .sect_title .po_ab p.sect_t {
+  font-family: var(--subEng-font);
+  color: var(--main-color);
+  height: 100px;
+}
+section#work .sect_inner .work_top_list .sect_title .po_ab p.txt {
+  font-size: 1rem;
+  font-weight: 500;
+}
 section#work .sect_inner .work_top_list .list_box ul li {
-  background: var(--mainBg-color);
+  background: var(--black);
+  color: var(--black600);
+  position: relative;
 }
 section#work .sect_inner .work_top_list .list_box ul li a {
   display: flex;
@@ -38,13 +53,41 @@ section#work .sect_inner .work_top_list .list_box ul li a p.list_title {
   font-weight: 600;
 }
 section#work .sect_inner .work_top_list .list_box ul li .right_box {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--mainBg100-color);
+  border: 1px solid var(--black600);
+  color: var(--main-color);
+  position: relative;
+  transition: 0.3s;
+}
+section#work .sect_inner .work_top_list .list_box ul li .right_box .r-poab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  background: var(--black);
+}
+section#work .sect_inner .work_top_list .list_box ul li:hover {
+  color: var(--white);
+}
+section#work .sect_inner .work_top_list .list_box ul li:hover .ex {
+  color: var(--black700);
+}
+section#work .sect_inner .work_top_list .list_box ul li:hover .right_box {
+  background: var(--white);
+}
+section#work .sect_inner .work_top_list .list_box ul li:hover .right_box .r-poab {
+  background: var(--main-color);
+  color: var(--white);
+  top: -8px;
+  left: 8px;
+  border: 1px solid var(--black);
 }
 section#work .list_box2 {
   border-left: 1px solid var(--black600);
@@ -53,19 +96,42 @@ section#work .list_box2 {
 section#work .list_box2 ul li {
   position: relative;
   overflow: hidden;
-}
-section#work .list_box2 ul li:not(:last-child) {
+  background-position: right center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--black600);
 }
+section#work .list_box2 ul li:nth-child(1) {
+  background-color: rgb(255, 255, 255);
+  background-image: url(../../img/work/jaws.jpg);
+}
+section#work .list_box2 ul li:nth-child(2) {
+  background-color: #00ab44;
+  background-image: url(../../img/work/chil.jpg);
+}
+section#work .list_box2 ul li:nth-child(3) {
+  background-color: rgb(255, 255, 255);
+  background-image: url(../../img/work/logo.jpg);
+}
+section#work .list_box2 ul li:nth-child(4) {
+  background-color: rgb(255, 255, 255);
+  background-image: url(../../img/work/logo.jpg);
+}
+section#work .list_box2 ul li:nth-child(5) {
+  background-color: rgb(255, 255, 255);
+  background-image: url(../../img/work/yes24.jpg);
+}
 section#work .list_box2 ul li a {
-  transition: 0.75s ease;
+  display: block;
   width: 100%;
-  position: absolute;
-  background: var(--mainBg-color);
-  color: var(--black700);
+  height: 100%;
+  position: relative;
+  background: var(--black);
+  color: var(--black600);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 10px 0px 80px rgba(0, 0, 0, 0.8);
+  transition: 0.75s ease;
 }
 section#work .list_box2 ul li a p.list_title {
   font-weight: 400;
@@ -77,18 +143,16 @@ section#work .list_box2 ul li a .right_box {
   justify-content: center;
   align-items: center;
 }
-section#work .list_box2 ul li:hover {
-  background: #000;
-}
 section#work .list_box2 ul li:hover a {
-  color: var(--black200_txt);
+  color: var(--white);
   width: 85%;
 }
 section#work .list_box2 ul li:hover a .list_title {
   font-weight: 600;
+  color: var(--main-color);
 }
 section#work .list_box2 ul li:hover a .right_box {
-  color: var(--mainBg100-color);
+  color: var(--main-color);
 }
 
 @media only screen and (max-width: 600px) {
@@ -97,13 +161,20 @@ section#work .list_box2 ul li:hover a .right_box {
     grid-template-columns: 1fr;
   }
   main .work_top_list .sect_title {
-    height: 150px;
     font-size: 5rem;
     font-weight: 600;
   }
-  main .work_top_list .sect_title p {
-    top: 55%;
-    color: #555;
+  main .work_top_list .sect_title .po_ab {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--black400);
+  }
+  main .work_top_list .sect_title .po_ab p {
+    position: relative;
+    color: #ffffff;
+  }
+  main .work_top_list .sect_title .po_ab p.sect_t {
+    margin-bottom: 10px;
   }
   main .work_top_list .list_box ul {
     display: grid;
@@ -116,7 +187,7 @@ section#work .list_box2 ul li:hover a .right_box {
     border-left: 1px solid var(--black600);
   }
   main .work_top_list .list_box ul li a {
-    padding: 20px;
+    padding: 15px;
     display: flex;
     width: 100%;
   }
@@ -127,8 +198,39 @@ section#work .list_box2 ul li:hover a .right_box {
     width: 100%;
   }
   main .work_top_list .list_box ul li a .list_summary p.list_title {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  main .work_top_list .list_box ul li a .list_summary p.ex {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  main .work_top_list .list_box ul li a .list_summary p.type {
+    font-size: 0.75rem;
+    color: var(--black300);
+  }
+  main .work_top_list .list_box ul li .right_box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--black600);
+    color: var(--main-color);
+    position: relative;
+    transition: 0.3s;
+  }
+  main .work_top_list .list_box ul li .right_box .r-poab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    background: var(--black);
   }
   main .list_box2 {
     border-left: 1px solid var(--black600);
@@ -136,23 +238,43 @@ section#work .list_box2 ul li:hover a .right_box {
   }
   main .list_box2 ul li {
     position: relative;
-    height: 70px;
+    height: 60px;
     overflow: hidden;
+  }
+  main .list_box2 ul li:nth-child(1) {
+    background-size: auto 25%;
+  }
+  main .list_box2 ul li:nth-child(2) {
+    background-size: auto 35%;
+  }
+  main .list_box2 ul li:nth-child(3) {
+    background-size: auto 25%;
+  }
+  main .list_box2 ul li:nth-child(4) {
+    background-size: auto 25%;
+  }
+  main .list_box2 ul li:nth-child(5) {
+    background-size: auto 30%;
   }
   main .list_box2 ul li:not(:last-child) {
     border-bottom: 1px solid var(--black600);
   }
   main .list_box2 ul li a {
-    padding: 10px;
+    padding: 15px;
+  }
+  main .list_box2 ul li a p.date {
+    font-size: 0.75rem;
+    width: 15%;
   }
   main .list_box2 ul li a p.list_title {
-    width: 30%;
-    font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 900;
+    width: 25%;
   }
   main .list_box2 ul li a p.ex {
     width: 40%;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
   main .list_box2 ul li a .right_box {
     width: 50px;
@@ -176,11 +298,18 @@ section#work .list_box2 ul li:hover a .right_box {
   main .work_top_list .sect_title {
     height: 150px;
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 900;
   }
-  main .work_top_list .sect_title p {
-    top: 55%;
-    color: #555;
+  main .work_top_list .sect_title .po_ab {
+    display: flex;
+    border-bottom: 1px solid var(--black400);
+  }
+  main .work_top_list .sect_title .po_ab p {
+    position: relative;
+    color: #ffffff;
+  }
+  main .work_top_list .sect_title .po_ab p.sect_t {
+    height: 100px;
   }
   main .work_top_list .list_box ul {
     display: grid;
@@ -207,14 +336,45 @@ section#work .list_box2 ul li:hover a .right_box {
     font-size: 1.5rem;
     padding-bottom: 10px;
   }
+  main .work_top_list .list_box ul li .right_box {
+    width: 50px;
+    height: 50px;
+  }
+  main .work_top_list .list_box ul li .right_box .r-poab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    background: var(--black);
+  }
   main .list_box2 {
     border-left: 1px solid var(--black600);
     border-right: 1px solid var(--black600);
   }
   main .list_box2 ul li {
     position: relative;
-    height: 90px;
+    height: 70px;
     overflow: hidden;
+  }
+  main .list_box2 ul li:nth-child(1) {
+    background-size: auto 35%;
+  }
+  main .list_box2 ul li:nth-child(2) {
+    background-size: auto 50%;
+  }
+  main .list_box2 ul li:nth-child(3) {
+    background-size: auto 50%;
+  }
+  main .list_box2 ul li:nth-child(4) {
+    background-size: auto 40%;
+  }
+  main .list_box2 ul li:nth-child(5) {
+    background-size: auto 50%;
   }
   main .list_box2 ul li:not(:last-child) {
     border-bottom: 1px solid var(--black600);
@@ -253,7 +413,11 @@ section#work .list_box2 ul li:hover a .right_box {
   main .work_top_list .sect_title {
     height: 150px;
     font-size: 5rem;
-    font-weight: 600;
+  }
+  main .work_top_list .sect_title .po_ab {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0;
   }
   main .work_top_list .sect_title p {
     top: 55%;
@@ -285,6 +449,31 @@ section#work .list_box2 ul li:hover a .right_box {
   main .work_top_list .list_box ul li a .list_summary p.list_title {
     font-size: 1.75rem;
     padding: 0;
+    width: 35%;
+  }
+  main .work_top_list .list_box ul li a .list_summary p.ex {
+    width: 50%;
+  }
+  main .work_top_list .list_box ul li a .list_summary p.type {
+    width: 15%;
+  }
+  main .work_top_list .list_box ul li a .list_summary p br {
+    display: none;
+  }
+  main .list_box2 ul li:nth-child(1) {
+    background-size: auto 60%;
+  }
+  main .list_box2 ul li:nth-child(2) {
+    background-size: contain;
+  }
+  main .list_box2 ul li:nth-child(3) {
+    background-size: auto 70%;
+  }
+  main .list_box2 ul li:nth-child(4) {
+    background-size: auto 70%;
+  }
+  main .list_box2 ul li:nth-child(5) {
+    background-size: auto 80%;
   }
   main .list_box2 ul li a p.list_title {
     width: 20%;
