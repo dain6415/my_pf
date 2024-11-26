@@ -44,7 +44,7 @@
             transition: .3s;
           }
           &.on{
-            color: var(--mainBg100-color);
+            color: var(--main-color);
             font-weight: 700;
             &::after{
               display: none;

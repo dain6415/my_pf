@@ -33,7 +33,7 @@
   transition: 0.3s;
 }
 #header .header__inner nav ul li.on {
-  color: var(--mainBg100-color);
+  color: var(--main-color);
   font-weight: 700;
 }
 #header .header__inner nav ul li.on::after {

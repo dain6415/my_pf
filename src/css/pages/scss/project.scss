@@ -88,6 +88,7 @@ section {
         position: relative;
         .swiper-slide {
           border-bottom: 1px solid var(--black600);
+          // overflow-x: hidden;
           .summary {
             height: 100%;
             .number {
@@ -232,7 +233,20 @@ section {
           &:hover {
             background: var(--mainBg-color);
             color: var(--black);
-            // border-left: 1px solid var(--black600);
+            // &.slide1{
+            //   border-left: 1px solid var(--black600);
+            // }
+            // &.slide2{
+            //   border-left: 1px solid var(--black600);
+            // }
+            // &.slide3{
+            //   // border-left: 1px solid var(--black600);
+            //   // border-right: 1px solid var(--black600);
+            // }
+            // &.slide4{
+            //   border-left: 1px solid var(--black600);
+            //   // border-right: 1px solid var(--black600);
+            // }
             .summary {
               .number {
                 border: 1px solid var(--mainBg-color);

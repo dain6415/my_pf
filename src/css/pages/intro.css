@@ -1,5 +1,10 @@
+section#intro {
+  background: var(--mainBg-color);
+  border-bottom: 1px solid var(--black600);
+}
 section#intro .sect_inner {
   padding: 12rem 5% 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 900px) {
