@@ -1,20 +1,31 @@
-// let prevScrollTop = 0;
-//       let header = document.querySelector("header");
+export function header() {
+  window.addEventListener('load', function () {
+    header(); // 페이지 로드 후 header 함수 실행
+  });
+  
+  function header() {
+    window.addEventListener('scroll', function () {
+      console.log('스크롤이 발생했습니다!');
+      let header = document.querySelector('#header');
+      if (window.scrollY > 100) {
+        header.style.backgroundColor = 'transparent';
+      } else {
+        header.style.backgroundColor = 'black';
+      }
+    });
+  }
 
-//       const sectionElems = document.querySelectorAll("section");
 
-//       window.addEventListener("scroll", function () {
-//         let currentScrollTop = window.pageYOffset;
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("#header");
+    // const nav = document.querySelector("nav ul li a");
 
-//         //현재보다 아래로 내려가면 header가 안 보이고
-//         if (currentScrollTop > prevScrollTop) {
-//           //스크롤을 아래로 내릴 때
-//           header.style.top = "-100px";
-//         } else {
-//           header.style.top = 0;
-//         }
-
-//         //위로 올리면 header 보이기
-//         //현재 스크롤 위치를 이전 스크롤값에 저장한다
-//         prevScrollTop = currentScrollTop;
-//       })
+    if (window.scrollY > 600) {
+      // 스크롤 600이상으로 내려가면 header에 scrolled라는 클래스 추가
+      header.classList.add("scrolled");
+    } else {
+      // 600이하가 아니면 scrolled 클래스를 제거 = 원래대로 돌아와라
+      header.classList.remove("scrolled");
+    }
+  });
+}

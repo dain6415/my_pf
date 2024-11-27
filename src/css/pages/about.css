@@ -1,1 +1,12 @@
-/*# sourceMappingURL=about.css.map */
+#about .sect_inner .sect_title {
+  font-family: "Hey November", sans-serif;
+}
+
+@media only screen and (min-width: 701px) {
+  #about .sect_inner {
+    padding: 12rem 5% 0;
+  }
+  #about .sect_inner .sect_title {
+    font-size: 8rem;
+  }
+}/*# sourceMappingURL=about.css.map */

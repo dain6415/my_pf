@@ -29,9 +29,9 @@ section#work .sect_inner .work_top_list .sect_title .po_ab {
 section#work .sect_inner .work_top_list .sect_title .po_ab p {
   line-height: 1.5;
   transition: 1s;
+  font-family: "Hey November", sans-serif;
 }
 section#work .sect_inner .work_top_list .sect_title .po_ab p.sect_t {
-  font-family: var(--subEng-font);
   color: var(--main-color);
   height: 100px;
 }

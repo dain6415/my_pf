@@ -38,8 +38,9 @@ section {
             p {
               line-height: 1.5;
               transition: 1s;
+              font-family: 'Hey November', sans-serif;
               &.sect_t{
-                font-family: var(--subEng-font);
+                // font-family: var(--subEng-font);
                 color: var(--main-color);
                 height: 100px;
                 // opacity: 0;

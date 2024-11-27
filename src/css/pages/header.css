@@ -1,17 +1,18 @@
+@charset "UTF-8";
 #header {
   position: fixed;
   z-index: 999;
-  height: 100px;
   width: 100%;
   background: var(--mainBg-color);
   padding: 20px 5%;
   border-bottom: 1px solid var(--black600);
 }
+#header.scrolled {
+  background-color: rgb(255, 255, 255); /* 스크롤 후 변경된 배경색 */
+  border-bottom: 1px solid #e4e4e4;
+}
 #header .header__inner {
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 #header .header__inner nav ul {
   display: flex;
@@ -44,12 +45,23 @@
 }
 
 @media only screen and (max-width: 600px) {
-  nav {
+  #header {
+    height: 60px;
+  }
+  #header nav {
     display: none;
   }
 }
-@media only screen and (min-width: 1300px) {
-  .header__nav_mobile {
+@media only screen and (min-width: 601px) {
+  #header {
+    height: 100px;
+  }
+  #header .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header .header__inner .header__nav_mobile {
     display: none;
   }
 }/*# sourceMappingURL=header.css.map */

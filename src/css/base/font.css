@@ -209,12 +209,20 @@
   src : url(./font_file/Pixer-Regular.woff2);
 }
 
-
-
 /* Gmarket 지마켓 */
 @font-face {
   font-family: 'GmarketSansMedium';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+/* hey november  */
+@import url('https://fonts.cdnfonts.com/css/hey-november');
+/* font-family: 'Hey November', sans-serif; */
+
+/* LABSAmiga  */
+@font-face{
+  font-family: LABSAmiga;
+  src : url(./font_file/6647809f28af789ca1b7f574_LABSAmiga-Regular.woff);
 }

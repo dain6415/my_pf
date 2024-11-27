@@ -16,15 +16,16 @@
 #header {
   position: fixed;
   z-index: 999;
-  height: 100px;
   width: 100%;
   background: var(--mainBg-color);
   padding: 20px 5%;
   border-bottom: 1px solid var(--black600);
-  
+  &.scrolled {
+    background-color: rgb(255, 255, 255); /* 스크롤 후 변경된 배경색 */
+    border-bottom: 1px solid #e4e4e4;
+  }
   .header__inner{
     height: 100%;
-    @include flex-c(space-between);
     nav{
       ul{
         display: flex;
@@ -63,15 +64,26 @@
 
 // *********************************************************************************************************************
 @media only screen and (max-width:600px){
-  nav{display: none;}
+  #header{
+    height: 60px;
+    nav{display: none;}
+  }
 }
 // ------------------------------------------------------------------------------------------------
-@media only screen and (min-width: 1300px){
-
+@media only screen and (min-width: 601px){
+  #header{
+    height: 100px;
+    .header__inner{
+      @include flex-c(space-between);
+      .header__nav_mobile{
+        display: none;
+      }
+    }
+  }
 }
 // ------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 1300px) {
-  .header__nav_mobile{
-    display: none;
+  .header__inner{
+
   }
 }

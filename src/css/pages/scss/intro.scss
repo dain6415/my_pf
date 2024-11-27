@@ -12,6 +12,7 @@
 
 section{
   &#intro{
+    display: none;
     background: var(--mainBg-color);
     border-bottom: 1px solid var(--black600);
     .sect_inner{
