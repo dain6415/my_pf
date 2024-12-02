@@ -16,12 +16,12 @@ export function bgColor() {
 
       onEnter: () => gsap.to('body', {
         backgroundColor: color, 
-        duration: 0.5
+        // duration: 0.5
       }),
 
       onEnterBack: () => gsap.to('body', {
         backgroundColor: color, 
-        duration: 0.5
+        // duration: 0.5
       })
     });
   });

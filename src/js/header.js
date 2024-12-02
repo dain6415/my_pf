@@ -20,7 +20,7 @@ export function header() {
     const header = document.querySelector("#header");
     // const nav = document.querySelector("nav ul li a");
 
-    if (window.scrollY > 600) {
+    if (window.scrollY > 1250) {
       // 스크롤 600이상으로 내려가면 header에 scrolled라는 클래스 추가
       header.classList.add("scrolled");
     } else {

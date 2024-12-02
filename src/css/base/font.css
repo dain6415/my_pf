@@ -223,6 +223,16 @@
 
 /* LABSAmiga  */
 @font-face{
-  font-family: LABSAmiga;
+  font-family: 'LABSAmiga';
   src : url(./font_file/6647809f28af789ca1b7f574_LABSAmiga-Regular.woff);
 }
+
+/* lush  */
+@font-face {
+  font-family: 'Parkway Lush';
+  src: url('./font_file/ParkwayLush.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+

@@ -37,32 +37,6 @@ body {
 section {
   position: relative;
   &#project {
-    .line {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      .h-line {
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        background: var(--black600);
-        &.h-line1 {
-          left: 5%;
-        }
-        &.h-line2 {
-          left: 27.5%;
-        }
-        &.h-line3 {
-          left: 50%;
-        }
-        &.h-line4 {
-          right: 27.5%;
-        }
-        &.h-line5 {
-          right: 5%;
-        }
-      }
-    }
     .sect_inner {
       padding: 12rem 5% 0;
       .sect_title {
@@ -87,7 +61,8 @@ section {
       .swiper_box {
         position: relative;
         .swiper-slide {
-          border-bottom: 1px solid var(--black600);
+          border: 1px solid transparent;
+          border-bottom-color:var(--black600);
           // overflow-x: hidden;
           .summary {
             height: 100%;
@@ -233,20 +208,9 @@ section {
           &:hover {
             background: var(--mainBg-color);
             color: var(--black);
-            // &.slide1{
-            //   border-left: 1px solid var(--black600);
-            // }
-            // &.slide2{
-            //   border-left: 1px solid var(--black600);
-            // }
-            // &.slide3{
-            //   // border-left: 1px solid var(--black600);
-            //   // border-right: 1px solid var(--black600);
-            // }
-            // &.slide4{
-            //   border-left: 1px solid var(--black600);
-            //   // border-right: 1px solid var(--black600);
-            // }
+            border-left-color:var(--black600);
+            // border-right-color:var(--black600);
+            // border-color:#f00;
             .summary {
               .number {
                 border: 1px solid var(--mainBg-color);
@@ -444,6 +408,10 @@ section {
                 position: absolute;
                 width: 300px;
               }
+              &:hover {
+                border-left-color:var(--black600);
+                border-right-color:var(--black600);
+              }
             }
           }
           .swiper_btn {
@@ -564,6 +532,9 @@ section {
       &.h-line2 {
         display: block;
       }
+      &.h-line3 {
+        display: block;
+      }
       &.h-line4 {
         display: block;
       }
@@ -636,6 +607,14 @@ section {
               .sticker {
                 position: absolute;
                 width: 300px;
+              }
+              &:hover {
+                border-left-color:var(--black600);
+                &.slide4{
+                  // border-left:none;
+                  // border-right:1px solid var(--black600);
+                  // border-right-color:var(--black600);
+                }
               }
             }
           }

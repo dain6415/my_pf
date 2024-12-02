@@ -1,11 +1,51 @@
 section#intro {
-  display: none;
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
 }
 section#intro .sect_inner {
   padding: 12rem 5% 0;
   text-align: center;
+}
+section#intro .sect_inner .intro_title p {
+  line-height: 1;
+}
+section#intro .stickers {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 100px);
+  border: 1px solid #000;
+}
+section#intro .stickers .sticker {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#intro .stickers .sticker.black1 {
+  transform: rotate(105deg);
+}
+section#intro .stickers .sticker.black2 {
+  transform: rotate(-15deg);
+}
+section#intro .stickers .sticker.black3 {
+  transform: rotate(45deg);
+}
+section#intro .stickers .sticker.blue1 {
+  transform: rotate(15deg);
+}
+section#intro .stickers .sticker.blue2 {
+  transform: rotate(15deg);
+}
+section#intro .stickers .sticker.blue3 {
+  transform: rotate(195deg);
+}
+section#intro .stickers .sticker.sticker7 {
+  transform: rotate(15deg);
+}
+section#intro .stickers .sticker.sticker8 {
+  transform: rotate(15deg);
 }
 
 @media only screen and (min-width: 900px) {
@@ -17,14 +57,70 @@ section#intro .sect_inner {
   main section#intro {
     height: 100vh;
   }
-  main section#intro p.title {
-    font-size: 240px;
+  main section#intro .intro_title p {
+    font-size: 120px;
     text-align: center;
     font-weight: 900;
-    margin-top: 100px;
   }
-  main section#intro .img_box img {
-    width: 20%;
-    filter: drop-shadow(5px 5px 5px red);
+  main section#intro .intro_title p.web {
+    font-family: Pixer;
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title p.publisher {
+    font-size: 180px;
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title p.portfolio {
+    font-size: 40px;
+  }
+  main section#intro .intro_title .publisher-stroke {
+    width: 500px;
+  }
+  main section#intro .intro_title .publisher-stroke.text {
+    stroke: red;
+    stroke-width: 2;
+  }
+  main section#intro .sticker {
+    width: 250px;
+    box-shadow: 1px 1px 1px var(--black600);
+    background: var(--white);
+    border-radius: 999px;
+    border: 1px solid #000;
+  }
+  main section#intro .sticker.black1 {
+    left: 6%;
+    top: 32%;
+  }
+  main section#intro .sticker.black2 {
+    left: -5%;
+    bottom: 5%;
+  }
+  main section#intro .sticker.black3 {
+    right: 16%;
+    bottom: 12%;
+  }
+  main section#intro .sticker.black4 {
+    right: -8%;
+    bottom: 18%;
+  }
+  main section#intro .sticker.blue1 {
+    right: 3%;
+    top: 42%;
+  }
+  main section#intro .sticker.blue2 {
+    left: 13%;
+    top: 48%;
+  }
+  main section#intro .sticker.blue3 {
+    left: 30%;
+    bottom: 7%;
+  }
+  main section#intro .sticker.sticker7 {
+    left: 0;
+    top: 0;
+  }
+  main section#intro .sticker.sticker8 {
+    left: 0;
+    top: 0;
   }
 }/*# sourceMappingURL=intro.css.map */

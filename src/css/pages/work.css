@@ -32,6 +32,7 @@ section#work .sect_inner .work_top_list .sect_title .po_ab p {
   font-family: "Hey November", sans-serif;
 }
 section#work .sect_inner .work_top_list .sect_title .po_ab p.sect_t {
+  font-family: LABSAmiga;
   color: var(--main-color);
   height: 100px;
 }
@@ -131,7 +132,7 @@ section#work .list_box2 ul li a {
   justify-content: space-between;
   align-items: center;
   box-shadow: 10px 0px 80px rgba(0, 0, 0, 0.8);
-  transition: 0.75s ease;
+  transition: 0.5s ease;
 }
 section#work .list_box2 ul li a p.list_title {
   font-weight: 400;
@@ -144,7 +145,8 @@ section#work .list_box2 ul li a .right_box {
   align-items: center;
 }
 section#work .list_box2 ul li:hover a {
-  color: var(--white);
+  color: var(--black400);
+  background: var(--white);
   width: 85%;
 }
 section#work .list_box2 ul li:hover a .list_title {
@@ -358,7 +360,7 @@ section#work .list_box2 ul li:hover a .right_box {
   }
   main .list_box2 ul li {
     position: relative;
-    height: 70px;
+    height: 80px;
     overflow: hidden;
   }
   main .list_box2 ul li:nth-child(1) {
@@ -412,7 +414,6 @@ section#work .list_box2 ul li:hover a .right_box {
   }
   main .work_top_list .sect_title {
     height: 150px;
-    font-size: 5rem;
   }
   main .work_top_list .sect_title .po_ab {
     display: flex;
@@ -422,6 +423,9 @@ section#work .list_box2 ul li:hover a .right_box {
   main .work_top_list .sect_title p {
     top: 55%;
     color: #555;
+  }
+  main .work_top_list .sect_title p.sect_t {
+    font-size: 10rem;
   }
   main .work_top_list .list_box ul {
     display: grid;

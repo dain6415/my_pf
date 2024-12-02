@@ -10,4 +10,14 @@ window.addEventListener('load', function(){
   header()
   project()
   bgColor()
+  
+  document.querySelector('.up_btn').addEventListener('click', function() {
+    // alert()
+    window.scroll({
+        top: 0,           // 최상단으로 이동
+        behavior: 'smooth' // 부드럽게 이동
+      });
+  });
+  
 })
+

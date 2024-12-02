@@ -41,6 +41,7 @@ section {
               font-family: 'Hey November', sans-serif;
               &.sect_t{
                 // font-family: var(--subEng-font);
+                font-family: LABSAmiga;
                 color: var(--main-color);
                 height: 100px;
                 // opacity: 0;
@@ -149,7 +150,7 @@ section {
             @include flex-c(space-between);
             box-shadow: 10px 0px 80px rgba($color: #000000, $alpha: 0.8);
 
-            transition: 0.75s ease;
+            transition: 0.5s ease;
             p {
               &.list_title {
                 font-weight: 400;
@@ -164,7 +165,8 @@ section {
 
           &:hover {
             a {
-              color: var(--white);
+              color: var(--black400);
+              background: var(--white);
               width: 85%;
               .list_title {
                 font-weight: 600;
@@ -406,7 +408,7 @@ section {
       ul {
         li {
           position: relative;
-          height: 70px;
+          height: 80px;
           overflow: hidden;
 
           &:nth-child(1) {
@@ -472,12 +474,15 @@ section {
       grid-template-columns: 1fr 3fr;
       .sect_title {
         height: 150px;
-        font-size: 5rem;
         .po_ab{
           display: flex;
           flex-direction: column;border-bottom: 0;
         }
         p {
+          &.sect_t{
+            font-size: 10rem;
+            // letter-spacing: 1rem;
+          }
           top: 55%;
           color: #555;
         }

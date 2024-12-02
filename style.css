@@ -18,36 +18,68 @@
 /* ------------------------------------------------------------------ */
 
 body {
+  background: var(--mainBg-color);
   color: var(--black200_txt);
 }
+/* -------------------- */
 .line {
   position: fixed;
   width: 100%;
   height: 100%;
-  .h-line {
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    background: var(--black600);
-    &.h-line1 {
-      left: 5%;
-    }
-    &.h-line2 {
-      left: 27.5%;
-    }
-    &.h-line3 {
-      left: 50%;
-    }
-    &.h-line4 {
-      right: 27.5%;
-    }
-    &.h-line5 {
-      right: 5%;
-    }
-  }
+  z-index: 0;
 }
+.h-line {
+  z-index: 999;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: var(--black600);
+}
+.h-line1 {
+  left: 5%;
+  z-index: 999;
+}
+.h-line2 {
+  left: 27.5%;
+}
+.h-line3 {
+  left: 50%;
+}
+.h-line4 {
+  right: 27.5%;
+}
+.h-line5 {
+  right: 5%;
+  z-index: 999;
+}
+/* -------------------- */
+
 section {
   width: 100%;
   height: 100vh;
   /* padding: 10rem 5% 0; */
+}
+
+.up_btn{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+  background: var(--main-color);
+  cursor: pointer;
+  
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 2rem;
+  font-weight: 900;
+}
+.up_btn:hover{
+  box-shadow: 0px 5px 10px rgba(0, 0, 255, .2);
+  color: var(--white);
 }
