@@ -49,12 +49,12 @@ section {
           overflow: hidden;
           p {
             font-family: var(--subEng-font);
-            position: absolute;
-            top: 55%;
+            // position: absolute;
+            // top: 55%;
             // transform: translateY(-50%);
             color: var(--black200_txt);
             transition: 1s;
-            opacity: 0;
+            // opacity: 0;
           }
         }
       }
@@ -206,7 +206,7 @@ section {
             z-index: 99;
           }
           &:hover {
-            background: var(--mainBg-color);
+            background: var(--black);
             color: var(--black);
             border-left-color:var(--black600);
             // border-right-color:var(--black600);
@@ -315,6 +315,7 @@ section {
     // swiper btn
   }
 }
+
 // ***************************************************************************************************************************
 @media only screen and (max-width: 700px) {
   .line {
@@ -343,9 +344,9 @@ section {
           p {
             width: 90%;
             line-height: normal;
-            left: 50%;
-            top: 50%;
-            transform: translateY(-50%);
+            // left: 50%;
+            // top: 50%;
+            // transform: translateY(-50%);
             text-align: center;
           }
         }
@@ -452,9 +453,9 @@ section {
           grid-template-columns: 2fr 2fr;
           p {
             line-height: normal;
-            left: -400px;
-            top: 50%;
-            transform: translateY(-50%);
+            // left: -400px;
+            // top: 50%;
+            // transform: translateY(-50%);
           }
         }
         .swiper {
@@ -551,8 +552,8 @@ section {
           grid-template-columns: 2fr 2fr;
           p {
             line-height: normal;
-            left: -400px;
-            top: 55%;
+            // left: -400px;
+            // top: 55%;
           }
         }
         .swiper_box {
@@ -610,11 +611,11 @@ section {
               }
               &:hover {
                 border-left-color:var(--black600);
-                &.slide4{
+                // &.slide4{
                   // border-left:none;
                   // border-right:1px solid var(--black600);
                   // border-right-color:var(--black600);
-                }
+                // }
               }
             }
           }

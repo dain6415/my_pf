@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 기본 스타일 */
+.hover-container span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: black; /* 기본 글자색 */
+  transition: color 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 호버 시 글자색 변경 */
+.hover-container span:hover {
+  color: red; /* 호버 시 글자색 */
+}
+
+/* 클릭 후 고정 색상 */
+.hover-container span.active {
+  color: blue; /* 클릭 후 유지되는 색상 */
+  font-weight: bold; /* 강조 효과 (선택 사항) */
+}
+
+/* 이미지 표시 영역 */
+.image-display {
+  margin-top: 20px;
+  text-align: center;
+  height: 500px;
+  border: 1px solid #000;
+}
+
+#hovered-image {
+  max-width: 100%;
+  height: auto;
+  display: none; /* 기본적으로 숨김 */
+}
+
+
+    </style>
+</head>
+<body>
+  
+  <div class="image-display">
+    <img src="" alt="Hovered Image" id="hovered-image" />
+  </div>
+  <div class="hover-container">
+      <span data-image="./src/img/sticker_texture.avif">Text 1</span>
+      <span data-image="./src/img/sticker1.png">Text 2</span>
+      <span data-image="./">Text 3</span>
+    </div>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <script>
+$(document).ready(function () {
+  const $imageDisplay = $("#hovered-image");
+
+  $(".hover-container span").hover(
+    function () {
+      // 호버 시 이미지 변경 및 표시
+      const imageSrc = $(this).data("image");
+      $imageDisplay.attr("src", imageSrc).fadeIn();
+    },
+    function () {
+      // 호버 해제 시 (클릭 상태에 따라 처리)
+      if (!$(this).hasClass("active")) {
+        $imageDisplay.fadeOut();
+      }
+    }
+  );
+
+  // 클릭하면 상태 고정
+  $(".hover-container span").mouseenter(function () {
+    // 모든 span의 active 클래스 제거 및 색상 초기화
+    $(".hover-container span").removeClass("active");
+    $(".hover-container span").css("color", "black");
+
+    // 클릭된 span에 active 클래스 추가
+    $(this).addClass("active");
+    $(this).css("color", "blue"); // 클릭된 항목의 색상 고정
+
+    // 클릭된 항목의 이미지 표시
+    const imageSrc = $(this).data("image");
+    $imageDisplay.attr("src", imageSrc).fadeIn();
+  });
+});
+
+
+      </script>
+</body>
+</html>

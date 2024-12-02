@@ -41,11 +41,8 @@ section#project .sect_inner .sect_title .po_ab {
 }
 section#project .sect_inner .sect_title .po_ab p {
   font-family: var(--subEng-font);
-  position: absolute;
-  top: 55%;
   color: var(--black200_txt);
   transition: 1s;
-  opacity: 0;
 }
 section#project .sect_inner .swiper_box {
   position: relative;
@@ -185,7 +182,7 @@ section#project .sect_inner .swiper_box .swiper-slide .sticker {
   z-index: 99;
 }
 section#project .sect_inner .swiper_box .swiper-slide:hover {
-  background: var(--mainBg-color);
+  background: var(--black);
   color: var(--black);
   border-left-color: var(--black600);
 }
@@ -299,9 +296,6 @@ section#project .sect_inner .swiper_box .swiper_btn .btn_box .swp_btn.swiper-but
   main #project .sect_inner .sect_title p {
     width: 90%;
     line-height: normal;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: center;
   }
   main #project .sect_inner .swiper_box .swiper {
@@ -382,9 +376,6 @@ section#project .sect_inner .swiper_box .swiper_btn .btn_box .swp_btn.swiper-but
   }
   main #project .sect_inner .sect_title p {
     line-height: normal;
-    left: -400px;
-    top: 50%;
-    transform: translateY(-50%);
   }
   main #project .sect_inner .swiper {
     margin-top: -50px;
@@ -461,8 +452,6 @@ section#project .sect_inner .swiper_box .swiper_btn .btn_box .swp_btn.swiper-but
   }
   main #project .sect_inner .sect_title p {
     line-height: normal;
-    left: -400px;
-    top: 55%;
   }
   main #project .sect_inner .swiper_box .swiper {
     margin-top: -50px;

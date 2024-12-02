@@ -1,15 +1,19 @@
 // import {menu} from "./src/js/menu.js";
 // import {link} from "./src/js/link.js";
+import gsap from 'gsap';
+
 import {header} from "./src/js/header.js";
 import {project} from "./src/js/project.js";
-import {bgColor} from "./src/js/bg_color.js";
+import {work} from "./src/js/work.js";
+// import {bgColor} from "./src/js/bg_color.js";
 
 window.addEventListener('load', function(){
   // menu()
   // link()
   header()
   project()
-  bgColor()
+  work()
+  // bgColor()
   
   document.querySelector('.up_btn').addEventListener('click', function() {
     // alert()
