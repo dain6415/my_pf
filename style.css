@@ -96,7 +96,7 @@ body {
 }
 .h-line1 {
   left: 5%;
-  z-index: 999;
+  /* z-index: 999; */
 }
 .h-line2 {
   left: 27.5%;
@@ -109,7 +109,7 @@ body {
 }
 .h-line5 {
   right: 5%;
-  z-index: 999;
+  /* z-index: 999; */
 }
 /* -------------------- */
 
