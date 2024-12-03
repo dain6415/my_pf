@@ -1,5 +1,5 @@
-import gsap from "/node_modules/.vite/deps/gsap.js?v=8ce3b243";
-import ScrollTrigger from "/node_modules/.vite/deps/gsap_ScrollTrigger.js?v=8ce3b243";
+import gsap from "../../node_modules/.vite/deps/gsap.js?v=8ce3b243";
+import ScrollTrigger from "../../node_modules/.vite/deps/gsap_ScrollTrigger.js?v=8ce3b243";
 
 export function bgColor() {
   gsap.registerPlugin(ScrollTrigger);

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Header Scroll</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            min-width: 700px;
+            width: 50%;
+            background: #000;
+            border-radius: 99px;
+            height: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            position: absolute;
+            top: calc(100vh - 100px);
+            transition: top 0.3s ease; /* top 위치 변경 시 애니메이션 */
+        }
+
+        header.fixed {
+            top: 50px; /* 헤더가 고정될 위치 */
+        }
+
+        section {
+            height: 100vh;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <section>SECT1
+        <header></header>
+    </section>
+    <section>SECT2</section>
+    <section>SECT3</section>
+    <section>SECT4</section>
+
+    <script>
+        const header = document.querySelector('header');
+        const triggerPoint = window.innerHeight - 100; // 헤더가 고정되기 시작할 지점
+
+        function scrollFunc() {
+            const scrollTop = window.scrollY;
+
+            // 스크롤 위치가 트리거 포인트를 넘어가면 fixed 클래스 추가
+            if (scrollTop >= triggerPoint) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
+        }
+
+        window.addEventListener('scroll', scrollFunc);
+    </script>
+</body>
+
+</html>

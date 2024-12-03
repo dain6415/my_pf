@@ -46,6 +46,7 @@
   </head>
 
   <body>
+    <!-- <div id="custom_cursor"><span></span></div> -->
     <div class="line">
       <div class="h-line h-line1"></div>
       <div class="h-line h-line2"></div>
@@ -55,79 +56,82 @@
       <!-- <div class="h-line h-line6"></div> -->
     </div>
 
-    <!-- header -->
-    <header id="header" role="banner">
-      <div class="header__inner">
-        <div class="header__logo">
-          <a href="#">portfolio<em>ux/ui / pulisher</em></a>
-        </div>
-        <nav class="header__nav" role="navigation" aria-label="메인메뉴">
-          <ul>
-            <li class="on"><a href="#intro">home</a></li>
-            <li><a href="#project">project</a></li>
-            <li><a href="#work">work</a></li>
-            <li><a href="#uxui">ux/ui</a></li>
-            <li><a href="#about">about</a></li>
-          </ul>
-        </nav>
-        <div
-          class="header__nav_mobile"
-          id="headerToggle"
-          aria-controls="primary-menu"
-          aria-expanded="flase"
-          role="button"
-        >
-          <span></span>
-        </div>
-      </div>
-    </header>
-
     <!-- ************************ -->
     <main>
       <!-- intro -->
       <section id="intro" data-bg="#f5f5f5">
+        <!-- header -->
+        <header id="header" role="banner">
+          <div class="header__inner">
+            <div class="header__logo">
+              <a href="#">portfolio<em>ux/ui / pulisher</em></a>
+            </div>
+            <nav class="header__nav" role="navigation" aria-label="메인메뉴">
+              <ul>
+                <li class="on"><a href="#intro">home</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#work">work</a></li>
+                <li><a href="#uxui">ux/ui</a></li>
+                <li><a href="#about">about</a></li>
+              </ul>
+            </nav>
+            <div
+              class="header__nav_mobile"
+              id="headerToggle"
+              aria-controls="primary-menu"
+              aria-expanded="flase"
+              role="button"
+            >
+              <span></span>
+            </div>
+          </div>
+        </header>
+        <div class="blend"></div>
         <div class="sect_inner">
+          <div class="stickers">
+            <div class="sticker black1">
+              <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <div class="sticker black2">
+              <div class="img_blend"></div>
+              <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <!-- blue  -->
+            <div class="sticker blue1">
+              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <div class="sticker blue2">
+              <div class="img_blend"></div>
+              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <div class="sticker blue3">
+              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <!-- blue&black  -->
+            <div class="sticker long1">
+              <img
+                src="./src/img/SVG/blue_long.svg"
+                alt="인트로 스티커 이미지"
+              />
+            </div>
+            <div class="sticker long2">
+              <img
+                src="./src/img/SVG/blue_long.svg"
+                alt="인트로 스티커 이미지"
+              />
+            </div>
+            <div class="sticker long3">
+              <img
+                src="./src/img/SVG/blue_long.svg"
+                alt="인트로 스티커 이미지"
+              />
+            </div>
+          </div>
           <div class="intro_title">
-            <p class="web">web</p>
+            <!-- <p class="web">web</p> -->
             <p class="publisher">Publisher</p>
-            <!-- <svg class="publisher-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 60">
-              <text x="10" y="40" font-size="80" fill="black">Publisher</text>
-            </svg> -->
-            
-            <p class="portfolio">portfolio</p>
+            <!-- <p class="portfolio">portfolio</p> -->
           </div>
-        </div>
-
-        <!-- sticker -->
-        <div class="stickers">
-          <div class="sticker black1">
-            <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <div class="sticker black2">
-            <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <div class="sticker black3">
-            <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <div class="sticker black4">
-            <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <!-- blue  -->
-          <div class="sticker blue1">
-            <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <div class="sticker blue2">
-            <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <div class="sticker blue3">
-            <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <!-- <div class="sticker sticker7">
-            <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-          </div>
-          <div class="sticker sticker8">
-            <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-          </div> -->
         </div>
       </section>
 
@@ -141,20 +145,36 @@
           </div>
           <div class="txt">
             <ul>
-              <p class="keyword">안정적인 사람</p>
               <li>
-                저는 한 가지에 푹 빠지는 스타일이에요. 물론, 필이 꽂혀야
-                그렇지만요! 디테일에 집착하는 편이라, 한 번 시작하면 될 때까지
-                파고드는 경향이 있어요. 이렇게도 해보고, 저렇게도 해보고, 계속
-                머리를 굴리다가 "아, 이건 정말 안되겠다" 싶을 때에서야 손을
-                놓습니다. 장점이라면 무언가를 끝까지 해내는 집념이 있다는 것.
-                단점이라면... 가끔 시간이 촉박해진다는 거겠죠. 넘어가야 할 때도
-                계속 한 가지에 매달리니까요. 하지만 그런 과정을 통해 완성도 높은
-                결과물을 만들어 내는 것이 제가 가진 가장 큰 강점이라고
-                생각합니다.
+                <p class="keyword">디테일 집착</p>
+                <p>
+                  저는 한 가지에 푹 빠지는 스타일이에요. 디테일에 집착하는
+                  편이라, 한 번 시작하면 될 때까지 파고드는 경향이 있어요. 계속
+                  머리를 굴리다가 "아, 이건 정말 안되겠다" 싶을 때에서야 손을
+                  놓습니다. 하지만 그런 과정을 통해 완성도 높은 결과물을 만들어 내는 것이 제가 가진 강점이라고 생각합니다.
+                </p>
               </li>
-              <li></li>
-              <li></li>
+              <!-- <li>
+                <p class="keyword">디테일 집착</p>
+                <p>
+                  저는 한 가지에 푹 빠지는 스타일이에요. 디테일에 집착하는
+                  편이라, 한 번 시작하면 될 때까지 파고드는 경향이 있어요. 계속
+                  머리를 굴리다가 "아, 이건 정말 안되겠다" 싶을 때에서야 손을
+                  놓습니다.
+                   <span>장점이라면 무언가를 끝까지 해내는 집념이 있다는 것.</span>
+                  하지만 그런 과정을 통해 완성도 높은 결과물을 만들어 내는 것이 제가 가진 가장 큰 강점이라고 생각합니다.
+                </p>
+              </li> -->
+              <li>
+                <p class="keyword">
+                  과정에서의 성취감이 저를 앞으로 나아가게 합니다
+                </p>
+                <p>
+                  저는 디자인을 처음부터 좋아했던 건 아니었어요. 하지만 어느새, 하나의 작업을 끝내고 결과물을 마주했을 때 느끼는 성취감이 제게 큰 원동력이 되고 있다는 걸 깨달았죠. 완벽하지 않아도, 한 발 한
+                  발 꾸준히 나아가는 과정 속에서 얻는 보람이 지금의 저를 만들어 주었습니다.
+    작업의 완성도를 높이기 위해 노력하는 편이에요
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -174,7 +194,7 @@
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide slide1">
-                  <a href="" target="_blank">
+                  <a href="#" target="_blank">
                     <div class="summary flex-sb">
                       <div class="number"><p>1</p></div>
                       <div class="txt">
@@ -197,7 +217,7 @@
                   </a>
                 </div>
                 <div class="swiper-slide slide2">
-                  <a href="" target="_blank">
+                  <a href="#" target="_blank">
                     <div class="summary flex-sb">
                       <div class="number"><p>2</p></div>
                       <div class="txt">
@@ -223,7 +243,7 @@
                   </a>
                 </div>
                 <!-- <div class="swiper-slide slide2">
-                  <a href="" target="_blank">
+                  <a href="#" target="_blank">
                     <div class="summary flex-sb">
                       <div class="number"><p>2</p></div>
                       <div class="txt">
@@ -249,7 +269,7 @@
                   </a>
                 </div> -->
                 <div class="swiper-slide slide3">
-                  <a href="" target="_blank">
+                  <a href="#" target="_blank">
                     <div class="summary flex-sb">
                       <div class="number"><p>3</p></div>
                       <div class="txt">
@@ -272,7 +292,7 @@
                   </a>
                 </div>
                 <div class="swiper-slide slide4">
-                  <a href="" target="_blank">
+                  <a href="#" target="_blank">
                     <div class="summary flex-sb">
                       <div class="number"><p>4</p></div>
                       <div class="txt">
@@ -323,7 +343,7 @@
             <div class="list_box">
               <ul>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <div class="list_summary">
                       <p class="list_title">망그러진 곰</p>
                       <p class="ex">설명을 쓰시오</p>
@@ -337,7 +357,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <div class="list_summary">
                       <p class="list_title">NONFICTION</p>
                       <p class="ex">
@@ -354,7 +374,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <div class="list_summary">
                       <p class="list_title">청와대</p>
                       <p class="ex">
@@ -371,7 +391,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <div class="list_summary">
                       <p class="list_title">NewJeans</p>
                       <p class="ex">
@@ -394,7 +414,7 @@
           <div class="list_box2">
             <ul>
               <li>
-                <a href="" target="_blank">
+                <a href="#" target="_blank">
                   <p class="date">날짜</p>
                   <p class="list_title">죠스 떡볶이</p>
                   <p class="ex">설명을 쓰시오</p>
@@ -406,7 +426,7 @@
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="#" target="_blank">
                   <p class="date">aaaa</p>
                   <p class="list_title">칠성사이다</p>
                   <p class="ex">설명을 쓰시오</p>
@@ -418,7 +438,7 @@
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="#" target="_blank">
                   <p class="date">aaaa</p>
                   <p class="list_title">인테리어</p>
                   <p class="ex">설명을 쓰시오</p>
@@ -430,7 +450,7 @@
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="#" target="_blank">
                   <p class="date">aaaa</p>
                   <p class="list_title">인테리어</p>
                   <p class="ex">설명을 쓰시오</p>
@@ -440,7 +460,7 @@
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="#" target="_blank">
                   <p class="date">aaaa</p>
                   <p class="list_title">yes 24</p>
                   <p class="ex">설명을 쓰시오</p>

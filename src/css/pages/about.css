@@ -2,6 +2,10 @@
   font-family: "LABSAmiga";
   text-transform: uppercase;
 }
+#about .txt ul li {
+  width: 25%;
+  border: 1px solid #000;
+}
 
 @media only screen and (min-width: 701px) {
   #about .sect_inner {

@@ -1,9 +1,10 @@
-section#intro {
+@charset "UTF-8";
+section#home {
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
   position: relative;
 }
-section#intro .blend {
+section#home .blend {
   background-image: url(/src/img/sticker_texture.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -16,12 +17,12 @@ section#intro .blend {
   height: 100%;
   z-index: 999;
 }
-section#intro .sect_inner {
+section#home .sect_inner {
   height: 86%;
   background-color: var(--black100);
   text-align: center;
 }
-section#intro .sect_inner .stickers {
+section#home .sect_inner .stickers {
   position: relative;
   left: 0;
   bottom: 0;
@@ -29,27 +30,23 @@ section#intro .sect_inner .stickers {
   height: 64%;
   border: 1px solid #000;
 }
-section#intro .sect_inner .stickers .sticker {
+section#home .sect_inner .stickers .sticker {
   margin-top: 40px;
   position: absolute;
   transition: 0.1;
-  opacity: 0;
-  border-radius: 999px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* 기본적으로 투명하게 시작 */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section#intro .sect_inner .stickers .sticker.black1 {
+section#home .sect_inner .stickers .sticker.black1 {
   transform: rotate(-65deg);
   z-index: 1;
-  background: var(--main-color);
 }
-section#intro .sect_inner .stickers .sticker.black2 {
+section#home .sect_inner .stickers .sticker.black2 {
   transform: rotate(35deg);
-  background: var(--main-color);
 }
-section#intro .sect_inner .stickers .sticker.black2 .img_blend {
+section#home .sect_inner .stickers .sticker.black2 .img_blend {
   width: 100%;
   height: 100%;
   background-image: url(/src/img/sticker_texture2.avif);
@@ -64,19 +61,16 @@ section#intro .sect_inner .stickers .sticker.black2 .img_blend {
   border-radius: 999px;
   z-index: 999;
 }
-section#intro .sect_inner .stickers .sticker.black3 {
+section#home .sect_inner .stickers .sticker.black3 {
   transform: rotate(45deg);
-  background: var(--main-color);
 }
-section#intro .sect_inner .stickers .sticker.blue1 {
+section#home .sect_inner .stickers .sticker.blue1 {
   transform: rotate(15deg);
-  background: #ddd;
 }
-section#intro .sect_inner .stickers .sticker.blue2 {
+section#home .sect_inner .stickers .sticker.blue2 {
   transform: rotate(-35deg);
-  background: #ddd;
 }
-section#intro .sect_inner .stickers .sticker.blue2 .img_blend {
+section#home .sect_inner .stickers .sticker.blue2 .img_blend {
   width: 100%;
   height: 100%;
   background-image: url(/src/img/sticker_texture2.avif);
@@ -91,32 +85,22 @@ section#intro .sect_inner .stickers .sticker.blue2 .img_blend {
   border-radius: 999px;
   z-index: 999;
 }
-section#intro .sect_inner .stickers .sticker.blue3 {
+section#home .sect_inner .stickers .sticker.blue3 {
   transform: rotate(195deg);
-  background: #ddd;
 }
-section#intro .sect_inner .stickers .sticker.long1 {
+section#home .sect_inner .stickers .sticker.long1 {
   transform: rotate(30deg);
-  border-radius: 27px;
-  background: var(--main-color);
 }
-section#intro .sect_inner .stickers .sticker.long2 {
+section#home .sect_inner .stickers .sticker.long2 {
   transform: rotate(-20deg);
-  border-radius: 27px;
-  background: var(--main-color);
 }
-section#intro .sect_inner .stickers .sticker.long3 {
+section#home .sect_inner .stickers .sticker.long3 {
   transform: rotate(-210deg);
-  border-radius: 27px;
-  background: var(--main-color);
 }
-section#intro .sect_inner .intro_title {
-  transform: translateY(80px);
-  color: var(--main-color);
-  mix-blend-mode: difference;
+section#home .sect_inner .intro_title {
+  color: var(--black600);
 }
-section#intro .sect_inner .intro_title p.publisher {
-  font-size: 100px;
+section#home .sect_inner .intro_title p {
   line-height: 1;
 }
 
@@ -126,70 +110,72 @@ section#intro .sect_inner .intro_title p.publisher {
     margin: auto;
     width: 100%;
   }
-  main section#intro {
+  main section#home {
     height: 100vh;
   }
-  main section#intro .intro_title p {
+  main section#home .intro_title p {
     text-align: center;
     font-weight: 700;
   }
-  main section#intro .intro_title p.publisher {
+  main section#home .intro_title p.publisher {
+    font-size: 270px;
     text-transform: uppercase;
   }
-  main section#intro .intro_title .publisher-stroke {
+  main section#home .intro_title .publisher-stroke {
     width: 500px;
   }
-  main section#intro .intro_title .publisher-stroke.text {
+  main section#home .intro_title .publisher-stroke.text {
     stroke: red;
     stroke-width: 2;
   }
-  main section#intro .sticker {
+  main section#home .sticker {
     width: 250px;
+    border-radius: 999px;
   }
-  main section#intro .sticker img {
+  main section#home .sticker img {
     width: 100%;
   }
-  main section#intro .sticker.black1 {
+  main section#home .sticker.black1 {
     left: 31%;
     top: 35%;
   }
-  main section#intro .sticker.black2 {
+  main section#home .sticker.black2 {
     right: 25%;
     top: 10%;
   }
-  main section#intro .sticker.black3 {
+  main section#home .sticker.black3 {
     right: 16%;
     bottom: 12%;
   }
-  main section#intro .sticker.black4 {
+  main section#home .sticker.black4 {
     right: -8%;
     bottom: 18%;
   }
-  main section#intro .sticker.blue1 {
+  main section#home .sticker.blue1 {
     right: 2%;
     top: 25%;
   }
-  main section#intro .sticker.blue2 {
+  main section#home .sticker.blue2 {
     left: 13%;
     top: 10%;
   }
-  main section#intro .sticker.blue3 {
+  main section#home .sticker.blue3 {
     right: 17%;
     bottom: 1%;
   }
-  main section#intro .sticker.long1 {
+  main section#home .sticker.long1 {
     width: 350px;
     left: -2%;
     bottom: 20%;
   }
-  main section#intro .sticker.long2 {
+  main section#home .sticker.long2 {
     width: 350px;
     left: 35%;
     top: 11%;
   }
-  main section#intro .sticker.long3 {
+  main section#home .sticker.long3 {
     width: 350px;
     right: -12%;
     bottom: -5%;
   }
-}/*# sourceMappingURL=intro.css.map */
+}/*# sourceMappingURL=home.css.map */
