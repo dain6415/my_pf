@@ -23,7 +23,7 @@ body {
 
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: 9999;
   bottom: 5%;
   position: absolute;
   top: calc(100vh - 100px);
@@ -52,7 +52,8 @@ body {
         color: var(--black600);
 
         li {
-          position: relative;
+          a{
+            position: relative;
 
           &::after {
             content: "";
@@ -75,10 +76,11 @@ body {
             }
           }
 
-          &:hover {
+          &:hover:not(.on) {
             &::after {
               width: 100%;
             }
+          }
           }
         }
       }

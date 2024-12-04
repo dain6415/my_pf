@@ -68,11 +68,11 @@
             </div>
             <nav class="header__nav" role="navigation" aria-label="메인메뉴">
               <ul>
-                <li class="on"><a href="#intro">home</a></li>
+                <li ><a href="#intro" class="on">home</a></li>
+                <li><a href="#about">about</a></li>
                 <li><a href="#project">project</a></li>
                 <li><a href="#work">work</a></li>
                 <li><a href="#uxui">ux/ui</a></li>
-                <li><a href="#about">about</a></li>
               </ul>
             </nav>
             <div
@@ -99,25 +99,20 @@
             <div class="sticker black1">
               <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
             </div>
-            <div class="sticker black2">
-              <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
-            </div>
-            <!-- blue  -->
-            <div class="sticker blue1">
-              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
-            </div>
-            <div class="sticker blue2">
-              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
-            </div>
-            <div class="sticker blue3">
-              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
-            </div>
-            <!-- blue&black  -->
             <div class="sticker long1">
               <img
                 src="./src/img/SVG/blue_long.svg"
                 alt="인트로 스티커 이미지"
               />
+            </div>
+            <div class="sticker blue1">
+              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <div class="sticker black2">
+              <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <div class="sticker blue2">
+              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
             </div>
             <div class="sticker long2">
               <img
@@ -125,6 +120,15 @@
                 alt="인트로 스티커 이미지"
               />
             </div>
+            <div class="sticker blue3">
+              <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+            </div>
+            <!-- <div class="sticker long4">
+              <img
+                src="./src/img/SVG/blue_long.svg"
+                alt="인트로 스티커 이미지"
+              />
+            </div> -->
             <div class="sticker long3">
               <img
                 src="./src/img/SVG/blue_long.svg"
@@ -152,16 +156,15 @@
         <div class="sect_inner">
           <div class="sect_title">
             <div class="po_ab">
-              <p>about</p>
+              <!-- <p>about</p> -->
             </div>
           </div>
           <div class="txt">
             <ul>
               <li>
-                <p class="keyword">디테일 집착</p>
+                <p class="keyword">완성에 대한 디테일</p>
                 <p>
-                  "디자인에 대해 처음부터 좋아했던 건 아니었어요. 하지만 작업을 하나씩 끝내고 결과물을 마주할 때 느끼는 성취감이 점점 저를 이끌어주는 원동력이 되었죠. 완벽하지 않아도 한 걸음씩 꾸준히 나아가는 과정에서 얻는 보람이 지금의 저를 만들어 주었어요. 다만, 저는 디테일에 조금 집착하는 성향이 있어서, 완벽주의까지는 아니지만 작업의 완성도를 높이기 위해 노력하는 편이에요."
-
+                  어떤 일이든 완성은 디테일에서 결정된다고 생각합니다. 저는 작은 디테일 하나라도 놓치지 않으려는 태도를 중요하게 여기며, 이를 통해 작업의 완성도를 높이기 위해 항상 노력합니다. 완벽주의라는 단어가 어울릴 정도는 아니지만, 작업의 완성도를 높이기 위해 노력하는 편입니다.
                 </p>
               </li>
               <!-- <li>
@@ -181,7 +184,7 @@
                 </p>
                 <p>
                   저는 디자인을 처음부터 좋아했던 건 아니었어요. 하지만 어느새, 하나의 작업을 끝내고 결과물을 마주했을 때 느끼는 성취감이 제게 큰 원동력이 되고 있다는 걸 깨달았죠. 완벽하지 않아도, 한 발 한
-                  발 꾸준히 나아가는 과정 속에서 얻는 보람이 지금의 저를 만들어 주었습니다.작업의 완성도를 높이기 위해 노력하는 편이에요
+                  발 꾸준히 나아가는 과정 속에서 얻는 보람이 지금의 저를 만들어 주었습니다.
                 </p>
               </li>
             </ul>
@@ -289,7 +292,7 @@
                     </div> -->
                     <div class="sticker">
                       <img
-                        src="./src/img/SVG/sema.svg"
+                        src="./src/img/SVG/sema_logo_원래.svg"
                         alt="서울시립미술관 로고"
                       />
                     </div>
@@ -479,8 +482,26 @@
     <!-- -------------------------------------------------------------------------------------------- -->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.umd.min.js
+    "></script>
+    
+    <script>
+      const lenis = new Lenis();
+
+      // Use requestAnimationFrame to continuously update the scroll
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
     <script type="module" src="./main.js"></script>
     
   </body>

@@ -11,7 +11,7 @@ body {
   height: 100px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: 9999;
   bottom: 5%;
   position: absolute;
   top: calc(100vh - 100px);
@@ -35,10 +35,10 @@ body {
   text-transform: uppercase;
   color: var(--black600);
 }
-#header .header__inner nav ul li {
+#header .header__inner nav ul li a {
   position: relative;
 }
-#header .header__inner nav ul li::after {
+#header .header__inner nav ul li a::after {
   content: "";
   width: 0%;
   height: 2px;
@@ -48,14 +48,14 @@ body {
   bottom: -2px;
   transition: 0.3s;
 }
-#header .header__inner nav ul li.on {
+#header .header__inner nav ul li a.on {
   color: var(--main-color);
   font-weight: 700;
 }
-#header .header__inner nav ul li.on::after {
+#header .header__inner nav ul li a.on::after {
   width: 0;
 }
-#header .header__inner nav ul li:hover::after {
+#header .header__inner nav ul li a:hover:not(.on)::after {
   width: 100%;
 }
 

@@ -20,8 +20,9 @@ section {
       width: 100px;
       height: 100px;
       background: rgba(255, 255, 255, 0.3);
-      border-radius:50%; /* 도형 형태를 유지하려면 필요 */
-      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 1px 1px 5px  rgba(0, 0, 0 , .1); /* 안쪽 블러 효과 */
+      border-radius: 50%; /* 도형 형태를 유지하려면 필요 */
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+        1px 1px 5px rgba(0, 0, 0, 0.1); /* 안쪽 블러 효과 */
       position: absolute;
       left: 50%;
       bottom: 9%;
@@ -30,23 +31,22 @@ section {
       backdrop-filter: blur(10px);
     }
     .blend {
+      // pointer-events: none;
       background-image: url(/src/img/sticker_texture.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 120%;
-      mix-blend-mode: color-burn;
+      mix-blend-mode: multiply;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: 90;
-      pointer-events: none;
     }
     .sect_inner {
       // padding: 12rem 5% 0;
       height: 86%;
-      // background-blend-mode: multiply;
       background-color: var(--black100);
       text-align: center;
       .stickers {
@@ -56,22 +56,40 @@ section {
         width: 100%;
         height: 64%;
         .sticker {
-          margin-top: 40px;
           position: absolute;
+          left: 50%;
           transition: 0.1;
           opacity: 0;
-          border-radius: 999px;
-          // border: 2px solid #fc0f0f;
           box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
           @include flex-c();
           overflow: hidden;
+          transition: .05s;
+          &.black1,&.black2,&.black3,&.blue1,&.blue2,&.blue3{
+            border-radius: 50%;
+          }
           &.black1 {
-            transform: rotate(-65deg);
-            z-index: 1;
+            z-index: 10;
             background: var(--main-color);
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture.jpg);
+              background-position: bottom right;
+              background-repeat: no-repeat;
+              background-size: 190%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform: rotate(45deg);
+              transform-origin: center;
+              pointer-events: none;
+            }
           }
           &.black2 {
-            transform: rotate(35deg);
             background: var(--main-color);
             &::after {
               content: "";
@@ -93,7 +111,6 @@ section {
           }
 
           &.blue1 {
-            transform: rotate(15deg);
             background: #ddd;
             &::after {
               content: "";
@@ -111,10 +128,10 @@ section {
               z-index: 1;
               transform: rotate(45deg);
               transform-origin: center;
+              pointer-events: none;
             }
           }
           &.blue2 {
-            transform: rotate(-35deg);
             background: #ddd;
             &::after {
               content: "";
@@ -128,39 +145,118 @@ section {
               mix-blend-mode: color-burn;
               @include po-c();
               z-index: 1;
+              pointer-events: none;
             }
           }
           &.blue3 {
-            transform: rotate(195deg);
+            background: #ddd;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture.jpg);
+              background-position: bottom right;
+              background-repeat: no-repeat;
+              background-size: 100%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform: rotate(45deg);
+              transform-origin: center;
+              pointer-events: none;
+            }
+          }
+          &.blue4 {
             background: #ddd;
           }
 
-          &.long1 {
-            transform: rotate(30deg);
-            border-radius: 27px;
+          &.long1,&.long2,&.long3,&.blue4 {
             background: var(--main-color);
+            
           }
-          &.long2 {
-            transform: rotate(-20deg);
-            border-radius: 27px;
-            background: var(--main-color);
+          &.long1{
+            z-index: 1;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture.jpg);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 150%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              // transform: rotate(45deg);
+              transform-origin: center;
+              pointer-events: none;
+            }
           }
-          &.long3 {
-            transform: rotate(-210deg);
-            border-radius: 27px;
-            background: var(--main-color);
+          &.long2{
+            z-index: 1;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture2.avif);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 150%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform-origin: center;
+              pointer-events: none;
+            }
           }
-        }
-      }
-      .intro_title {
-        transform: translateY(80px);
-        color: var(--main-color);
-        mix-blend-mode: difference;
-        text-transform: uppercase;
-        // color: var(--mainBg-color);
-        p.publisher {
-          font-size: 100px;
-          line-height: 1;
+          &.long3{
+            z-index: 1;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture2.avif);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 150%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform-origin: center;
+              pointer-events: none;
+            }
+          }
+          &.long4{
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture.avif);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 150%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform-origin: center;
+              pointer-events: none;
+            }
+          }
         }
       }
     }
@@ -169,10 +265,173 @@ section {
 // ***************************************************************************************************************************
 
 @media only screen and (max-width: 600px) {
+  main {
+    section {
+      width: 1400px;
+      margin: auto;
+      width: 100%;
+      &#intro {
+        height: 100vh;
+        .blend {
+          background-image: url(/src/img/sticker_texture.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 120% 150%;
+          mix-blend-mode: color-burn;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 90;
+          pointer-events: none;
+        }
+
+        .sticker {
+          width: 150px;
+          // border-radius: 999px;
+          // border: 1px solid #000;
+          img {
+            width: 100%;
+          }
+          &.black1 {
+            transform: translate(-58%, 180%) rotate(-65deg);
+          }
+          &.black2 {
+            transform: translate(-4%, 23%) rotate(35deg);
+          }
+          &.blue1 {
+            transform: translate(72%, 138%) rotate(15deg);
+          }
+          &.blue2 {
+            transform: translate(-130%, 140%) rotate(-25deg);
+          }
+          &.blue3 {
+            z-index: 10;
+            transform: translate(27%, 246%) rotate(220deg);
+          }
+          &.long1,&.long2,&.long3 {
+            background: var(--main-color);
+            border-radius: 15px;
+          }
+          &.long1 {
+            width: 16rem;
+            transform: translate(-118%, 346%) rotate(35deg);
+          }
+          &.long2 {
+            width: 16rem;
+            transform: translate(-43%, 187%) rotate(-20deg);
+          }
+          &.long3 {
+            width: 16rem;
+            transform: translate(31%, 309%) rotate(130deg);
+          }
+        }
+
+        .intro_title {
+          transform: translateY(80px);
+          color: var(--mainBg-color);
+          mix-blend-mode: difference;
+          text-transform: uppercase;
+          // color: var(--mainBg-color);
+          p{
+            &.publisher {
+              font-size: 4rem;
+              font-weight: 700;
+              line-height: 1;
+            }
+            &.portfolio{
+              color: var(--black600);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // ----------------------------------------------------------------------
 
 @media only screen and (min-width: 601px) {
+  main {
+    section {
+      width: 1400px;
+      margin: auto;
+      width: 100%;
+      &#intro {
+        height: 100vh;
+        .blend {
+          background-image: url(/src/img/sticker_texture.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 120% 150%;
+          mix-blend-mode: color-burn;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 90;
+          pointer-events: none;
+        }
+        .intro_title {
+          transform: translateY(80px);
+          color: var(--main-color);
+          mix-blend-mode: difference;
+          text-transform: uppercase;
+          // color: var(--mainBg-color);
+          p.publisher {
+            font-size: 100px;
+            line-height: 1;
+          }
+        }
+
+        .sticker {
+          width: 250px;
+          // border-radius: 999px;
+          // border: 1px solid #000;
+          img {
+            width: 100%;
+          }
+          &.black1 {
+            transform: translate(-86%, 70%) rotate(-65deg);
+          }
+          &.black2 {
+            transform: translate(-4%, 23%) rotate(35deg);
+          }
+          &.blue1 {
+            transform: translate(88%, 58%) rotate(15deg);
+          }
+          &.blue2 {
+            transform: translate(-160%, 32%) rotate(-35deg);
+          }
+          &.blue3 {
+            transform: translate(25%, 92%) rotate(195deg);
+          }
+
+          &.long1,&.long2,&.long3,&.long4 {
+            background: var(--main-color);
+            border-radius: 22px;
+          }
+          &.long1 {
+            width: 22rem;
+            transform: translate(-153%, 216%) rotate(27deg);
+          }
+          &.long2 {
+            width: 22rem;
+            transform: translate(-53%, 38%) rotate(-20deg);
+          }
+          &.long3 {
+            width: 22rem;
+            transform: translate(83%, 263%) rotate(-210deg);
+          }
+          &.long4 {
+            width: 22rem;
+            transform: translate(-67%, 235%) rotate(110deg);
+          }
+        }
+      }
+    }
+  }
 }
 // ----------------------------------------------------------------------
 
@@ -202,12 +461,6 @@ section {
             }
           }
         }
-        // .img_box{
-        //   img{
-        //     width: 20%;
-        //     filter: drop-shadow(5px 5px 5px red);
-        //   }
-        // }
 
         .sticker {
           width: 250px;
@@ -215,51 +468,6 @@ section {
           // border: 1px solid #000;
           img {
             width: 100%;
-          }
-          &.black1 {
-            left: 31%;
-            top: 35%;
-          }
-          &.black2 {
-            right: 25%;
-            top: 10%;
-          }
-          &.black3 {
-            right: 16%;
-            bottom: 12%;
-          }
-          &.black4 {
-            right: -8%;
-            bottom: 18%;
-          }
-          // blue
-          &.blue1 {
-            right: 2%;
-            top: 25%;
-          }
-          &.blue2 {
-            left: 13%;
-            top: 10%;
-          }
-          &.blue3 {
-            right: 17%;
-            bottom: 1%;
-          }
-
-          &.long1 {
-            width: 350px;
-            left: -2%;
-            bottom: 20%;
-          }
-          &.long2 {
-            width: 350px;
-            left: 35%;
-            top: 11%;
-          }
-          &.long3 {
-            width: 350px;
-            right: -12%;
-            bottom: -5%;
           }
         }
       }

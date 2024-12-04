@@ -1,53 +1,72 @@
 export function header() {
-//스크롤 값 구하기
+  //스크롤 값 구하기
   // window.addEventListener('scroll', function() {
   //   console.log(window.scrollY);
   // });
 
-  const header = document.querySelector('header');
-  let headerTop = header.offsetTop;  
+  const header = document.querySelector("header");
+  let headerTop = header.offsetTop;
 
   function scrollFunc() {
-      const scrollTop = window.scrollY;
+    const scrollTop = window.scrollY;
 
-
-      if (scrollTop + 0 >= headerTop) {
-          header.classList.add('fixed');
-      } else {
-          header.classList.remove('fixed');
-      }
+    if (scrollTop + 0 >= headerTop) {
+      header.classList.add("fixed");
+    } else {
+      header.classList.remove("fixed");
+    }
   }
 
- 
-  window.addEventListener('scroll', scrollFunc);
+  window.addEventListener("scroll", scrollFunc);
 
-
-  window.addEventListener('resize', () => {
-      headerTop = header.offsetTop;
+  window.addEventListener("resize", () => {
+    headerTop = header.offsetTop;
   });
 
-
-  const links = document.querySelectorAll('a[href^="#sect"]');
-
+  let links = gsap.utils.toArray("nav ul li a");
   links.forEach((link) => {
-    link.addEventListener('click', function(e) {
+    let elem = document.querySelector(link.getAttribute("href"));
+    console.log(elem);
+
+    ScrollTrigger.create({
+      trigger: elem,
+      start: "top center",
+      end: "bottom center",
+      onToggle: (self) => linkActive(link),
+    });
+    // -------------------------------------------
+    link.addEventListener("click", function (e) {
       e.preventDefault();
-      
-      const href = this.getAttribute('href');
-      const sect = document.querySelector(href);
-  
-      //일반적으로 해당 위치로 가기, 윈도우의 y 좌표값을 찾아가는 것
-      // window.scrollTo({
-      //   top: sect.offsetTop,
-      //   behavior: 'smooth' //가는 움직임이 부드러움
-      // })
-      
-      //해당 위치로 가는데 height의 센터로 감, 해당 오브젝트 찾아가는 것
-      sect.scrollIntoView({
-        behavior: 'smooth',
-        block:'center',
-  
-      })
+      linkActive(link);
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+          y: elem,
+          offsetY: 50,
+        },
+        overwrite: "auto",
+      });
     });
   });
+  // nav 활성화 비활성화-------------------------------------------
+  const showNav = gsap
+    .from("nav", {
+      // yPercent: -200,
+      paused: true,
+      duration: 0.2,
+    })
+    .progress(1);
+
+  ScrollTrigger.create({
+    start: "top top",
+    end: 9999,
+    onUpdate: (self) => {
+      self.direction === -1 ? showNav.play() : showNav.reverse();
+    },
+  });
+  // 버튼 활성화-------------------------------------------
+  function linkActive(link) {
+    links.forEach((el) => el.classList.remove("on"));
+    link.classList.add("on");
+  }
 }

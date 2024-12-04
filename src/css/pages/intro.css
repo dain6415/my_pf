@@ -22,14 +22,13 @@ section#intro .blend {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: multiply;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 90;
-  pointer-events: none;
 }
 section#intro .sect_inner {
   height: 86%;
@@ -44,24 +43,42 @@ section#intro .sect_inner .stickers {
   height: 64%;
 }
 section#intro .sect_inner .stickers .sticker {
-  margin-top: 40px;
   position: absolute;
+  left: 50%;
   transition: 0.1;
   opacity: 0;
-  border-radius: 999px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: 0.05s;
+}
+section#intro .sect_inner .stickers .sticker.black1, section#intro .sect_inner .stickers .sticker.black2, section#intro .sect_inner .stickers .sticker.black3, section#intro .sect_inner .stickers .sticker.blue1, section#intro .sect_inner .stickers .sticker.blue2, section#intro .sect_inner .stickers .sticker.blue3 {
+  border-radius: 50%;
 }
 section#intro .sect_inner .stickers .sticker.black1 {
-  transform: rotate(-65deg);
-  z-index: 1;
+  z-index: 10;
   background: var(--main-color);
 }
+section#intro .sect_inner .stickers .sticker.black1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 190%;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: rotate(45deg);
+  transform-origin: center;
+  pointer-events: none;
+}
 section#intro .sect_inner .stickers .sticker.black2 {
-  transform: rotate(35deg);
   background: var(--main-color);
 }
 section#intro .sect_inner .stickers .sticker.black2::after {
@@ -84,7 +101,6 @@ section#intro .sect_inner .stickers .sticker.black3 {
   background: var(--main-color);
 }
 section#intro .sect_inner .stickers .sticker.blue1 {
-  transform: rotate(15deg);
   background: #ddd;
 }
 section#intro .sect_inner .stickers .sticker.blue1::after {
@@ -102,9 +118,9 @@ section#intro .sect_inner .stickers .sticker.blue1::after {
   z-index: 1;
   transform: rotate(45deg);
   transform-origin: center;
+  pointer-events: none;
 }
 section#intro .sect_inner .stickers .sticker.blue2 {
-  transform: rotate(-35deg);
   background: #ddd;
 }
 section#intro .sect_inner .stickers .sticker.blue2::after {
@@ -121,37 +137,259 @@ section#intro .sect_inner .stickers .sticker.blue2::after {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  pointer-events: none;
 }
 section#intro .sect_inner .stickers .sticker.blue3 {
-  transform: rotate(195deg);
   background: #ddd;
 }
-section#intro .sect_inner .stickers .sticker.long1 {
-  transform: rotate(30deg);
-  border-radius: 27px;
+section#intro .sect_inner .stickers .sticker.blue3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: rotate(45deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+section#intro .sect_inner .stickers .sticker.blue4 {
+  background: #ddd;
+}
+section#intro .sect_inner .stickers .sticker.long1, section#intro .sect_inner .stickers .sticker.long2, section#intro .sect_inner .stickers .sticker.long3, section#intro .sect_inner .stickers .sticker.blue4 {
   background: var(--main-color);
+}
+section#intro .sect_inner .stickers .sticker.long1 {
+  z-index: 1;
+}
+section#intro .sect_inner .stickers .sticker.long1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: center;
+  pointer-events: none;
 }
 section#intro .sect_inner .stickers .sticker.long2 {
-  transform: rotate(-20deg);
-  border-radius: 27px;
-  background: var(--main-color);
+  z-index: 1;
+}
+section#intro .sect_inner .stickers .sticker.long2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture2.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: center;
+  pointer-events: none;
 }
 section#intro .sect_inner .stickers .sticker.long3 {
-  transform: rotate(-210deg);
-  border-radius: 27px;
-  background: var(--main-color);
+  z-index: 1;
 }
-section#intro .sect_inner .intro_title {
-  transform: translateY(80px);
-  color: var(--main-color);
-  mix-blend-mode: difference;
-  text-transform: uppercase;
+section#intro .sect_inner .stickers .sticker.long3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture2.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: center;
+  pointer-events: none;
 }
-section#intro .sect_inner .intro_title p.publisher {
-  font-size: 100px;
-  line-height: 1;
+section#intro .sect_inner .stickers .sticker.long4::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  mix-blend-mode: color-burn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: center;
+  pointer-events: none;
 }
 
+@media only screen and (max-width: 600px) {
+  main section {
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
+  main section#intro {
+    height: 100vh;
+  }
+  main section#intro .blend {
+    background-image: url(/src/img/sticker_texture.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120% 150%;
+    mix-blend-mode: color-burn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    pointer-events: none;
+  }
+  main section#intro .sticker {
+    width: 150px;
+  }
+  main section#intro .sticker img {
+    width: 100%;
+  }
+  main section#intro .sticker.black1 {
+    transform: translate(-58%, 180%) rotate(-65deg);
+  }
+  main section#intro .sticker.black2 {
+    transform: translate(-4%, 23%) rotate(35deg);
+  }
+  main section#intro .sticker.blue1 {
+    transform: translate(72%, 138%) rotate(15deg);
+  }
+  main section#intro .sticker.blue2 {
+    transform: translate(-130%, 140%) rotate(-25deg);
+  }
+  main section#intro .sticker.blue3 {
+    z-index: 10;
+    transform: translate(27%, 246%) rotate(220deg);
+  }
+  main section#intro .sticker.long1, main section#intro .sticker.long2, main section#intro .sticker.long3 {
+    background: var(--main-color);
+    border-radius: 15px;
+  }
+  main section#intro .sticker.long1 {
+    width: 16rem;
+    transform: translate(-118%, 346%) rotate(35deg);
+  }
+  main section#intro .sticker.long2 {
+    width: 16rem;
+    transform: translate(-43%, 187%) rotate(-20deg);
+  }
+  main section#intro .sticker.long3 {
+    width: 16rem;
+    transform: translate(31%, 309%) rotate(130deg);
+  }
+  main section#intro .intro_title {
+    transform: translateY(80px);
+    color: var(--mainBg-color);
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title p.publisher {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  main section#intro .intro_title p.portfolio {
+    color: var(--black600);
+  }
+}
+@media only screen and (min-width: 601px) {
+  main section {
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
+  main section#intro {
+    height: 100vh;
+  }
+  main section#intro .blend {
+    background-image: url(/src/img/sticker_texture.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120% 150%;
+    mix-blend-mode: color-burn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    pointer-events: none;
+  }
+  main section#intro .intro_title {
+    transform: translateY(80px);
+    color: var(--main-color);
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title p.publisher {
+    font-size: 100px;
+    line-height: 1;
+  }
+  main section#intro .sticker {
+    width: 250px;
+  }
+  main section#intro .sticker img {
+    width: 100%;
+  }
+  main section#intro .sticker.black1 {
+    transform: translate(-86%, 70%) rotate(-65deg);
+  }
+  main section#intro .sticker.black2 {
+    transform: translate(-4%, 23%) rotate(35deg);
+  }
+  main section#intro .sticker.blue1 {
+    transform: translate(88%, 58%) rotate(15deg);
+  }
+  main section#intro .sticker.blue2 {
+    transform: translate(-160%, 32%) rotate(-35deg);
+  }
+  main section#intro .sticker.blue3 {
+    transform: translate(25%, 92%) rotate(195deg);
+  }
+  main section#intro .sticker.long1, main section#intro .sticker.long2, main section#intro .sticker.long3, main section#intro .sticker.long4 {
+    background: var(--main-color);
+    border-radius: 22px;
+  }
+  main section#intro .sticker.long1 {
+    width: 22rem;
+    transform: translate(-153%, 216%) rotate(27deg);
+  }
+  main section#intro .sticker.long2 {
+    width: 22rem;
+    transform: translate(-53%, 38%) rotate(-20deg);
+  }
+  main section#intro .sticker.long3 {
+    width: 22rem;
+    transform: translate(83%, 263%) rotate(-210deg);
+  }
+  main section#intro .sticker.long4 {
+    width: 22rem;
+    transform: translate(-67%, 235%) rotate(110deg);
+  }
+}
 @media only screen and (min-width: 900px) {
   main section {
     width: 1400px;
@@ -180,48 +418,5 @@ section#intro .sect_inner .intro_title p.publisher {
   }
   main section#intro .sticker img {
     width: 100%;
-  }
-  main section#intro .sticker.black1 {
-    left: 31%;
-    top: 35%;
-  }
-  main section#intro .sticker.black2 {
-    right: 25%;
-    top: 10%;
-  }
-  main section#intro .sticker.black3 {
-    right: 16%;
-    bottom: 12%;
-  }
-  main section#intro .sticker.black4 {
-    right: -8%;
-    bottom: 18%;
-  }
-  main section#intro .sticker.blue1 {
-    right: 2%;
-    top: 25%;
-  }
-  main section#intro .sticker.blue2 {
-    left: 13%;
-    top: 10%;
-  }
-  main section#intro .sticker.blue3 {
-    right: 17%;
-    bottom: 1%;
-  }
-  main section#intro .sticker.long1 {
-    width: 350px;
-    left: -2%;
-    bottom: 20%;
-  }
-  main section#intro .sticker.long2 {
-    width: 350px;
-    left: 35%;
-    top: 11%;
-  }
-  main section#intro .sticker.long3 {
-    width: 350px;
-    right: -12%;
-    bottom: -5%;
   }
 }/*# sourceMappingURL=intro.css.map */
