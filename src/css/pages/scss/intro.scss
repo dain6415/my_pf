@@ -1,22 +1,35 @@
-@mixin po-c{
+@mixin po-c {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-@mixin flex-c($justify:center){
+@mixin flex-c($justify: center) {
   display: flex;
   justify-content: $justify;
   align-items: center;
 }
 
-section{
-  &#intro{
+section {
+  &#intro {
     // display: none;
     background: var(--mainBg-color);
     border-bottom: 1px solid var(--black600);
     position: relative;
-    .blend{
+    .home__down {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius:50%; /* 도형 형태를 유지하려면 필요 */
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 1px 1px 5px  rgba(0, 0, 0 , .1); /* 안쪽 블러 효과 */
+      position: absolute;
+      left: 50%;
+      bottom: 9%;
+      transform: translateX(-50%);
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+    .blend {
       background-image: url(/src/img/sticker_texture.jpg);
       background-position: center;
       background-repeat: no-repeat;
@@ -27,33 +40,41 @@ section{
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 999;
+      z-index: 90;
+      pointer-events: none;
     }
-    .sect_inner{
+    .sect_inner {
       // padding: 12rem 5% 0;
       height: 86%;
       // background-blend-mode: multiply;
       background-color: var(--black100);
       text-align: center;
-      .stickers{
+      .stickers {
         position: relative;
         left: 0;
         bottom: 0;
         width: 100%;
         height: 64%;
-        border: 1px solid #000;
-        .sticker{
+        .sticker {
           margin-top: 40px;
           position: absolute;
           transition: 0.1;
           opacity: 0;
           border-radius: 999px;
           // border: 2px solid #fc0f0f;
-          box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: .2);
+          box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
           @include flex-c();
-          &.black1{transform: rotate(-65deg); z-index: 1; background: var(--main-color);}
-          &.black2{transform: rotate(35deg); background: var(--main-color);
-            .img_blend{
+          overflow: hidden;
+          &.black1 {
+            transform: rotate(-65deg);
+            z-index: 1;
+            background: var(--main-color);
+          }
+          &.black2 {
+            transform: rotate(35deg);
+            background: var(--main-color);
+            &::after {
+              content: "";
               width: 100%;
               height: 100%;
               // border: 1px solid red;
@@ -61,42 +82,83 @@ section{
               background-position: center;
               background-repeat: no-repeat;
               background-size: 120%;
-              mix-blend-mode:color-burn;
+              mix-blend-mode: color-burn;
               @include po-c();
-              border-radius: 999px;
-              z-index: 999;
-            }}
-          &.black3{transform: rotate(45deg); background: var(--main-color);}
-
-          &.blue1{transform: rotate(15deg);background:#ddd;}
-          &.blue2{transform: rotate(-35deg);background:#ddd;
-            .img_blend{
-              width: 100%;
-              height: 100%;
-              // border: 1px solid red;
-              background-image: url(/src/img/sticker_texture2.avif);
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: 120%;
-              mix-blend-mode:color-burn;
-              @include po-c();
-              border-radius: 999px;
-              z-index: 999;
+              z-index: 1;
             }
           }
-          &.blue3{transform: rotate(195deg); background:#ddd;}
+          &.black3 {
+            transform: rotate(45deg);
+            background: var(--main-color);
+          }
 
-          &.long1{transform: rotate(30deg); border-radius: 27px;background:var(--main-color);}
-          &.long2{transform: rotate(-20deg); border-radius: 27px;background:var(--main-color);}
-          &.long3{transform: rotate(-210deg); border-radius: 27px;background:var(--main-color);}
+          &.blue1 {
+            transform: rotate(15deg);
+            background: #ddd;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture2.avif);
+              background-position: bottom right;
+              background-repeat: no-repeat;
+              background-size: 100%;
+              mix-blend-mode: color-burn;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              transform: rotate(45deg);
+              transform-origin: center;
+            }
+          }
+          &.blue2 {
+            transform: rotate(-35deg);
+            background: #ddd;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              // border: 1px solid red;
+              background-image: url(/src/img/sticker_texture2.avif);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 120%;
+              mix-blend-mode: color-burn;
+              @include po-c();
+              z-index: 1;
+            }
+          }
+          &.blue3 {
+            transform: rotate(195deg);
+            background: #ddd;
+          }
+
+          &.long1 {
+            transform: rotate(30deg);
+            border-radius: 27px;
+            background: var(--main-color);
+          }
+          &.long2 {
+            transform: rotate(-20deg);
+            border-radius: 27px;
+            background: var(--main-color);
+          }
+          &.long3 {
+            transform: rotate(-210deg);
+            border-radius: 27px;
+            background: var(--main-color);
+          }
         }
       }
-      .intro_title{
+      .intro_title {
         transform: translateY(80px);
         color: var(--main-color);
         mix-blend-mode: difference;
+        text-transform: uppercase;
         // color: var(--mainBg-color);
-        p.publisher{
+        p.publisher {
           font-size: 100px;
           line-height: 1;
         }
@@ -106,31 +168,27 @@ section{
 }
 // ***************************************************************************************************************************
 
-@media only screen and (max-width:600px){
-
+@media only screen and (max-width: 600px) {
 }
 // ----------------------------------------------------------------------
 
-
-@media only screen and (min-width:601px){
-  
+@media only screen and (min-width: 601px) {
 }
 // ----------------------------------------------------------------------
 
-
-@media only screen and (min-width:900px){
-  main{
-    section{
+@media only screen and (min-width: 900px) {
+  main {
+    section {
       width: 1400px;
       margin: auto;
       width: 100%;
-      &#intro{
+      &#intro {
         height: 100vh;
-        .intro_title{
-          p{
+        .intro_title {
+          p {
             text-align: center;
             font-weight: 700;
-            &.publisher{
+            &.publisher {
               // font-size: 270px;
               text-transform: uppercase;
             }
@@ -151,28 +209,60 @@ section{
         //   }
         // }
 
-        .sticker{
+        .sticker {
           width: 250px;
           // border-radius: 999px;
           // border: 1px solid #000;
-          img{
+          img {
             width: 100%;
           }
-          &.black1{left: 31%;top: 35%;}
-          &.black2{right: 25%;top: 10%;}
-          &.black3{right: 16%;bottom: 12%;}
-          &.black4{right: -8%;bottom: 18%;}
+          &.black1 {
+            left: 31%;
+            top: 35%;
+          }
+          &.black2 {
+            right: 25%;
+            top: 10%;
+          }
+          &.black3 {
+            right: 16%;
+            bottom: 12%;
+          }
+          &.black4 {
+            right: -8%;
+            bottom: 18%;
+          }
           // blue
-          &.blue1{right: 2%;top: 25%;}
-          &.blue2{left: 13%;top: 10%;}
-          &.blue3{right: 17%;bottom: 1%;}
+          &.blue1 {
+            right: 2%;
+            top: 25%;
+          }
+          &.blue2 {
+            left: 13%;
+            top: 10%;
+          }
+          &.blue3 {
+            right: 17%;
+            bottom: 1%;
+          }
 
-          &.long1{width: 350px ;left: -2%;bottom: 20%;}
-          &.long2{width: 350px ;left: 35%;top: 11%;}
-          &.long3{width: 350px ;right: -12%;bottom: -5%;}
+          &.long1 {
+            width: 350px;
+            left: -2%;
+            bottom: 20%;
+          }
+          &.long2 {
+            width: 350px;
+            left: 35%;
+            top: 11%;
+          }
+          &.long3 {
+            width: 350px;
+            right: -12%;
+            bottom: -5%;
+          }
         }
       }
     }
   }
-
 }
