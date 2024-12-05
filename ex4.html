@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10x10</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css'>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="gallery">
+    <!-- 이미지 목록 -->
+    <a href="./src/img/111222.png" data-fancybox="gallery">
+        <img src="./src/img/111222.png" alt="이미지 1">
+    </a>
+    <a href="./src/img/111222.png" data-fancybox="gallery">
+        <img src="./src/img/111222.png" alt="이미지 1">
+    </a>
+    <a href="./src/img/111222.png" data-fancybox="gallery">
+        <img src="./src/img/111222.png" alt="이미지 1">
+    </a>
+    <a href="./src/img/111222.png" data-fancybox="gallery">
+        <img src="./src/img/111222.png" alt="이미지 1">
+    </a>
+    <a href="./src/img/111222.png" data-fancybox="gallery">
+        <img src="./src/img/111222.png" alt="이미지 1">
+    </a>
+    <a href="./src/img/111222.png" data-fancybox="gallery">
+        <img src="./src/img/111222.png" alt="이미지 1">
+    </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind("[data-fancybox='gallery']", {
+        Toolbar: true,
+        animated: true,
+        Infinite: true
+    });
+</script>
+</body>
+
+</html>

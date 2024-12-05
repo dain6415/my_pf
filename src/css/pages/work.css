@@ -425,7 +425,7 @@ section#work .list_box2 ul li:hover a .right_box {
     color: #555;
   }
   main .work_top_list .sect_title p.sect_t {
-    font-size: 10rem;
+    font-size: 5rem;
   }
   main .work_top_list .list_box ul {
     display: grid;

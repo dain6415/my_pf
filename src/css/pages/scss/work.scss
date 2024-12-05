@@ -475,11 +475,12 @@ section {
         height: 150px;
         .po_ab{
           display: flex;
-          flex-direction: column;border-bottom: 0;
+          flex-direction: column;
+          border-bottom: 0;
         }
         p {
           &.sect_t{
-            font-size: 10rem;
+            font-size: 5rem;
             // letter-spacing: 1rem;
           }
           top: 55%;

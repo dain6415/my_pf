@@ -1,36 +1,38 @@
-export function intro(){
-  gsap.set('#intro .sticker',{opacity:0})
-  gsap.to('#intro .sticker', {
-    // y: 200,
-    opacity:1,
-    stagger: { each: 0.1, from: 'start', },
-    // repeat: 1,
-    // yoyo: true,
-    // ease: "esaeout"
-  });
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
+gsap.registerPlugin(Draggable);
 
+export function intro() {
+  // 초기 opacity 설정
+  gsap.set('#intro .sticker', { opacity: 0 });
+
+  // 등장 애니메이션
+  gsap.to('#intro .sticker', {
+    opacity: 1,
+    stagger: { each: 0.1, from: 'start' },
+  });
 
   const initialPositions = {
     desktop: [],
     tablet: [],
     mobile: []
   };
-  
-  // 각 화면 크기별 위치 계산
+
+  // 각 화면 크기별 위치 저장
   function storeInitialPositions() {
-    document.querySelectorAll(".sticker").forEach((sticker, index) => {
+    document.querySelectorAll("#intro .sticker").forEach((sticker, index) => {
       const rect = sticker.getBoundingClientRect();
-      if (window.innerWidth >= 1024) {  // desktop
+      if (window.innerWidth >= 1024) {
         initialPositions.desktop[index] = { x: rect.left, y: rect.top };
-      } else if (window.innerWidth >= 768) {  // tablet
+      } else if (window.innerWidth >= 768) {
         initialPositions.tablet[index] = { x: rect.left, y: rect.top };
-      } else {  // mobile
+      } else {
         initialPositions.mobile[index] = { x: rect.left, y: rect.top };
       }
     });
   }
-  
-  // 반응형에 따라 위치 재조정
+
+  // 반응형에 따라 위치 적용
   function adjustPositions() {
     let positions;
     if (window.innerWidth >= 1024) {
@@ -40,34 +42,37 @@ export function intro(){
     } else {
       positions = initialPositions.mobile;
     }
-  
+
     positions.forEach((pos, index) => {
-      const sticker = document.querySelectorAll(".sticker")[index];
-      gsap.set(sticker, { x: pos.x, y: pos.y });
+      const sticker = document.querySelectorAll("#intro .sticker")[index];
+      if (pos) {
+        gsap.set(sticker, { x: pos.x, y: pos.y });
+      }
     });
   }
-  
-  // 화면 크기 변경 시 위치 업데이트
+
+  // 초기화 순서: 페이지 로드 시 실행
+  window.addEventListener('load', () => {
+    storeInitialPositions();
+    adjustPositions(); // 초기 위치 적용
+  });
+
+  // 화면 크기 변경 시 위치 재조정
   window.addEventListener('resize', adjustPositions);
-  
-  // 페이지 로드 시 위치 초기화
-  window.addEventListener('load', storeInitialPositions);
-  
-  gsap.registerPlugin(Draggable);
-  Draggable.create(".sticker", {
+
+  // 드래그 설정
+  Draggable.create("#intro .sticker", {
     type: "x,y",
-    // bounds: "#intro", // bounds를 설정하지 않으면 화면 밖으로 나갈 수 있음
-    inertia: true, // 드래그 후 자연스러운 움직임 추가
+    // bounds: "#intro", 
+    // 화면 밖으로 나가지 않도록 제한
+    inertia: true,    // 관성 효과 추가
     onDragStart: function () {
       console.log("드래그 시작");
+      this.style.zIndex='-1'
     },
     onDragEnd: function () {
       console.log("드래그 종료");
     }
   });
 
-  
-  
-
-  
 }
