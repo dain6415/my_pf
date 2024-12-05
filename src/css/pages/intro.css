@@ -209,7 +209,7 @@ section#intro .sect_inner .stickers .sticker.long3 {
     pointer-events: none;
   }
   main section#intro .intro_title {
-    transform: translateY(80px);
+    transform: translateY(40px);
     color: var(--main-color);
     mix-blend-mode: difference;
     text-transform: uppercase;

@@ -1,13 +1,19 @@
+#about {
+  background: var(--main-color);
+  border-radius: 40px 40px 0 0;
+}
+#about .sect_inner .sect_title {
+  text-transform: uppercase;
+  grid-template-columns: 1;
+  border: 1px solid var(--black600);
+}
+#about .sect_inner .sect_title img {
+  width: 20%;
+}
 #about .sect_inner .about__me {
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 300px;
-}
-#about .sect_inner .about__me .sect_title {
-  text-transform: uppercase;
-  grid-template-columns: 1;
-  background: var(--mainBg-color);
-  border: 1px solid var(--black600);
 }
 #about .sect_inner .about__me .txt {
   grid-template-columns: 1;
@@ -21,12 +27,16 @@
   width: 25%;
 }
 #about .sect_inner .about__me .txt ul li p {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 #about .sect_inner .about__me .txt ul li p.keyword {
   font-size: 1.5rem;
   font-weight: 600;
   padding-bottom: 10px;
+}
+#about .sect_inner .about__me .information {
+  color: var(--mainBg-color);
+  font-size: 1.2rem;
 }
 #about .sect_inner .flow .splide .splide__track {
   background: #000;
