@@ -65,7 +65,7 @@ section#intro .sect_inner .stickers .sticker.black1::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../../../img/sticker_texture.jpg);
+  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 190%;
@@ -85,7 +85,7 @@ section#intro .sect_inner .stickers .sticker.black2::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../../../img/sticker_texture2.avif);
+  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;
@@ -107,7 +107,7 @@ section#intro .sect_inner .stickers .sticker.blue1::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../../../img/sticker_texture2.avif);
+  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -127,7 +127,7 @@ section#intro .sect_inner .stickers .sticker.blue2::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../../../img/sticker_texture2.avif);
+  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;
@@ -146,7 +146,7 @@ section#intro .sect_inner .stickers .sticker.blue3::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../../../img/sticker_texture.jpg);
+  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -210,7 +210,7 @@ section#intro .sect_inner .stickers .sticker.long3::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.avif");
+  background-image: url("http://hongdain.dothome.co.kr/sticker/sticker_texture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 150%;
