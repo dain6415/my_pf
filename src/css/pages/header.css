@@ -1,14 +1,9 @@
-body {
-  min-height: 100vh;
-  position: relative;
-}
-
 #header {
   min-width: 700px;
   width: 100%;
   padding: 20px 40px;
   background: transparent;
-  height: 100px;
+  height: 80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;

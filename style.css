@@ -6,8 +6,10 @@
 /* 작업 css */
 @import url(./src/css/pages/header.css);
 @import url(./src/css/pages/intro.css);
-@import url(./src/css/pages/project.css);
-@import url(./src/css/pages/work.css);
+/* @import url(./src/css/pages/project.css); */
+@import url(./src/css/pages/project2.css);
+/* @import url(./src/css/pages/work.css); */
+@import url(./src/css/pages/work2.css);
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
 @import url(./src/css/pages/footer.css);
@@ -80,13 +82,12 @@ body {
   margin-right: -10px;
 }
 
-
+/* line--------------------------- */
 .line {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 0;
-  /* border: 5px solid #000; */
 }
 .h-line {
   z-index: 999;
@@ -98,28 +99,31 @@ body {
 .h-line1 {
   left: 5%;
   z-index: 999;
+  background: red;
 }
 .h-line2 {
-  left: 27.5%;
+  left: 35%;
+  background: blue;
 }
-.h-line3 {
+/* .h-line3 {
   left: 50%;
-}
+} */
+/* right: 27.5%; */
 .h-line4 {
-  right: 27.5%;
+  right: 35%;
 }
 .h-line5 {
   right: 5%;
+  background: yellow;
   /* z-index: 999; */
 }
 /* -------------------- */
-
-section:not(#about) {
+section:not(#about, #work) {
   width: 100%;
   height: 100vh;
   /* padding: 10rem 5% 0; */
 }
-
+/* ---------------------- */
 .up_btn{
   display: none;
   width: 80px;
@@ -143,4 +147,15 @@ section:not(#about) {
 .up_btn:hover{
   box-shadow: 0px 5px 10px rgba(0, 0, 255, .2);
   color: var(--white);
+}
+/* -------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+::-webkit-scrollbar-track {
+  background: lightgray;
 }

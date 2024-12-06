@@ -1,6 +1,5 @@
 #about {
   background: var(--main-color);
-  border-radius: 40px 40px 0 0;
 }
 #about .sect_inner .sect_title {
   text-transform: uppercase;
