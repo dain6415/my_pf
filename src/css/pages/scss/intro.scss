@@ -62,12 +62,10 @@ section {
         .sticker {
           position: absolute;
           left: 50%;
-          transition: 0.1;
           opacity: 1;
           box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
           @include flex-c();
           overflow: hidden;
-          transition: 0.05s;
           &.black1,
           &.black2,
           &.black3,

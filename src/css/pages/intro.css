@@ -50,14 +50,12 @@ section#intro .sect_inner .stickers {
 section#intro .sect_inner .stickers .sticker {
   position: absolute;
   left: 50%;
-  transition: 0.1;
   opacity: 1;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: 0.05s;
 }
 section#intro .sect_inner .stickers .sticker.black1, section#intro .sect_inner .stickers .sticker.black2, section#intro .sect_inner .stickers .sticker.black3, section#intro .sect_inner .stickers .sticker.blue1, section#intro .sect_inner .stickers .sticker.blue2, section#intro .sect_inner .stickers .sticker.blue3 {
   border-radius: 50%;

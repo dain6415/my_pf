@@ -31,5 +31,9 @@ window.addEventListener("load", function () {
   }
   requestAnimationFrame(raf);
 
-  
+  (function($){
+    $(window).on("load",function(){
+        $("body").mCustomScrollbar();
+    });
+})(jQuery);
 });
