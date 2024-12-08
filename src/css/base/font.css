@@ -236,3 +236,15 @@
   font-display: swap;
 }
 
+/* nj-슈퍼내추럴 로고 */
+@font-face{
+  /* outline */
+  font-family: 'KNERDFilled';
+  src : url(./font_file/KNERDFilled-Regular.woff);
+  src : url(./font_file/KNERDFilled-Regular.woff2);
+}
+@font-face{
+  font-family: 'KNERDOutline';
+  src : url(./font_file/KNERDOutline-Regular.woff);
+  src : url(./font_file/KNERDOutline-Regular.woff2);
+}
