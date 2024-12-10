@@ -221,7 +221,6 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap, section#intro 
   overflow: hidden;
   position: absolute;
   background: var(--main-color);
-  border-radius: 28px;
 }
 section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap .img_blend, section#intro .sect_inner .stickers .sticker.long2 .sticker_wrap .img_blend, section#intro .sect_inner .stickers .sticker.long3 .sticker_wrap .img_blend {
   position: absolute;
@@ -312,6 +311,9 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     width: 342px;
     height: 160px;
   }
+  main section#intro .stickers .sticker.long1 .sticker_wrap, main section#intro .stickers .sticker.long2 .sticker_wrap, main section#intro .stickers .sticker.long3 .sticker_wrap {
+    border-radius: 20px;
+  }
   main section#intro .stickers .sticker.long1 {
     transform: translate(-118%, 156%) rotate(35deg);
   }
@@ -395,6 +397,9 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
   main section#intro .sticker.long1, main section#intro .sticker.long2, main section#intro .sticker.long3 {
     width: 427px;
     height: 188px;
+  }
+  main section#intro .sticker.long1 .sticker_wrap, main section#intro .sticker.long2 .sticker_wrap, main section#intro .sticker.long3 .sticker_wrap {
+    border-radius: 26px;
   }
   main section#intro .sticker.long1 {
     transform: translate(-137%, 146%) rotate(-153deg);

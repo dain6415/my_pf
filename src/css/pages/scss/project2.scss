@@ -92,7 +92,9 @@ section {
             font-weight: 400;
             font-size: 1.25rem;
             line-height: 1.75rem;
-            letter-spacing: -.1px;
+            letter-spacing: -.3px;
+            text-align: justify;
+            border: 1px solid #000;
             span{
               font-weight: 700;
             }
@@ -103,6 +105,7 @@ section {
             padding: 10px 30px;
             transition: 0.3s;
             border: 1px solid #000;
+            font-weight: 800;
             &.view_btn {
               margin-right: 10px;
               i {
@@ -117,8 +120,22 @@ section {
             &.plan {
               border: none;
               font-weight: 800;
-              background: var(--black800);
               border: 1px solid var(--black800);
+              background: var(--black800);
+              &::after{
+                content: '';
+                transition: .5s;
+                opacity: 0;
+              }
+              &:hover{
+                &::after{
+                  content: '->';
+                  padding-left: 5px;
+                  opacity: 1;
+                }
+                // background: var(--black800);
+                // mix-blend-mode:difference;
+              }
             }
           }
           
@@ -135,8 +152,26 @@ section {
             transition: .3s;
             img {
               width: 100%;
+              animation: rotateImage 2s infinite linear;
             }
           }
+          // @keyframes rotateImage {
+          //   0% {
+          //     transform: rotate(0deg);
+          //   }
+          //   25% {
+          //     transform: rotate(5deg);
+          //   }
+          //   50% {
+          //     transform: rotate(0deg);
+          //   }
+          //   75% {
+          //     transform: rotate(-5deg);
+          //   }
+          //   100% {
+          //     transform: rotate(0deg);
+          //   }
+          // }
         }
       }
     }

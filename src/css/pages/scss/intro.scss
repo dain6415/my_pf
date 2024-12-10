@@ -260,7 +260,6 @@ section {
               overflow: hidden;
               position: absolute;
               background: var(--main-color);
-              border-radius: 28px;
 
               .img_blend {
                 position: absolute;
@@ -363,6 +362,9 @@ section {
             &.long3 {
               width: 342px;
               height: 160px;
+              .sticker_wrap {
+                border-radius: 20px;
+              }
             }
             &.long1 {
               transform: translate(-118%, 156%) rotate(35deg);
@@ -469,6 +471,9 @@ section {
           &.long3 {
             width: 427px;
             height: 188px;
+            .sticker_wrap {
+              border-radius: 26px;
+            }
           }
           &.long1 {
             transform: translate(-137%, 146%) rotate(-153deg);

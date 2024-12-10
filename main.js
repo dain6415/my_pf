@@ -27,6 +27,16 @@ window.addEventListener("load", function () {
       customCursor.style.padding = "5px";
     });
   });
+  const blend = document.querySelectorAll(".m-blend");
+
+  blend.forEach((mouse) => {
+    mouse.addEventListener("mouseenter", function () {
+      customCursor.style.mixBlendMode = "difference"; // custom_cursor의 mix-blend-mode 변경
+    });
+    mouse.addEventListener("mouseleave", function () {
+      customCursor.style.mixBlendMode = "normal"; // 기본으로 돌아옴
+    });
+  });
   // mouse color-----------
   document.addEventListener("mousemove", (e) => {
     const cursor = document.getElementById("custom_cursor");
