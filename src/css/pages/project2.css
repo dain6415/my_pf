@@ -11,10 +11,8 @@ body {
   box-sizing: border-box;
 }
 
-section {
-  height: auto;
-}
 section#project {
+  height: auto;
   color: var(--black200_txt);
   height: auto;
   width: 100%;
