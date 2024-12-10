@@ -30,12 +30,26 @@ section {
     height: auto;
     width: 100%;
     background-color: var(--mainBg-color);
+    position: relative;
+    z-index: 1;
     .sect_inner {
       width: 100%;
       margin: auto;
       height: auto;
       // border-left: 1px solid var(--mainBg-color);
       // border-right: 1px solid var(--mainBg-color);
+      .sect_title{
+        padding: 40px;
+        background: var(--mainBg-color);
+        border-bottom: 2px solid #000;
+        .po_ab{
+          width: 100%;
+          font-size: 5rem;
+          line-height: 1;
+          text-transform: uppercase;
+          font-family: var(--subEng-font);
+        }
+      }
       article.sect__item {
         height: 70vh;
         display: grid;
@@ -81,7 +95,7 @@ section {
           font-family: 'Binggrae';
         }
         .info{
-          h2{
+          h3{
             font-size: 2.5rem;
             line-height: 1;
             font-weight: 600;
@@ -94,7 +108,7 @@ section {
             line-height: 1.75rem;
             letter-spacing: -.3px;
             text-align: justify;
-            border: 1px solid #000;
+            border-right: 1px solid #000;
             span{
               font-weight: 700;
             }
@@ -120,14 +134,17 @@ section {
             &.plan {
               border: none;
               font-weight: 800;
-              border: 1px solid var(--black800);
-              background: var(--black800);
+              // border: 1px solid var(--black800);
+              // background: var(--black800);
+              transition: .5s;
               &::after{
                 content: '';
                 transition: .5s;
                 opacity: 0;
+                font-family: 'Pretendard Variable';
               }
               &:hover{
+                color: var(--main-color);
                 &::after{
                   content: '->';
                   padding-left: 5px;

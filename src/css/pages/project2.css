@@ -19,11 +19,25 @@ section#project {
   height: auto;
   width: 100%;
   background-color: var(--mainBg-color);
+  position: relative;
+  z-index: 1;
 }
 section#project .sect_inner {
   width: 100%;
   margin: auto;
   height: auto;
+}
+section#project .sect_inner .sect_title {
+  padding: 40px;
+  background: var(--mainBg-color);
+  border-bottom: 2px solid #000;
+}
+section#project .sect_inner .sect_title .po_ab {
+  width: 100%;
+  font-size: 5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--subEng-font);
 }
 section#project .sect_inner article.sect__item {
   height: 70vh;
@@ -59,7 +73,7 @@ section#project .sect_inner article.sect__item .num {
   line-height: 1;
   font-family: "Binggrae";
 }
-section#project .sect_inner article.sect__item .info h2 {
+section#project .sect_inner article.sect__item .info h3 {
   font-size: 2.5rem;
   line-height: 1;
   font-weight: 600;
@@ -72,7 +86,7 @@ section#project .sect_inner article.sect__item .info .txt {
   line-height: 1.75rem;
   letter-spacing: -0.3px;
   text-align: justify;
-  border: 1px solid #000;
+  border-right: 1px solid #000;
 }
 section#project .sect_inner article.sect__item .info .txt span {
   font-weight: 700;
@@ -98,13 +112,16 @@ section#project .sect_inner article.sect__item .info a.view_btn:hover {
 section#project .sect_inner article.sect__item .info a.plan {
   border: none;
   font-weight: 800;
-  border: 1px solid var(--black800);
-  background: var(--black800);
+  transition: 0.5s;
 }
 section#project .sect_inner article.sect__item .info a.plan::after {
   content: "";
   transition: 0.5s;
   opacity: 0;
+  font-family: "Pretendard Variable";
+}
+section#project .sect_inner article.sect__item .info a.plan:hover {
+  color: var(--main-color);
 }
 section#project .sect_inner article.sect__item .info a.plan:hover::after {
   content: "->";
