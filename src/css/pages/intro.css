@@ -35,13 +35,11 @@ section#intro .sect_inner .blend img {
 }
 section#intro .sect_inner .stickers {
   position: relative;
-  padding-top: 20px;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 64%;
   z-index: 10;
-  border: 1px solid #173ce0;
 }
 section#intro .sect_inner .stickers .sticker {
   position: absolute;

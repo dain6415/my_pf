@@ -48,13 +48,12 @@ section {
       }
       .stickers {
         position: relative;
-        padding-top: 20px;
+        // padding-top: 20px;
         left: 0;
         bottom: 0;
         width: 100%;
         height: 64%;
         z-index: 10;
-        border: 1px solid #173ce0;
         .sticker {
           position: absolute;
           left: 50%;

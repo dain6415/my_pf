@@ -22,24 +22,24 @@
 body {
   background: var(--mainBg-color);
   color: var(--black200_txt);
-  /* cursor: none; */
+  cursor: none;  
 }
-/* a{cursor:none;} */
+a{cursor:none;}
 /* -------------------- */
 #custom_cursor{
-  padding:calc( 45px / 2);
+  padding:5px;
   border-radius: 50%;
-  background: #fff;
-  mix-blend-mode: difference;
+  /* background: rgba(255, 255, 255, .6); */
+  /* mix-blend-mode: difference; */
+  background: var(--main-color);
+  /* filter: blur(5px); */
   pointer-events: none;
-
   position: fixed;
-  left:500px;
-  top:300px;
   transform: translate(-50%, -50%);
   z-index: 99999;
   transition: padding 0.3s;
 }
+
 #custom_cursor.on{
   padding:calc(100px / 2);
 }
@@ -47,7 +47,7 @@ body {
   height: 12px;
   transform: translateY(-30px);
 }
-#custom_cursor span::before,
+/* #custom_cursor span::before,
 #custom_cursor span::after{
   content: "";
   display: block;
@@ -80,7 +80,7 @@ body {
 #custom_cursor span::after{
   right:50%;
   margin-right: -10px;
-}
+} */
 
 /* line--------------------------- */
 .body_line{
@@ -149,7 +149,7 @@ section:not(#about, #work) {
   color: var(--white);
 }
 /* -------------------------- */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-thumb {
@@ -158,4 +158,4 @@ section:not(#about, #work) {
 
 ::-webkit-scrollbar-track {
   background: lightgray;
-}
+} */

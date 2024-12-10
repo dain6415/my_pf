@@ -15,6 +15,26 @@ window.addEventListener("load", function () {
   project();
   // bgColor();
 
+  // mouse event
+  const mouses = document.querySelectorAll(".mouse_event");
+  const customCursor = document.getElementById("custom_cursor");
+
+  mouses.forEach((mouse) => {
+    mouse.addEventListener("mouseenter", function () {
+      customCursor.style.padding = "calc( 30px / 2)"; //15px이여
+    });
+    mouse.addEventListener("mouseleave", function () {
+      customCursor.style.padding = "5px";
+    });
+  });
+  // mouse color-----------
+  document.addEventListener("mousemove", (e) => {
+    const cursor = document.getElementById("custom_cursor");
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+  });
+
+  // ------------------------------------------
   // document.querySelector(".up_btn").addEventListener("click", function () {
   //   // alert()
   //   window.scroll({
@@ -23,15 +43,19 @@ window.addEventListener("load", function () {
   //   });
   // });
 
-  // const lenis = new Lenis();
+  // ------------------------------------------
+  // lenis - 안됨 스크롤 자체가 안됨ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+  const lenis = new Lenis();
 
-  // function raf(time) {
-  //   lenis.raf(time);
-  //   requestAnimationFrame(raf);
-  // }
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // 스크롤바------------------------------------------
   // requestAnimationFrame(raf);
-
-  $("body").mCustomScrollbar({
-    theme: "minimal-dark",
-  });
+  // $("body").mCustomScrollbar({
+  //   theme: "minimal-dark",
+  // });
 });

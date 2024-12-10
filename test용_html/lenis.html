@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenis Test</title>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      /* overflow: hidden; */
+       /* Lenis 사용을 위해 기본 스크롤 비활성화 */
+    }
+    section {
+      height: 100vh; /* 각 섹션을 전체 화면 높이로 설정 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+    }
+    section:nth-child(odd) {
+      background: #e66465;
+    }
+    section:nth-child(even) {
+      background: #9198e5;
+    }
+  </style>
+</head>
+<body>
+  <section>Section 1</section>
+  <section>Section 2</section>
+  <section>Section 3</section>
+  <script>
+    // Lenis 초기화
+    const lenis = new Lenis({
+      smooth: true, // 부드러운 스크롤 활성화
+    });
+
+    // 애니메이션 루프
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  </script>
+</body>
+</html>
