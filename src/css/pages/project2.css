@@ -21,7 +21,7 @@ section#project {
   background-color: var(--mainBg-color);
 }
 section#project .sect_inner {
-  width: 90%;
+  width: 100%;
   margin: auto;
   height: auto;
 }
@@ -30,7 +30,7 @@ section#project .sect_inner article.sect__item {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 50px;
-  padding: 40px 0;
+  padding: 40px 40px;
   position: sticky;
   left: 0;
   top: 0;
@@ -110,9 +110,6 @@ section#project .sect_inner article.sect__item .info a.plan:hover::after {
   content: "->";
   padding-left: 5px;
   opacity: 1;
-}
-section#project .sect_inner article.sect__item .s_img {
-  padding-right: 20px;
 }
 section#project .sect_inner article.sect__item .s_img .img_bg {
   border-radius: 5px;
