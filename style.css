@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* stting */
 @import url(./src/css/base/reset.css);
 
@@ -13,11 +12,13 @@
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
 @import url(./src/css/pages/footer.css);
-
 /* font, color's */
 @import url(./src/css/base/vars.css);
 
-/* ------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
 
 body {
   background: var(--mainBg-color);
@@ -47,6 +48,7 @@ a{cursor:none;}
   height: 12px;
   transform: translateY(-30px);
 }
+/* 커서 모양내기 */
 /* #custom_cursor span::before,
 #custom_cursor span::after{
   content: "";
