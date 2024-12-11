@@ -23,45 +23,50 @@ body {
 }
 
 //
-section {
-  &#project {
-    height: auto;
-    color: var(--black200_txt);
-    height: auto;
+#project {
+  width: 100%;
+  // overflow: visible;
+  overflow-x: hidden;
+  position: relative;
+  
+  color: var(--black200_txt);
+  background-color: var(--mainBg-color);
+  border: 1px solid #ff0000;
+  .sect_inner {
     width: 100%;
-    background-color: var(--mainBg-color);
-    position: relative;
-    z-index: 1;
-    border: 1px solid #ff0000;
-    .sect_inner {
-      width: 1;
-      margin: auto;
-      height: auto;
-      // border-left: 1px solid var(--mainBg-color);
-      // border-right: 1px solid var(--mainBg-color);
-      .sect_title {
-        padding: 40px;
-        background: var(--mainBg-color);
-        border-bottom: 2px solid #000;
-        .po_ab {
-          width: 100%;
-          font-size: 5rem;
-          line-height: 1;
-          text-transform: uppercase;
-          font-family: var(--subEng-font);
-        }
+    min-height: 300vh;
+    // overflow: visible;
+    .sect_title {
+      padding: 40px;
+      background: var(--mainBg-color);
+      border-bottom: 2px solid #000;
+      .po_ab {
+        width: 100%;
+        font-size: 5rem;
+        line-height: 1;
+        text-transform: uppercase;
+        font-family: var(--subEng-font);
       }
+    }
+
+    .sect__wrap{
+      position: relative;
+      border: 3px solid #000;
+      // padding-bottom: 1200px;
       article.sect__item {
-        height: 70vh;
+        // height: 70vh;
+        position: sticky;
+  
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-        gap: 50px;
+        gap: 30px;
+        
         padding: 40px 40px;
-        position: sticky;
         left: 0;
         top: 0;
+        z-index: 10;
         background-color: var(--mainBg-color);
-
+  
         // border-top: 1px solid #000;
         border: 1px solid transparent;
         border-bottom: 0;
@@ -71,11 +76,11 @@ section {
         &.s1 {
           top: 79px;
         }
-
+  
         &.s2 {
           top: 200px;
         }
-
+  
         &.s3 {
           top: 320px;
           .s_img {
@@ -86,9 +91,10 @@ section {
             }
           }
         }
-
+  
         &.s4 {
           top: 440px;
+          // z-index: 20;
         }
         .num {
           line-height: 1;
@@ -130,7 +136,7 @@ section {
                 color: var(--white);
               }
             }
-
+  
             &.plan {
               border: none;
               font-weight: 800;

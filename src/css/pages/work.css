@@ -8,17 +8,20 @@
   color: #ffffff;
 }
 
-section#work .sect_inner {
+#work {
+  padding-top: 2000px;
+}
+#work .sect_inner {
   padding: 12rem 5% 0;
 }
-section#work .sect_inner .work_top_list {
+#work .sect_inner .work_top_list {
   display: grid;
   border: 1px solid var(--black600);
 }
-section#work .sect_inner .work_top_list .sect_title {
+#work .sect_inner .work_top_list .sect_title {
   text-transform: uppercase;
 }
-section#work .sect_inner .work_top_list .sect_title .po_ab {
+#work .sect_inner .work_top_list .sect_title .po_ab {
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -26,34 +29,34 @@ section#work .sect_inner .work_top_list .sect_title .po_ab {
   justify-content: space-between;
   align-items: center;
 }
-section#work .sect_inner .work_top_list .sect_title .po_ab p {
+#work .sect_inner .work_top_list .sect_title .po_ab p {
   line-height: 1.5;
   transition: 1s;
   font-family: "Hey November", sans-serif;
 }
-section#work .sect_inner .work_top_list .sect_title .po_ab p.sect_t {
+#work .sect_inner .work_top_list .sect_title .po_ab p.sect_t {
   font-family: LABSAmiga;
   color: var(--main-color);
   height: 100px;
 }
-section#work .sect_inner .work_top_list .sect_title .po_ab p.txt {
+#work .sect_inner .work_top_list .sect_title .po_ab p.txt {
   font-size: 1rem;
   font-weight: 500;
 }
-section#work .sect_inner .work_top_list .list_box ul li {
+#work .sect_inner .work_top_list .list_box ul li {
   background: var(--black);
   color: var(--black600);
   position: relative;
 }
-section#work .sect_inner .work_top_list .list_box ul li a {
+#work .sect_inner .work_top_list .list_box ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-section#work .sect_inner .work_top_list .list_box ul li a p.list_title {
+#work .sect_inner .work_top_list .list_box ul li a p.list_title {
   font-weight: 600;
 }
-section#work .sect_inner .work_top_list .list_box ul li .right_box {
+#work .sect_inner .work_top_list .list_box ul li .right_box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +65,7 @@ section#work .sect_inner .work_top_list .list_box ul li .right_box {
   position: relative;
   transition: 0.3s;
 }
-section#work .sect_inner .work_top_list .list_box ul li .right_box .r-poab {
+#work .sect_inner .work_top_list .list_box ul li .right_box .r-poab {
   position: absolute;
   left: 0;
   top: 0;
@@ -74,54 +77,53 @@ section#work .sect_inner .work_top_list .list_box ul li .right_box .r-poab {
   transition: 0.3s;
   background: var(--black);
 }
-section#work .sect_inner .work_top_list .list_box ul li:hover {
+#work .sect_inner .work_top_list .list_box ul li:hover {
   color: var(--white);
 }
-section#work .sect_inner .work_top_list .list_box ul li:hover .ex {
+#work .sect_inner .work_top_list .list_box ul li:hover .ex {
   color: var(--black700);
 }
-section#work .sect_inner .work_top_list .list_box ul li:hover .right_box {
+#work .sect_inner .work_top_list .list_box ul li:hover .right_box {
   background: var(--white);
 }
-section#work .sect_inner .work_top_list .list_box ul li:hover .right_box .r-poab {
+#work .sect_inner .work_top_list .list_box ul li:hover .right_box .r-poab {
   background: var(--main-color);
   color: var(--white);
   top: -8px;
   left: 8px;
   border: 1px solid var(--black);
 }
-section#work .list_box2 {
-  border-left: 1px solid var(--black600);
-  border-right: 1px solid var(--black600);
+#work .list_box2 {
+  border: 1px solid #fd0404;
 }
-section#work .list_box2 ul li {
+#work .list_box2 ul li {
   position: relative;
   overflow: hidden;
   background-position: right center;
   background-repeat: no-repeat;
   border-bottom: 1px solid var(--black600);
 }
-section#work .list_box2 ul li:nth-child(1) {
+#work .list_box2 ul li:nth-child(1) {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/jaws.jpg);
 }
-section#work .list_box2 ul li:nth-child(2) {
+#work .list_box2 ul li:nth-child(2) {
   background-color: #00ab44;
   background-image: url(../../img/work/chil.jpg);
 }
-section#work .list_box2 ul li:nth-child(3) {
+#work .list_box2 ul li:nth-child(3) {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/logo.jpg);
 }
-section#work .list_box2 ul li:nth-child(4) {
+#work .list_box2 ul li:nth-child(4) {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/logo.jpg);
 }
-section#work .list_box2 ul li:nth-child(5) {
+#work .list_box2 ul li:nth-child(5) {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/yes24.jpg);
 }
-section#work .list_box2 ul li a {
+#work .list_box2 ul li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -134,30 +136,30 @@ section#work .list_box2 ul li a {
   box-shadow: 10px 0px 80px rgba(0, 0, 0, 0.8);
   transition: 0.5s ease;
 }
-section#work .list_box2 ul li a p.list_title {
+#work .list_box2 ul li a p.list_title {
   font-weight: 400;
 }
-section#work .list_box2 ul li a .right_box {
+#work .list_box2 ul li a .right_box {
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section#work .list_box2 ul li:hover a {
+#work .list_box2 ul li:hover a {
   color: var(--black400);
   background: var(--white);
   width: 85%;
 }
-section#work .list_box2 ul li:hover a .list_title {
+#work .list_box2 ul li:hover a .list_title {
   font-weight: 600;
   color: var(--main-color);
 }
-section#work .list_box2 ul li:hover a .right_box {
+#work .list_box2 ul li:hover a .right_box {
   color: var(--main-color);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   main .work_top_list {
     display: grid;
     grid-template-columns: 1fr;
@@ -292,7 +294,7 @@ section#work .list_box2 ul li:hover a .right_box {
     font-weight: 600;
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
   main .work_top_list {
     display: grid;
     grid-template-columns: 1fr;
@@ -359,9 +361,7 @@ section#work .list_box2 ul li:hover a .right_box {
     border-right: 1px solid var(--black600);
   }
   main .list_box2 ul li {
-    position: relative;
-    height: 80px;
-    overflow: hidden;
+    height: 200px;
   }
   main .list_box2 ul li:nth-child(1) {
     background-size: auto 35%;
@@ -405,93 +405,5 @@ section#work .list_box2 ul li:hover a .right_box {
   main .list_box2 ul li:hover a .list_title {
     font-weight: 600;
     font-size: 1.75rem;
-  }
-}
-@media only screen and (min-width: 1300px) {
-  main .work_top_list {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-  }
-  main .work_top_list .sect_title {
-    height: 150px;
-  }
-  main .work_top_list .sect_title .po_ab {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 0;
-  }
-  main .work_top_list .sect_title p {
-    top: 55%;
-    color: #555;
-  }
-  main .work_top_list .sect_title p.sect_t {
-    font-size: 5rem;
-  }
-  main .work_top_list .list_box ul {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  main .work_top_list .list_box ul li:not(:last-child) {
-    border-bottom: 1px solid var(--black600);
-  }
-  main .work_top_list .list_box ul li:nth-child(even) {
-    border-left: 0;
-  }
-  main .work_top_list .list_box ul li a {
-    padding: 20px 40px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-  main .work_top_list .list_box ul li a .list_summary {
-    display: flex;
-    gap: 40px;
-    width: 90%;
-  }
-  main .work_top_list .list_box ul li a .list_summary p.list_title {
-    font-size: 1.75rem;
-    padding: 0;
-    width: 35%;
-  }
-  main .work_top_list .list_box ul li a .list_summary p.ex {
-    width: 50%;
-  }
-  main .work_top_list .list_box ul li a .list_summary p.type {
-    width: 15%;
-  }
-  main .work_top_list .list_box ul li a .list_summary p br {
-    display: none;
-  }
-  main .list_box2 ul li:nth-child(1) {
-    background-size: auto 60%;
-  }
-  main .list_box2 ul li:nth-child(2) {
-    background-size: contain;
-  }
-  main .list_box2 ul li:nth-child(3) {
-    background-size: auto 70%;
-  }
-  main .list_box2 ul li:nth-child(4) {
-    background-size: auto 70%;
-  }
-  main .list_box2 ul li:nth-child(5) {
-    background-size: auto 80%;
-  }
-  main .list_box2 ul li a p.list_title {
-    width: 20%;
-    font-weight: 400;
-    font-size: 1.75rem;
-  }
-  main .list_box2 ul li a p.ex {
-    width: 50%;
-  }
-  main .list_box2 ul li:hover a {
-    width: 85%;
-  }
-  main .list_box2 ul li:hover a .list_title {
-    font-weight: 600;
-    font-size: 2rem;
   }
 }/*# sourceMappingURL=work.css.map */

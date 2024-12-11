@@ -1,18 +1,18 @@
-// import {menu} from "./src/js/menu.js";
-// import {link} from "./src/js/link.js";
 import { header } from "./src/js/header.js";
 // import { about } from "./src/js/about.js";
 import { intro } from "./src/js/intro.js";
 import { project } from "./src/js/project.js";
+import { work } from "./src/js/work.js";
+
 // import { bgColor } from "./src/js/bg_color.js";
 
 window.addEventListener("load", function () {
-  // menu()
-  // link()
   // about();
   header();
   intro();
   project();
+  work();
+
   // bgColor();
 
   // mouse event

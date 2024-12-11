@@ -12,7 +12,7 @@
   src : url(./font_file/jt-font.woff);
 }
 
-/* Montserrat */
+/* Montserrat--------------------------------------------------------- */
 @font-face{
   font-family: Montserrat-Bold;
   src : url(./font_file/Montserrat-Bold.woff);
@@ -43,7 +43,7 @@
   src : url(./font_file/mugo-font.woff);
 }
 
-/* NotoSans 노토산스 */
+/* NotoSans 노토산스--------------------------------------------- */
 @font-face{
   font-family: NotoSans-Black;
   src : url(./font_file/NotoSans-Black.woff);
@@ -247,4 +247,17 @@
   font-family: 'KNERDOutline';
   src : url(./font_file/KNERDOutline-Regular.woff);
   src : url(./font_file/KNERDOutline-Regular.woff2);
+}
+
+/* NONFICTION LOGO FONT */
+@font-face{
+  /* outline */
+  font-family: 'Figue_Regular';
+  src : url(./font_file/Figue_Regular.woff);
+}
+/* ----------------------------- */
+@font-face{
+  /* outline */
+  font-family: 'PbykFmXiEBPT4ITbgNA5Cgm20xz64px_1hVWr0wuPNGmlQNMEfD4.106';
+  src : url(./font_file/PbykFmXiEBPT4ITbgNA5Cgm20xz64px_1hVWr0wuPNGmlQNMEfD4.106.woff);
 }

@@ -46,7 +46,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smooting: antialiased;
   -webkit-text-size-adjust: 100%;
-  color: var(--black200r);
   background-color: var(--mainBg-color);
   font-family: var(--mainEng-font);
 }
