@@ -8,7 +8,6 @@
 /* @import url(./src/css/pages/project.css); */
 @import url(./src/css/pages/project2.css);
 /* @import url(./src/css/pages/work.css); */
-/* @import url(./src/css/pages/work2.css); */
 @import url(./src/css/pages/work3.css);
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
@@ -151,6 +150,38 @@ a{cursor:none;}
 
 .right {
   right: 0;
+}
+@media only screen and (max-width: 700px){
+  .h-line {
+    background-color: black;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .left-middle {
+    left: 25%;
+    display: none;
+  }
+  
+  .center {
+    left: 50%;
+    display: none;
+  }
+  
+  .right-middle {
+    display: none;
+    right: 25%;
+  }
+  
+  .right {
+    right: 0;
+  }
 }
 /* -------------------- */
 section:not(#about, #work) {

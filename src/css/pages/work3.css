@@ -1,14 +1,15 @@
 #work {
   color: var(--black200_txt);
+  padding-top: 2000px;
   position: relative;
 }
 #work .sect_inner .swiper_box {
-  border-top: 1px solid var(--black600);
   position: relative;
   padding: 0 40px;
 }
 #work .sect_inner .swiper_box .swiper-slide {
   border: 1px solid transparent;
+  border-top: 1px solid var(--black600);
   border-bottom-color: var(--black600);
   transition: 0.2s;
 }
@@ -17,9 +18,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-#work .sect_inner .swiper_box .swiper-slide .summary .txt {
-  padding: 0px 40px;
 }
 #work .sect_inner .swiper_box .swiper-slide .summary .txt .title {
   font-size: 2rem;
@@ -159,49 +157,12 @@
     padding-bottom: 100px;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
-    padding: 30px 80px;
+    padding-top: 30px;
     position: relative;
     height: 350px;
   }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide1 .sticker {
-    left: 20px;
-    top: 0;
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide2 .sticker {
-    left: 50%;
-    top: 54%;
-    transform: translateX(-50%) rotate(-15deg);
-    width: 350px;
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide2 .sticker img {
-    width: 80%;
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide3 .sticker {
-    left: 180px;
-    top: 10px;
-    transform: rotate(0deg);
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide3 .sticker img {
-    width: 80%;
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .sticker {
-    width: 160px;
-    height: 160px;
-    right: 70px;
-    top: 40px;
-    border-radius: 50px;
-    transform: rotate(15deg);
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .sticker img {
-    width: 100%;
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide .summary .number {
-    width: 30px;
-    height: 30px;
-  }
-  #work .sect_inner .swiper_box .swiper .swiper-slide .sticker {
-    position: absolute;
-    width: 300px;
+  #work .sect_inner .swiper_box .swiper .swiper-slide .summary {
+    text-align: center;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide:hover {
     border-left-color: var(--black600);

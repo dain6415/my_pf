@@ -243,7 +243,7 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
   top: -23%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   main section {
     width: 1400px;
     margin: auto;
@@ -338,7 +338,7 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     color: var(--black600);
   }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
   main section {
     width: 1400px;
     margin: auto;
