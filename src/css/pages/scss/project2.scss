@@ -25,8 +25,7 @@ body {
 //
 #project {
   width: 100%;
-  overflow: visible;
-  // overflow-x: hidden;
+  height: 100%;
   position: relative;
 
   color: var(--black200_txt);
@@ -35,7 +34,7 @@ body {
   .sect_inner {
     width: 100%;
     min-height: 300vh;
-    // overflow: visible;
+    overflow: visible;
     .sect_title {
       background: var(--mainBg-color);
       border-bottom: 2px solid #000;
@@ -234,6 +233,7 @@ body {
           }
           .num {
             font-size: 0.75rem;
+            color: var(--black600);
           }
           .info {
             padding-top: 20px;
@@ -364,7 +364,6 @@ body {
           // height: 70vh;
           grid-template-columns: 1fr 2fr 1fr;
           gap: 30px;
-
           padding: 40px;
           &.s1 {
             top: 79px;

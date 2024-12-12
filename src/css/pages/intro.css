@@ -35,18 +35,17 @@ section#intro .sect_inner .blend img {
 }
 section#intro .sect_inner .stickers {
   position: relative;
-  left: 0;
-  bottom: 0;
   width: 100%;
   height: 64%;
   z-index: 10;
 }
 section#intro .sect_inner .stickers .sticker {
   position: absolute;
-  left: 50%;
+  left: 48%;
   transform-origin: center center;
   border: 2px solid transparent;
   transition: 0.05s;
+  cursor: none;
 }
 section#intro .sect_inner .stickers .sticker:hover {
   border: 2px solid var(--main-color);
@@ -64,25 +63,21 @@ section#intro .sect_inner .stickers .sticker.black1 .vertex, section#intro .sect
   opacity: 0;
   transition: 0.05s;
 }
-section#intro .sect_inner .stickers .sticker.black1 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black2 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black3 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue1 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue2 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue3 .vertex .t::before {
+section#intro .sect_inner .stickers .sticker.black1 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black1 .vertex .t::after, section#intro .sect_inner .stickers .sticker.black1 .vertex .b::before, section#intro .sect_inner .stickers .sticker.black1 .vertex .b::after, section#intro .sect_inner .stickers .sticker.black2 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black2 .vertex .t::after, section#intro .sect_inner .stickers .sticker.black2 .vertex .b::before, section#intro .sect_inner .stickers .sticker.black2 .vertex .b::after, section#intro .sect_inner .stickers .sticker.black3 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black3 .vertex .t::after, section#intro .sect_inner .stickers .sticker.black3 .vertex .b::before, section#intro .sect_inner .stickers .sticker.black3 .vertex .b::after, section#intro .sect_inner .stickers .sticker.blue1 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue1 .vertex .t::after, section#intro .sect_inner .stickers .sticker.blue1 .vertex .b::before, section#intro .sect_inner .stickers .sticker.blue1 .vertex .b::after, section#intro .sect_inner .stickers .sticker.blue2 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue2 .vertex .t::after, section#intro .sect_inner .stickers .sticker.blue2 .vertex .b::before, section#intro .sect_inner .stickers .sticker.blue2 .vertex .b::after, section#intro .sect_inner .stickers .sticker.blue3 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue3 .vertex .t::after, section#intro .sect_inner .stickers .sticker.blue3 .vertex .b::before, section#intro .sect_inner .stickers .sticker.blue3 .vertex .b::after {
   content: "";
   width: 14px;
   height: 14px;
   position: absolute;
-  top: -7px;
-  left: -7px;
   background: #fff;
   border: 2px solid var(--main-color);
 }
+section#intro .sect_inner .stickers .sticker.black1 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black2 .vertex .t::before, section#intro .sect_inner .stickers .sticker.black3 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue1 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue2 .vertex .t::before, section#intro .sect_inner .stickers .sticker.blue3 .vertex .t::before {
+  top: -7px;
+  left: -7px;
+}
 section#intro .sect_inner .stickers .sticker.black1 .vertex .t::after, section#intro .sect_inner .stickers .sticker.black2 .vertex .t::after, section#intro .sect_inner .stickers .sticker.black3 .vertex .t::after, section#intro .sect_inner .stickers .sticker.blue1 .vertex .t::after, section#intro .sect_inner .stickers .sticker.blue2 .vertex .t::after, section#intro .sect_inner .stickers .sticker.blue3 .vertex .t::after {
-  content: "";
-  width: 14px;
-  height: 14px;
-  position: absolute;
   top: -7px;
   right: -7px;
-  background: #fff;
-  border: 2px solid var(--main-color);
 }
 section#intro .sect_inner .stickers .sticker.black1 .vertex .b::before, section#intro .sect_inner .stickers .sticker.black2 .vertex .b::before, section#intro .sect_inner .stickers .sticker.black3 .vertex .b::before, section#intro .sect_inner .stickers .sticker.blue1 .vertex .b::before, section#intro .sect_inner .stickers .sticker.blue2 .vertex .b::before, section#intro .sect_inner .stickers .sticker.blue3 .vertex .b::before {
   content: "";
@@ -274,6 +269,9 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     position: relative; /* stickers는 부모로서 relative */
     z-index: 10;
   }
+  main section#intro .stickers .sticker {
+    left: 50%;
+  }
   main section#intro .stickers .sticker img {
     width: 100%;
   }
@@ -321,7 +319,7 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     transform: translate(-43%, 37%) rotate(-20deg);
   }
   main section#intro .stickers .sticker.long3 {
-    transform: translate(41%, 160%) rotate(-210deg);
+    transform: translate(38%, 100%) rotate(130deg);
   }
   main section#intro .intro_title {
     transform: translateY(80px);
@@ -386,7 +384,7 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     transform: translate(-4%, 23%) rotate(35deg);
   }
   main section#intro .sticker.blue1 {
-    transform: translate(88%, 58%) rotate(165deg);
+    transform: translate(88%, 8%) rotate(165deg);
   }
   main section#intro .sticker.blue2 {
     transform: translate(-140%, 32%) rotate(-35deg);
@@ -409,7 +407,7 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     transform: translate(-53%, 38%) rotate(-20deg);
   }
   main section#intro .sticker.long3 {
-    transform: translate(78%, 190%) rotate(-30deg);
+    transform: translate(67%, 150%) rotate(140deg);
   }
 }
 @media only screen and (min-width: 900px) {

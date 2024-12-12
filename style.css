@@ -184,6 +184,9 @@ a{cursor:none;}
   }
 }
 /* -------------------- */
+section{
+  min-height: 900px;
+}
 section:not(#about, #work) {
   width: 100%;
   height: 100vh;

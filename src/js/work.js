@@ -61,14 +61,13 @@ export function work() {
   const slide2 = document.querySelector(".slide2");
   const rotatingImage = slide2.querySelector(".rotating-image");
 
-  
-let currentRotation = 0; // 초기 회전 값
-let rotationInterval; // 회전 유지 타이머
+  let currentRotation = 0; // 초기 회전 값
+  let rotationInterval; // 회전 유지 타이머
   // slide2에 마우스를 올릴 때
   slide2.addEventListener("mouseenter", () => {
     clearInterval(rotationInterval); // 기존 타이머 중지
     rotationInterval = setInterval(() => {
-      currentRotation += .6; // 일정 각도씩 계속 회전
+      currentRotation += 0.6; // 일정 각도씩 계속 회전
       rotatingImage.style.transform = `rotate(${currentRotation}deg)`;
     }, 16); // 약 60FPS로 회전
   });
@@ -77,4 +76,15 @@ let rotationInterval; // 회전 유지 타이머
   slide2.addEventListener("mouseleave", () => {
     clearInterval(rotationInterval); // 회전 중지
   });
+
+
+  // GIF 이미지 엘리먼트
+const gifImage = document.getElementById('gifImage');
+
+// 호버 시 GIF를 새로 로드하는 함수
+gifImage.addEventListener('mouseenter', function () {
+  const src = gifImage.src;  // 현재 src 값을 저장
+  gifImage.src = '';  // src를 빈 값으로 설정
+  gifImage.src = src;  // 다시 원래 src로 설정하여 GIF를 새로 시작
+});
 }
