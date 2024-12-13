@@ -11,7 +11,6 @@
 @import url(./src/css/pages/work3.css);
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
-@import url(./src/css/pages/footer.css);
 /* font, color's */
 @import url(./src/css/base/vars.css);
 
@@ -117,105 +116,12 @@ a{cursor:none;}
 .right {
   right: 0;
 } */
-.body_line{
-  pointer-events: none;
-  display: block;
-  position: fixed;
-  inset: 0 40px;
-}
 
-.h-line {
-  background-color: black;
-  width: 1px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-@media only screen and (max-width: 700px){
-  .h-line {
-    background-color: black;
-    width: 1px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .left {
-    left: 0;
-  }
-  
-  .left-middle {
-    left: 25%;
-    display: none;
-  }
-  
-  .center {
-    left: 50%;
-    display: none;
-  }
-  
-  .right-middle {
-    display: none;
-    right: 25%;
-  }
-  
-  .right {
-    right: 0;
-  }
-}
-@media only screen and (min-width: 701px){  
-  .left {
-    left: 0;
-  }
-  
-  .left-middle {
-    left: 25%;
-    display: none;
-  }
-  
-  .center {
-    left: 50%;
-  }
-  
-  .right-middle {
-    display: none;
-    right: 25%;
-  }
-  
-  .right {
-    right: 0;
-  }
-}
-@media only screen and (min-width: 1300px){
-  .left {
-    left: 0;
-  }
-  
-  .left-middle {
-    left: 25%;
-    display: block;
-  }
-  
-  .center {
-    left: 50%;
-  }
-  
-  .right-middle {
-    right: 25%;
-    display: block;
-  }
-  
-  .right {
-    right: 0;
-  }
-}
 /* -------------------- */
-section{
+section:not(:last-child){
   min-height: 900px;
-}
-section:not(#about, #work) {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   /* padding: 10rem 5% 0; */
 }
 /* ---------------------- */

@@ -416,9 +416,6 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     margin: auto;
     width: 100%;
   }
-  main section#intro {
-    height: 100vh;
-  }
   main section#intro .intro_title p {
     text-align: center;
     font-weight: 700;
