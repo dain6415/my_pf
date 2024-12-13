@@ -140,9 +140,11 @@ body {
                 transition: 0.5s;
                 opacity: 0;
                 font-family: "Pretendard Variable";
+                color: var(--main-color);
+                // mix-blend-mode:difference;
               }
               &:hover {
-                color: var(--sBg-color);
+                color: var(--main-color);
                 &::after {
                   content: "->";
                   padding-left: 5px;

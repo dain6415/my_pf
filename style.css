@@ -131,26 +131,6 @@ a{cursor:none;}
   top: 0;
   bottom: 0;
 }
-
-.left {
-  left: 0;
-}
-
-.left-middle {
-  left: 25%;
-}
-
-.center {
-  left: 50%;
-}
-
-.right-middle {
-  right: 25%;
-}
-
-.right {
-  right: 0;
-}
 @media only screen and (max-width: 700px){
   .h-line {
     background-color: black;
@@ -177,6 +157,52 @@ a{cursor:none;}
   .right-middle {
     display: none;
     right: 25%;
+  }
+  
+  .right {
+    right: 0;
+  }
+}
+@media only screen and (min-width: 701px){  
+  .left {
+    left: 0;
+  }
+  
+  .left-middle {
+    left: 25%;
+    display: none;
+  }
+  
+  .center {
+    left: 50%;
+  }
+  
+  .right-middle {
+    display: none;
+    right: 25%;
+  }
+  
+  .right {
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1300px){
+  .left {
+    left: 0;
+  }
+  
+  .left-middle {
+    left: 25%;
+    display: block;
+  }
+  
+  .center {
+    left: 50%;
+  }
+  
+  .right-middle {
+    right: 25%;
+    display: block;
   }
   
   .right {

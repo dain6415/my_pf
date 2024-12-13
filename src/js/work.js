@@ -57,7 +57,7 @@ export function work() {
     });
   });
 
-  // 논픽션의 로고 회전
+  // 논픽션의 로고 회전 ******************************************
   const slide2 = document.querySelector(".slide2");
   const rotatingImage = slide2.querySelector(".rotating-image");
 
@@ -77,14 +77,32 @@ export function work() {
     clearInterval(rotationInterval); // 회전 중지
   });
 
-
-  // GIF 이미지 엘리먼트
-const gifImage = document.getElementById('gifImage');
-
-// 호버 시 GIF를 새로 로드하는 함수
-gifImage.addEventListener('mouseenter', function () {
-  const src = gifImage.src;  // 현재 src 값을 저장
-  gifImage.src = '';  // src를 빈 값으로 설정
-  gifImage.src = src;  // 다시 원래 src로 설정하여 GIF를 새로 시작
-});
+  // 망곰 ******************************************
+  // 망곰 애니메이션
+  const frames = document.querySelectorAll(".slide4 .frame");
+  let currentIndex = 0;
+  let intervalId = null; // 애니메이션 ID 저장용
+  
+  function switchFrames() {
+    frames.forEach((frame) => frame.classList.remove("active")); // 모든 프레임 숨기기
+    frames[currentIndex].classList.add("active"); // 현재 프레임 활성화
+    currentIndex = (currentIndex + 1) % frames.length; // 다음 프레임으로 이동
+  }
+  
+  // 슬라이드4에 호버 이벤트 추가
+  const slide4 = document.querySelector(".slide4");
+  
+  slide4.addEventListener("mouseenter", () => {
+    // 호버 시작 시 애니메이션 실행
+    if (!intervalId) {
+      intervalId = setInterval(switchFrames, 100);
+    }
+  });
+  
+  slide4.addEventListener("mouseleave", () => {
+    // 호버 종료 시 애니메이션 중지
+    clearInterval(intervalId);
+    intervalId = null;
+  });
+  
 }

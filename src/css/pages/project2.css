@@ -115,9 +115,10 @@ body {
   transition: 0.5s;
   opacity: 0;
   font-family: "Pretendard Variable";
+  color: var(--main-color);
 }
 #project .sect_inner .sect__wrap article.sect__item .info a.plan:hover {
-  color: var(--sBg-color);
+  color: var(--main-color);
 }
 #project .sect_inner .sect__wrap article.sect__item .info a.plan:hover::after {
   content: "->";

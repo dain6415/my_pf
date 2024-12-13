@@ -15,6 +15,10 @@ window.addEventListener("load", function () {
 
   // bgColor();
 
+  
+  // ***************************************************************************
+
+  //about에서만 커서 컬러 변경 - 근데 안됨
   document.addEventListener("DOMContentLoaded", function () {
     // 페이지 경로 확인 후 'about' 페이지에서만 색상 변경
     if (window.location.pathname.includes("about")) {
@@ -32,10 +36,12 @@ window.addEventListener("load", function () {
   
   mouses.forEach((mouse) => {
     mouse.addEventListener("mouseenter", function () {
-      customCursor.style.padding = "calc( 30px / 2)"; // 15px
+      customCursor.style.padding = "calc( 30px / 2)"; // 나누기니까 15px
+      customCursor.style.mixBlendMode = "difference"; // 15px
     });
     mouse.addEventListener("mouseleave", function () {
       customCursor.style.padding = "5px";
+      customCursor.style.mixBlendMode = "normal"; // 15px
     });
   });
   
