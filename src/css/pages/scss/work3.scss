@@ -43,7 +43,7 @@
             }
           }
           .logo_img {
-            padding-top: 60px;
+            padding-top: 20%;
             @include flex-c();
             transition: 0.3s;
           }
@@ -347,12 +347,14 @@
         .swiper {
           margin-top: -50px;
           padding-top: 50px;
-          padding-bottom: 100px;
           .swiper-slide {
             // padding: 30px 80px;
             padding-top: 30px;
             position: relative;
             height: 300px;
+            .logo_img{
+              padding-top: 10%;
+            }
             &:hover {
               border-left-color: var(--black600);
               border-right-color: var(--black600);
@@ -423,7 +425,8 @@
         }
       }
       .swiper_btn {
-        width: 190%;
+        width: 100%;
+        // display: block;
       }
     }
   }

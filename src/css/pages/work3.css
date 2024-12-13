@@ -33,7 +33,7 @@
   color: var(--black400);
 }
 #work .sect_inner .swiper_box .swiper-slide .summary .logo_img {
-  padding-top: 60px;
+  padding-top: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,12 +252,14 @@
   #work .sect_inner .swiper_box .swiper {
     margin-top: -50px;
     padding-top: 50px;
-    padding-bottom: 100px;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     padding-top: 30px;
     position: relative;
     height: 300px;
+  }
+  #work .sect_inner .swiper_box .swiper .swiper-slide .logo_img {
+    padding-top: 10%;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide:hover {
     border-left-color: var(--black600);
@@ -314,7 +316,7 @@
     transition: 0.3s;
   }
   #work .sect_inner .swiper_btn {
-    width: 190%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1000px) {
