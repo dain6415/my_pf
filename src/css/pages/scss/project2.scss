@@ -59,14 +59,17 @@ body {
     .sect__wrap {
       overflow: visible;
       position: relative;
-      article.sect__item {
+      .article_box{
         position: sticky;
+        left: 0;
+        top: 0;
+        
+      }
+      article.sect__item {
 
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         padding: 40px 40px;
-        left: 0;
-        top: 0;
         // z-index: 10;
 
         background-color: var(--mainBg-color);
@@ -218,20 +221,10 @@ body {
 
       .sect__wrap {
         article.sect__item {
+          height: auto;
           display: flex;
           flex-direction: column;
           padding: 30px 40px;
-          &.s1 {
-          }
-
-          &.s2 {
-          }
-
-          &.s3 {
-          }
-
-          &.s4 {
-          }
           .num {
             font-size: 0.75rem;
             color: var(--black600);
@@ -295,20 +288,10 @@ body {
 
       .sect__wrap {
         article.sect__item {
+          height: auto;
           // height: 70vh;
           gap: 10px;
           padding: 30px 40px;
-          &.s1 {
-          }
-
-          &.s2 {
-          }
-
-          &.s3 {
-          }
-
-          &.s4 {
-          }
           .num {
             font-size: 0.75rem;
           }
@@ -345,16 +328,9 @@ body {
 
       .sect__wrap {
         article.sect__item {
-          // height: 70vh;
           grid-template-columns: 1fr 2fr 1fr;
           gap: 30px;
           padding: 40px;
-          &.s1 {
-          }
-
-          &.s2 {
-          }
-
           &.s3 {
             .s_img {
               .img_bg {
@@ -363,10 +339,6 @@ body {
                 }
               }
             }
-          }
-
-          &.s4 {
-            // z-index: 20;
           }
           .num {
             font-size: 1rem;
@@ -395,16 +367,8 @@ body {
 
       .sect__wrap {
         article.sect__item {
-          // height: 70vh;
           gap: 30px;
-
           padding: 40px;
-          &.s1 {
-          }
-
-          &.s2 {
-          }
-
           &.s3 {
             .s_img {
               .img_bg {
@@ -414,7 +378,6 @@ body {
               }
             }
           }
-
           &.s4 {
             // z-index: 20;
           }

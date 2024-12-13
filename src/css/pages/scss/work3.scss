@@ -270,7 +270,11 @@
         @include flex-c(space-between);
         @include po-c();
         z-index: 1;
+        pointer-events: none;
+        // height: 0;
+
         .btn_box {
+          position: auto;
           width: 80px;
           height: 80px;
           position: relative;

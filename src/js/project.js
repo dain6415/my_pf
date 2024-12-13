@@ -32,7 +32,7 @@ export function project() {
 
   // *****************************************************************
   const relaElem = document.querySelector(".sect__wrap");
-  const stickyElems = document.querySelectorAll(".sect__item");
+  const stickyElems = document.querySelectorAll(".article_box");
 
   // 높이와 top 위치를 data 속성에서 가져오기
   const stickyHeight = Number(relaElem.dataset.height);
@@ -46,4 +46,17 @@ export function project() {
     sticky.style.height = `${stickyHeight + stickyTitle * reverseIdx}px`; // 높이 설정
     sticky.style.top = `${stickyTop + stickyTitle * idx}px`; // top 위치 설정
   });
+
+  const mobile = 700;
+  window.addEventListener("resize", function () {
+    resize();
+  });
+  function resize() {
+    let currentWid = window.outerWidth;
+    if (currentWid > mobile) {
+      console.log("pc");
+    } else {
+      console.log("mobile");
+    }
+  }
 }
