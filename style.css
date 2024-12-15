@@ -121,10 +121,11 @@ a{cursor:none;}
   display: block;
   position: fixed;
   inset: 0 40px;
+  z-index: -1;
 }
 
 .h-line {
-  background-color: black;
+  background-color: var(--black600);
   width: 1px;
   position: absolute;
   top: 0;
@@ -132,7 +133,7 @@ a{cursor:none;}
 }
 @media only screen and (max-width: 700px){
   .h-line {
-    background-color: black;
+    background-color: var(--black600);
     width: 1px;
     position: absolute;
     top: 0;
@@ -215,9 +216,9 @@ section:not(:last-child){
   /* height: 100vh; */
   /* padding: 10rem 5% 0; */
 }
-/* ---------------------- */
+/* 위로가기 버튼 ---------------------- */
 .up_btn{
-  display: none;
+  /* display: none; */
   width: 80px;
   height: 80px;
   border: 1px solid #000;

@@ -34,7 +34,8 @@ export function header() {
       end: "bottom center",
       onToggle: (self) => linkActive(link),
     });
-    // -------------------------------------------
+
+    // nav li 클릭시 해당 위치로 스크롤 이동 + 부드럽게 이동 -------------------------------------------
     link.addEventListener("click", function (e) {
       e.preventDefault();
       linkActive(link);
@@ -69,4 +70,15 @@ export function header() {
     links.forEach((el) => el.classList.remove("on"));
     link.classList.add("on");
   }
+    function clock() {
+    let time = document.querySelector(".time");
+    let H = String(new Date().getHours()).padStart(2, "0");
+    let M = String(new Date().getMinutes()).padStart(2, "0");
+    let S = String(new Date().getSeconds()).padStart(2, "0");
+
+    time.innerHTML = `${H}:${M}:${S}`;
+  }
+
+  clock();
+  setInterval(clock, 1000);
 }

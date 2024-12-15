@@ -21,6 +21,7 @@ body {
 #project .sect_inner {
   width: 100%;
   min-height: 300vh;
+  border-bottom: 1px solid #000;
 }
 #project .sect_inner .sect_title {
   display: grid;

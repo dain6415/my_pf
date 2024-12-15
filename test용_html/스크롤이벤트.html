@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크롤 재로드</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      height: 500px;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .active {
+      background: lightblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="section" data-section="1">1번 섹션</div>
+  <div class="section" data-section="2">2번 섹션</div>
+  <div class="section" data-section="3">3번 섹션</div>
+  <div class="section" data-section="4">4번 섹션</div>
+  <script>
+    const sections = document.querySelectorAll('.section');
+
+    // Intersection Observer 설정
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // 화면에 나타난 섹션에 active 클래스 추가
+          entry.target.classList.add('active');
+          console.log(`${entry.target.dataset.section}번 섹션 로드됨`);
+        } else {
+          // 화면에서 벗어난 섹션에서 active 클래스 제거
+          entry.target.classList.remove('active');
+          console.log(`${entry.target.dataset.section}번 섹션 비활성화`);
+        }
+      });
+    }, {
+      threshold: 0.5 // 요소가 50% 이상 보일 때만 감지
+    });
+
+    // 모든 섹션을 Observer에 추가
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>

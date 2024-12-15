@@ -34,7 +34,7 @@ body {
   .sect_inner {
     width: 100%;
     min-height: 300vh;
-    
+    border-bottom: 1px solid #000;
     .sect_title {
       // background: var(--mainBg-color);
       // border-bottom: 2px solid #000;
@@ -63,10 +63,8 @@ body {
         position: sticky;
         left: 0;
         top: 0;
-        
       }
       article.sect__item {
-
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         padding: 40px 40px;
@@ -78,12 +76,6 @@ body {
         border-image: url(/src/img/line.jpg) 30;
         
         border-image-repeat: repeat;
-        &.s1 {
-        }
-
-        &.s2 {
-        }
-
         &.s3 {
           .s_img {
             .img_bg {
@@ -92,10 +84,6 @@ body {
               }
             }
           }
-        }
-
-        &.s4 {
-          // z-index: 20;
         }
         .num {
           line-height: 1;
@@ -363,6 +351,7 @@ body {
       min-height: 300vh;
       // overflow: visible;
       // .sect_title {
+
       // }
 
       .sect__wrap {
@@ -377,9 +366,6 @@ body {
                 }
               }
             }
-          }
-          &.s4 {
-            // z-index: 20;
           }
           .num {
             font-size: 1rem;

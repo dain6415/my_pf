@@ -13,11 +13,20 @@
 }
 #about .sect_inner .bg {
   height: 30vh;
+  line-height: 1;
 }
 #about .sect_inner .bottom {
-  color: var(--white);
+  color: var(--main-color600);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  font-size: 1.25rem;
+}
+#about .sect_inner .bottom .copyright {
+  font-weight: 100;
+  color: var(--main-color600);
+}
+#about .sect_inner .bottom .time_area span {
+  display: none;
 }
 
 @media only screen and (min-width: 701px) {
@@ -25,6 +34,6 @@
     font-size: 2rem;
   }
   #about .sect_inner .thanku {
-    font-size: 20rem;
+    font-size: 18rem;
   }
 }/*# sourceMappingURL=about.css.map */

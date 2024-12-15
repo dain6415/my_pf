@@ -23,11 +23,21 @@
     }
     .bg{
       height: 30vh;
+      line-height: 1;
     }
     .bottom {
-      color: var(--white);
+      color: var(--main-color600);
       display: grid;
       grid-template-columns: repeat(4,1fr);
+      font-size: 1.25rem;
+      .copyright{
+        font-weight: 100;
+        color: var(--main-color600);
+      }
+      .time_area{
+        span{display: none;}
+
+      }
       // >div{
       //   padding-left: 20px;
       // }
@@ -69,6 +79,8 @@
     //     }
     //   }
     // }
+
+
   }
 }
 
@@ -86,7 +98,7 @@
         font-size: 2rem;
       }
       .thanku {
-        font-size: 20rem;
+        font-size: 18rem;
       }
     }
   }
