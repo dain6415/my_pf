@@ -1,20 +1,17 @@
 #about {
-  overflow: hidden;
-  position: relative;
-  border: 1px solid rgb(255, 0, 0);
+  background: var(--mainBg-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
   z-index: -1;
   padding: 0 40px;
-  background: var(--main-color);
-  border-radius: 20px 20px 0 0;
-}
-#about line {
-  display: none;
+  height: var(--footer-spacing);
+  padding: 0 40px;
 }
 #about .sect_inner {
-  height: 40vh;
-  transform: translateY(-100%);
-  position: relative;
-  z-index: 90000;
+  border-radius: 20px 20px 0 0;
+  background: var(--main-color);
+  height: var(--footer-spacing);
 }
 #about .sect_inner .sect_title {
   line-height: 1;
@@ -22,7 +19,6 @@
   grid-template-columns: 1;
 }
 #about .sect_inner .bg {
-  border: 1px solid #000;
   line-height: 1;
 }
 #about .sect_inner .bottom {

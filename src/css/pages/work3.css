@@ -1,7 +1,9 @@
 @charset "UTF-8";
 #work {
+  background: var(--mainBg-color);
   color: var(--black200_txt);
   position: relative;
+  margin-bottom: var(--footer-spacing);
 }
 #work .sect_inner .swiper_box {
   position: relative;

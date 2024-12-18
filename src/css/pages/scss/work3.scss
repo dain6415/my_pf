@@ -11,10 +11,11 @@
 }
 
 #work {
+  background:var(--mainBg-color);
   color: var(--black200_txt);
   // padding-top: 2000px;
   position: relative;
-
+  margin-bottom: var(--footer-spacing);
   .sect_inner {
     // border: 5px solid #000;
     .swiper_box {

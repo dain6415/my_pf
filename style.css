@@ -20,8 +20,11 @@
 /* -------------------------------------------------------------------------------- */
 
 body {
-  cursor: none;  
+  cursor: none;
 }
+main{
+  position: relative;
+}  
 a{cursor:none;}
 /* -------------------- */
 #custom_cursor{
