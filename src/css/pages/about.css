@@ -1,10 +1,20 @@
 #about {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(255, 0, 0);
+  z-index: -1;
   padding: 0 40px;
-  height: 50vh;
   background: var(--main-color);
+  border-radius: 20px 20px 0 0;
 }
 #about line {
   display: none;
+}
+#about .sect_inner {
+  height: 40vh;
+  transform: translateY(-100%);
+  position: relative;
+  z-index: 90000;
 }
 #about .sect_inner .sect_title {
   line-height: 1;
@@ -12,7 +22,7 @@
   grid-template-columns: 1;
 }
 #about .sect_inner .bg {
-  height: 30vh;
+  border: 1px solid #000;
   line-height: 1;
 }
 #about .sect_inner .bottom {
@@ -34,6 +44,6 @@
     font-size: 2rem;
   }
   #about .sect_inner .thanku {
-    font-size: 18rem;
+    font-size: 10rem;
   }
 }/*# sourceMappingURL=about.css.map */

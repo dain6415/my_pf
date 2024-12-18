@@ -8,13 +8,19 @@
   line {
     display: none;
   }
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(255, 0, 0);
+  z-index: -1;
   padding: 0 40px;
-  // position: sticky;
-  // border: 10px solid #fa0e0e;
-  height: 50vh;
   background: var(--main-color);
-  // border-radius: 40px 40px 0 0;
+  border-radius: 20px 20px 0 0;
+  // height: 50vh;
   .sect_inner {
+    height: 40vh;
+    transform: translateY(-100%);
+    position: relative;
+    z-index: 90000;
     .sect_title {
       // font-family: 'LABSAmiga';
       line-height: 1;
@@ -22,7 +28,7 @@
       grid-template-columns: 1;
     }
     .bg{
-      height: 30vh;
+      border: 1px solid #000;
       line-height: 1;
     }
     .bottom {
@@ -98,7 +104,7 @@
         font-size: 2rem;
       }
       .thanku {
-        font-size: 18rem;
+        font-size: 10rem;
       }
     }
   }
