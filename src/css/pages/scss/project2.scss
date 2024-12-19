@@ -61,14 +61,11 @@ body {
       overflow: visible;
       position: relative;
       .article_box{
-        position: sticky;
+        // position: sticky;
         left: 0;
         top: 0;
       }
       article.sect__item {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        padding: 40px 40px;
         // z-index: 10;
 
         background-color: var(--mainBg-color);
@@ -96,8 +93,6 @@ body {
             font-weight: 600;
           }
           .txt {
-            width: 70%;
-            padding-top: 80px;
             font-weight: 400;
             font-size: 1.25rem;
             line-height: 1.75rem;
@@ -153,7 +148,7 @@ body {
             }
           }
         }
-        .s_img {
+        .visual {
           // padding-right: 20px;
           padding-top: 140%;
           width: 100%;
@@ -214,9 +209,12 @@ body {
           display: flex;
           flex-direction: column;
           padding: 30px 40px;
-          .num {
-            font-size: 0.75rem;
-            color: var(--black600);
+          .title{
+            .num {
+              font-size: 0.75rem;
+              color: var(--black600);
+            }
+
           }
           .info {
             padding-top: 20px;
@@ -277,9 +275,12 @@ body {
 
       .sect__wrap {
         article.sect__item {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr;
+          padding: 40px 40px;
           height: auto;
           // height: 70vh;
-          gap: 10px;
+          // gap: 10px;
           padding: 30px 40px;
           .num {
             font-size: 0.75rem;
@@ -316,28 +317,57 @@ body {
       // }
 
       .sect__wrap {
-        article.sect__item {
-          grid-template-columns: 1fr 2fr 1fr;
-          gap: 30px;
-          padding: 40px;
-          &.s3 {
-            .s_img {
-              .img_bg {
-                img {
-                  width: 60%;
+        position: relative;
+        .article_box{
+          position: relative;
+          overflow: hidden;
+          border: 1px solid #000;
+          article.sect__item {
+            background: #000;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto 1fr;
+            column-gap: 2%;
+            padding: 40px;
+            &.s3 {
+              .s_img {
+                .img_bg {
+                  img {
+                    width: 60%;
+                  }
                 }
               }
             }
-          }
-          .num {
-            font-size: 1rem;
-          }
-          .info {
-            h3 {
-              font-size: 2rem;
+            .header__title{
+              display: flex;
+              grid-column: 1/10 ;
+              // padding-bottom: 20px;
+              // border: 1px solid #000;
+              position: relative;
+              margin-bottom: 20px;
+              .num {
+                font-size: 1rem;
+                width: 34%;
+              }
+              h3 {
+                line-height: 1.2;
+                font-size: 2.5rem;
+              }
             }
-            .txt {
-              width: 90%;
+            .info {
+              grid-column: 1/ 10;
+              // border: 1px solid #000;
+              padding-left: 34%;
+              padding-top: 20px;
+              // overflow: hidden;
+              .txt {
+                width: 90%;
+              }
+            }
+            .visual{
+              grid-column: 10/13;
+              grid-row-start: 1;
+              grid-row-end: 3;
+              // border: 1px solid #000;
             }
           }
         }
@@ -354,10 +384,14 @@ body {
       // .sect_title {
 
       // }
-
+      .sticky-element {
+        position: sticky;
+        top: 100px;  /* 50px 아래에서 고정되기 시작 */
+        z-index: 10;
+      }
       .sect__wrap {
         article.sect__item {
-          gap: 30px;
+          // gap: 30px;
           padding: 40px;
           &.s3 {
             .s_img {
@@ -373,11 +407,9 @@ body {
           }
           .info {
             h3 {
-              font-size: 2.5rem;
+              font-size: 2.75rem;
             }
             .txt {
-              width: 80%;
-              padding-top: 80px;
               font-size: 1.25rem;
               line-height: 1.75rem;
               letter-spacing: -0.3px;

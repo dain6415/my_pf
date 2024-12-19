@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   width: 100%;
@@ -46,14 +47,10 @@ body {
   position: relative;
 }
 #project .sect_inner .sect__wrap .article_box {
-  position: sticky;
   left: 0;
   top: 0;
 }
 #project .sect_inner .sect__wrap article.sect__item {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  padding: 40px 40px;
   background-color: var(--mainBg-color);
   border: 1px solid transparent;
   border-bottom: 0;
@@ -72,8 +69,6 @@ body {
   font-weight: 600;
 }
 #project .sect_inner .sect__wrap article.sect__item .info .txt {
-  width: 70%;
-  padding-top: 80px;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -121,13 +116,13 @@ body {
   padding-left: 5px;
   opacity: 1;
 }
-#project .sect_inner .sect__wrap article.sect__item .s_img {
+#project .sect_inner .sect__wrap article.sect__item .visual {
   padding-top: 140%;
   width: 100%;
   background: var(--black900);
   position: relative;
 }
-#project .sect_inner .sect__wrap article.sect__item .s_img .img_bg {
+#project .sect_inner .sect__wrap article.sect__item .visual .img_bg {
   border-radius: 5px;
   position: absolute;
   left: 50%;
@@ -139,7 +134,7 @@ body {
   filter: grayscale(100%);
   transition: 0.3s;
 }
-#project .sect_inner .sect__wrap article.sect__item .s_img .img_bg img {
+#project .sect_inner .sect__wrap article.sect__item .visual .img_bg img {
   width: 100%;
   animation: rotateImage 2s infinite linear;
 }
@@ -162,7 +157,7 @@ body {
     flex-direction: column;
     padding: 30px 40px;
   }
-  #project .sect_inner .sect__wrap article.sect__item .num {
+  #project .sect_inner .sect__wrap article.sect__item .title .num {
     font-size: 0.75rem;
     color: var(--black600);
   }
@@ -218,8 +213,10 @@ body {
     font-size: 4rem;
   }
   #project .sect_inner .sect__wrap article.sect__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 40px 40px;
     height: auto;
-    gap: 10px;
     padding: 30px 40px;
   }
   #project .sect_inner .sect__wrap article.sect__item .num {
@@ -245,30 +242,62 @@ body {
   #project .sect_inner {
     min-height: 300vh;
   }
-  #project .sect_inner .sect__wrap article.sect__item {
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 30px;
+  #project .sect_inner .sect__wrap {
+    position: relative;
+  }
+  #project .sect_inner .sect__wrap .article_box {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+  }
+  #project .sect_inner .sect__wrap .article_box article.sect__item {
+    background: #000;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 2%;
     padding: 40px;
   }
-  #project .sect_inner .sect__wrap article.sect__item.s3 .s_img .img_bg img {
+  #project .sect_inner .sect__wrap .article_box article.sect__item.s3 .s_img .img_bg img {
     width: 60%;
   }
-  #project .sect_inner .sect__wrap article.sect__item .num {
+  #project .sect_inner .sect__wrap .article_box article.sect__item .header__title {
+    display: flex;
+    grid-column: 1/10;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  #project .sect_inner .sect__wrap .article_box article.sect__item .header__title .num {
     font-size: 1rem;
+    width: 34%;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info h3 {
-    font-size: 2rem;
+  #project .sect_inner .sect__wrap .article_box article.sect__item .header__title h3 {
+    line-height: 1.2;
+    font-size: 2.5rem;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info .txt {
+  #project .sect_inner .sect__wrap .article_box article.sect__item .info {
+    grid-column: 1/10;
+    padding-left: 34%;
+    padding-top: 20px;
+  }
+  #project .sect_inner .sect__wrap .article_box article.sect__item .info .txt {
     width: 90%;
+  }
+  #project .sect_inner .sect__wrap .article_box article.sect__item .visual {
+    grid-column: 10/13;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
 @media only screen and (min-width: 1400px) {
   #project .sect_inner {
     min-height: 300vh;
   }
+  #project .sect_inner .sticky-element {
+    position: sticky;
+    top: 100px; /* 50px 아래에서 고정되기 시작 */
+    z-index: 10;
+  }
   #project .sect_inner .sect__wrap article.sect__item {
-    gap: 30px;
     padding: 40px;
   }
   #project .sect_inner .sect__wrap article.sect__item.s3 .s_img .img_bg img {
@@ -278,11 +307,9 @@ body {
     font-size: 1rem;
   }
   #project .sect_inner .sect__wrap article.sect__item .info h3 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
   #project .sect_inner .sect__wrap article.sect__item .info .txt {
-    width: 80%;
-    padding-top: 80px;
     font-size: 1.25rem;
     line-height: 1.75rem;
     letter-spacing: -0.3px;
