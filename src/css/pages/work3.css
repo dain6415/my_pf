@@ -257,9 +257,6 @@
   #work .sect_inner .sect_title {
     font-size: 3.5rem;
     font-weight: 600;
-    height: 150px;
-    display: grid;
-    position: relative;
   }
   #work .sect_inner .sect_title p {
     width: 90%;

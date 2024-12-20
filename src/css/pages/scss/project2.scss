@@ -35,27 +35,6 @@ body {
     width: 100%;
     min-height: 300vh;
     border-bottom: 1px solid #000;
-    .sect_title {
-      // background: var(--mainBg-color);
-      // border-bottom: 2px solid #000;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr 2fr;
-      gap: 30px;
-      .po_ab {
-        margin: 10px;
-        border: 1px solid #000;
-        border: 1px solid red;
-        padding: 40px;
-        background: var(--black);
-        grid-column: 2;
-        width: 100%;
-        line-height: 1;
-        text-transform: uppercase;
-        font-family: var(--subEng-font);
-        font-weight: 900;
-      }
-    }
 
     .sect__wrap {
       // overflow: visible;
@@ -194,6 +173,7 @@ body {
       min-height: 300vh;
       // overflow: visible;
       .sect_title {
+
         padding: 40px;
         .po_ab {
           width: 100%;
@@ -263,10 +243,10 @@ body {
       min-height: 300vh;
       // overflow: visible;
       .sect_title {
-        // padding: 40px;
         .po_ab {
           width: 100%;
           font-size: 4rem;
+          padding: 40px 0;
         }
       }
 

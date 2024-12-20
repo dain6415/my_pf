@@ -82,8 +82,8 @@ export function project() {
   // 콘솔 로그 지우기. 디버깅 중에 콘솔을 정리하는 용도로 사용
 
   gsap.registerPlugin(ScrollTrigger);
-  
-  const aritBox = gsap.utils.toArray(".article_box"); 
+
+  const aritBox = gsap.utils.toArray(".article_box");
   const sWrap = document.querySelector(".sect__wrap");
 
   function getHeaderHeight() {
@@ -91,10 +91,10 @@ export function project() {
   }
 
   let headerHeight = getHeaderHeight();
-window.addEventListener('resize', () => {
-  headerHeight = getHeaderHeight();
-  updateAccordionHeight();
-});
+  window.addEventListener("resize", () => {
+    headerHeight = getHeaderHeight();
+    updateAccordionHeight();
+  });
 
   function updateAccordionHeight() {
     // 마지막 아코디언의 .vlsual이 확장된 상태에서 높이 계산
@@ -102,59 +102,58 @@ window.addEventListener('resize', () => {
     // 아코디언의 각 항목을 기준으로 높이를 업데이트하는 역할
 
     aritBox.forEach((item) => {
-      const visualHeight = item.querySelector(".visual"); 
+      const visualHeight = item.querySelector(".visual");
       const contentHeight = visualHeight.scrollHeight; // 실제 내용 높이
       totalHeight += contentHeight;
       // contentHeight 값을 가져와 모든 항목의 총 높이 구하기
 
       // console.log(visualHeight.scrollHeight);
     });
-  
+
     // .sWrap 높이 = 총 높이
     sWrap.style.height = totalHeight + "px";
   }
 
-  function getScrollTriggerValues(i, headerHeight) {
-    if (window.innerWidth > 1000) {
-      return {
-        start: `top ${headerHeight + (100 * i)}`,
-        end: `bottom-=${headerHeight}`
-      };
-    } else {
-      return {
-        start: `top ${headerHeight + (50 * i)}`,
-        end: `bottom-=${headerHeight}`
-      };
-    }
-  }
-  
+  // function getScrollTriggerValues(i, headerHeight) {
+  //   if (window.innerWidth > 999) {
+  //     return {
+  //       start: `top ${headerHeight + 100 * i}`,
+  //       end: `bottom-=${headerHeight}`,
+  //     };
+  //   } else {
+  //     return {
+  //       start: `top ${headerHeight + 50 * i}`,
+  //       end: `bottom-=${headerHeight}`,
+  //     };
+  //   }
+  // }
+
   // 아코디언 애니메이션 설정
   aritBox.forEach((item, i) => {
     const visualContent = item.querySelector(".visual");
     const header = item.querySelector(".header__title");
-  
+
     gsap.to(visualContent, {
       height: "0",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: item,
         // start: "top " + (header.clientHeight * 2.5) * i,
-        start: () => `top ${getHeaderHeight() + (header.clientHeight * 2.5) * i}`,
+        start: () => `top ${getHeaderHeight() + header.clientHeight * 2.5 * i}`,
         endTrigger: "#work",
-        end: () => `bottom-${getHeaderHeight()}`,
-        // end: "top bottom",
+        // end: () => `bottom-${getHeaderHeight()}`,
+        end: "top bottom",
         // end: "top " + header.clientHeight * 21,
         pin: true,
         pinSpacing: false,
-        scrub: .5,
+        scrub: 0.5,
         markers: { indent: 0 * i },
         id: i + 1,
         onUpdate: updateAccordionHeight, // 높이 업데이트
       },
     });
   });
-  
+
   // 초기 높이 설정
   updateAccordionHeight();
-  
 }

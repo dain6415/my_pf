@@ -23,24 +23,6 @@ body {
   min-height: 300vh;
   border-bottom: 1px solid #000;
 }
-#project .sect_inner .sect_title {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  gap: 30px;
-}
-#project .sect_inner .sect_title .po_ab {
-  margin: 10px;
-  border: 1px solid #000;
-  border: 1px solid red;
-  padding: 40px;
-  background: var(--black);
-  grid-column: 2;
-  width: 100%;
-  line-height: 1;
-  text-transform: uppercase;
-  font-family: var(--subEng-font);
-  font-weight: 900;
-}
 #project .sect_inner .sect__wrap {
   position: relative;
 }
@@ -212,6 +194,7 @@ body {
   #project .sect_inner .sect_title .po_ab {
     width: 100%;
     font-size: 4rem;
+    padding: 40px 0;
   }
   #project .sect_inner .sect__wrap article.sect__item {
     display: grid;
