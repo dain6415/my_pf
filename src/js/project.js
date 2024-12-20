@@ -76,45 +76,78 @@ export function project() {
   // });
 
   // ------------------------------------------------------
+
   // 아코디언
   console.clear();
+  // 콘솔 로그 지우기. 디버깅 중에 콘솔을 정리하는 용도로 사용
 
   gsap.registerPlugin(ScrollTrigger);
   
-  const items = gsap.utils.toArray(".article_box"); // .item -> .sect__item
-  
-  const accordionSection = document.querySelector(".sect__wrap"); // .accordion-section -> .sect__wrap
-  
+  const aritBox = gsap.utils.toArray(".article_box"); 
+  const sWrap = document.querySelector(".sect__wrap");
+
+  function getHeaderHeight() {
+    return document.querySelector("#header").getBoundingClientRect().height; // 헤더 높이 실시간 계산
+  }
+
+  let headerHeight = getHeaderHeight();
+window.addEventListener('resize', () => {
+  headerHeight = getHeaderHeight();
+  updateAccordionHeight();
+});
+
   function updateAccordionHeight() {
-    // 마지막 아코디언의 .body가 확장된 상태에서 높이 계산
+    // 마지막 아코디언의 .vlsual이 확장된 상태에서 높이 계산
     let totalHeight = 0;
-    items.forEach((item) => {
-      const body = item.querySelector(".info"); // .body -> .info
-      const contentHeight = body.scrollHeight; // 실제 내용 높이
+    // 아코디언의 각 항목을 기준으로 높이를 업데이트하는 역할
+
+    aritBox.forEach((item) => {
+      const visualHeight = item.querySelector(".visual"); 
+      const contentHeight = visualHeight.scrollHeight; // 실제 내용 높이
       totalHeight += contentHeight;
+      // contentHeight 값을 가져와 모든 항목의 총 높이 구하기
+
+      // console.log(visualHeight.scrollHeight);
     });
   
-    // .accordion-section 높이 설정
-    accordionSection.style.height = totalHeight + "px";
+    // .sWrap 높이 = 총 높이
+    sWrap.style.height = totalHeight + "px";
+  }
+
+  function getScrollTriggerValues(i, headerHeight) {
+    if (window.innerWidth > 1000) {
+      return {
+        start: `top ${headerHeight + (100 * i)}`,
+        end: `bottom-=${headerHeight}`
+      };
+    } else {
+      return {
+        start: `top ${headerHeight + (50 * i)}`,
+        end: `bottom-=${headerHeight}`
+      };
+    }
   }
   
   // 아코디언 애니메이션 설정
-  items.forEach((item, i) => {
-    const content = item.querySelector(".visual"); // .body -> .info
-    const header = item.querySelector(".header__title"); // .header -> .header__title
+  aritBox.forEach((item, i) => {
+    const visualContent = item.querySelector(".visual");
+    const header = item.querySelector(".header__title");
   
-    gsap.to(content, {
-      height: "0", // .body -> .info
-      ease: "none",
+    gsap.to(visualContent, {
+      height: "0",
+      ease: "power1.inOut",
       scrollTrigger: {
         trigger: item,
-        start: "top " + (header.clientHeight * 2.5) * i,
-        endTrigger: "#work", // .final -> .sect__wrap
-        end: "top " + header.clientHeight * items.length,
+        // start: "top " + (header.clientHeight * 2.5) * i,
+        start: () => `top ${getHeaderHeight() + (header.clientHeight * 2.5) * i}`,
+        endTrigger: "#work",
+        end: () => `bottom-${getHeaderHeight()}`,
+        // end: "top bottom",
+        // end: "top " + header.clientHeight * 21,
         pin: true,
         pinSpacing: false,
-        scrub: true,
-        markers: { indent: 150 * i },
+        scrub: .5,
+        markers: { indent: 0 * i },
         id: i + 1,
         onUpdate: updateAccordionHeight, // 높이 업데이트
       },
