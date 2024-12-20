@@ -248,6 +248,7 @@ body {
     font-size: 0.75rem;
   }
   #project .sect_inner .sect__wrap article.sect__item .visual {
+    height: 0;
     padding-top: 160%;
     grid-column: 9/13;
     grid-row-start: 1;
@@ -285,6 +286,7 @@ body {
     width: 90%;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .visual {
+    height: 0;
     padding-top: 140%;
     grid-column: 10/13;
     grid-row-start: 1;

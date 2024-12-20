@@ -305,6 +305,7 @@ body {
             }
           }
           .visual{
+            height: 0;
             padding-top: 160%;
             grid-column: 9/13;
             grid-row-start: 1;
@@ -356,6 +357,7 @@ body {
               }
             }
             .visual {
+              height: 0;
               padding-top: 140%;
               grid-column: 10/13;
               grid-row-start: 1;
