@@ -11,7 +11,7 @@
 }
 #work .sect_inner .swiper_box {
   position: relative;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 #work .sect_inner .swiper_box .swiper-slide {
   pointer-events: auto;
@@ -178,7 +178,7 @@
 #work .sect_inner .list_box {
   border-left: 1px solid var(--black600);
   border-right: 1px solid var(--black600);
-  padding: 0 40px;
+  padding: 0 20px;
 }
 #work .sect_inner .list_box ul li {
   position: relative;

@@ -168,7 +168,7 @@ body {
       // min-height: 300vh;  
       overflow: hidden;
       .sect_title {
-        padding: 20px 40px;
+        padding: 20px 20px;
         display: block;
         .po_ab {
           font-size: 1rem;
@@ -181,12 +181,8 @@ body {
           height: auto;
           display: flex;
           flex-direction: column;
-          padding: 1.5em 40px;
+          padding: 1.5em 20px;
           .header__title {
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: center;
-            // flex-direction: row-reverse;
             .num {
               font-size: 0.75rem;
               color: var(--black600);

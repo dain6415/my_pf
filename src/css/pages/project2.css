@@ -123,7 +123,7 @@ body {
     overflow: hidden;
   }
   #project .sect_inner .sect_title {
-    padding: 20px 40px;
+    padding: 20px 20px;
     display: block;
   }
   #project .sect_inner .sect_title .po_ab {
@@ -134,7 +134,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 1.5em 40px;
+    padding: 1.5em 20px;
   }
   #project .sect_inner .sect__wrap article.sect__item .header__title .num {
     font-size: 0.75rem;

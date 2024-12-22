@@ -142,6 +142,13 @@ a {
   bottom: 0;
 }
 @media only screen and (max-width: 700px) {
+  .body_line {
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    inset: 0 20px;
+    /* z-index: -1; */
+  }
   .h-line {
     background-color: var(--black600);
     width: 1px;
