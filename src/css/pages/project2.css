@@ -23,7 +23,6 @@ body {
   width: 100%;
 }
 #project .sect_inner .sect__wrap {
-  overflow: hidden;
   position: relative;
 }
 #project .sect_inner .sect__wrap .article_box {
@@ -100,6 +99,7 @@ body {
   height: 0;
   background: var(--black900);
   position: relative;
+  overflow: hidden;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .visual .img_bg {
   border-radius: 5px;
@@ -189,8 +189,9 @@ body {
   }
   #project .sect_inner .sect_title .po_ab {
     width: 100%;
-    font-size: 4rem;
-    padding: 40px 0;
+  }
+  #project .sect_inner .sect__wrap {
+    overflow: hidden;
   }
   #project .sect_inner .sect__wrap article.sect__item {
     display: grid;

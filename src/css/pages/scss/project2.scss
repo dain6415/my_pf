@@ -35,7 +35,7 @@ body {
   .sect_inner {
     width: 100%;
     .sect__wrap {
-      overflow: hidden;
+      // overflow: hidden;
       position: relative;
       .article_box {
         position: relative;
@@ -125,6 +125,7 @@ body {
             height: 0;
             background: var(--black900);
             position: relative;
+            overflow: hidden;
             .img_bg {
               border-radius: 5px;
               @include po-c();
@@ -242,12 +243,11 @@ body {
       .sect_title {
         .po_ab {
           width: 100%;
-          font-size: 4rem;
-          padding: 40px 0;
         }
       }
 
       .sect__wrap {
+        overflow: hidden;
         article.sect__item {
           display: grid;
           grid-template-columns: repeat(12, 1fr);

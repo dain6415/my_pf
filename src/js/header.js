@@ -70,4 +70,50 @@ export function header() {
     links.forEach((el) => el.classList.remove("on"));
     link.classList.add("on");
   }
+
+    // phon ver nav -------------------------------------------
+    // const navBtn = document.querySelector(".header__nav_mobile")
+$(".header__nav_mobile").click(function (e) {
+  const nav = $("nav");
+  const toggleBtn = $(this);
+
+  if (nav.is(":visible")) { // 닫기
+    // nav가 화면에 보이는 상태인지 확인함 = 열려있다면
+    header.classList.add("fixed")
+    header.classList.remove("borderNo")
+    nav.stop().slideUp(600).find("ul").css("opacity", "0");
+    toggleBtn.attr("aria-expanded", "false").removeClass("open");
+  } else {  // 열기
+    header.classList.add("fixed","borderNo")
+    nav.stop().slideDown().find("ul").css("opacity", "1");
+    toggleBtn.attr("aria-expanded", "true").addClass("open");
+  }
+  e.stopPropagation();
+});
+
+// li 클릭 시 메뉴 닫기
+$("nav li").click(function () {
+  const nav = $("nav");
+  const toggleBtn = $(".header__nav_mobile");
+
+  nav.stop().slideUp().find("ul").css("opacity", "0");
+  toggleBtn.attr("aria-expanded", "false").removeClass("open");
+});
+
+// 다른 곳을 클릭해도 닫기
+$(document).click(function () {
+  const nav = $("nav");
+  const toggleBtn = $(".header__nav_mobile");
+
+  if (nav.is(":visible")) {
+    nav.stop().slideUp(300).find("ul").css("opacity", "0");
+    toggleBtn.attr("aria-expanded", "false").removeClass("open");
+  }
+});
+
+// nav 클릭 시 전파 중지 (닫히지 않도록 설정)
+$("nav").click(function (event) {
+  event.stopPropagation();
+});
+
 }
