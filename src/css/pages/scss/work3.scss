@@ -11,19 +11,24 @@
 }
 
 #work {
+  // margin-top: 70px;
   background:var(--mainBg-color);
   color: var(--black200_txt);
   // padding-top: 2000px;
   position: relative;
-  margin-bottom: var(--footer-spacing);
+  // margin-bottom: var(--footer-spacing);
+  border-top: 1px solid var(--black600);
   .sect_inner {
-    // border: 5px solid #000;
+    .sect_title{
+      background:var(--mainBg-color);
+      border-bottom: 1px solid var(--black600);
+    }
     .swiper_box {
       position: relative;
       padding: 0 40px;
       .swiper-slide {
         border: 1px solid transparent;
-        border-top: 1px solid var(--black600);
+        // border-top: 1px solid var(--black600);
         border-bottom-color: var(--black600);
         overflow: hidden;
         transition: 0.2s;
@@ -33,7 +38,6 @@
           flex-direction: column;
           justify-content: space-between;
           .txt {
-            // border: 1px solid #000;
             text-align: center;
             padding: 0px 10% 0 ;
             transform: translateY(25%);
@@ -192,8 +196,9 @@
         @include flex-c(space-between);
         @include po-c();
         z-index: 1;
-        pointer-events: none;
-        // height: 0;
+        // pointer-events: none;
+        height: 0;
+        // border: 1px solid #000;
 
         .btn_box {
           position: auto;
@@ -419,10 +424,6 @@
     .sect_inner {
       .sect_title {
         font-size: 3.5rem;
-        font-weight: 600;
-        height: 150px;
-        display: grid;
-        grid-template-columns: 2fr 2fr;
         p {
           line-height: normal;
           // left: -400px;
@@ -486,10 +487,6 @@
     .sect_inner {
       .sect_title {
         font-size: 5rem;
-        font-weight: 600;
-        height: 150px;
-        display: grid;
-        grid-template-columns: 2fr 2fr;
         p {
           line-height: normal;
           // left: -400px;

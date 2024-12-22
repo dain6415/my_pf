@@ -12,7 +12,6 @@
 // ------------------------------
 #header {
   // display: none;
-  min-width: 700px;
   width: 100%;
   padding: 20px 40px;
   background: transparent;
@@ -159,16 +158,72 @@
 }
 
 // *********************************************************************************************************************
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #header {
-    // height: 60px;
-    nav {
-      display: none;
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    top: calc(100vh - 80px);
+    z-index: 1000; 
+    .header__inner {
+      padding: 0px 40px;
+      width: 100%;
+      height: 100%;
+      @include flex-c(space-between);
+      // position: relative;
+      background: var(--mainBg-color);
+      nav {
+        // border: 1px solid var(--black700);
+        width: 100%;
+        height: 200px;
+        padding: 20px 40px;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background: rgba($color: #f5f5f5, $alpha: .8);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 2px 20px rgba($color: #000000, $alpha: .1);
+        z-index: -1;
+        ul{
+          flex-direction: column;
+          li{
+            text-align: right;
+          }
+        }
+      }
+      .header__nav_mobile {
+        width: 70px;
+        height: 70px;
+        padding: 10px 18px; 
+        @include flex-c();
+        transform: translateX(18px);
+        span {
+          width: 100%;
+          height: 4px;
+          background: var(--black200_txt);
+          display: block;
+          position: relative;
+          &::before,
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background: var(--black200_txt);
+          }
+          &::before {
+            top: -10px;
+          }
+          &::after {
+            top: 10px;
+          }
+        }
+      }
     }
   }
 }
 // ------------------------------------------------------------------------------------------------
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
   #header {
     // height: 100px;
     .header__inner {

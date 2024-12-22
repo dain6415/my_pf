@@ -12,6 +12,7 @@ body {
 }
 
 #project {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   position: relative;
@@ -20,28 +21,25 @@ body {
 }
 #project .sect_inner {
   width: 100%;
-  min-height: 300vh;
-  border-bottom: 1px solid #000;
 }
 #project .sect_inner .sect__wrap {
+  overflow: hidden;
   position: relative;
 }
 #project .sect_inner .sect__wrap .article_box {
   position: relative;
-  overflow: hidden;
   left: 0;
   top: 0;
-  border-bottom: 1px solid #098330;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item {
   background-color: var(--mainBg-color);
-  border: 1px solid transparent;
+  border-top: 1px solid transparent;
   border-bottom: 0;
   border-image: url(/src/img/line.jpg) 30;
   border-image-repeat: repeat;
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item.s3 .s_img .img_bg img {
-  width: 70%;
+#project .sect_inner .sect__wrap .article_box article.sect__item.s3 .visual .img_bg img {
+  width: 80%;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .header__title {
   position: relative;
@@ -51,7 +49,7 @@ body {
   font-family: "Binggrae";
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .header__title h3 {
-  line-height: 1.2;
+  line-height: 1;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .info .txt {
   font-weight: 400;
@@ -61,40 +59,38 @@ body {
 #project .sect_inner .sect__wrap .article_box article.sect__item .info .txt span {
   font-weight: 700;
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a {
+#project .sect_inner .sect__wrap .article_box article.sect__item a {
   display: inline-block;
-  margin-top: 60px;
   padding: 10px 30px;
   transition: 0.3s;
   border: 1px solid #000;
-  font-weight: 800;
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.view_btn {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.view_btn {
   margin-right: 10px;
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.view_btn i {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.view_btn i {
   padding-left: 10px;
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.view_btn:hover {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.view_btn:hover {
   background: var(--black);
   color: var(--white);
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.plan {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.plan {
   border: none;
   font-weight: 800;
   transition: 0.5s;
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.plan::after {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.plan::after {
   content: "";
   transition: 0.5s;
   opacity: 0;
   font-family: "Pretendard Variable";
   color: var(--main-color);
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.plan:hover {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.plan:hover {
   color: var(--main-color);
 }
-#project .sect_inner .sect__wrap .article_box article.sect__item .info a.plan:hover::after {
+#project .sect_inner .sect__wrap .article_box article.sect__item a.plan:hover::after {
   content: "->";
   padding-left: 5px;
   opacity: 1;
@@ -118,58 +114,59 @@ body {
   transition: 0.3s;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .visual .img_bg img {
-  width: 100%;
   animation: rotateImage 2s infinite linear;
 }
 
 @media only screen and (max-width: 700px) {
   #project .sect_inner {
     width: 100%;
-    min-height: 300vh;
+    overflow: hidden;
   }
   #project .sect_inner .sect_title {
-    padding: 40px;
+    padding: 20px 40px;
+    display: block;
   }
   #project .sect_inner .sect_title .po_ab {
+    font-size: 1rem;
     width: 100%;
-    font-size: 5rem;
   }
   #project .sect_inner .sect__wrap article.sect__item {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 30px 40px;
+    padding: 1.5em 40px;
   }
-  #project .sect_inner .sect__wrap article.sect__item .title .num {
+  #project .sect_inner .sect__wrap article.sect__item .header__title .num {
     font-size: 0.75rem;
     color: var(--black600);
   }
-  #project .sect_inner .sect__wrap article.sect__item .info {
-    padding-top: 20px;
-  }
-  #project .sect_inner .sect__wrap article.sect__item .info h3 {
-    font-size: 2rem;
+  #project .sect_inner .sect__wrap article.sect__item .header__title h3 {
+    font-size: 1.5rem;
+    padding-top: 10px;
     font-weight: 500;
+  }
+  #project .sect_inner .sect__wrap article.sect__item .info {
+    padding-top: 30px;
   }
   #project .sect_inner .sect__wrap article.sect__item .info .txt {
     width: 100%;
-    padding-top: 40px;
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info a {
-    margin-top: 30px;
+  #project .sect_inner .sect__wrap article.sect__item a {
+    margin-top: 40px;
     padding: 10px 30px;
     font-size: 1rem;
+    font-weight: 600;
   }
-  #project .sect_inner .sect__wrap article.sect__item .s_img {
-    margin-top: 60px;
-    padding-top: 75%;
+  #project .sect_inner .sect__wrap article.sect__item .visual {
+    margin-top: 40px;
+    padding-top: 70%;
     width: 100%;
     background: var(--sBg-color);
     position: relative;
   }
-  #project .sect_inner .sect__wrap article.sect__item .s_img .img_bg {
+  #project .sect_inner .sect__wrap article.sect__item .visual .img_bg {
     border-radius: 5px;
     position: absolute;
     left: 50%;
@@ -181,15 +178,14 @@ body {
     filter: grayscale(100%);
     transition: 0.3s;
   }
-  #project .sect_inner .sect__wrap article.sect__item .s_img .img_bg img {
-    width: 100%;
+  #project .sect_inner .sect__wrap article.sect__item .visual .img_bg img {
+    width: 80%;
     animation: rotateImage 2s infinite linear;
   }
 }
 @media only screen and (min-width: 701px) {
   #project .sect_inner {
     width: 100%;
-    min-height: 300vh;
   }
   #project .sect_inner .sect_title .po_ab {
     width: 100%;
@@ -201,52 +197,51 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr;
     column-gap: 2%;
-    padding: 30px 40px;
+    padding: 2em 40px;
   }
   #project .sect_inner .sect__wrap article.sect__item .header__title {
     display: flex;
     grid-column: 1/9;
+    padding-bottom: 12px;
   }
   #project .sect_inner .sect__wrap article.sect__item .header__title .num {
     font-size: 0.75rem;
-    width: 34%;
+    width: 20%;
+    padding-top: 5px;
   }
   #project .sect_inner .sect__wrap article.sect__item .header__title h3 {
     font-size: 1.75rem;
     font-weight: 500;
   }
   #project .sect_inner .sect__wrap article.sect__item .info {
-    grid-column: 1/9;
-    padding-left: 34%;
+    grid-column: 2/8;
+    padding-left: 10%;
     padding-top: 40px;
   }
   #project .sect_inner .sect__wrap article.sect__item .info .txt {
     line-height: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 95%;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info a {
+  #project .sect_inner .sect__wrap article.sect__item a {
     margin-top: 30px;
     padding: 5px 20px;
     font-size: 0.75rem;
   }
   #project .sect_inner .sect__wrap article.sect__item .visual {
     height: 0;
-    padding-top: 160%;
+    padding-top: 120%;
     grid-column: 9/13;
     grid-row-start: 1;
     grid-row-end: 3;
   }
+  #project .sect_inner .sect__wrap article.sect__item .visual .img_bg img {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 1000px) {
-  #project .sect_inner {
-    min-height: 300vh;
-  }
   #project .sect_inner .sect__wrap {
     position: relative;
-  }
-  #project .sect_inner .sect__wrap .article_box article.sect__item {
-    padding: 40px;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item.s3 .s_img .img_bg img {
     width: 60%;
@@ -254,19 +249,23 @@ body {
   #project .sect_inner .sect__wrap .article_box article.sect__item .header__title {
     grid-column: 1/10;
     margin-bottom: 20px;
+    padding-bottom: 10px;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .header__title .num {
     font-size: 1rem;
+    width: 34%;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .header__title h3 {
     font-size: 2.5rem;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .info {
-    grid-column: 1/10;
+    padding-left: 0;
+    grid-column: 4/10;
     padding-top: 20px;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .info .txt {
     width: 90%;
+    font-size: 1rem;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .visual {
     height: 0;
@@ -277,27 +276,23 @@ body {
   }
 }
 @media only screen and (min-width: 1400px) {
-  #project .sect_inner {
-    min-height: 300vh;
-  }
-  #project .sect_inner .sect__wrap article.sect__item {
-    padding: 40px;
-  }
-  #project .sect_inner .sect__wrap article.sect__item.s3 .s_img .img_bg img {
+  #project .sect_inner .sect__wrap .article_box article.sect__item.s3 .s_img .img_bg img {
     width: 60%;
   }
-  #project .sect_inner .sect__wrap article.sect__item .num {
+  #project .sect_inner .sect__wrap .article_box article.sect__item .header__title .num {
     font-size: 1rem;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info h3 {
-    font-size: 2.75rem;
+  #project .sect_inner .sect__wrap .article_box article.sect__item .header__title h3 {
+    font-size: 2.5rem;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info .txt {
+  #project .sect_inner .sect__wrap .article_box article.sect__item .info {
+    padding-top: 60px;
+  }
+  #project .sect_inner .sect__wrap .article_box article.sect__item .info .txt {
     font-size: 1.25rem;
-    line-height: 1.75rem;
-    letter-spacing: -0.3px;
+    line-height: 2rem;
   }
-  #project .sect_inner .sect__wrap article.sect__item .info a {
+  #project .sect_inner .sect__wrap .article_box article.sect__item a {
     margin-top: 60px;
     padding: 10px 30px;
     font-size: 1rem;

@@ -17,18 +17,27 @@ window.addEventListener("load", function () {
 
   // ***************************************************************************
   // mouse event
-  const mouses = document.querySelectorAll(".mouse_event"); /* 호버했을 때 size 변경용*/
-  const customCursor = document.getElementById("custom_cursor"); 
+  const mouses =
+    document.querySelectorAll(".mouse_event"); /* 호버했을 때 size 변경용*/
+  const customCursor = document.getElementById("custom_cursor");
   /* color, background 변경용 : background로 컬러를 지정했으니까 */
+
+  // 초기 설정
+  customCursor.style.padding = "calc(30px / 2)";
+  customCursor.style.mixBlendMode = "normal"; 
 
   mouses.forEach((mouse) => {
     mouse.addEventListener("mouseenter", function () {
-      customCursor.style.padding = "5px"; // 나누기니까 15px
-      customCursor.style.mixBlendMode = "difference"; // 15px
+      if (!mouse.classList.contains("on")) {
+        customCursor.style.padding = "5px"; // 나누기니까 15px
+      }
+      customCursor.style.mixBlendMode = "difference";
     });
     mouse.addEventListener("mouseleave", function () {
-      customCursor.style.padding = "calc( 30px / 2)";
-      customCursor.style.mixBlendMode = "normal"; // 15px
+      if (!mouse.classList.contains("on")) {
+        customCursor.style.padding = "calc( 30px / 2)";
+      }
+      customCursor.style.mixBlendMode = "normal"; 
     });
   });
 
@@ -55,10 +64,10 @@ window.addEventListener("load", function () {
   const aboutCursor = document.querySelector("#about .sect_inner");
 
   aboutCursor.addEventListener("mouseenter", function () {
-    customCursor.style.background = "#fff"; 
+    customCursor.style.background = "#fff";
   });
   aboutCursor.addEventListener("mouseleave", function () {
-    customCursor.style.background = "var(--main-color)"; 
+    customCursor.style.background = "var(--main-color)";
   });
 
   // 위로가기 ------------------------------------------

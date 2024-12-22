@@ -43,7 +43,7 @@ export function header() {
         duration: 1,
         scrollTo: {
           y: elem,
-          offsetY: 50,
+          offsetY: 80,
         },
         overwrite: "auto",
       });
@@ -70,15 +70,4 @@ export function header() {
     links.forEach((el) => el.classList.remove("on"));
     link.classList.add("on");
   }
-    function clock() {
-    let time = document.querySelector(".time");
-    let H = String(new Date().getHours()).padStart(2, "0");
-    let M = String(new Date().getMinutes()).padStart(2, "0");
-    let S = String(new Date().getSeconds()).padStart(2, "0");
-
-    time.innerHTML = `${H}:${M}:${S}`;
-  }
-
-  clock();
-  setInterval(clock, 1000);
 }

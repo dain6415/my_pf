@@ -5,12 +5,11 @@
 /* 작업 css */
 @import url(./src/css/pages/header.css);
 @import url(./src/css/pages/intro.css);
-/* @import url(./src/css/pages/project.css); */
 @import url(./src/css/pages/project2.css);
-/* @import url(./src/css/pages/work.css); */
 @import url(./src/css/pages/work3.css);
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
+
 /* font, color's */
 @import url(./src/css/base/vars.css);
 
@@ -29,7 +28,7 @@ main {
 a {
   cursor: none;
 }
-/* -------------------- */
+/* cursor -------------------- */
 #custom_cursor {
   padding: 5px;
   border-radius: 50%;
@@ -224,17 +223,18 @@ a {
     right: 0;
   }
 }
-/* -------------------- */
+/* section -------------------- */
 section:not(:last-child) {
   min-height: 900px;
   width: 100%;
   /* height: 100vh; */
   /* padding: 10rem 5% 0; */
 }
-/* 위로가기 버튼 ---------------------- */
+/* h2 ---------------------- */
 .sect_title {
   display: grid;
   position: relative;
+  align-items: center;
 }
 .po_ab {
   margin: 10px 0;
@@ -245,6 +245,28 @@ section:not(:last-child) {
   font-family: var(--subEng-font);
   font-weight: 900;
 }
+@media only screen and (max-width: 700px) {
+  .sect_title{
+    padding: 20px 40px;
+    display: block;
+    text-align: left;
+    h2{
+      font-size: 2rem;
+    }
+  }
+}
+@media only screen and (min-width: 701px) {
+  h2{
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  h2{
+    font-size: 4rem;
+  }
+}
+
+/* 위로가기 버튼 ---------------------- */
 .up_btn {
   /* display: none; */
   width: 80px;
