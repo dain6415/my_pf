@@ -239,18 +239,15 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
 }
 
 @media only screen and (max-width: 700px) {
-  main section {
-    margin: auto;
+  #intro {
     width: 100%;
-  }
-  main section#intro {
     height: 100vh;
     overflow: hidden;
   }
-  main section#intro .sect_inner {
+  #intro .sect_inner {
     height: 100%;
   }
-  main section#intro .sect_inner .blend {
+  #intro .sect_inner .blend {
     pointer-events: none;
     background-image: url(../../../img/sticker_texture_bg.jpg);
     background-position: center;
@@ -264,25 +261,25 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     height: 100%;
     z-index: 900;
   }
-  main section#intro .sect_inner .blend img {
+  #intro .sect_inner .blend img {
     width: 100%;
     height: 100%;
   }
-  main section#intro .sect_inner .stickers {
-    top: 7%;
+  #intro .sect_inner .stickers {
+    top: -7%;
     z-index: 10;
   }
-  main section#intro .sect_inner .stickers .sticker {
+  #intro .sect_inner .stickers .sticker {
     left: 50%;
   }
-  main section#intro .sect_inner .stickers .sticker img {
+  #intro .sect_inner .stickers .sticker img {
     width: 100%;
   }
-  main section#intro .sect_inner .stickers .sticker.black1, main section#intro .sect_inner .stickers .sticker.black2, main section#intro .sect_inner .stickers .sticker.black3, main section#intro .sect_inner .stickers .sticker.blue1, main section#intro .sect_inner .stickers .sticker.blue2, main section#intro .sect_inner .stickers .sticker.blue3 {
-    width: 200px;
-    height: 200px;
+  #intro .sect_inner .stickers .sticker.black1, #intro .sect_inner .stickers .sticker.black2, #intro .sect_inner .stickers .sticker.black3, #intro .sect_inner .stickers .sticker.blue1, #intro .sect_inner .stickers .sticker.blue2, #intro .sect_inner .stickers .sticker.blue3 {
+    width: 180px;
+    height: 180px;
   }
-  main section#intro .sect_inner .stickers .sticker.black1 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.black2 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.black3 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.blue1 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.blue2 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.blue3 .sticker_wrap {
+  #intro .sect_inner .stickers .sticker.black1 .sticker_wrap, #intro .sect_inner .stickers .sticker.black2 .sticker_wrap, #intro .sect_inner .stickers .sticker.black3 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue1 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue2 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue3 .sticker_wrap {
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -292,57 +289,56 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
   }
-  main section#intro .sect_inner .stickers .sticker.black1 {
+  #intro .sect_inner .stickers .sticker.black1 {
     transform: translate(-58%, 140%) rotate(-65deg);
   }
-  main section#intro .sect_inner .stickers .sticker.black2 {
+  #intro .sect_inner .stickers .sticker.black2 {
     transform: translate(-4%, -23%) rotate(35deg);
   }
-  main section#intro .sect_inner .stickers .sticker.blue1 {
+  #intro .sect_inner .stickers .sticker.blue1 {
     transform: translate(-20%, 98%) rotate(15deg);
   }
-  main section#intro .sect_inner .stickers .sticker.blue2 {
+  #intro .sect_inner .stickers .sticker.blue2 {
     transform: translate(-130%, 90%) rotate(-25deg);
   }
-  main section#intro .sect_inner .stickers .sticker.blue3 {
+  #intro .sect_inner .stickers .sticker.blue3 {
     z-index: 10;
     transform: translate(10%, 200%) rotate(150deg);
   }
-  main section#intro .sect_inner .stickers .sticker.long1, main section#intro .sect_inner .stickers .sticker.long2, main section#intro .sect_inner .stickers .sticker.long3 {
-    width: 342px;
-    height: 160px;
+  #intro .sect_inner .stickers .sticker.long1, #intro .sect_inner .stickers .sticker.long2, #intro .sect_inner .stickers .sticker.long3 {
+    width: 302px;
+    height: 140px;
   }
-  main section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.long2 .sticker_wrap, main section#intro .sect_inner .stickers .sticker.long3 .sticker_wrap {
+  #intro .sect_inner .stickers .sticker.long1 .sticker_wrap, #intro .sect_inner .stickers .sticker.long2 .sticker_wrap, #intro .sect_inner .stickers .sticker.long3 .sticker_wrap {
     border-radius: 20px;
   }
-  main section#intro .sect_inner .stickers .sticker.long1 {
+  #intro .sect_inner .stickers .sticker.long1 {
     transform: translate(-118%, 156%) rotate(35deg);
   }
-  main section#intro .sect_inner .stickers .sticker.long2 {
+  #intro .sect_inner .stickers .sticker.long2 {
     transform: translate(-43%, 37%) rotate(-20deg);
   }
-  main section#intro .sect_inner .stickers .sticker.long3 {
+  #intro .sect_inner .stickers .sticker.long3 {
     transform: translate(38%, 100%) rotate(130deg);
   }
-  main section#intro .sect_inner .intro_title {
-    transform: translateY(80px);
-    color: var(--mainBg-color);
+  #intro .sect_inner .intro_title {
+    color: var(--main-color);
     mix-blend-mode: difference;
     text-transform: uppercase;
   }
-  main section#intro .sect_inner .intro_title p.publisher {
+  #intro .sect_inner .intro_title p.publisher {
     font-size: 4rem;
     font-weight: 700;
     line-height: 1;
   }
-  main section#intro .sect_inner .intro_title p.portfolio {
+  #intro .sect_inner .intro_title p.portfolio {
     color: var(--black600);
   }
 }
 @media only screen and (min-width: 701px) {
   main section {
     width: 1400px;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
   }
   main section#intro {
