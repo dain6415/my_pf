@@ -240,7 +240,6 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
 
 @media only screen and (max-width: 700px) {
   main section {
-    width: 1400px;
     margin: auto;
     width: 100%;
   }
