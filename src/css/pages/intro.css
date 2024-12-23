@@ -246,6 +246,7 @@ section#intro .sect_inner .stickers .sticker.long1 .sticker_wrap.long3 .img_blen
   }
   main section#intro {
     height: 100vh;
+    overflow: hidden;
   }
   main section#intro .sect_inner {
     height: 100%;

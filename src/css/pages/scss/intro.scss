@@ -296,6 +296,7 @@ section {
       width: 100%;
       &#intro {
         height: 100vh;
+        overflow: hidden;
         .sect_inner{
           height: 100%;
           .blend {
