@@ -3,12 +3,9 @@
   padding: 20px 40px;
   background: transparent;
   height: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  bottom: 5%;
+  bottom: 0;
   position: absolute;
-  top: calc(100vh - 100px);
+  z-index: 1000;
 }
 #header.fixed {
   position: fixed;

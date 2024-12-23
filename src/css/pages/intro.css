@@ -268,8 +268,8 @@
     height: 100%;
   }
   #intro .sect_inner .stickers {
-    border: 1px solid red;
-    top: 7%;
+    top: 70px;
+    position: relative;
     z-index: 10;
   }
   #intro .sect_inner .stickers .sticker {
@@ -328,6 +328,8 @@
     color: var(--main-color);
     mix-blend-mode: difference;
     text-transform: uppercase;
+    z-index: 99;
+    position: relative;
   }
   #intro .sect_inner .intro_title p.publisher {
     font-size: 4rem;
