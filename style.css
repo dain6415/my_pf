@@ -5,10 +5,11 @@
 /* 작업 css */
 @import url(./src/css/pages/header.css);
 @import url(./src/css/pages/intro.css);
-@import url(./src/css/pages/project2.css);
-@import url(./src/css/pages/work3.css);
-@import url(./src/css/pages/uxui.css);
+@import url(./src/css/pages/project.css);
+@import url(./src/css/pages/work.css);
+/* @import url(./src/css/pages/uxui.css); */
 @import url(./src/css/pages/about.css);
+@import url(./src/css/pages/footer.css);
 
 /* font, color's */
 @import url(./src/css/base/vars.css);
@@ -227,7 +228,7 @@ a {
   }
 }
 /* section -------------------- */
-section:not(:last-child) {
+section:not(:nth-child(2)) {
   min-height: 900px;
   width: 100%;
   /* height: 100vh; */

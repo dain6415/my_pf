@@ -1,0 +1,122 @@
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+#footer {
+  background: var(--mainBg-color);
+  // line {
+    // display: none;
+  // }
+  z-index: -10;
+  padding: 0 40px;
+  height: var(--footer-spacing);
+  padding: 0 40px;
+  .sect_inner {
+    border-radius: 20px 20px 0 0;
+    background: var(--main-color);
+    height: var(--footer-spacing);
+    .sect_title {
+      // font-family: 'LABSAmiga';
+      line-height: 1;
+      text-transform: uppercase;
+      grid-template-columns: 1;
+    }
+    .bg{
+      line-height: 1;
+    }
+    .bottom {
+      color: var(--main-color600);
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      font-size: 1.25rem;
+      .copyright{
+        font-weight: 100;
+        color: var(--main-color600);
+      }
+      .time_area{
+        span{display: none;}
+
+      }
+      // >div{
+      //   padding-left: 20px;
+      // }
+      // justify-content: space-between;
+      // font-size: 1.5rem;
+      // .copyright {
+        // span{
+        //   top: -0.5em;
+        //   margin-left: 3px;
+        //   vertical-align: baseline;
+        //   font-size: 80%;
+        //   position: relative;
+        // }
+      // }
+    }
+    // .flow {
+    //   .splide {
+    //     .splide__track {
+    //       background: #000;
+    //       .splide__list {
+    //         display: flex;
+    //         .splide__slide {
+    //           // padding: 10px;
+    //           color: aliceblue;
+    //           font-size: 5vw;
+    //           display: flex;
+    //           align-items: center;
+    //           flex-shrink: 0;
+    //           filter: grayscale(100%);
+    //           transition: filter 0.5s ease;
+    //           img {
+    //             width: 250px;
+    //           }
+    //           &.is-active {
+    //             filter: grayscale(0%) !important;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+
+  }
+}
+
+// ***************************************************************************************************************************
+
+@media only screen and (max-width: 700px) {
+  #footer {
+    padding:0 20px ;
+    .sect_inner {
+      // padding: 12rem 5% 0;
+      .sect_title {
+        font-size: 2rem;
+      }
+      .thanku {
+        font-size: 10rem;
+      }
+    }
+  }
+}
+// ----------------------------------------------------------------------
+
+@media only screen and (min-width: 701px) {
+  #footer {
+    .sect_inner {
+      // padding: 12rem 5% 0;
+      .sect_title {
+        font-size: 2rem;
+      }
+      .thanku {
+        font-size: 10rem;
+      }
+    }
+  }
+}
+// ----------------------------------------------------------------------
+
+@media only screen and (min-width: 1300px) {
+}
