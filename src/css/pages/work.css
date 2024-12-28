@@ -15,7 +15,6 @@
 }
 #work .sect_inner .swiper_box .swiper-slide {
   pointer-events: auto;
-  border: 1px solid transparent;
   border-bottom-color: var(--black600);
   overflow: hidden;
   transition: 0.2s;
@@ -38,6 +37,7 @@
 }
 #work .sect_inner .swiper_box .swiper-slide .summary .txt .info {
   color: var(--black400);
+  opacity: 0;
   transition: 0.3s;
 }
 #work .sect_inner .swiper_box .swiper-slide .summary .logo_img {
@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  border: 1px solid #000;
 }
 #work .sect_inner .swiper_box .swiper-slide:hover {
   background: #000;
@@ -187,29 +188,30 @@
   background-repeat: no-repeat;
   border-bottom: 1px solid var(--black600);
 }
-#work .sect_inner .list_box ul li:nth-child(1) {
+#work .sect_inner .list_box ul li.woodam {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/jaws.jpg);
 }
-#work .sect_inner .list_box ul li:nth-child(2) {
+#work .sect_inner .list_box ul li.chilsung {
   background-color: #00ab44;
   background-image: url(../../img/work/chil.jpg);
 }
-#work .sect_inner .list_box ul li:nth-child(3) {
+#work .sect_inner .list_box ul li.interior {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/logo.jpg);
 }
-#work .sect_inner .list_box ul li:nth-child(4) {
+#work .sect_inner .list_box ul li.apple {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/logo.jpg);
 }
-#work .sect_inner .list_box ul li:nth-child(5) {
+#work .sect_inner .list_box ul li.yes24 {
   background-color: rgb(255, 255, 255);
   background-image: url(../../img/work/yes24.jpg);
 }
 #work .sect_inner .list_box ul li a {
   display: block;
   width: 100%;
+  height: 100px;
   position: relative;
   background: var(--mainBg-color);
   color: var(--black600);
@@ -262,6 +264,7 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt .info {
     padding-top: 20px;
+    opacity: 1;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .logo_img {
     padding-top: 10%;
@@ -348,8 +351,9 @@
     font-weight: 600;
   }
   #work .sect_inner .swiper .swiper-slide .summary .txt .info {
-    font-size: 1rem;
+    font-size: 0.75rem;
     padding-top: 20px;
+    line-height: 1.5;
   }
   #work .sect_inner .swiper .swiper-slide .summary .logo_img {
     padding-top: 60px;
@@ -362,7 +366,7 @@
     width: 100%;
   }
   #work .sect_inner .list_box ul li a {
-    height: 100px;
+    height: 110px;
   }
   #work .sect_inner .list_box ul li a .list_grid {
     width: 100%;
@@ -406,6 +410,9 @@
   }
 }
 @media only screen and (min-width: 1300px) {
+  #work .sect_inner .swiper_box .swiper .swiper-slide {
+    height: 370px;
+  }
   #work .sect_inner .swiper_box .swiper_btn {
     display: none;
   }

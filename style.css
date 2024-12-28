@@ -132,6 +132,7 @@ a {
   display: block;
   position: absolute;
   inset: 0 40px;
+  margin: auto;
   /* z-index: -1; */
 }
 
@@ -207,22 +208,23 @@ a {
 @media only screen and (min-width: 1300px) {
   .left {
     left: 0;
+    /* z-index: 1; */
   }
-
+  
   .left-middle {
     left: 25%;
     display: block;
   }
-
+  
   .center {
     left: 50%;
   }
-
+  
   .right-middle {
     right: 25%;
     display: block;
   }
-
+  
   .right {
     right: 0;
   }

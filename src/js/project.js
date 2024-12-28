@@ -74,8 +74,8 @@ export function project() {
         // end: () => `+=${window.innerHeight * 1.5}`,
         pin: true,
         pinSpacing: false,
-        scrub: 0.5,
-        // markers: { indent: 0 * i },
+        scrub: 1,
+        markers: { indent: 0 * i },
         id: i + 1,
         onUpdate: updateAccordionHeight, // 높이 업데이트
       },
