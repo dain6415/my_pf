@@ -15,6 +15,10 @@ export function work() {
         slidesPerView: 2,
         // spaceBetween: 10,
       },
+      1000: {
+        slidesPerView: 3,
+        // spaceBetween: 10,
+      },
       1300: {
         slidesPerView: 4,
         // spaceBetween: 60,

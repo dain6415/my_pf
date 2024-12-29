@@ -205,6 +205,31 @@ a {
     right: 0;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .left {
+    left: 0;
+  }
+
+  .left-middle {
+    left: 33.333333%;
+    display: block;
+  }
+  
+  .center {
+    left: 50%;
+    display: none;
+  }
+  
+  .right-middle {
+    display: block;
+    /* display: none; */
+    right: 33.333333%;
+  }
+
+  .right {
+    right: 0;
+  }
+}
 @media only screen and (min-width: 1300px) {
   .left {
     left: 0;
@@ -213,16 +238,15 @@ a {
   
   .left-middle {
     left: 25%;
-    display: block;
   }
   
   .center {
     left: 50%;
+    display: block;
   }
   
   .right-middle {
     right: 25%;
-    display: block;
   }
   
   .right {
