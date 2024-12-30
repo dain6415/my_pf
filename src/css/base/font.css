@@ -261,3 +261,15 @@
   font-family: 'PbykFmXiEBPT4ITbgNA5Cgm20xz64px_1hVWr0wuPNGmlQNMEfD4.106';
   src : url(./font_file/PbykFmXiEBPT4ITbgNA5Cgm20xz64px_1hVWr0wuPNGmlQNMEfD4.106.woff);
 }
+
+/* MAZIUS / 세리프 ----------------------------- */
+@font-face{
+  /* outline */
+  font-family: 'MAZIUS';
+  src : url(./font_file/63f89aa6a3a619000cf5656b_MAZIUS.woff);
+}
+@font-face{
+  /* outline */
+  font-family: 'MAZIUS';
+  src : url(./font_file/63f89aa6a3a619000cf5656b_MAZIUS.woff2);
+}

@@ -32,7 +32,7 @@
         overflow: hidden;
         transition: 0.2s;
         position: relative;
-        a{
+        a {
           position: absolute;
           top: 0;
           left: 0;
@@ -48,40 +48,71 @@
               padding: 0px 10% 0;
               transform: translateY(22%);
               transition: 0.3s;
+              .w_num {
+                color: var(--black700);
+                font-family: "MAZIUS";
+                &.colNo {
+                  color: transparent;
+                }
+              }
               .title {
                 font-weight: 600;
                 // color: var(--black400);
               }
               .info {
-                color: var(--black400);
+                color: var(--black600);
                 opacity: 0;
                 transition: 0.3s;
               }
+            }
+            .Responsive {
+              width: 100px;
+              margin: auto;
+              padding: 5px 15px;
+              border-radius: 99px;
+              transform: translateY(290%);
+              color: #9e1d1d;
+              transition: 0.3s;
+              text-align: center;
+              color: var(--black200_txt);
+              position: relative;
+              z-index: 1;
+              mix-blend-mode: difference;
             }
             .logo_img {
               // padding-top: 20%;
               @include flex-c();
               transition: 0.3s;
-              // border: 1px solid #000;
+              transform: translateY(-35px);
             }
           }
         }
         &:hover {
           background: #000;
           color: var(--white);
-          a{
+          a {
             .txt {
               transform: translateY(0);
+              .w_num {
+                color: var(--black300);
+              }
               .info {
                 opacity: 1;
               }
+            }
+            .Responsive {
+              background-color: rgba(255, 255, 255, 0.5);
+              -webkit-backdrop-filter: blur(3px);
+              backdrop-filter: blur(3px);
+              color: var(--white);
+              mix-blend-mode: normal;
             }
           }
           &.slide1,
           &.slide2,
           &.slide3 {
             .logo_img {
-              transform: translateY(20px);
+              transform: translateY(-20px);
               img {
                 filter: invert(1);
               }
@@ -89,7 +120,7 @@
           }
           &.slide4 {
             .frame__box {
-              transform: translateY(17px);
+              transform: translateY(-25px);
               img {
                 filter: invert(1);
               }
@@ -112,7 +143,7 @@
           }
           .logo_img {
             img {
-              width: 70%;
+              width: 75%;
               transform-origin: center;
             }
           }
@@ -138,6 +169,7 @@
             height: 300px;
             position: relative;
             @include flex-c();
+            transform: translateY(-35px);
             .frame {
               // padding-top: 12%;
               width: 65%;
@@ -438,12 +470,8 @@
               padding: 0px 10%;
               padding-top: 40px;
               .w_num {
-                font-size: .75rem;
-                color: var(--black600);
+                font-size: 1.25rem;
                 padding-bottom: 10px;
-                &.colNo{
-                  color: transparent;
-                }
               }
               .title {
                 font-size: 4vw;
@@ -564,22 +592,30 @@
                   transform-origin: center;
                 }
               }
+              &.slide2 {
+                .logo_img {
+                  padding-top: 12px;
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
             }
           }
+          .swiper_btn {
+            display: none;
+          }
         }
-        .swiper_btn {
-          display: none;
-        }
+        // .swiper,
+        // .list_box ul{
+        //   max-width: 1740px;
+        //   margin: auto;
+        // }
+        // .list_box ul{
+        //   border-left: 1px solid var(--black600);
+        //   border-right: 1px solid var(--black600);
+        // }
       }
-      // .swiper,
-      // .list_box ul{
-      //   max-width: 1740px;
-      //   margin: auto;
-      // }
-      // .list_box ul{
-      //   border-left: 1px solid var(--black600);
-      //   border-right: 1px solid var(--black600);
-      // }
     }
   }
 }
