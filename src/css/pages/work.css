@@ -237,20 +237,6 @@
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease;
 }
-#work .sect_inner .list_box ul li:hover a {
-  color: var(--black400);
-  width: 75%;
-}
-#work .sect_inner .list_box ul li:hover a .w_num {
-  color: var(--black600);
-}
-#work .sect_inner .list_box ul li:hover a .list_title {
-  font-weight: 600;
-  color: var(--main-color);
-}
-#work .sect_inner .list_box ul li:hover a .right_box i {
-  color: var(--main-color);
-}
 
 @media only screen and (max-width: 700px) {
   #work .sect_inner .sect_title_work {
@@ -353,6 +339,10 @@
   }
   #work .sect_inner .list_box li a .list_grid .right_box .r-poab i {
     font-size: 1.25rem;
+  }
+  #work .sect_inner .list_box li:hover a {
+    color: var(--black400);
+    width: 100%;
   }
 }
 @media only screen and (min-width: 701px) {
@@ -472,6 +462,20 @@
   }
   #work .sect_inner .list_box ul li a .list_grid .right_box i {
     font-size: 1.25rem;
+  }
+  #work .sect_inner .list_box ul li:hover a {
+    color: var(--black400);
+    width: 75%;
+  }
+  #work .sect_inner .list_box ul li:hover a .w_num {
+    color: var(--black600);
+  }
+  #work .sect_inner .list_box ul li:hover a .list_title {
+    font-weight: 600;
+    color: var(--main-color);
+  }
+  #work .sect_inner .list_box ul li:hover a .right_box i {
+    color: var(--main-color);
   }
 }
 @media only screen and (min-width: 1000px) {

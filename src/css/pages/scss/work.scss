@@ -298,24 +298,6 @@
             //   }
             // }
           }
-          &:hover {
-            a {
-              color: var(--black400);
-              width: 75%;
-              .w_num {
-                color: var(--black600);
-              }
-              .list_title {
-                font-weight: 600;
-                color: var(--main-color);
-              }
-              .right_box {
-                i {
-                  color: var(--main-color);
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -433,6 +415,13 @@
                   }
                 }
               }
+            }
+          }
+          &:hover {
+            a {
+              color: var(--black400);
+              width: 100%;
+              
             }
           }
         }
@@ -583,6 +572,24 @@
                   justify-content: space-between;
                   i {
                     font-size: 1.25rem;
+                  }
+                }
+              }
+            }
+            &:hover {
+              a {
+                color: var(--black400);
+                width: 75%;
+                .w_num {
+                  color: var(--black600);
+                }
+                .list_title {
+                  font-weight: 600;
+                  color: var(--main-color);
+                }
+                .right_box {
+                  i {
+                    color: var(--main-color);
                   }
                 }
               }
