@@ -346,7 +346,7 @@
           padding-top: 50px;
           .swiper-slide {
             position: relative;
-            height: 38vh;
+            height: 35vh;
             background: var(--black);
             .summary {
               padding-top: 20px;
@@ -369,7 +369,7 @@
                 }
               }
               .logo_img {
-                padding-top: 10%;
+                padding-top: 12%;
                 img {
                   filter: invert(0.5);
                 }
@@ -377,7 +377,7 @@
             }
             &.slide4 {
               .frame__box {
-                margin-top: 32px;
+                margin-top: 8%;
                 .frame {
                   opacity: 0.4;
                   &#frame2,

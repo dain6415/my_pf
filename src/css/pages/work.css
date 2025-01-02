@@ -273,7 +273,7 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     position: relative;
-    height: 38vh;
+    height: 35vh;
     background: var(--black);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary {
@@ -296,13 +296,13 @@
     line-height: 1.5;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .logo_img {
-    padding-top: 10%;
+    padding-top: 12%;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .logo_img img {
     filter: invert(0.5);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box {
-    margin-top: 32px;
+    margin-top: 8%;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box .frame {
     opacity: 0.4;
