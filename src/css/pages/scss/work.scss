@@ -33,9 +33,9 @@
       position: relative;
       // padding: 0 40px;
       .swiper-slide {
+        border-bottom-color: transparent;
         padding-top: 40%;
         pointer-events: auto;
-        border-bottom-color: var(--black600);
         overflow: hidden;
         transition: 0.2s;
         position: relative;
@@ -63,6 +63,7 @@
               }
               .title {
                 font-weight: 600;
+                line-height: 1;
                 // color: var(--black400);
               }
               .info {
@@ -71,28 +72,26 @@
                 transition: 0.3s;
               }
             }
-            .Responsive {
-              width: 100px;
-              margin: auto;
-              padding: 5px 15px;
-              border-radius: 99px;
-              transform: translateY(290%);
-              color: #9e1d1d;
-              transition: 0.3s;
-              text-align: center;
-              color: var(--black200_txt);
-              position: relative;
-              z-index: 1;
-              background-color: rgba($color: #f5f5f5, $alpha: 0.4);
-              -webkit-backdrop-filter: blur(3px);
-              backdrop-filter: blur(3px);
-            }
+            // .Responsive {
+            //   width: 100px;
+            //   margin: auto;
+            //   padding: 5px 15px;
+            //   border-radius: 99px;
+            //   transform: translateY(290%);
+            //   color: #9e1d1d;
+            //   transition: 0.3s;
+            //   text-align: center;
+            //   color: var(--black200_txt);
+            //   position: relative;
+            //   z-index: 1;
+            //   background-color: rgba($color: #f5f5f5, $alpha: 0.4);
+            //   -webkit-backdrop-filter: blur(3px);
+            //   backdrop-filter: blur(3px);
+            // }
             .logo_img {
-              // padding-top: 20%;
               @include flex-c();
               transition: 0.3s;
               transform: translateY(-35px);
-              // opacity: .8;
             }
           }
         }
@@ -224,8 +223,11 @@
     }
     .list {
       background: var(--mainBg-color);
+      border-top: 1px solid var(--black600);
       border-bottom: 1px solid var(--black600);
       padding: 10px;
+      position: relative;
+      z-index: 10;
     }
     .list_box {
       border-left: 1px solid var(--black600);
@@ -351,7 +353,7 @@
                 }
               }
               .logo_img {
-                padding-top: 12%;
+                margin-top: 20%;
                 img {
                   filter: invert(0.5);
                 }
@@ -359,7 +361,7 @@
             }
             &.slide4 {
               .frame__box {
-                margin-top: 8%;
+                margin-top: 18%;
                 .frame {
                   opacity: 0.4;
                   &#frame2,
@@ -451,7 +453,6 @@
             // height: 360px;
             overflow: hidden;
             .summary {
-              padding-top: 40px;
               height: 100%;
               display: flex;
               flex-direction: column;
@@ -465,7 +466,7 @@
                   padding-bottom: 10px;
                 }
                 .title {
-                  font-size: 4vw;
+                  font-size: 3vw;
                   font-weight: 600;
                   // color: var(--black400);
                 }
@@ -476,7 +477,12 @@
                 }
               }
               .logo_img {
-                padding-top: 5px;
+                padding-top: 10%;
+                @include flex-c();
+                transition: 0.3s;
+              }
+              .frame__box{
+                margin-top: 10%;
                 @include flex-c();
                 transition: 0.3s;
               }
@@ -618,7 +624,7 @@
             padding-top: 27%;
             .summary {
               .title {
-                font-size: 2.8vw;
+                font-size: 2.5vw;
               }
             }
             .logo_img {
@@ -645,17 +651,18 @@
           .swiper-slide {
             padding-top: 20%;
             .summary {
-              .title {
-                font-size: 2.1vw;
-              }
-              .info {
-                padding-top: 20px;
-                font-size: 1vw;
+              .txt{
+                .title {
+                  font-size: 2.1vw;
+                }
+                .info {
+                  font-size: 1vw;
+                }
               }
             }
             &.slide1 {
               .logo_img {
-                padding-top: 12px;
+                padding-top: 12%x;
                 img {
                   width: 100%;
                   transform-origin: center;
@@ -663,7 +670,8 @@
               }
               &.slide2 {
                 .logo_img {
-                  padding-top: 12px;
+                  padding-top: 12%x;
+                  // padding-top: 12px;
                   img {
                     width: 100%;
                   }
