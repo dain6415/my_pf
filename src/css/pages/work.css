@@ -5,9 +5,18 @@
   position: relative;
   border-top: 1px solid var(--black600);
 }
-#work .sect_inner .sect_title {
+#work .sect_inner {
+  height: auto;
+}
+#work .sect_inner .sect_title_work {
   background: var(--mainBg-color);
-  border-bottom: 1px solid var(--black600);
+  border: 1px solid #831f1f;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+  padding: 40px;
+  font-size: 3rem;
+  line-height: 1;
 }
 #work .sect_inner .swiper_box {
   position: relative;
@@ -216,6 +225,11 @@
   left: 45%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+#work .sect_inner .list {
+  background: var(--mainBg-color);
+  border-bottom: 1px solid var(--black600);
+  padding: 10px;
+}
 #work .sect_inner .list_box {
   border-left: 1px solid var(--black600);
   border-right: 1px solid var(--black600);
@@ -330,34 +344,30 @@
   }
   #work .sect_inner .list_box a .list_grid {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   #work .sect_inner .list_box a .list_grid .w_num {
     font-size: 0.75rem;
     width: 30%;
+    display: none;
   }
   #work .sect_inner .list_box a .list_grid .list_title {
-    width: 60%;
+    width: 50%;
     font-size: 1rem;
   }
   #work .sect_inner .list_box a .list_grid .right_box {
-    width: 10%;
     height: 50px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
   #work .sect_inner .list_box a .list_grid .right_box .r-poab {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: none;
   }
   #work .sect_inner .list_box a .list_grid .right_box .r-poab i {
     font-size: 1.25rem;
-  }
-  #work .sect_inner .list_box a .list_grid .ex {
-    display: none;
   }
 }
 @media only screen and (min-width: 701px) {
@@ -382,7 +392,7 @@
     padding-top: 40px;
   }
   #work .sect_inner .swiper .swiper-slide .summary .txt .w_num {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-bottom: 10px;
   }
   #work .sect_inner .swiper .swiper-slide .summary .txt .title {

@@ -272,7 +272,7 @@ section:not(:nth-child(2)) {
   position: relative;
   align-items: center;
 }
-.po_ab {
+.sect_title .po_ab {
   width: 100%;
   padding: 40px 0;
   margin: 10px 0;

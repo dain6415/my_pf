@@ -18,9 +18,17 @@
   // margin-bottom: var(--footer-spacing);
   border-top: 1px solid var(--black600);
   .sect_inner {
-    .sect_title {
+    height: auto;
+    .sect_title_work {
       background: var(--mainBg-color);
-      border-bottom: 1px solid var(--black600);
+      border: 1px solid #831f1f;
+      // border-bottom: 1px solid var(--black600);
+      position: sticky;
+      position: -webkit-sticky;
+      top: 100px;
+      padding: 40px;
+      font-size: 3rem;
+      line-height: 1;
     }
     .swiper_box {
       position: relative;
@@ -77,7 +85,6 @@
               color: var(--black200_txt);
               position: relative;
               z-index: 1;
-              // mix-blend-mode: difference;
               background-color: rgba($color: #f5f5f5, $alpha: 0.4);
               -webkit-backdrop-filter: blur(3px);
               backdrop-filter: blur(3px);
@@ -256,6 +263,11 @@
         }
       }
     }
+    .list{
+      background: var(--mainBg-color);
+      border-bottom: 1px solid var(--black600);
+      padding: 10px;
+    }
     .list_box {
       border-left: 1px solid var(--black600);
       border-right: 1px solid var(--black600);
@@ -415,28 +427,27 @@
         a {
           padding: 20px 30px;
           .list_grid {
-            @include flex-c();
+            @include flex-c(space-between);
+            width: 100%;
             .w_num {
               font-size: 0.75rem;
               width: 30%;
+              display: none;
             }
             .list_title {
-              width: 60%;
+              width: 50%;
               font-size: 1rem;
             }
             .right_box {
-              width: 10%;
               height: 50px;
               @include flex-c(flex-end);
               .r-poab {
-                @include flex-c(flex-end);
+                display: none;
+                // @include flex-c(flex-end);
                 i {
                   font-size: 1.25rem;
                 }
               }
-            }
-            .ex {
-              display: none;
             }
           }
         }
@@ -473,7 +484,7 @@
               padding: 0px 10%;
               padding-top: 40px;
               .w_num {
-                font-size: 1.25rem;
+                font-size: 1rem;
                 padding-bottom: 10px;
               }
               .title {
