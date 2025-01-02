@@ -363,6 +363,9 @@
     justify-content: flex-end;
     align-items: center;
   }
+  #work .sect_inner .list_box a .list_grid .right_box .ex {
+    font-size: 0.75rem;
+  }
   #work .sect_inner .list_box a .list_grid .right_box .r-poab {
     display: none;
   }

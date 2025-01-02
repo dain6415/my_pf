@@ -441,6 +441,9 @@
             .right_box {
               height: 50px;
               @include flex-c(flex-end);
+              .ex{
+                font-size: 0.75rem;
+              }
               .r-poab {
                 display: none;
                 // @include flex-c(flex-end);
