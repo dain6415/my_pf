@@ -14,7 +14,6 @@
   position: sticky;
   position: -webkit-sticky;
   top: 100px;
-  padding: 40px;
   font-size: 3rem;
   line-height: 1;
 }
@@ -254,12 +253,13 @@
 }
 
 @media only screen and (max-width: 700px) {
-  #work .sect_inner .sect_title {
+  #work .sect_inner .sect_title_work {
     font-size: 3.5rem;
-    font-weight: 600;
     text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
   }
-  #work .sect_inner .sect_title p {
+  #work .sect_inner .sect_title_work p {
     width: 90%;
     line-height: normal;
     text-align: center;
@@ -273,7 +273,7 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     position: relative;
-    height: 360px;
+    height: 280px;
     background: var(--black);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary {
@@ -306,6 +306,9 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box .frame {
     opacity: 0.4;
+  }
+  #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box .frame#frame2, #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box .frame#frame3, #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box .frame#frame4, #work .sect_inner .swiper_box .swiper .swiper-slide.slide4 .frame__box .frame#frame5 {
+    display: none;
   }
   #work .sect_inner .swiper_box .swiper_btn {
     width: 100%;
@@ -353,10 +356,11 @@
   }
 }
 @media only screen and (min-width: 701px) {
-  #work .sect_inner .sect_title {
+  #work .sect_inner .sect_title_work {
     font-size: 3.5rem;
+    padding: 40px;
   }
-  #work .sect_inner .sect_title p {
+  #work .sect_inner .sect_title_work p {
     line-height: normal;
   }
   #work .sect_inner .swiper_box {
@@ -471,10 +475,10 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  #work .sect_inner .sect_title {
+  #work .sect_inner .sect_title_work {
     font-size: 5rem;
   }
-  #work .sect_inner .sect_title p {
+  #work .sect_inner .sect_title_work p {
     line-height: normal;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
