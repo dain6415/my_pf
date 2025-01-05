@@ -69,15 +69,14 @@ export function project() {
         trigger: item,
         start: () => `top ${getHeaderHeight() + header.clientHeight * 2 * i}`,
         endTrigger: "#work",
-        // end: () => `bottom-${getHeaderHeight()}`,
         end: "top",
         // end: () => `+=${window.innerHeight * 1.5}`,
         pin: true,
         pinSpacing: false,
         scrub: 1,
-        markers: { indent: 0 * i },
         id: i + 1,
         onUpdate: updateAccordionHeight, // 높이 업데이트
+        // markers: { indent: 0 * i },
       },
     });
   });

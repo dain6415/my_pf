@@ -7,21 +7,27 @@
 }
 #work .sect_inner {
   height: auto;
+  display: block;
 }
 #work .sect_inner .sect_title_work {
   background: var(--mainBg-color);
-  border: 1px solid #831f1f;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 100px;
+  z-index: 10;
   font-size: 3rem;
   line-height: 1;
+  position: relative;
+  border-bottom: 1px solid var(--black600);
+}
+#work .sect_inner .swiper_list {
+  background: var(--mainBg-color);
+  border-bottom: 1px solid var(--black600);
+  padding: 10px;
+  position: relative;
 }
 #work .sect_inner .swiper_box {
   position: relative;
 }
 #work .sect_inner .swiper_box .swiper-slide {
-  border-bottom-color: transparent;
+  border-bottom: none;
   padding-top: 40%;
   pointer-events: auto;
   overflow: hidden;
@@ -175,14 +181,6 @@
   left: 45%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-#work .sect_inner .list {
-  background: var(--mainBg-color);
-  border-top: 1px solid var(--black600);
-  border-bottom: 1px solid var(--black600);
-  padding: 10px;
-  position: relative;
-  z-index: 10;
-}
 #work .sect_inner .list_box {
   border-left: 1px solid var(--black600);
   border-right: 1px solid var(--black600);
@@ -295,38 +293,21 @@
     padding: 0 20px;
   }
   #work .sect_inner .list_box li a {
-    padding: 20px 30px;
+    padding: 30px 30px;
+    height: auto;
   }
   #work .sect_inner .list_box li a .list_grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
   }
   #work .sect_inner .list_box li a .list_grid .w_num {
-    font-size: 0.75rem;
-    width: 30%;
     display: none;
   }
   #work .sect_inner .list_box li a .list_grid .list_title {
-    width: 50%;
     font-size: 1rem;
+    color: var(--black200_txt);
   }
-  #work .sect_inner .list_box li a .list_grid .right_box {
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  #work .sect_inner .list_box li a .list_grid .right_box .ex {
-    font-size: 0.75rem;
-    text-align: right;
-  }
-  #work .sect_inner .list_box li a .list_grid .right_box .r-poab {
-    display: none;
-  }
-  #work .sect_inner .list_box li a .list_grid .right_box .r-poab i {
-    font-size: 1.25rem;
+  #work .sect_inner .list_box li a .list_grid .ex {
+    font-size: 0.7rem;
   }
   #work .sect_inner .list_box li:hover a {
     color: var(--black400);

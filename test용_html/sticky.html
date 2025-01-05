@@ -1,24 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Example</title>
     <style>
-        section{
-            height: 20000px;
-        }
-        .title{
-            position: sticky;
-            top: 20px;
-            border: 4px solid #000;
-        }
+      /* 전체 섹션 스타일 */
+      section {
+        height: 100vh;
+        border-bottom: 1px solid rgb(159, 37, 0);
+      }
+
+      /* 중간 섹션 배경 */
+      .sect2 {
+        background: #b1b1b1;
+        height: 150vh; /* 스크롤 테스트를 위한 높이 추가 */
+      }
+
+      /* 내부 컨테이너 */
+      .sect_inner {
+        padding: 20px;
+      }
+
+      /* sticky 제목 */
+      .sect_title_work {
+        position: sticky;
+        top: 20px; /* 화면 상단에서 20px 떨어진 상태로 고정 */
+        padding: 40px;
+        border: 8px solid #2d5aef;
+        background: #fff; /* 고정 상태에서 배경 설정 */
+        z-index: 10; /* 다른 요소 위로 올라오도록 설정 */
+      }
+
+      /* 기타 섹션 */
+      .sect3,
+      .sect4 {
+        background: #d3d3d3;
+        height: 100vh;
+      }
+      .box{
+        height: 40px;
+        background: #000;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        <div class="title">slide</div>
-        <p>skdjflksjdlfsjdlkfjsdkfjlskjdflsjdflksjldfjsldjflskjdflksd</p>
+      <div class="title">First Sticky Title</div>
+      <p>Content below the first sticky title.</p>
     </section>
-</body>
+
+    <section class="sect2">
+      <div class="sect_inner">
+        <div class="sect_title_work">
+          <div class="po_ab">
+            <h2 class="sect_t">Second Sticky Title (Work)</h2>
+          </div>
+        </div>
+        <p>Additional content for scrolling...</p>
+        <p>More content for scrolling...</p>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+      </div>
+    </section>
+
+    <section class="sect3">Content of Section 3</section>
+    <section class="sect4">Content of Section 4</section>
+  </body>
 </html>
