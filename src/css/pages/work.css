@@ -323,10 +323,6 @@
     font-size: 0.75rem;
     line-height: 1;
   }
-  #work .sect_inner .list_box li:hover a {
-    color: var(--black400);
-    width: 100%;
-  }
 }
 @media only screen and (min-width: 701px) {
   #work .sect_inner .sect_title_work {
