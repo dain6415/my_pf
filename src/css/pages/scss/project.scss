@@ -127,11 +127,10 @@ body {
             position: relative;
             overflow: hidden;
             .img_bg {
-              border-radius: 5px;
               @include po-c();
               @include flex-c();
-              filter: grayscale(100%); // 기본 흑백 처리
               transition: 0.3s;
+              border-radius: 5px;
               img {
                 animation: rotateImage 2s infinite linear;
               }
@@ -219,7 +218,7 @@ body {
               border-radius: 5px;
               @include po-c();
               @include flex-c();
-              filter: grayscale(100%); // 기본 흑백 처리
+              filter: grayscale(0%); // 여긴 컬러
               transition: 0.3s;
               img {
                 width: 80%;
@@ -287,6 +286,7 @@ body {
             grid-row-start: 1;
             grid-row-end: 3;
             .img_bg{
+              filter: grayscale(100%);
               img{
                 width: 100%;
               }

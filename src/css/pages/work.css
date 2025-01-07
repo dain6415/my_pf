@@ -3,7 +3,6 @@
   background: var(--mainBg-color);
   color: var(--black200_txt);
   position: relative;
-  border-top: 1px solid var(--black600);
 }
 #work .sect_inner {
   height: auto;
@@ -17,22 +16,22 @@
   position: relative;
   border-bottom: 1px solid var(--black600);
 }
-#work .sect_inner .swiper_list {
+#work .sect_inner .swiper_list .list_border {
   background: var(--mainBg-color);
-  border-bottom: 1px solid var(--black600);
   padding: 10px;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#work .sect_inner .swiper_list .svgs {
+#work .sect_inner .swiper_list .list_border .svgs {
   display: flex;
   justify-content: flex-end;
   gap: 5px;
 }
 #work .sect_inner .swiper_box {
   position: relative;
+  border-top: 1px solid var(--black600);
 }
 #work .sect_inner .swiper_box .swiper-slide {
   border-bottom: none;
@@ -190,8 +189,6 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 #work .sect_inner .list_box {
-  border-left: 1px solid var(--black600);
-  border-right: 1px solid var(--black600);
   padding: 0 40px;
 }
 #work .sect_inner .list_box ul li {
@@ -199,6 +196,8 @@
   overflow: hidden;
   background-position: right center;
   background-repeat: no-repeat;
+  border-left: 1px solid var(--black600);
+  border-right: 1px solid var(--black600);
   border-bottom: 1px solid var(--black600);
 }
 #work .sect_inner .list_box ul li.woodam {
@@ -331,11 +330,15 @@
   #work .sect_inner .sect_title_work p {
     line-height: normal;
   }
+  #work .sect_inner .swiper_list {
+    padding: 10px 40px;
+  }
   #work .sect_inner .swiper_box {
     padding: 0px 40px;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     overflow: hidden;
+    border-bottom: 1px solid var(--black600);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary {
     height: 100%;
@@ -443,6 +446,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  #work .sect_inner .list_box ul li a .list_grid .right_box .ex {
+    font-size: 0.75rem;
   }
   #work .sect_inner .list_box ul li a .list_grid .right_box i {
     font-size: 1.25rem;

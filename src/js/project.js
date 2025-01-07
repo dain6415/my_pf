@@ -1,37 +1,53 @@
 export function project() {
-  // ------------------------------------------------------
+  // -------------------------------------------------------------------------------------------------------
   // site view 호버 시 이미지 컬러 변경
-  document.addEventListener("DOMContentLoaded", () => {
-    const poAbText = document.querySelector(".po_ab p"); // p 태그 선택
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const poAbText = document.querySelector(".po_ab p"); // p 태그 선택
 
-    if (poAbText) {
-      setTimeout(() => {
-        poAbText.style.left = "30px"; // 최종 위치
-        poAbText.style.opacity = "1"; // 보이도록 설정
-      }, 300); // 페이지 로드 후 300ms 대기
-    }
-  });
+  //   if (poAbText) {
+  //     setTimeout(() => {
+  //       poAbText.style.left = "30px"; // 최종 위치
+  //       poAbText.style.opacity = "1"; // 보이도록 설정
+  //     }, 300); // 페이지 로드 후 300ms 대기
+  //   }
+  // });
 
-  const siteViewLinks = document.querySelectorAll(".info a.view_btn");
+  const vBtn = document.querySelectorAll(".info a.view_btn");
   const visualImg = document.querySelectorAll(".visual .img_bg"); // visual 안에 있는 이미지
-
-  if (siteViewLinks.length === 0 || visualImg.length === 0) {
-    console.log("Missing elements!");
-  } else {
-    siteViewLinks.forEach((link, index) => {
-      link.addEventListener("mouseenter", () => {
-        // 링크 호버시 해당 인덱스의 이미지 색상 변경
-        visualImg[index].style.filter = "grayscale(0%)"; // 컬러로 변경
+  
+  const checkWindowSize = () => {
+    console.log("window.innerWidth: ", window.innerWidth); // 창 크기 확인
+  
+    if (window.innerWidth > 701) {
+      vBtn.forEach((link, i) => {
+        link.addEventListener("mouseenter", () => {
+          visualImg[i].style.filter = "grayscale(0%)"; // 컬러로 변경
+        });
+  
+        link.addEventListener("mouseleave", () => {
+          visualImg[i].style.filter = "grayscale(100%)"; // 흑백으로 변경
+        });
       });
-
-      link.addEventListener("mouseleave", () => {
-        // 링크 떠날 때 해당 인덱스의 이미지 다시 흑백으로 변경
-        visualImg[index].style.filter = "grayscale(100%)"; // 다시 흑백으로 변경
+    } else if(window.innerWidth < 700) {
+      visualImg.forEach(link => {
+        link.style.filter = "grayscale(0%)"; // 기본적으로 컬러로 유지
       });
-    });
-  }
+    }
+  };
+  
+  // 페이지 로드 시 적용
+  checkWindowSize();
+  
+  // 창 크기 변경 시마다 반응형 처리
+  window.addEventListener("resize", checkWindowSize);
+  
 
-  // -------------------------------------------------
+  
+  
+
+  
+
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   // 아코디언
   console.clear();
   // 콘솔 로그 지우기. 디버깅 중에 콘솔을 정리하는 용도로 사용

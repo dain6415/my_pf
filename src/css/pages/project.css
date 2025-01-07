@@ -102,7 +102,6 @@ body {
   overflow: hidden;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .visual .img_bg {
-  border-radius: 5px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -110,8 +109,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: grayscale(100%);
   transition: 0.3s;
+  border-radius: 5px;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item .visual .img_bg img {
   animation: rotateImage 2s infinite linear;
@@ -175,7 +174,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: grayscale(100%);
+    filter: grayscale(0%);
     transition: 0.3s;
   }
   #project .sect_inner .sect__wrap article.sect__item .visual .img_bg img {
@@ -235,6 +234,9 @@ body {
     grid-column: 9/13;
     grid-row-start: 1;
     grid-row-end: 3;
+  }
+  #project .sect_inner .sect__wrap article.sect__item .visual .img_bg {
+    filter: grayscale(100%);
   }
   #project .sect_inner .sect__wrap article.sect__item .visual .img_bg img {
     width: 100%;
