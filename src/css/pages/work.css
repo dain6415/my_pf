@@ -316,10 +316,12 @@
   #work .sect_inner .list_box li a .list_grid .list_title {
     font-size: 1rem;
     font-weight: 600;
+    padding-bottom: 5px;
     color: var(--black200_txt);
   }
   #work .sect_inner .list_box li a .list_grid .ex {
     font-size: 0.75rem;
+    line-height: 1;
   }
   #work .sect_inner .list_box li:hover a {
     color: var(--black400);
