@@ -38,8 +38,11 @@
         @include flex-c(space-between);
         .svgs{
           display: flex;
-          justify-content: flex-end;
           gap: 5px;
+          .phone_svg{
+            display: flex;
+            align-items: center;
+          }
         }
       }
     }
@@ -334,7 +337,7 @@
         }
       }
       .swiper_list {
-        padding: 10px 20px;
+        padding: 0px 20px;
       }
       .swiper_box {
         padding: 0 20px;
@@ -440,6 +443,7 @@
               }
               .list_title{
                 font-size: 1rem;
+                font-weight: 600;
                 color: var(--black200_txt);
               }
               .ex{

@@ -26,8 +26,11 @@
 }
 #work .sect_inner .swiper_list .list_border .svgs {
   display: flex;
-  justify-content: flex-end;
   gap: 5px;
+}
+#work .sect_inner .swiper_list .list_border .svgs .phone_svg {
+  display: flex;
+  align-items: center;
 }
 #work .sect_inner .swiper_box {
   position: relative;
@@ -242,7 +245,7 @@
     text-align: center;
   }
   #work .sect_inner .swiper_list {
-    padding: 10px 20px;
+    padding: 0px 20px;
   }
   #work .sect_inner .swiper_box {
     padding: 0 20px;
@@ -312,6 +315,7 @@
   }
   #work .sect_inner .list_box li a .list_grid .list_title {
     font-size: 1rem;
+    font-weight: 600;
     color: var(--black200_txt);
   }
   #work .sect_inner .list_box li a .list_grid .ex {
