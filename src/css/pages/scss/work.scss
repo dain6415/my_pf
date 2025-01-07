@@ -444,10 +444,12 @@
               .list_title{
                 font-size: 1rem;
                 font-weight: 600;
+                padding-bottom: 5px;
                 color: var(--black200_txt);
               }
               .ex{
                 font-size: .75rem;
+                line-height: 1;
               }
             }
           }
