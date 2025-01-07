@@ -130,10 +130,10 @@ body {
               @include po-c();
               @include flex-c();
               transition: 0.3s;
-              border-radius: 5px;
-              img {
-                animation: rotateImage 2s infinite linear;
-              }
+              // border-radius: 5px;
+              // img {
+              //   animation: rotateImage 2s infinite linear;
+              // }
             }
             // @keyframes rotateImage {
             //   0% {

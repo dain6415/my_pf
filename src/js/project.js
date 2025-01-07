@@ -12,34 +12,61 @@ export function project() {
   //   }
   // });
 
-  const vBtn = document.querySelectorAll(".info a.view_btn");
-  const visualImg = document.querySelectorAll(".visual .img_bg"); // visual 안에 있는 이미지
+  // const vBtn = document.querySelectorAll(".info a.view_btn");
+  // const visualImg = document.querySelectorAll(".visual .img_bg"); // visual 안에 있는 이미지
   
-  const checkWindowSize = () => {
-    console.log("window.innerWidth: ", window.innerWidth); // 창 크기 확인
+  // const checkWindowSize = () => {
+  //   console.log("window.innerWidth: ", window.innerWidth); // 창 크기 확인
   
-    if (window.innerWidth > 701) {
-      vBtn.forEach((link, i) => {
-        link.addEventListener("mouseenter", () => {
-          visualImg[i].style.filter = "grayscale(0%)"; // 컬러로 변경
+  //   if (window.innerWidth > 701) {
+  //     vBtn.forEach((link, i) => {
+  //       link.addEventListener("mouseenter", () => {
+  //         visualImg[i].style.filter = "grayscale(0%)"; // 컬러로 변경
+  //       });
+  
+  //       link.addEventListener("mouseleave", () => {
+  //         visualImg[i].style.filter = "grayscale(100%)"; // 흑백으로 변경
+  //       });
+  //     });
+  //   } else if(window.innerWidth < 700) {
+  //     visualImg.forEach(link => {
+  //       link.style.filter = "grayscale(0%)"; // 기본적으로 컬러로 유지
+  //     });
+  //   }
+  // };
+  $(document).ready(function() {
+    const $vBtn = $(".info a.view_btn");
+    const $visualImg = $(".visual .img_bg");
+  
+    // 화면 크기 체크하고 적절히 이벤트 추가/제거
+    function handleResize() {
+      if ($(window).width() > 701) {
+        // 701px 이상일 때만 호버 이벤트 추가
+        $vBtn.each(function(index) {
+          $(this).on("mouseenter", function() {
+            $visualImg.eq(index).css("filter", "grayscale(0%)"); // 컬러로 변경
+          });
+  
+          $(this).on("mouseleave", function() {
+            $visualImg.eq(index).css("filter", "grayscale(100%)"); // 다시 흑백으로 변경
+          });
         });
   
-        link.addEventListener("mouseleave", () => {
-          visualImg[i].style.filter = "grayscale(100%)"; // 흑백으로 변경
-        });
-      });
-    } else if(window.innerWidth < 700) {
-      visualImg.forEach(link => {
-        link.style.filter = "grayscale(0%)"; // 기본적으로 컬러로 유지
-      });
+        // 701px 이상에서는 기본적으로 흑백 필터 적용
+        $visualImg.css("filter", "grayscale(100%)");
+      } else {
+        // 700px 이하일 때는 이미지가 컬러 상태로 유지되고, 호버 이벤트 제거
+        $visualImg.css("filter", "grayscale(0%)"); // 컬러로 유지
+        $vBtn.off("mouseenter mouseleave"); // 호버 이벤트 제거
+      }
     }
-  };
   
-  // 페이지 로드 시 적용
-  checkWindowSize();
+    // 초기 상태 설정
+    handleResize();
   
-  // 창 크기 변경 시마다 반응형 처리
-  window.addEventListener("resize", checkWindowSize);
+    // 창 크기 변경 시 이벤트 처리
+    $(window).on("resize", handleResize);
+  });
   
 
   
