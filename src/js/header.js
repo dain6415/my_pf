@@ -10,7 +10,7 @@ export function header() {
   function scrollFunc() {
     const scrollTop = window.scrollY;
 
-    if (scrollTop + 0 >= headerTop) {
+    if (scrollTop + 0 >= headerTop) { // 숫자가 탑에서 어쩌고...
       header.classList.add("fixed");
     } else {
       header.classList.remove("fixed");
@@ -72,7 +72,7 @@ export function header() {
   }
 
   // phon ver nav -------------------------------------------
-  const toggleMovile = document.querySelector(".header__nav_mobile"); // 햄버거 버튼
+  const toggleMovile = document.querySelector(".header__inner"); // 햄버거 버튼
   const nav = document.querySelector("nav.header__mobile"); // 네비게이션 메뉴
   const navIi = nav.querySelectorAll("li"); // 네비게이션 항목
 
@@ -81,11 +81,12 @@ export function header() {
 
     const open = nav.classList.contains("open");
 
-    if (open) {
+    if (open) { // 열리면
       //close
       nav.classList.remove("open");
       nav.style.opacity = "0";
       nav.style.display = "none";
+      nav.style.position = "fixed";
       toggleMovile.setAttribute("aria-expanded", "false");
       toggleMovile.classList.remove("open");
     } else {

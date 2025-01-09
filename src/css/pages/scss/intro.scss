@@ -14,6 +14,7 @@
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
   position: relative;
+  padding: 10px;
   .home__down {
     width: 100px;
     height: 100px;
@@ -29,9 +30,11 @@
     backdrop-filter: blur(10px);
   }
   .sect_inner {
-    height: 86%;
+    height: 100%;
     background-color: var(--black100);
     text-align: center;
+    border-radius: 20px;
+    // overflow: hidden;
     .blend {
       pointer-events: none;
       mix-blend-mode: color-burn;
@@ -291,12 +294,12 @@
   #intro {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     .sect_inner{
       height: 100%;
       @include flex-c(flex-start);
       flex-direction: column;
       overflow: hidden;
+      // 이게 핸드폰은 상단 주소창이랑 하단의 메뉴바같은게 있어서 올릴 때, 내릴 때 높이의 차이가 존재함
       .blend {
         pointer-events: none;
         background-image: url(../../../img/sticker_texture_bg.jpg);
@@ -389,7 +392,7 @@
         text-transform: uppercase;
         z-index: 99;
         position: absolute;
-        bottom: 80px;
+        bottom: 20%;
         // color: var(--mainBg-color);
         p {
           &.publisher {

@@ -10,7 +10,6 @@
 #header.fixed {
   position: fixed;
   top: 0;
-  background: var(--mainBg-color);
 }
 #header.borderNo {
   border-bottom: 0;
@@ -61,13 +60,19 @@
 
 @media only screen and (max-width: 700px) {
   #header {
-    width: 100%;
-    height: 80px;
-    padding: 0;
-    top: calc(100vh - 80px);
+    width: auto;
+    height: 60px;
+    padding: 10px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
   }
+  #header.fixed {
+    top: 0px;
+  }
   #header .header__inner {
+    border-radius: 10px;
     padding: 0px 20px;
     width: 100%;
     height: 100%;
@@ -75,6 +80,12 @@
     justify-content: space-between;
     align-items: center;
     background: var(--mainBg-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border: 1px solid var(--black600);
+  }
+  #header .header__inner .header__logo {
+    display: none;
   }
   #header .header__inner .header__nav {
     display: none;
@@ -83,22 +94,21 @@
     display: block;
     width: 70px;
     height: 70px;
-    padding: 10px 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(18px);
+    text-align: center;
     position: relative;
   }
   #header .header__inner .header__nav_mobile span.mobile_menuBar {
     width: 100%;
-    height: 2px;
-    background: var(--black200_txt);
     display: block;
     position: relative;
     transition: 0.5s;
+    color: #000;
   }
   #header .header__inner .header__nav_mobile span.mobile_menuBar::before, #header .header__inner .header__nav_mobile span.mobile_menuBar::after {
+    display: none;
     content: "";
     position: absolute;
     right: 0;
@@ -114,34 +124,21 @@
   #header .header__inner .header__nav_mobile span.mobile_menuBar::after {
     top: 10px;
   }
-  #header .header__inner .header__nav_mobile nav.header__mobile {
-    display: none;
-    transition: 0.3s;
-  }
-  #header .header__inner .header__nav_mobile nav.header__mobile.open {
-    display: block;
-    width: 100vw;
-    padding: 20px;
-    position: absolute;
-    top: 75px;
-    right: -2px;
-    background: var(--black700);
-  }
   #header .header__inner .header__nav_mobile:hover span::before {
     width: 80%;
   }
   #header .header__inner .header__nav_mobile:hover span::after {
     width: 80%;
   }
-  #header .header__inner .header__nav_mobile.close span {
+  #header .header__inner.close span {
     background: transparent;
   }
-  #header .header__inner .header__nav_mobile.close span::before {
+  #header .header__inner.close span::before {
     width: 100%;
     top: 0;
     transform: rotate(45deg);
   }
-  #header .header__inner .header__nav_mobile.close span::after {
+  #header .header__inner.close span::after {
     width: 100%;
     top: 0;
     transform: rotate(-45deg);
