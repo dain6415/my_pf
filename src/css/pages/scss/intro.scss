@@ -14,6 +14,7 @@
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
   position: relative;
+  overflow: hidden;
   .home__down {
     width: 100px;
     height: 100px;
@@ -392,7 +393,7 @@
         // color: var(--mainBg-color);
         p {
           &.publisher {
-            font-size: 4vw;
+            font-size: 14vw;
             font-weight: 700;
             line-height: 1;
           }

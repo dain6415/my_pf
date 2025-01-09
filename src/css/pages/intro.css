@@ -3,6 +3,7 @@
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
   position: relative;
+  overflow: hidden;
 }
 #intro .home__down {
   width: 100px;
@@ -338,7 +339,7 @@
     bottom: 80px;
   }
   #intro .sect_inner .intro_title p.publisher {
-    font-size: 4vw;
+    font-size: 14vw;
     font-weight: 700;
     line-height: 1;
   }
