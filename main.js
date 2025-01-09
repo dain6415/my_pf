@@ -15,17 +15,34 @@ window.addEventListener("load", function () {
 
   // bgColor();
 
-  // ***************************************************************************
+  // *********************************************************************************************************************************************************************************************************************************
   // mouse event
   const mouses =
     document.querySelectorAll(".mouse_event"); /* 호버했을 때 size 변경용*/
-  const customCursor = document.getElementById("custom_cursor");
-  /* color, background 변경용 : background로 컬러를 지정했으니까 */
+  const customCursor = document.getElementById("custom_cursor"); /* color, background 변경용 : background로 컬러를 지정했으니까 */
 
   // 초기 설정
   customCursor.style.padding = "calc(30px / 2)";
-  customCursor.style.mixBlendMode = "normal"; 
+  customCursor.style.mixBlendMode = "normal";
 
+  // phone일 때 마우스 없애기
+  const mediaQuery = window.matchMedia("(max-width: 700px)"); 
+  const customMouse = () =>{
+    if(mediaQuery.matches){
+      customCursor.style.display = "none";
+      this.document.body.style.cursor= "auto" // 기본 마우스
+    }else{
+       customCursor.style.display = "block";
+      this.document.body.style.cursor= "none"
+    }
+  }
+
+  // 초기 실행
+  customMouse();
+
+  mediaQuery.addEventListener("change", customMouse);
+
+  // 블렌드 모드 컬러 ------------------------------------------
   mouses.forEach((mouse) => {
     mouse.addEventListener("mouseenter", function () {
       if (!mouse.classList.contains("on")) {
@@ -37,30 +54,19 @@ window.addEventListener("load", function () {
       if (!mouse.classList.contains("on")) {
         customCursor.style.padding = "calc( 30px / 2)";
       }
-      customCursor.style.mixBlendMode = "normal"; 
+      customCursor.style.mixBlendMode = "normal";
     });
   });
 
-  // 블렌드 모드 컬러
-  const blend = document.querySelectorAll(".m-blend");
 
-  blend.forEach((mouse) => {
-    mouse.addEventListener("mouseenter", function () {
-      customCursor.style.mixBlendMode = "difference"; // custom_cursor의 mix-blend-mode 변경
-    });
-    mouse.addEventListener("mouseleave", function () {
-      customCursor.style.mixBlendMode = "normal"; // 기본으로 돌아옴
-    });
-  });
-
-  // mouse 커서 위치
+  // mouse 커서 위치 ------------------------------------------
   document.addEventListener("mousemove", (e) => {
     const cursor = document.getElementById("custom_cursor");
     cursor.style.left = `${e.clientX}px`;
     cursor.style.top = `${e.clientY}px`;
   });
 
-  //about에서만 커서 컬러 변경  - 특정 공간에서만 바꾸고 싶을 때
+  //특정 공간에서 커서 컬러 변경  - 특정 공간에서만 바꾸고 싶을 때 ------------------------------------------
   const aboutCursor = document.querySelector("#about .sect_inner");
 
   aboutCursor.addEventListener("mouseenter", function () {

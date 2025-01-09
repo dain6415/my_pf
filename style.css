@@ -56,6 +56,11 @@ a {
   background: rgba(255, 0, 0, 0.5); /* 드래그 중 빨간색 반투명 */
   transform: scale(1.2); /* 크기를 키움 */
 }
+@media screen and (max-width:700px) {
+  body{
+    cursor: none;
+  }
+}
 /* 커서 모양내기 */
 /* #custom_cursor span::before,
 #custom_cursor span::after{

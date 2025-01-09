@@ -31,7 +31,7 @@
     }
     .swiper_list {
       .list_border{
-        // border-top: 1px solid var(--black600);
+        border-bottom: 1px solid var(--black600);
         background: var(--mainBg-color);
         padding: 10px;
         position: relative;
@@ -48,7 +48,7 @@
     }
     .swiper_box {
       position: relative;
-      border-top: 1px solid var(--black600);
+      // border-top: 1px solid var(--black600);
       // border-bottom: 1px solid var(--black600);
       // padding: 0 40px;
       .swiper-slide {
@@ -437,7 +437,8 @@
             // }
             .list_grid{
               width: 100%;
-              display: block;
+              // display: flex;
+              // justify-content: space-between;
               .w_num{
                 display: none;
               }
@@ -447,9 +448,12 @@
                 padding-bottom: 5px;
                 color: var(--black200_txt);
               }
-              .ex{
-                font-size: .75rem;
-                line-height: 1;
+              .right_box{
+                // width: 60%;
+                .ex{
+                  font-size: .75rem;
+                  line-height: 1;
+                }
               }
             }
           }
@@ -470,7 +474,7 @@
         }
       }
       .swiper_list{
-        padding: 10px 40px;
+        padding: 0px 40px;
         // .list_border{
         //   border-right: 1px solid var(--black600);
         //   border-left: 1px solid var(--black600);
@@ -593,6 +597,9 @@
                 p {
                   &.w_num {
                     padding-left: 40px;
+                    color: var(--black700);
+                    font-weight: 300;
+                    font-size: .75rem;
                   }
                   &.list_title {
                     font-weight: 600;
@@ -669,6 +676,20 @@
         }
       }
       .list_box {
+        ul{
+          li {
+            a{
+              .list_grid{
+                grid-template-columns: 1fr 1fr 4fr;
+              }
+            }
+            &:hover{
+              a{
+                width: 66.6666%;
+              }
+            }
+          }
+        }
         .ex {
           font-size: 1rem;
         }
@@ -726,6 +747,22 @@
         //   border-left: 1px solid var(--black600);
         //   border-right: 1px solid var(--black600);
         // }
+      }
+      .list_box{
+        ul{
+          li{
+            a{
+              .list_grid{
+                grid-template-columns: 1fr 1fr 2fr;
+              }
+            }
+            &:hover{
+              a{
+                width: 75%;
+              }
+            }
+          }
+        }
       }
     }
   }

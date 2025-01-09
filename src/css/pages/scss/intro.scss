@@ -293,6 +293,8 @@
     overflow: hidden;
     .sect_inner{
       height: 100%;
+      @include flex-c();
+      flex-direction: column;
       .blend {
         pointer-events: none;
         background-image: url(../../../img/sticker_texture_bg.jpg);
