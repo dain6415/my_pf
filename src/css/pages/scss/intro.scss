@@ -211,6 +211,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
+            // @include po-c();
             opacity: 0;
             transition: 0.05s;
 
@@ -293,7 +294,7 @@
     overflow: hidden;
     .sect_inner{
       height: 100%;
-      @include flex-c();
+      @include flex-c(flex-start);
       flex-direction: column;
       .blend {
         pointer-events: none;
@@ -330,8 +331,8 @@
           &.blue1,
           &.blue2,
           &.blue3 {
-            width: 180px;
-            height: 180px;
+            width: 40%;
+            height: 30%;
             .sticker_wrap {
               margin: 20px;
               @include flex-c();
@@ -360,10 +361,12 @@
           &.long1,
           &.long2,
           &.long3 {
-            width: 302px;
-            height: 140px;
+            width: 60%;
+            height: 6.5rem;
+            // border: 1px solid #f00;
             .sticker_wrap {
               border-radius: 20px;
+              margin: 5%;
             }
           }
           &.long1 {
@@ -384,11 +387,12 @@
         mix-blend-mode: difference;
         text-transform: uppercase;
         z-index: 99;
-        position: relative;
+        position: absolute;
+        bottom: 80px;
         // color: var(--mainBg-color);
         p {
           &.publisher {
-            font-size: 4rem;
+            font-size: 4vw;
             font-weight: 700;
             line-height: 1;
           }
