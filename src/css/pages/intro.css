@@ -3,7 +3,6 @@
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
   position: relative;
-  overflow: hidden;
 }
 #intro .home__down {
   width: 100px;
@@ -252,6 +251,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
   }
   #intro .sect_inner .blend {
     pointer-events: none;

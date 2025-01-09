@@ -14,7 +14,6 @@
   background: var(--mainBg-color);
   border-bottom: 1px solid var(--black600);
   position: relative;
-  overflow: hidden;
   .home__down {
     width: 100px;
     height: 100px;
@@ -297,6 +296,7 @@
       height: 100%;
       @include flex-c(flex-start);
       flex-direction: column;
+      overflow: hidden;
       .blend {
         pointer-events: none;
         background-image: url(../../../img/sticker_texture_bg.jpg);
