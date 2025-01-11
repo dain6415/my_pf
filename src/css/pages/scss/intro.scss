@@ -34,7 +34,7 @@
     background-color: var(--black100);
     text-align: center;
     border-radius: 20px;
-    // overflow: hidden;
+    overflow: hidden;
     .blend {
       pointer-events: none;
       mix-blend-mode: color-burn;
@@ -298,7 +298,6 @@
       height: 100%;
       @include flex-c(flex-start);
       flex-direction: column;
-      overflow: hidden;
       // 이게 핸드폰은 상단 주소창이랑 하단의 메뉴바같은게 있어서 올릴 때, 내릴 때 높이의 차이가 존재함
       .blend {
         pointer-events: none;
@@ -374,7 +373,7 @@
             }
           }
           &.long1 {
-            transform: translate(-118%, 156%) rotate(35deg);
+            transform: translate(-118%, 186%) rotate(35deg);
           }
           &.long2 {
             transform: translate(-43%, 37%) rotate(-20deg);

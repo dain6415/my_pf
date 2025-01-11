@@ -63,7 +63,7 @@
     width: auto;
     height: 60px;
     padding: 10px;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
@@ -73,8 +73,7 @@
   }
   #header .header__inner {
     border-radius: 10px;
-    padding: 0px 20px;
-    width: 100%;
+    width: 90px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -82,7 +81,7 @@
     background: var(--mainBg-color);
     font-size: 0.75rem;
     text-transform: uppercase;
-    border: 1px solid var(--black600);
+    border: 1px solid var(--black200_txt);
   }
   #header .header__inner .header__logo {
     display: none;
@@ -92,56 +91,13 @@
   }
   #header .header__inner .header__nav_mobile {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-  }
-  #header .header__inner .header__nav_mobile span.mobile_menuBar {
-    width: 100%;
-    display: block;
-    position: relative;
-    transition: 0.5s;
-    color: #000;
-  }
-  #header .header__inner .header__nav_mobile span.mobile_menuBar::before, #header .header__inner .header__nav_mobile span.mobile_menuBar::after {
-    display: none;
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--black200_txt);
-    transform-origin: center;
-    transition: 0.5s;
-  }
-  #header .header__inner .header__nav_mobile span.mobile_menuBar::before {
-    top: -10px;
-  }
-  #header .header__inner .header__nav_mobile span.mobile_menuBar::after {
-    top: 10px;
-  }
-  #header .header__inner .header__nav_mobile:hover span::before {
-    width: 80%;
-  }
-  #header .header__inner .header__nav_mobile:hover span::after {
-    width: 80%;
-  }
-  #header .header__inner.close span {
-    background: transparent;
-  }
-  #header .header__inner.close span::before {
-    width: 100%;
-    top: 0;
-    transform: rotate(45deg);
-  }
-  #header .header__inner.close span::after {
-    width: 100%;
-    top: 0;
-    transform: rotate(-45deg);
+    cursor: pointer;
   }
 }
 @media only screen and (min-width: 701px) {

@@ -244,8 +244,8 @@
     line-height: normal;
     text-align: center;
   }
-  #work .sect_inner .swiper_list {
-    padding: 0px 20px;
+  #work .sect_inner .body_line {
+    display: none;
   }
   #work .sect_inner .swiper_box .swiper {
     margin-top: -50px;

@@ -23,6 +23,7 @@
   background-color: var(--black100);
   text-align: center;
   border-radius: 20px;
+  overflow: hidden;
 }
 #intro .sect_inner .blend {
   pointer-events: none;
@@ -252,7 +253,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
   }
   #intro .sect_inner .blend {
     pointer-events: none;
@@ -323,7 +323,7 @@
     margin: 5%;
   }
   #intro .sect_inner .stickers .sticker.long1 {
-    transform: translate(-118%, 156%) rotate(35deg);
+    transform: translate(-118%, 186%) rotate(35deg);
   }
   #intro .sect_inner .stickers .sticker.long2 {
     transform: translate(-43%, 37%) rotate(-20deg);
