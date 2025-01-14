@@ -54,13 +54,21 @@
   filter: invert(1);
 }
 
+@media only screen and (max-width: 400px) {
+  #footer {
+    height: 70vh;
+  }
+  .sect_inner {
+    height: 70vh;
+  }
+}
 @media only screen and (max-width: 700px) {
   #footer {
-    height: 60vh;
+    height: 50vh;
     border: 1px solid #000;
   }
   #footer .sect_inner {
-    height: 60vh;
+    height: 50vh;
     border: 1px solid #f00;
     padding: 80px 20px 0;
   }
