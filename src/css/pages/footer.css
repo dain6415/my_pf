@@ -56,10 +56,10 @@
 
 @media only screen and (max-width: 700px) {
   #footer {
-    height: calc(var(--footer-spacing) * 1.2);
+    height: 500px;
   }
   #footer .sect_inner {
-    padding: 5rem 20px 0;
+    padding: 80px 20px 0;
     height: 50%;
   }
   #footer .sect_inner .thanku {
@@ -67,9 +67,10 @@
     text-align: 0;
   }
   #footer .sect_inner .footer_info .top {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #footer .sect_inner .footer_info .top .txt {
+    font-size: 0.75rem;
     padding-top: 20px;
     margin-bottom: 40px;
   }

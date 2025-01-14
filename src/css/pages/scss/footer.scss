@@ -74,10 +74,10 @@
 
 @media only screen and (max-width: 700px) {
   #footer {
-    height: calc(var(--footer-spacing) * 1.2);
+    height: 500px;
     // overflow: hidden;
     .sect_inner {
-      padding: 5rem 20px 0;
+      padding: 80px 20px 0;
       height: 50%;
       .thanku {
         font-size: 10vw;
@@ -85,8 +85,9 @@
       }
       .footer_info {
         .top {
-          font-size: 2rem;
+          font-size: 1.5rem;
           .txt {
+            font-size: .75rem;
             padding-top: 20px;
             margin-bottom: 40px;
           }
