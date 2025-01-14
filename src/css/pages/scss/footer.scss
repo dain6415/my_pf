@@ -72,18 +72,58 @@
 
 // ***************************************************************************************************************************
 @media only screen and (max-width: 400px) {
-  body{
-    background:var(--main-color);
-    #footer{
+  #footer {
+    height: 80vh;
+    // overflow: hidden;
+    border: 1px solid #000;
+    .sect_inner {
       height: 80vh;
-    }
-      .sect_inner{
-        height: 80vh;
+      border: 1px solid #f00;
+      padding: 80px 20px 0;
+      .thanku {
+        display: none;
+        font-size: 10vw;
+        text-align: abs($number: 0);
       }
+      .footer_info {
+        .top {
+          font-size: 1.5rem;
+          .txt {
+            font-size: .75rem;
+            padding-top: 20px;
+            margin-bottom: 40px;
+          }
+        }
+        .bottom {
+          color: var(--white);
+          font-weight: 300;
+          .f_b_txt {
+            font-size: 1rem;
+            line-height: 2;
+            &.copyright {
+              font-weight: 100;
+            }
+            &.link {
+              margin-top: 40px;
+              > div {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+            &.none{
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
   #footer {
     height: 50vh;
     // overflow: hidden;

@@ -55,17 +55,55 @@
 }
 
 @media only screen and (max-width: 400px) {
-  body {
-    background: var(--main-color);
-  }
-  body #footer {
+  #footer {
     height: 80vh;
+    border: 1px solid #000;
   }
-  body .sect_inner {
+  #footer .sect_inner {
     height: 80vh;
+    border: 1px solid #f00;
+    padding: 80px 20px 0;
+  }
+  #footer .sect_inner .thanku {
+    display: none;
+    font-size: 10vw;
+    text-align: 0;
+  }
+  #footer .sect_inner .footer_info .top {
+    font-size: 1.5rem;
+  }
+  #footer .sect_inner .footer_info .top .txt {
+    font-size: 0.75rem;
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+  #footer .sect_inner .footer_info .bottom {
+    color: var(--white);
+    font-weight: 300;
+  }
+  #footer .sect_inner .footer_info .bottom .f_b_txt {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
+    font-weight: 100;
+  }
+  #footer .sect_inner .footer_info .bottom .f_b_txt.link {
+    margin-top: 40px;
+  }
+  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div img {
+    width: 100%;
+  }
+  #footer .sect_inner .footer_info .bottom .f_b_txt.none {
+    display: none;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
   #footer {
     height: 50vh;
     border: 1px solid #000;
