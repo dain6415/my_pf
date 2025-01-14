@@ -55,11 +55,14 @@
 }
 
 @media only screen and (max-width: 400px) {
-  #footer {
-    height: 70vh;
+  body {
+    background: var(--main-color);
   }
-  .sect_inner {
-    height: 70vh;
+  body #footer {
+    height: 80vh;
+  }
+  body .sect_inner {
+    height: 80vh;
   }
 }
 @media only screen and (max-width: 700px) {
