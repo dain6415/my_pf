@@ -56,12 +56,10 @@
 
 @media only screen and (max-width: 400px) {
   #footer {
-    height: 80vh;
-    border: 1px solid #000;
+    height: 70vh;
   }
   #footer .sect_inner {
-    height: 80vh;
-    border: 1px solid #f00;
+    height: 70vh;
     padding: 80px 20px 0;
   }
   #footer .sect_inner .thanku {
@@ -103,14 +101,12 @@
     display: none;
   }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 401px) {
   #footer {
     height: 50vh;
-    border: 1px solid #000;
   }
   #footer .sect_inner {
     height: 50vh;
-    border: 1px solid #f00;
     padding: 80px 20px 0;
   }
   #footer .sect_inner .thanku {
