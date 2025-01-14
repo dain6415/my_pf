@@ -12,7 +12,7 @@
 
 #intro {
   background: var(--mainBg-color);
-  border-bottom: 1px solid var(--black600);
+  // border-bottom: 1px solid var(--black600);
   position: relative;
   padding: 10px;
   .home__down {
@@ -386,7 +386,8 @@
 
       .intro_title {
         // transform: translateY(60px);
-        color: var(--main-color);
+        // color: var(--main-color);
+        color: var(--mainBg-color);
         mix-blend-mode: difference;
         text-transform: uppercase;
         z-index: 99;

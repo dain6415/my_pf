@@ -81,31 +81,31 @@ export function header() {
   
   function handleMobileNav() {
     if(mediaQuery.matches){
+      const openMenu = (e) => {
+        e.stopPropagation();
+        nav.classList.add("on");
+        filter.classList.add("on");
+      }
+      const closeMenu = (e) => {
+        e.stopPropagation();
+        nav.classList.remove("on");
+        filter.classList.remove("on");
+      }
       movileMeun.addEventListener('click',openMenu)
       closeBtn.addEventListener("click",closeMenu);
     }else{
       nav.classList.remove("on");
       filter.classList.remove("on");
+      
       movileMeun.removeEventListener("click", openMenu);
       closeBtn.removeEventListener("click", closeMenu);
     }
+    
+    handleMobileNav();
+    window.addEventListener("resize", handleMobileNav);
   }
-  function openMenu(e) {
-    e.stopPropagation();
-    nav.classList.add("on");
-    filter.classList.add("on");
-  }
-  function closeMenu(e) {
-    e.stopPropagation();
-    nav.classList.remove("on");
-    filter.classList.remove("on");
-  }
-  window.addEventListener("resize", handleMobileNav);
-  // 초기 상태 확인 및 이벤트 등록
-  handleMobileNav();
-  
-  
 
+  
 // 네비게이션 클릭 시 전파 중지
 nav.addEventListener("click", (e) => {
   e.stopPropagation(); // 이벤트 전파 방지

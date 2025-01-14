@@ -3,6 +3,7 @@
   background: var(--mainBg-color);
   color: var(--black200_txt);
   position: relative;
+  padding-bottom: 40px;
 }
 #work .sect_inner {
   height: auto;
@@ -383,7 +384,7 @@
   #work .sect_inner .swiper_box .swiper .swiper-slide:hover a .txt {
     transform: translateY(0);
   }
-  #work .sect_inner .swiper_box .swiper .swiper-slide:hover a .txt .w_num {
+  #work .sect_inner .swiper_box .swiper .swiper-slide:hover a .txt .w_num:not(:even) {
     color: var(--black300);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide:hover a .txt .info {

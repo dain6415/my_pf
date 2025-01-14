@@ -3,16 +3,17 @@ import { intro } from "./src/js/intro.js";
 import { project } from "./src/js/project.js";
 import { work } from "./src/js/work.js";
 import { about } from "./src/js/about.js";
+import { footer } from "./src/js/footer.js";
 
 // import { bgColor } from "./src/js/bg_color.js";
 
 window.addEventListener("load", function () {
   header();
   intro();
+  about(); // 순서를 기다리세요
   project();
   work();
-  about();
-
+  footer();
   // bgColor();
 
   // *********************************************************************************************************************************************************************************************************************************
@@ -67,10 +68,10 @@ window.addEventListener("load", function () {
   });
 
   //특정 공간에서 커서 컬러 변경  - 특정 공간에서만 바꾸고 싶을 때 ------------------------------------------
-  const aboutCursor = document.querySelector("#about .sect_inner");
+  const aboutCursor = document.querySelector("#footer .sect_inner");
 
   aboutCursor.addEventListener("mouseenter", function () {
-    customCursor.style.background = "#fff";
+    customCursor.style.background = "#f5f5f5";
   });
   aboutCursor.addEventListener("mouseleave", function () {
     customCursor.style.background = "var(--main-color)";

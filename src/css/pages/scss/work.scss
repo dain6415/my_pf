@@ -15,6 +15,7 @@
   background: var(--mainBg-color);
   color: var(--black200_txt);
   position: relative;
+  padding-bottom: 40px;
   // margin-bottom: var(--footer-spacing);
   // border-top: 1px solid var(--black600);
   .sect_inner {
@@ -530,7 +531,7 @@
               a {
                 .txt {
                   transform: translateY(0);
-                  .w_num {
+                  .w_num:not(:even) {
                     color: var(--black300);
                   }
                   .info {
