@@ -273,3 +273,25 @@
   font-family: 'MAZIUS';
   src : url(./font_file/63f89aa6a3a619000cf5656b_MAZIUS.woff2);
 }
+
+/* Metropolis / ace ----------------------------- */
+@font-face{
+  /* outline */
+  font-family: 'Metropolis-Medium';
+  src : url(./font_file/Metropolis-Bold.woff);
+}
+@font-face{
+  /* outline */
+  font-family: 'Metropolis-Medium';
+  src : url(./font_file/Metropolis-Medium.woff);
+}
+@font-face{
+  /* outline */
+  font-family: 'Metropolis-Medium';
+  src : url(./font_file/Metropolis-Light.woff);
+}
+@font-face{
+  /* outline */
+  font-family: 'Metropolis-Medium';
+  src : url(./font_file/Metropolis-Regular.woff);
+}
