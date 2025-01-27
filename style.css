@@ -1,24 +1,16 @@
 @charset "UTF-8";
-/* stting */
 @import url(./src/css/base/reset.css);
-
-/* 작업 css */
 @import url(./src/css/pages/header.css);
 @import url(./src/css/pages/intro.css);
 @import url(./src/css/pages/project.css);
 @import url(./src/css/pages/work.css);
-/* @import url(./src/css/pages/uxui.css); */
 @import url(./src/css/pages/about.css);
 @import url(./src/css/pages/footer.css);
+@import url(./src/css/base/vars.css); /* font, root style */
 
-/* font, color's */
-@import url(./src/css/base/vars.css);
-
-/* -------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------- */
-
+/* ========================== */
+/* 공통 스타일만*/
+/* ========================== */
 body {
   cursor: none;
   scrollbar-width: 1px;
@@ -131,97 +123,97 @@ a {
     bottom: 0;
   }
 
-  .left {
+  .body_line .left {
     left: 0;
   }
 
-  .left-middle {
+  .body_line .left-middle {
     left: 25%;
     display: none;
   }
 
-  .center {
+  .body_line .center {
     left: 50%;
     display: none;
   }
 
-  .right-middle {
+  .body_line .right-middle {
     display: none;
     right: 25%;
   }
 
-  .right {
+  .body_line .right {
     right: 0;
   }
 }
 @media only screen and (min-width: 701px) {
-  .left {
+  .body_line .left {
     left: 0;
   }
 
-  .left-middle {
+  .body_line .left-middle {
     left: 25%;
     display: none;
   }
 
-  .center {
+  .body_line .center {
     left: 50%;
   }
 
-  .right-middle {
+  .body_line .right-middle {
     display: none;
     right: 25%;
   }
 
-  .right {
+  .body_line .right {
     right: 0;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .left {
+  .body_line .left {
     left: 0;
   }
 
-  .left-middle {
+  .body_line .left-middle {
     left: 33.333333%;
     display: block;
   }
 
-  .center {
+  .body_line .center {
     left: 50%;
     display: none;
   }
 
-  .right-middle {
+  .body_line .right-middle {
     display: block;
     /* display: none; */
     right: 33.333333%;
   }
 
-  .right {
+  .body_line .right {
     right: 0;
   }
 }
 @media only screen and (min-width: 1300px) {
-  .left {
+  .body_line .left {
     left: 0;
     /* z-index: 1; */
   }
 
-  .left-middle {
+  .body_line .left-middle {
     left: 25%;
   }
 
-  .center {
+  .body_line .center {
     left: 50%;
     display: block;
   }
 
-  .right-middle {
+  .body_line .right-middle {
     right: 25%;
   }
 
-  .right {
+  .body_line .right {
     right: 0;
   }
 }
@@ -266,52 +258,48 @@ section:not(:nth-child(2)) {
     display: block;
     text-align: left;
     padding: 20px 40px;
-    .po_ab {
-      padding: 20px 0px;
-      h2 {
-        font-size: 2rem;
-      }
-    }
+  }
+  .sect_title .po_ab {
+    padding: 20px 0px;
+  }
+  .sect_title .po_ab h2 {
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 701px) {
   .sect_title {
     padding: 20px 40px;
-    .po_ab {
-      grid-column: 3/7;
-      h2 {
-        font-size: 3rem;
-      }
-    }
-    .title_info {
-      grid-column: 7/12;
-    }
+  }
+  .sect_title .po_ab {
+    grid-column: 3/7;
+  }
+  .sect_title .po_ab h2 {
+    font-size: 3rem;
+  }
+  .title_info {
+    grid-column: 7/12;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .sect_title {
-    .po_ab {
-      grid-column: 4/8;
-      h2 {
-        font-size: 4rem;
-      }
-    }
-    .title_info {
-      grid-column: 8/12;
-    }
+  .sect_title .po_ab {
+    grid-column: 4/8;
+  }
+  .sect_title .po_ab h2 {
+    font-size: 4rem;
+  }
+  .sect_title .title_info {
+    grid-column: 8/12;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .sect_title {
-    .po_ab {
-      grid-column: 4/7;
-      h2 {
-        font-size: 4rem;
-      }
-    }
-    .title_info {
-      grid-column: 7/12;
-    }
+  .sect_title .po_ab {
+    grid-column: 4/7;
+  }
+  .sect_title .po_ab h2 {
+    font-size: 4rem;
+  }
+  .sect_title .title_info {
+    grid-column: 7/12;
   }
 }
 /* -------------------------------------------------------------------------------- */

@@ -72,42 +72,45 @@ export function header() {
   }
 
   // phon ver nav -------------------------------------------
-  const movileMeun = document.querySelector(".header__nav_mobile");
+  const mobileMeun = document.querySelector(".header__nav_mobile");
   const closeBtn = document.querySelector(".close"); 
   const nav = document.querySelector("nav.header__mobile");
   const filter = document.querySelector('.header__mobile_filter')
-  // 미디어 쿼리 설정
+
   const mediaQuery = window.matchMedia("(max-width: 700px)");
   
+  const openMenu = (e) => {
+    e.stopPropagation();
+    nav.classList.add("on");
+    filter.classList.add("on");
+  };
+  
+  const closeMenu = (e) => {
+    e.stopPropagation();
+    nav.classList.remove("on");
+    filter.classList.remove("on");
+  };
+  
   function handleMobileNav() {
-    if(mediaQuery.matches){
-      const openMenu = (e) => {
-        e.stopPropagation();
-        nav.classList.add("on");
-        filter.classList.add("on");
-      }
-      const closeMenu = (e) => {
-        e.stopPropagation();
-        nav.classList.remove("on");
-        filter.classList.remove("on");
-      }
-      movileMeun.addEventListener('click',openMenu)
-      closeBtn.addEventListener("click",closeMenu);
-    }else{
+    if (mediaQuery.matches) {
+      mobileMeun.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+    } else {
       nav.classList.remove("on");
       filter.classList.remove("on");
-      
-      movileMeun.removeEventListener("click", openMenu);
+  
+      mobileMeun.removeEventListener("click", openMenu);
       closeBtn.removeEventListener("click", closeMenu);
     }
-    
-    handleMobileNav();
-    window.addEventListener("resize", handleMobileNav);
   }
-
   
-// 네비게이션 클릭 시 전파 중지
-nav.addEventListener("click", (e) => {
-  e.stopPropagation(); // 이벤트 전파 방지
-});
+  // 초기 실행 및 리사이즈 이벤트 연결
+  handleMobileNav();
+  window.addEventListener("resize", handleMobileNav);
+  
+  // 네비게이션 클릭 시 이벤트 전파 방지
+  nav.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+  
 }

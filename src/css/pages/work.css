@@ -4,6 +4,7 @@
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
+  box-shadow: 0 5px 5px #000;
 }
 #work .sect_inner {
   height: auto;
@@ -498,6 +499,10 @@
   }
 }
 @media only screen and (min-width: 1300px) {
+  #work {
+    height: auto;
+    box-shadow: 0 5px 5px #000;
+  }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     padding-top: 20%;
   }
