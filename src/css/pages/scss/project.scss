@@ -10,18 +10,6 @@
   align-items: center;
 }
 
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box; // 크기 계산에 border 포함
-}
-
 //
 #project {
   overflow: hidden;
@@ -29,9 +17,6 @@ body {
   height: 100%;
   position: relative;
   color: var(--black200_txt);
-  background-color: var(--mainBg-color);
-  // z-index: -1;
-  // border: 1px solid #ff0000;
   .sect_inner {
     width: 100%;
     .sect__wrap {

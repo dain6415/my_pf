@@ -11,9 +11,19 @@
 /* ========================== */
 /* 공통 스타일만*/
 /* ========================== */
+html,
 body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
   cursor: none;
   scrollbar-width: 1px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*  크기 계산에 border 포함 */
 }
 main {
   position: relative;
@@ -219,12 +229,11 @@ a {
 }
 /* -------------------------------------------------------------------------------- */
 /* section -------------------- */
-section{
-  background: var(--main-color);
+section {
+  background: var(--mainBg-color);
 }
-section:not(:nth-child(2)) {
+section {
   width: 100%;
-  /* height: 100vh; */
   /* padding: 10rem 5% 0; */
 }
 @media only screen and (min-width: 701px) {
@@ -356,10 +365,10 @@ nav.header__mobile {
   left: 50%;
   top: -100%;
   transform: translateX(-50%);
-  transition: .5s ease;
+  transition: 0.5s ease;
   z-index: 1001;
 }
-nav.header__mobile .inner{
+nav.header__mobile .inner {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -379,7 +388,7 @@ nav.header__mobile .inner ul {
   text-align: center;
 }
 /* 모바일 메뉴bg의 반투명 */
-.header__mobile_filter{
+.header__mobile_filter {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -390,10 +399,12 @@ nav.header__mobile .inner ul {
   -webkit-backdrop-filter: blur(10px);
   pointer-events: none;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
-.header__mobile_filter.on{
+.header__mobile_filter.on {
   opacity: 1;
+  /* on일 땐 배경이 클릭되면 안되니까!! */
+  pointer-events: visible;
 }
 /*  */
 nav.header__mobile.on {
@@ -405,17 +416,17 @@ nav.header__mobile.on ul li a.on {
 nav.header__mobile ul li a {
   position: relative;
   opacity: 1;
-  transition: opacity .5s ease, color .5s ease; /* opacity와 color에 대해 부드러운 전환 효과 추가 */
+  transition: opacity 0.5s ease, color 0.5s ease; /* opacity와 color에 대해 부드러운 전환 효과 추가 */
 }
 nav.header__mobile ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background: var(--white);
   position: absolute;
   right: 0;
   bottom: -2px;
-  transition: width .5s ease; /* width에 대한 전환 효과 */
+  transition: width 0.5s ease; /* width에 대한 전환 효과 */
 }
 nav.header__mobile ul li a:hover::after {
   width: 100%;
@@ -447,7 +458,7 @@ nav.header__mobile ul li a:hover {
 }
 .close_icon::before,
 .close_icon::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -462,19 +473,20 @@ nav.header__mobile ul li a:hover {
 .close_icon::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.close_bg_blend{
+.close_bg_blend {
   width: 100%;
   height: 100%;
   background: var(--main-color);
   mix-blend-mode: multiply;
   opacity: 0;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), inset 1 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5),
+    inset 1 0 10px rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: .2s;
+  transition: 0.2s;
 }
-.close:hover .close_bg_blend{
-  opacity: .5;
+.close:hover .close_bg_blend {
+  opacity: 0.5;
 }

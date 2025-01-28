@@ -1,23 +1,9 @@
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 #project {
   overflow: hidden;
   width: 100%;
   height: 100%;
   position: relative;
   color: var(--black200_txt);
-  background-color: var(--mainBg-color);
 }
 #project .sect_inner {
   width: 100%;

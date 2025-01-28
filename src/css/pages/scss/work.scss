@@ -12,13 +12,13 @@
 
 #work {
   // margin-top: 70px;
-  background: var(--mainBg-color);
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
   // margin-bottom: var(--footer-spacing);
   // border-top: 1px solid var(--black600);
   box-shadow: 0 5px 5px #000;
+  border: 2px solid #000;
   .sect_inner {
     height: auto;
     display: block;
@@ -706,7 +706,6 @@
 @media only screen and (min-width: 1300px) {
   #work {
     height: auto;
-    box-shadow: 0 5px 5px #000;
     .sect_inner {
       .swiper_box {
         .swiper {
