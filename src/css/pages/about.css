@@ -1,4 +1,9 @@
 #about {
   height: 100vh;
-  background: var(--mainBg-color);
+}
+
+@media only screen and (max-width: 400px) {
+  #about .sect_inner {
+    padding: 20px;
+  }
 }/*# sourceMappingURL=about.css.map */

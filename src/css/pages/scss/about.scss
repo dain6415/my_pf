@@ -1,5 +1,17 @@
+@mixin flex-c($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
 #about{
 height: 100vh;
-background: var(--mainBg-color);
-// border: 1px solid #000;
 }
+
+@media only screen and (max-width: 400px) {
+  #about{
+    .sect_inner{
+      padding: 20px;
+    }
+  }
+};

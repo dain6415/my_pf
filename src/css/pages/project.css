@@ -115,7 +115,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 1.5em 20px;
+    padding: 1.5em 10px;
   }
   #project .sect_inner .sect__wrap article.sect__item .header__title .num {
     font-size: 0.75rem;
