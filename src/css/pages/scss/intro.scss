@@ -11,7 +11,6 @@
 }
 
 #intro {
-  // border-bottom: 1px solid var(--black600);
   position: relative;
   padding: 10px;
   .home__down {
@@ -30,6 +29,7 @@
   }
   .sect_inner {
     height: 100%;
+    // background-color: var(--main-color);
     background-color: var(--black100);
     text-align: center;
     border-radius: 20px;

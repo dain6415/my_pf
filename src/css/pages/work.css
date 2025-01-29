@@ -3,8 +3,6 @@
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
-  box-shadow: 0 5px 5px #000;
-  border: 2px solid #000;
 }
 #work .sect_inner {
   height: auto;
@@ -231,8 +229,18 @@
   position: relative;
   background: var(--mainBg-color);
   color: var(--black600);
-  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease;
+}
+#work::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 5px #000;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 700px) {

@@ -17,8 +17,6 @@
   padding-bottom: 40px;
   // margin-bottom: var(--footer-spacing);
   // border-top: 1px solid var(--black600);
-  box-shadow: 0 5px 5px #000;
-  border: 2px solid #000;
   .sect_inner {
     height: auto;
     display: block;
@@ -32,16 +30,16 @@
       border-bottom: 1px solid var(--black600);
     }
     .swiper_list {
-      .list_border{
+      .list_border {
         border-bottom: 1px solid var(--black600);
         background: var(--mainBg-color);
         padding: 10px;
         position: relative;
         @include flex-c(space-between);
-        .svgs{
+        .svgs {
           display: flex;
           gap: 5px;
-          .phone_svg{
+          .phone_svg {
             display: flex;
             align-items: center;
           }
@@ -56,7 +54,7 @@
       .swiper-slide {
         // border-top: 1px solid var(--black600);
         // border-bottom-color: var(--black600);
-        border-bottom:none;
+        border-bottom: none;
         padding-top: 40%;
         pointer-events: auto;
         overflow: hidden;
@@ -283,7 +281,6 @@
             position: relative;
             background: var(--mainBg-color);
             color: var(--black600);
-            box-shadow: 5px 0px 20px rgba($color: #000000, $alpha: 0.2);
             transition: 0.5s ease;
             // .list_grid {
             //   width: 100%;
@@ -318,6 +315,16 @@
       }
     }
   }
+  &::before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 5px #000;
+    z-index: 1;
+  }
 }
 
 // // ***************************************************************************************************************************
@@ -338,7 +345,7 @@
           text-align: center;
         }
       }
-      .body_line{
+      .body_line {
         display: none;
       }
       // .swiper_list {
@@ -440,23 +447,20 @@
             //     }
             //   }
             // }
-            .list_grid{
+            .list_grid {
               width: 100%;
-              // display: flex;
-              // justify-content: space-between;
-              .w_num{
+              .w_num {
                 display: none;
               }
-              .list_title{
+              .list_title {
                 font-size: 1rem;
                 font-weight: 600;
                 padding-bottom: 5px;
                 color: var(--black200_txt);
               }
-              .right_box{
-                // width: 60%;
-                .ex{
-                  font-size: .75rem;
+              .right_box {
+                .ex {
+                  font-size: 0.75rem;
                   line-height: 1;
                 }
               }
@@ -478,7 +482,7 @@
           line-height: normal;
         }
       }
-      .swiper_list{
+      .swiper_list {
         padding: 0px 40px;
         // .list_border{
         //   border-right: 1px solid var(--black600);
@@ -520,7 +524,7 @@
                 @include flex-c();
                 transition: 0.3s;
               }
-              .frame__box{
+              .frame__box {
                 margin-top: 10%;
                 @include flex-c();
                 transition: 0.3s;
@@ -604,7 +608,7 @@
                     padding-left: 40px;
                     color: var(--black700);
                     font-weight: 300;
-                    font-size: .75rem;
+                    font-size: 0.75rem;
                   }
                   &.list_title {
                     font-weight: 600;
@@ -619,8 +623,8 @@
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  .ex{
-                    font-size: .75rem;
+                  .ex {
+                    font-size: 0.75rem;
                   }
                   i {
                     font-size: 1.25rem;
@@ -681,15 +685,15 @@
         }
       }
       .list_box {
-        ul{
+        ul {
           li {
-            a{
-              .list_grid{
+            a {
+              .list_grid {
                 grid-template-columns: 1fr 1fr 4fr;
               }
             }
-            &:hover{
-              a{
+            &:hover {
+              a {
                 width: 66.6666%;
               }
             }
@@ -712,7 +716,7 @@
           .swiper-slide {
             padding-top: 20%;
             .summary {
-              .txt{
+              .txt {
                 .title {
                   font-size: 2.1vw;
                 }
@@ -754,16 +758,16 @@
         //   border-right: 1px solid var(--black600);
         // }
       }
-      .list_box{
-        ul{
-          li{
-            a{
-              .list_grid{
+      .list_box {
+        ul {
+          li {
+            a {
+              .list_grid {
                 grid-template-columns: 1fr 1fr 2fr;
               }
             }
-            &:hover{
-              a{
+            &:hover {
+              a {
                 width: 75%;
               }
             }

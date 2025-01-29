@@ -131,6 +131,7 @@
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
     font-weight: 100;
+    font-size: 0.75rem;
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.link {
     margin-top: 40px;
