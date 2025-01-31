@@ -199,8 +199,6 @@
   overflow: hidden;
   background-position: right center;
   background-repeat: no-repeat;
-  border-left: 1px solid var(--black600);
-  border-right: 1px solid var(--black600);
   border-bottom: 1px solid var(--black600);
 }
 #work .sect_inner .list_box ul li.woodam {
@@ -231,17 +229,6 @@
   color: var(--black600);
   transition: 0.5s ease;
 }
-#work::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 5px #000;
-  z-index: 1;
-}
 
 @media only screen and (max-width: 700px) {
   #work .sect_inner .sect_title_work {
@@ -263,6 +250,7 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     position: relative;
+    min-height: 280px;
     height: 40vh;
     background: var(--black);
   }
@@ -276,7 +264,7 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt .title {
     font-size: 1.5rem;
-    color: var(--black700);
+    color: var(--mainBg-color);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt .info {
     padding-top: 15px;
@@ -420,6 +408,10 @@
   }
   #work .sect_inner .swiper_box .swiper_btn {
     width: 100%;
+  }
+  #work .sect_inner .list_box ul li {
+    border-left: 1px solid var(--black600);
+    border-right: 1px solid var(--black600);
   }
   #work .sect_inner .list_box ul li a {
     height: 110px;

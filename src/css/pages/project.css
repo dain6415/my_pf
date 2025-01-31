@@ -1,3 +1,13 @@
+.c-stacking_trigger {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.is-inview {
+  z-index: 2;
+}
+
 #project {
   overflow: hidden;
   width: 100%;
@@ -18,10 +28,8 @@
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item {
   background-color: var(--mainBg-color);
-  border-top: 1px solid transparent;
+  border-top: 1px solid var(--black700);
   border-bottom: 0;
-  border-image: url(/src/img/line.jpg) 30;
-  border-image-repeat: repeat;
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item.s3 .visual .img_bg img {
   width: 80%;
@@ -46,7 +54,6 @@
 }
 #project .sect_inner .sect__wrap .article_box article.sect__item a {
   display: inline-block;
-  padding: 10px 30px;
   transition: 0.3s;
   border: 1px solid #000;
 }
@@ -136,13 +143,9 @@
   }
   #project .sect_inner .sect__wrap article.sect__item a {
     margin-top: 40px;
-    padding: 10px 30px;
-    font-size: 1rem;
+    padding: 5px 30px;
+    font-size: 0.75rem;
     font-weight: 600;
-  }
-  #project .sect_inner .sect__wrap article.sect__item a.view_btn {
-    background: var(--black);
-    color: var(--white);
   }
   #project .sect_inner .sect__wrap article.sect__item .visual {
     margin-top: 40px;
