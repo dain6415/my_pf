@@ -255,7 +255,10 @@
     background: var(--black);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary {
-    padding-top: 20px;
+    padding-top: 4%;
+  }
+  #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt {
+    transform: translateY(20%);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt .w_num {
     font-size: 0.75rem;
@@ -263,14 +266,14 @@
     padding-bottom: 10px;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--mainBg-color);
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .txt .info {
     padding-top: 15px;
     opacity: 1;
     white-space: nowrap;
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .logo_img {
@@ -308,13 +311,13 @@
     display: none;
   }
   #work .sect_inner .list_box li a .list_grid .list_title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     color: var(--black200_txt);
   }
   #work .sect_inner .list_box li a .list_grid .right_box .ex {
-    font-size: 0.75rem;
+    font-size: 1rem;
     line-height: 1;
   }
 }
