@@ -12,7 +12,7 @@
 
 #intro {
   position: relative;
-  padding: 10px;
+  // padding: 10px;
   .home__down {
     width: 100px;
     height: 100px;
@@ -32,7 +32,7 @@
     // background-color: var(--main-color);
     background-color: var(--black100);
     text-align: center;
-    border-radius: 20px;
+    // border-radius: 20px;
     overflow: hidden;
     .blend {
       pointer-events: none;

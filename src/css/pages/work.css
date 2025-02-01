@@ -313,7 +313,7 @@
     display: none;
   }
   #work .sect_inner .list_box li a .list_grid .list_title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     padding-bottom: 10px;
     color: var(--black200_txt);

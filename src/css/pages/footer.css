@@ -87,6 +87,7 @@
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
     font-weight: 100;
+    opacity: 0.6;
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.link {
     margin-top: 40px;
@@ -135,6 +136,7 @@
   #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
     font-weight: 100;
     font-size: 0.75rem;
+    opacity: 0.6;
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.link {
     margin-top: 40px;

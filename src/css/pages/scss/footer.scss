@@ -101,6 +101,7 @@
             line-height: 2;
             &.copyright {
               font-weight: 100;
+              opacity: .6;
             }
             &.link {
               margin-top: 40px;
@@ -151,7 +152,7 @@
             &.copyright {
               font-weight: 100;
               font-size: .75rem;
-              
+              opacity: .6;
             }
             &.link {
               margin-top: 40px;

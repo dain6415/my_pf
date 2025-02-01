@@ -68,13 +68,15 @@ window.addEventListener("load", function () {
   });
 
   //특정 공간에서 커서 컬러 변경  - 특정 공간에서만 바꾸고 싶을 때 ------------------------------------------
-  const aboutCursor = document.querySelector("#footer .sect_inner");
+  const footerCursor = document.querySelector("#footer .sect_inner");
 
-  aboutCursor.addEventListener("mouseenter", function () {
+  footerCursor.addEventListener("mouseenter", function () {
     customCursor.style.background = "#f5f5f5";
+    // customCursor.style.opacity = "0.5";
   });
-  aboutCursor.addEventListener("mouseleave", function () {
+  footerCursor.addEventListener("mouseleave", function () {
     customCursor.style.background = "var(--main-color)";
+    // customCursor.style.opacity = "0";
   });
 
   // 위로가기 ------------------------------------------
