@@ -199,7 +199,6 @@
   overflow: hidden;
   background-position: right center;
   background-repeat: no-repeat;
-  border-bottom: 1px solid var(--black600);
 }
 #work .sect_inner .list_box ul li.woodam {
   background-color: rgb(255, 255, 255);
@@ -273,7 +272,7 @@
     padding-top: 15px;
     opacity: 1;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 0.75rem;
     line-height: 1.5;
   }
   #work .sect_inner .swiper_box .swiper .swiper-slide .summary .logo_img {
@@ -301,6 +300,9 @@
   #work .sect_inner .list_box {
     padding: 0;
   }
+  #work .sect_inner .list_box li {
+    border-bottom: 1px solid var(--black800);
+  }
   #work .sect_inner .list_box li a {
     padding: 30px 10px;
   }
@@ -311,14 +313,16 @@
     display: none;
   }
   #work .sect_inner .list_box li a .list_grid .list_title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     color: var(--black200_txt);
   }
   #work .sect_inner .list_box li a .list_grid .right_box .ex {
-    font-size: 1rem;
+    font-size: 0.75rem;
+    font-weight: 300;
     line-height: 1;
+    color: var(--black200_txt);
   }
 }
 @media only screen and (min-width: 701px) {
@@ -415,6 +419,7 @@
   #work .sect_inner .list_box ul li {
     border-left: 1px solid var(--black600);
     border-right: 1px solid var(--black600);
+    border-bottom: 1px solid var(--black600);
   }
   #work .sect_inner .list_box ul li a {
     height: 110px;

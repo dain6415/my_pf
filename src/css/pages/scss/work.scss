@@ -247,7 +247,6 @@
           overflow: hidden;
           background-position: right center;
           background-repeat: no-repeat;
-          border-bottom: 1px solid var(--black600);
           &.woodam {
             background-color: rgb(255, 255, 255);
             background-image: url(../../img/work/jaws.jpg);
@@ -372,7 +371,7 @@
                   padding-top: 15px;
                   opacity: 1;
                   white-space: nowrap;
-                  font-size: 1rem;
+                  font-size: 0.75rem;
                   line-height: 1.5;
                 }
               }
@@ -412,6 +411,7 @@
       .list_box {
         padding: 0;
         li {
+          border-bottom: 1px solid var(--black800);
           a {
             padding: 30px 10px;
             // height: auto;
@@ -449,15 +449,17 @@
                 display: none;
               }
               .list_title {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 font-weight: 600;
-                padding-bottom: 20px;
+                padding-bottom: 10px;
                 color: var(--black200_txt);
               }
               .right_box {
                 .ex {
-                  font-size: 1rem;
+                  font-size: .75rem;
+                  font-weight: 300;
                   line-height: 1;
+                  color: var(--black200_txt);
                 }
               }
             }
@@ -579,6 +581,7 @@
           li {
             border-left: 1px solid var(--black600);
             border-right: 1px solid var(--black600);
+            border-bottom: 1px solid var(--black600);
             a {
               height: 110px;
               .list_grid {
