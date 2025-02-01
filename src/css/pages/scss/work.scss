@@ -247,26 +247,6 @@
           overflow: hidden;
           background-position: right center;
           background-repeat: no-repeat;
-          &.woodam {
-            background-color: rgb(255, 255, 255);
-            background-image: url(../../img/work/jaws.jpg);
-          }
-          &.chilsung {
-            background-color: #00ab44;
-            background-image: url(../../img/work/chil.jpg);
-          }
-          &.interior {
-            background-color: rgb(255, 255, 255);
-            background-image: url(../../img/work/logo.jpg);
-          }
-          &.iPadPro {
-            background-color: rgb(255, 255, 255);
-            background-image: url(../../img/work/logo.jpg);
-          }
-          &.yes24 {
-            background-color: rgb(255, 255, 255);
-            background-image: url(../../img/work/yes24.jpg);
-          }
           a {
             display: block;
             width: 100%;
@@ -411,6 +391,7 @@
       .list_box {
         padding: 0;
         li {
+          padding: 0 20px;
           border-bottom: 1px solid var(--black800);
           a {
             padding: 30px 10px;
@@ -582,6 +563,26 @@
             border-left: 1px solid var(--black600);
             border-right: 1px solid var(--black600);
             border-bottom: 1px solid var(--black600);
+            &.woodam {
+              background-color: rgb(255, 255, 255);
+              background-image: url(../../img/work/jaws.jpg);
+            }
+            &.chilsung {
+              background-color: #00ab44;
+              background-image: url(../../img/work/chil.jpg);
+            }
+            &.interior {
+              background-color: rgb(255, 255, 255);
+              background-image: url(../../img/work/logo.jpg);
+            }
+            &.iPadPro {
+              background-color: rgb(255, 255, 255);
+              background-image: url(../../img/work/logo.jpg);
+            }
+            &.yes24 {
+              background-color: rgb(255, 255, 255);
+              background-image: url(../../img/work/yes24.jpg);
+            }
             a {
               height: 110px;
               .list_grid {

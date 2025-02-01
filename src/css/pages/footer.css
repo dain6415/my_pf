@@ -175,6 +175,9 @@
     font-weight: 500;
     padding-left: 40px;
   }
+  #footer .sect_inner .footer_info .top .name {
+    font-weight: 500;
+  }
   #footer .sect_inner .footer_info .top .txt {
     padding-top: 10px;
   }
