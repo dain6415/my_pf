@@ -67,7 +67,10 @@
     text-align: 0;
   }
   #footer .sect_inner .footer_info .top {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+  #footer .sect_inner .footer_info .top .name {
+    font-weight: 500;
   }
   #footer .sect_inner .footer_info .top .txt {
     font-size: 0.75rem;
