@@ -112,7 +112,7 @@ export function project() {
         scrub: 1,
         id: i + 1,
         onUpdate: updateAccordionHeight, // 높이 업데이트
-        markers: { indent: 0 * i },
+        // markers: { indent: 0 * i },
       },
     });
   });
