@@ -272,12 +272,12 @@ section {
 }
 @media only screen and (min-width: 701px) {
   .sect_title {
-    padding-top: 20px;
-    padding-left: 40px;
+    padding: 20px 40px;
   }
   #project .sect_title {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 2%;
   }
   #project .sect_title .po_ab {
     grid-column: 2/7;
@@ -293,6 +293,10 @@ section {
   }
   .sect_title .po_ab {
     font-size: 1.5rem;
+  }
+  #project .sect_title .po_ab {
+    grid-column: 4/7;
+    padding-left: 0;
   }
   .sect_title .title_info {
     grid-column: 8/12;

@@ -4,62 +4,89 @@
   align-items: center;
 }
 
-#about{
-.sect_inner{
-  height: 100%;
-  .sect_title {
-    padding: 0;
-    padding-bottom: 40px;
-    // border-bottom: 1px solid var(--black700);
-    .po_ab{
+#about {
+  .sect_inner {
+    height: 100%;
+    .sect_title {
       padding: 0;
+      padding-bottom: 40px;
+      // border-bottom: 1px solid var(--black700);
+      .po_ab {
+        padding: 0;
+      }
+    }
+    .info {
+      .keyword {
+        font-weight: 600;
+      }
+      .txt {
+        word-break: keep-all;
+      }
     }
   }
-  .info{
-    .keyword{
-      font-weight: 600;
-    }
-    .txt{
-      word-break: keep-all;
-    }
-    .txt1{
-      margin-top: 3rem
-    }
-    .txt2{
-      margin-top: 1rem
-    }
-  }
-}
 }
 // // ***************************************************************************************************************************
 @media only screen and (max-width: 700px) {
-  #about{
+  #about {
     padding: 6rem 20px 8rem;
-    .sect_inner{
-      .info{
+    .sect_inner {
+      .info {
         // margin-top: 3rem;
-        .keyword{
+        .keyword {
           font-size: 2rem;
           line-height: 1.3;
+        }
+        .txt1 {
+          margin-top: 3rem;
+        }
+        .txt2 {
+          margin-top: 1rem;
+          br{
+            display: none;
+          }
         }
       }
     }
   }
-};
+}
 //----------------------------------------------------------------------
 @media only screen and (min-width: 701px) {
-  #about{
+  #about {
     padding: 6rem 40px 8rem;
     // height: 600px;
-    .keyword{
+    .keyword {
       font-size: 2rem;
       line-height: 1.3;
     }
+    .txt1 {
+      margin-top: 3rem;
+    }
+    .txt2 {
+      margin-top: 1rem;
+      br {
+        display: none;
+      }
+    }
   }
-};
+}
 //----------------------------------------------------------------------
-// @media only screen and (min-width: 1300px) {
-//   #about{
-//     padding: 40px;
-//   }
-// };
+@media only screen and (min-width: 1300px) {
+  #about {
+    padding: 8rem 40px 12rem;
+    .keyword {
+      font-size: 3rem;
+      color: var(--black200_txt);
+      opacity: 0.9;
+      line-height: 1.3;
+    }
+    .txt1 {
+      margin-top: 2rem;
+    }
+    .txt2 {
+      margin-top: 0.5rem;
+      br {
+        display: block;
+      }
+    }
+  }
+}
