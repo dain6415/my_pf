@@ -10,6 +10,9 @@
   height: auto;
   display: block;
 }
+#work .sect_inner .sect_title {
+  border-bottom: 1px solid var(--black700);
+}
 #work .sect_inner .swiper_list .list_border {
   border-bottom: 1px solid var(--black600);
   background: var(--mainBg-color);

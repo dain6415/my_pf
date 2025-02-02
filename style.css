@@ -267,7 +267,7 @@ section {
   }
   .sect_title .po_ab {
     padding: 20px 0px;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 701px) {

@@ -21,6 +21,9 @@
   .sect_inner {
     height: auto;
     display: block;
+    .sect_title{
+      border-bottom: 1px solid var(--black700);
+    }
     .swiper_list {
       .list_border {
         border-bottom: 1px solid var(--black600);

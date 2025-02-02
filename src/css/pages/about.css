@@ -11,6 +11,9 @@
 #about .sect_inner .info .keyword {
   font-weight: 600;
 }
+#about .sect_inner .info .txt {
+  word-break: keep-all;
+}
 #about .sect_inner .info .txt1 {
   margin-top: 3rem;
 }
