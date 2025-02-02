@@ -79,15 +79,6 @@ window.addEventListener("load", function () {
     // customCursor.style.opacity = "0";
   });
 
-  // 위로가기 ------------------------------------------
-  // document.querySelector(".up_btn").addEventListener("click", function () {
-  //   // alert()
-  //   window.scroll({
-  //     top: 0, // 최상단으로 이동
-  //     behavior: "smooth", // 부드럽게 이동
-  //   });
-  // });
-
   // ------------------------------------------
   // lenis
   const lenis = new Lenis();
@@ -97,10 +88,4 @@ window.addEventListener("load", function () {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
-
-  // 스크롤바------------------------------------------
-  // requestAnimationFrame(raf);
-  // $("body").mCustomScrollbar({
-  //   theme: "minimal-dark",
-  // });
 });

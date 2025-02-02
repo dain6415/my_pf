@@ -20,7 +20,6 @@
   // top: calc(100vh - 100px);
   z-index: 1000;
   // transition: 3s;
-
   &.fixed {
     position: fixed;
     top: 0;
@@ -39,6 +38,9 @@
   .header__inner {
     height: 100%;
     display: flex;
+    .header__logo{
+      font-family: "GmarketSansMedium";
+    }
     nav {
       ul {
         display: flex;

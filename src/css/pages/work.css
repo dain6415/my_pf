@@ -3,18 +3,12 @@
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
+  border-top: 1px solid var(--black700);
+  z-index: 2;
 }
 #work .sect_inner {
   height: auto;
   display: block;
-}
-#work .sect_inner .sect_title_work {
-  background: var(--mainBg-color);
-  z-index: 10;
-  font-size: 3rem;
-  line-height: 1;
-  position: relative;
-  border-bottom: 1px solid var(--black600);
 }
 #work .sect_inner .swiper_list .list_border {
   border-bottom: 1px solid var(--black600);
@@ -208,18 +202,11 @@
   color: var(--black600);
   transition: 0.5s ease;
 }
+#work .sect_inner .list_box ul li a .ex {
+  word-break: keep-all;
+}
 
 @media only screen and (max-width: 700px) {
-  #work .sect_inner .sect_title_work {
-    font-size: 3.5rem;
-    padding: 30px;
-    text-transform: uppercase;
-  }
-  #work .sect_inner .sect_title_work p {
-    width: 90%;
-    line-height: normal;
-    text-align: center;
-  }
   #work .sect_inner .body_line {
     display: none;
   }
@@ -285,7 +272,7 @@
     border-bottom: 1px solid var(--black800);
   }
   #work .sect_inner .list_box li a {
-    padding: 30px 10px;
+    padding: 30px 0;
   }
   #work .sect_inner .list_box li a .list_grid {
     width: 100%;
@@ -307,13 +294,6 @@
   }
 }
 @media only screen and (min-width: 701px) {
-  #work .sect_inner .sect_title_work {
-    font-size: 3.5rem;
-    padding: 40px;
-  }
-  #work .sect_inner .sect_title_work p {
-    line-height: normal;
-  }
   #work .sect_inner .swiper_list {
     padding: 0px 40px;
   }
@@ -403,8 +383,10 @@
     border-bottom: 1px solid var(--black600);
   }
   #work .sect_inner .list_box ul li.woodam {
-    background-color: rgb(255, 255, 255);
-    background-image: url(../../img/work/jaws.jpg);
+    background-color: var(--mainBg-color);
+    background-image: url(../../img/work/woodam_logo.png);
+    background-position: right 20px center;
+    background-size: 20%;
   }
   #work .sect_inner .list_box ul li.chilsung {
     background-color: #00ab44;
@@ -415,8 +397,10 @@
     background-image: url(../../img/work/logo.jpg);
   }
   #work .sect_inner .list_box ul li.iPadPro {
-    background-color: rgb(255, 255, 255);
-    background-image: url(../../img/work/logo.jpg);
+    background-color: var(--mainBg-color);
+    background-image: url(../../img/work/Apple_logo_black.svg.png);
+    background-position: right 10% center;
+    background-size: 6%;
   }
   #work .sect_inner .list_box ul li.yes24 {
     background-color: rgb(255, 255, 255);
@@ -449,7 +433,6 @@
   }
   #work .sect_inner .list_box ul li a .list_grid p.list_title {
     font-weight: 600;
-    font-size: 1.5vw;
   }
   #work .sect_inner .list_box ul li a .list_grid .right_box {
     width: 100%;
@@ -481,12 +464,6 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  #work .sect_inner .sect_title_work {
-    font-size: 5rem;
-  }
-  #work .sect_inner .sect_title_work p {
-    line-height: normal;
-  }
   #work .sect_inner .swiper_box .swiper .swiper-slide {
     padding-top: 27%;
   }
@@ -496,6 +473,14 @@
   #work .sect_inner .swiper_box .swiper .swiper-slide .logo_img {
     width: 90%;
     margin: auto;
+  }
+  #work .sect_inner .list_box ul li.woodam {
+    background-position: right 60px center;
+    background-size: 20%;
+  }
+  #work .sect_inner .list_box ul li.iPadPro {
+    background-position: right 13% center;
+    background-size: 4%;
   }
   #work .sect_inner .list_box ul li a .list_grid {
     grid-template-columns: 1fr 1fr 4fr;
@@ -535,6 +520,13 @@
   }
   #work .sect_inner .swiper_box .swiper .swiper_btn {
     display: none;
+  }
+  #work .sect_inner .list_box ul li.woodam {
+    background-size: 16%;
+  }
+  #work .sect_inner .list_box ul li.iPadPro {
+    background-position: right 150px center;
+    background-size: 4%;
   }
   #work .sect_inner .list_box ul li a .list_grid {
     grid-template-columns: 1fr 1fr 2fr;

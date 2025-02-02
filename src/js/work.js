@@ -81,9 +81,7 @@ export function work() {
     clearInterval(rotationInterval); // 회전 중지
   });
 
-
   // 망곰 ******************************************
-  // 망곰 애니메이션
   const frames = document.querySelectorAll(".slide4 .frame");
   let currentIndex = 0;
   let intervalId = null; // 애니메이션 ID 저장용
@@ -110,25 +108,6 @@ export function work() {
     intervalId = null;
   });
   
+  // **************************************************  
 }
 
-// **************************************************
-// `work` 섹션의 타이틀에 pin을 적용하여 고정
-// function updateStickyPosition() {
-//   const header = document.querySelector("#header"); // 헤더 요소 선택
-//   return header ? header.offsetHeight : 0; // 헤더 높이를 반환
-// }
-// gsap.to(".sect_title_work", {
-//   scrollTrigger: {
-//     trigger: ".sect_title_work",
-//     start: () => `top top+=${updateStickyPosition()}`,
-//     end: "bottom+=1000 bottom",
-//     pin: true,       
-//     pinSpacing: false, 
-//     scrub: true,
-//     markers: true,   
-//   }
-// });
-// window.addEventListener("resize", () => {
-//   ScrollTrigger.refresh(); // 화면 크기가 변경될 때 ScrollTrigger 갱신
-// });

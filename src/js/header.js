@@ -1,9 +1,4 @@
 export function header() {
-  //스크롤 값 구하기
-  // window.addEventListener('scroll', function() {
-  //   console.log(window.scrollY);
-  // });
-
   const header = document.querySelector("header");
   let headerTop = header.offsetTop;
 
@@ -71,7 +66,7 @@ export function header() {
     link.classList.add("on");
   }
 
-  // phon ver nav -------------------------------------------
+  // phon ver. nav -------------------------------------------
   const mobileMeun = document.querySelector(".header__nav_mobile");
   const closeBtn = document.querySelector(".close"); 
   const nav = document.querySelector("nav.header__mobile");
@@ -109,8 +104,8 @@ export function header() {
   window.addEventListener("resize", handleMobileNav);
   
   // 네비게이션 클릭 시 이벤트 전파 방지
-  nav.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
+  // nav.addEventListener("click", (e) => {
+  //   e.stopPropagation();
+  // });
   
 }

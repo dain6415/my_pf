@@ -4,6 +4,7 @@
   width: 100%;
   transition: transform 0.5s ease-out;
   z-index: -1;
+  transition: 0.2s;
 }
 #footer .sect_inner {
   height: var(--footer-spacing);
@@ -192,7 +193,7 @@
     padding-left: 40px;
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
-    color: var(--main-color600);
+    opacity: 0.8;
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.link > div {
     display: inline-block;

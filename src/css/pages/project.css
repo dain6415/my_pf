@@ -110,19 +110,11 @@
     width: 100%;
     overflow: hidden;
   }
-  #project .sect_inner .sect_title {
-    padding: 20px 20px;
-    display: block;
-  }
-  #project .sect_inner .sect_title .po_ab {
-    font-size: 1rem;
-    width: 100%;
-  }
   #project .sect_inner .sect__wrap article.sect__item {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 1.5em 10px;
+    padding: 1.5em 20px;
   }
   #project .sect_inner .sect__wrap article.sect__item .header__title .num {
     font-size: 0.75rem;
@@ -175,9 +167,6 @@
   #project .sect_inner {
     width: 100%;
   }
-  #project .sect_inner .sect_title .po_ab {
-    width: 100%;
-  }
   #project .sect_inner .sect__wrap {
     overflow: hidden;
   }
@@ -209,8 +198,8 @@
   }
   #project .sect_inner .sect__wrap article.sect__item .info .txt {
     line-height: 1.5rem;
-    font-size: 0.9rem;
-    width: 95%;
+    font-size: 0.8rem;
+    width: 110%;
   }
   #project .sect_inner .sect__wrap article.sect__item a {
     margin-top: 30px;
@@ -257,7 +246,6 @@
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .info .txt {
     width: 90%;
-    font-size: 1rem;
   }
   #project .sect_inner .sect__wrap .article_box article.sect__item .visual {
     height: 0;

@@ -21,6 +21,9 @@
   height: 100%;
   display: flex;
 }
+#header .header__inner .header__logo {
+  font-family: "GmarketSansMedium";
+}
 #header .header__inner nav ul {
   display: flex;
   gap: 20px;
