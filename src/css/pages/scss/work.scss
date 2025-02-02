@@ -633,6 +633,14 @@
             a {
               .list_grid {
                 grid-template-columns: 1fr 1fr 4fr;
+                .list_title{
+                  font-size: 1.15rem;
+                }
+                .right_box{
+                  .ex {
+                    font-size: 16px;
+                  }
+                }
               }
             }
             &:hover {
@@ -641,9 +649,6 @@
               }
             }
           }
-        }
-        .ex {
-          font-size: 1rem;
         }
       }
     }
@@ -714,6 +719,9 @@
             a {
               .list_grid {
                 grid-template-columns: 1fr 1fr 2fr;
+                .list_title{
+                  font-size: 1.25rem;
+                }
               }
             }
             &:hover {

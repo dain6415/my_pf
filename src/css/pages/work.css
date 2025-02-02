@@ -488,11 +488,14 @@
   #work .sect_inner .list_box ul li a .list_grid {
     grid-template-columns: 1fr 1fr 4fr;
   }
+  #work .sect_inner .list_box ul li a .list_grid .list_title {
+    font-size: 1.15rem;
+  }
+  #work .sect_inner .list_box ul li a .list_grid .right_box .ex {
+    font-size: 16px;
+  }
   #work .sect_inner .list_box ul li:hover a {
     width: 66.6666%;
-  }
-  #work .sect_inner .list_box .ex {
-    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 1300px) {
@@ -533,6 +536,9 @@
   }
   #work .sect_inner .list_box ul li a .list_grid {
     grid-template-columns: 1fr 1fr 2fr;
+  }
+  #work .sect_inner .list_box ul li a .list_grid .list_title {
+    font-size: 1.25rem;
   }
   #work .sect_inner .list_box ul li:hover a {
     width: 75%;
