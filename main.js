@@ -20,23 +20,26 @@ window.addEventListener("load", function () {
   // mouse event
   const mouses =
     document.querySelectorAll(".mouse_event"); /* 호버했을 때 size 변경용*/
-  const customCursor = document.getElementById("custom_cursor"); /* color, background 변경용 : background로 컬러를 지정했으니까 */
+  const customCursor =
+    document.getElementById(
+      "custom_cursor"
+    ); /* color, background 변경용 : background로 컬러를 지정했으니까 */
 
   // 초기 설정
   customCursor.style.padding = "calc(30px / 2)";
   customCursor.style.mixBlendMode = "normal";
 
   // phone일 때 마우스 없애기
-  const mediaQuery = window.matchMedia("(max-width: 700px)"); 
-  const customMouse = () =>{
-    if(mediaQuery.matches){
+  const mediaQuery = window.matchMedia("(max-width: 700px)");
+  const customMouse = () => {
+    if (mediaQuery.matches) {
       customCursor.style.display = "none";
-      this.document.body.style.cursor= "auto" // 기본 마우스
-    }else{
-       customCursor.style.display = "block";
-      this.document.body.style.cursor= "none"
+      this.document.body.style.cursor = "auto"; // 기본 마우스
+    } else {
+      customCursor.style.display = "block";
+      this.document.body.style.cursor = "none";
     }
-  }
+  };
 
   // 초기 실행
   customMouse();
@@ -58,7 +61,6 @@ window.addEventListener("load", function () {
       customCursor.style.mixBlendMode = "normal";
     });
   });
-
 
   // mouse 커서 위치 ------------------------------------------
   document.addEventListener("mousemove", (e) => {

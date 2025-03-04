@@ -51,7 +51,7 @@ export function work() {
       }
     );
 
-    // 호버된 항목은 active 상태로 유지되며 색상은 파란색
+    // 현재는 active 상태로 유지 + 색상은 파란색
     $(".hover-container span").mouseenter(function () {
       // 다른 항목의 active 클래스 제거 및 초기화
       $(".hover-container span").removeClass("active").css("color", "black");
@@ -110,4 +110,3 @@ export function work() {
   
   // **************************************************  
 }
-
