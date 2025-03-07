@@ -225,7 +225,7 @@
           }
           .title {
             h4 {
-              font-size: 6vw;
+              font-size: 5vw;
               a {
                 padding: 10px 0;
                 gap: 10px;
@@ -244,19 +244,19 @@
             padding-top: 0;
             max-height: 0;
             .txt {
-              font-size: 4vw;
+              font-size: clamp(14px, 4vw, 24px);
               margin-bottom: 30px;
             }
             .filter-tag {
               ul {
-                gap: 10px;
+                gap: 8px;
                 li {
                   font-size: 3vw;
-                  padding: 6px 20px;
+                  padding: 6px 14px;
                 }
               }
               a{
-                padding: 6px 20px;
+                padding: 6px 14px;
                 border-radius: 20px;
                 background: #111;
                 color: #fff;

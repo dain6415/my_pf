@@ -200,7 +200,7 @@
     margin-bottom: 10px;
   }
   #work .sect_inner .item-box .item .title h4 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   #work .sect_inner .item-box .item .title h4 a {
     padding: 10px 0;
@@ -219,18 +219,18 @@
     max-height: 0;
   }
   #work .sect_inner .item-box .item .info .txt {
-    font-size: 4vw;
+    font-size: clamp(14px, 4vw, 24px);
     margin-bottom: 30px;
   }
   #work .sect_inner .item-box .item .info .filter-tag ul {
-    gap: 10px;
+    gap: 8px;
   }
   #work .sect_inner .item-box .item .info .filter-tag ul li {
     font-size: 3vw;
-    padding: 6px 20px;
+    padding: 6px 14px;
   }
   #work .sect_inner .item-box .item .info .filter-tag a {
-    padding: 6px 20px;
+    padding: 6px 14px;
     border-radius: 20px;
     background: #111;
     color: #fff;
