@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(./src/css/base/public/reset.css);
-@import url(./src/css/base/public/vars.css); 
+@import url(./src/css/base/public/vars.css);
 @import url(./src/css/pages/intro.css);
 @import url(./src/css/pages/header.css);
 @import url(./src/css/pages/about.css);
@@ -100,48 +100,27 @@ section {
   line-height: 1;
   text-transform: uppercase;
   font-family: var(--subEng-font);
-  font-weight:900;
+  font-weight: 900;
 }
 @media only screen and (max-width: 700px) {
   .sect_title {
     display: block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   .sect_title h2 {
-    /* padding: 20px 0px; */
     font-size: 8vw;
   }
 }
 @media only screen and (min-width: 701px) {
   .sect_title {
-    /* padding: 20px 40px; */
     border: 1px solid #000;
   }
-  #project .sect_title {
-    /* display: grid; */
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2%;
-  }
-  #project .sect_title h2 {
-    grid-column: 2/7;
-    padding-left: 10%;
-    font-size: 2.4rem;
-  }
 }
+
 @media only screen and (min-width: 1000px) {
-  #project .sect_title h2 {
-    grid-column: 4/8;
-  }
   .sect_title h2 {
     font-size: 1.5rem;
-  }
-  #project .sect_title h2 {
-    grid-column: 4/7;
-    padding-left: 0;
-  }
-  .sect_title .title_info {
-    grid-column: 8/12;
   }
 }
 
