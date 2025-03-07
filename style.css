@@ -21,7 +21,8 @@ body {
   cursor: none;
   scrollbar-width: 1px;
   position: relative;
-  /* font-size: 10px; */
+  font-size: 10px;
+  line-height: 1.2;
 }
 *,
 *::before,
@@ -252,9 +253,9 @@ section {
   align-items: center;
   color: var(--black700);
 }
-.sect_title .po_ab {
+.sect_title h2 {
   width: 100%;
-  padding: 40px 0;
+  /* padding: 40px 0; */
   grid-column: 2;
   line-height: 1;
   text-transform: uppercase;
@@ -264,39 +265,37 @@ section {
 @media only screen and (max-width: 700px) {
   .sect_title {
     display: block;
-    text-align: left;
-    padding: 20px;
+    text-align: center;
   }
-  .sect_title .po_ab {
-    padding: 20px 0px;
-    font-size: 1.5rem;
+  .sect_title h2 {
+    /* padding: 20px 0px; */
+    font-size: 2.4rem;
   }
 }
 @media only screen and (min-width: 701px) {
   .sect_title {
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
+    border: 1px solid #000;
   }
   #project .sect_title {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: repeat(12, 1fr);
     gap: 2%;
   }
-  #project .sect_title .po_ab {
+  #project .sect_title h2 {
     grid-column: 2/7;
     padding-left: 10%;
-  }
-  .sect_title .po_ab {
-    font-size: 1.25rem;
+    font-size: 2.4rem;
   }
 }
 @media only screen and (min-width: 1000px) {
-  #project .sect_title .po_ab {
+  #project .sect_title h2 {
     grid-column: 4/8;
   }
-  .sect_title .po_ab {
+  .sect_title h2 {
     font-size: 1.5rem;
   }
-  #project .sect_title .po_ab {
+  #project .sect_title h2 {
     grid-column: 4/7;
     padding-left: 0;
   }
@@ -305,7 +304,7 @@ section {
   }
 }
 /* @media only screen and (min-width: 1400px) {
-  .sect_title .po_ab {
+  .sect_title h2 {
     grid-column: 4/7;
   }
   .sect_title .title_info {

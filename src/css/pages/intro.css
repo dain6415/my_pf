@@ -1,6 +1,7 @@
 @charset "UTF-8";
 #intro {
   position: relative;
+  display: none;
 }
 #intro .home__down {
   width: 100px;

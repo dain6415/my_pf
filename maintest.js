@@ -1,7 +1,7 @@
 import { header } from "./src/js/header.js";
 import { intro } from "./src/js/intro.js";
-// import { project } from "./src/js/project.js";
-// import { work } from "./src/js/work.js";
+import { project } from "./src/js/project.js";
+import { work } from "./src/js/work.js";
 import { about } from "./src/js/about.js";
 import { footer } from "./src/js/footer.js";
 
@@ -12,32 +12,34 @@ window.addEventListener("load", function () {
   intro();
   about(); // 순서를 기다리세요
   // project();
-  // work();
+  work();
   footer();
   // bgColor();
 
   // *********************************************************************************************************************************************************************************************************************************
   // mouse event
   const mouses =
-    document.querySelectorAll("a"); /* 호버했을 때 size 변경용 */ 
-    // 원래는 mouse_event라는 클래스를 썼는데 어차피 거의 a태그에 써서 필요가 없어졌음
-  const customCursor = document.getElementById("custom_cursor"); /* color, background 변경용 : background로 컬러를 지정했으니까 */
+    document.querySelectorAll(".mouse_event"); /* 호버했을 때 size 변경용*/
+  const customCursor =
+    document.getElementById(
+      "custom_cursor"
+    ); /* color, background 변경용 : background로 컬러를 지정했으니까 */
 
   // 초기 설정
   customCursor.style.padding = "calc(30px / 2)";
   customCursor.style.mixBlendMode = "normal";
 
   // phone일 때 마우스 없애기
-  const mediaQuery = window.matchMedia("(max-width: 700px)"); 
-  const customMouse = () =>{
-    if(mediaQuery.matches){
+  const mediaQuery = window.matchMedia("(max-width: 700px)");
+  const customMouse = () => {
+    if (mediaQuery.matches) {
       customCursor.style.display = "none";
-      this.document.body.style.cursor= "auto" // 기본 마우스
-    }else{
-       customCursor.style.display = "block";
-      this.document.body.style.cursor= "none"
+      this.document.body.style.cursor = "auto"; // 기본 마우스
+    } else {
+      customCursor.style.display = "block";
+      this.document.body.style.cursor = "none";
     }
-  }
+  };
 
   // 초기 실행
   customMouse();
@@ -59,7 +61,6 @@ window.addEventListener("load", function () {
       customCursor.style.mixBlendMode = "normal";
     });
   });
-
 
   // mouse 커서 위치 ------------------------------------------
   document.addEventListener("mousemove", (e) => {
