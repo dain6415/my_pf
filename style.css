@@ -7,7 +7,6 @@
 @import url(./src/css/pages/project.css);
 @import url(./src/css/pages/work.css);
 @import url(./src/css/pages/footer.css);
-/* font, root style */
 
 /* ========================== */
 /* 공통 스타일만*/
@@ -23,7 +22,9 @@ body {
   scrollbar-width: 1px;
   position: relative;
   font-size: 10px;
+  font-family: var(--mainKor-font);
   line-height: 1.2;
+  color: var(--black200_txt);
 }
 *,
 *::before,
@@ -99,16 +100,17 @@ section {
   line-height: 1;
   text-transform: uppercase;
   font-family: var(--subEng-font);
-  font-weight: 900;
+  font-weight:900;
 }
 @media only screen and (max-width: 700px) {
   .sect_title {
     display: block;
     text-align: center;
+    margin-bottom: 20px;
   }
   .sect_title h2 {
     /* padding: 20px 0px; */
-    font-size: 2.4rem;
+    font-size: 8vw;
   }
 }
 @media only screen and (min-width: 701px) {

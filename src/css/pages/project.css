@@ -40,7 +40,7 @@
   width: 100%;
 }
 #project .swiper-slide h4 {
-  font-weight: 500;
+  font-weight: 600;
 }
 #project .swiper-slide h4 a {
   display: block;
@@ -63,7 +63,6 @@
   #project .sect_inner .swiper {
     overflow: visible !important;
     padding-top: 20px;
-    border: 1px solid #000;
   }
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
@@ -86,20 +85,20 @@
     text-align: center;
   }
   #project .sect_inner .swiper .swiper-slide .txt .title {
-    font-size: 6vw;
+    font-size: 8vw;
     margin-bottom: 6px;
   }
   #project .sect_inner .swiper .swiper-slide .txt p {
-    font-size: 3vw;
+    font-size: 4vw;
+    font-weight: 300;
     color: #999;
   }
   #project .sect_inner .swiper .pagination-aria {
     width: 100%;
     height: 14px;
-    display: block;
     position: relative;
+    margin-top: 20px;
     display: block;
-    border: 1px solid #000;
   }
   #project .sect_inner .swiper .pagination-aria .swiper-pagination {
     position: absolute;
