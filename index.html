@@ -111,7 +111,7 @@
             <img src="./src/img/sticker_texture_bg.jpg" alt="" />
           </div>
           <div class="stickers">
-            <div class="sticker black1 ">
+            <div class="sticker black1">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -126,7 +126,7 @@
                 <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
               </div>
             </div>
-            <div class="sticker long1 ">
+            <div class="sticker long1">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -144,7 +144,7 @@
                 />
               </div>
             </div>
-            <div class="sticker blue1 ">
+            <div class="sticker blue1">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -159,7 +159,7 @@
                 <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
               </div>
             </div>
-            <div class="sticker black2 ">
+            <div class="sticker black2">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -174,7 +174,7 @@
                 <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
               </div>
             </div>
-            <div class="sticker blue2 ">
+            <div class="sticker blue2">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -189,7 +189,7 @@
                 <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
               </div>
             </div>
-            <div class="sticker long2 ">
+            <div class="sticker long2">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -207,7 +207,7 @@
                 />
               </div>
             </div>
-            <div class="sticker blue3 ">
+            <div class="sticker blue3">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -222,7 +222,7 @@
                 <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
               </div>
             </div>
-            <div class="sticker long3 ">
+            <div class="sticker long3">
               <div class="vertex">
                 <div class="t"></div>
                 <div class="b"></div>
@@ -323,7 +323,7 @@
                   href="https://dain6415.github.io/project/p_NewJeans"
                   target="_blank"
                   role="button"
-                  class="bg-img "
+                  class="bg-img"
                 >
                   <img src="./src/img/work/new2.jpg" alt="뉴진스 배경 이미지" />
                 </a>
@@ -332,7 +332,7 @@
                     <a
                       href="https://dain6415.github.io/project/p_NewJeans"
                       target="_blank"
-                      class="title "
+                      class="title"
                       >NewJeans</a
                     >
                   </h4>
@@ -344,7 +344,7 @@
                   href="https://dain6415.github.io/project/p_SeMA/index.html"
                   target="_blank"
                   role="button"
-                  class="bg-img "
+                  class="bg-img"
                 >
                   <img
                     src="./src/img/work/sema.jpg"
@@ -356,11 +356,11 @@
                     <a
                       href="https://dain6415.github.io/project/p_SeMA/index.html"
                       target="_blank"
-                      class="title "
+                      class="title"
                       >서울시립미술관</a
                     >
                   </h4>
-                  <p>JAVA script를 </p>
+                  <p>JAVA script를</p>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -368,7 +368,7 @@
                   href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
                   target="_blank"
                   role="button"
-                  class="bg-img "
+                  class="bg-img"
                 >
                   <img src="./src/img/work/selmine.jpg" alt="배경 이미지" />
                 </a>
@@ -377,7 +377,7 @@
                     <a
                       href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
                       target="_blank"
-                      class="title "
+                      class="title"
                       >selmine</a
                     >
                   </h4>
@@ -414,36 +414,6 @@
               </li>
             </ul>
           </div>
-          <script>
-            document
-              .querySelectorAll(".filter ul li a")
-              .forEach(function (link) {
-                link.addEventListener("click", function (e) {
-                  e.preventDefault();
-                  document
-                    .querySelectorAll(".filter ul li a")
-                    .forEach((link) => {
-                      //()=>{} or function(){}
-                      link.classList.remove("on");
-                    });
-                  this.classList.add("on");
-
-                  var filters = this.getAttribute("data-filter");
-                  filtering(filters);
-                });
-              });
-
-            function filtering(filters) {
-              var items = document.querySelectorAll(".item");
-              items.forEach(function (i) {
-                if (filters === "*" || i.matches(filters)) {
-                  i.style.display = "block";
-                } else {
-                  i.style.display = "none";
-                }
-              });
-            }
-          </script>
           <div class="item-box">
             <div class="left">
               <div class="item clone responsive 에이">
@@ -472,7 +442,7 @@
                       target="_blank"
                       role="button"
                       class="view-btn"
-                    >site view
+                      >site view
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -728,34 +698,6 @@
               </div>
             </div>
           </div>
-          <script>
-            document.querySelectorAll(".item").forEach(function (i) {
-              i.addEventListener("click", function () {
-                const itemTxt = this.querySelector(".info");
-
-                if (itemTxt) {
-                  const txtOpen = itemTxt.style.maxHeight !== "0px"; // 열려있는지 체크
-
-                  // 닫혀 있는 상태 = 기본 값
-                  document.querySelectorAll(".info").forEach((txt) => {
-                    txt.style.maxHeight = "0";
-                  });
-                  document.querySelectorAll(".item").forEach((i) => {
-                    i.classList.remove("on");
-                  });
-
-                  if (!txtOpen) {
-                    itemTxt.style.maxHeight = itemTxt.scrollHeight + "px";
-                    this.classList.add("on");
-                  } else {
-                    // 이미 열려 있다면 닫기
-                    itemTxt.style.maxHeight = "0";
-                    this.classList.remove("on");
-                  }
-                }
-              });
-            });
-          </script>
         </div>
       </section>
     </main>
@@ -823,6 +765,21 @@
     </div> -->
 
     <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- ------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/is-inview@0.10.2/dist/is-inview.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -850,21 +807,62 @@
         // loop: true,
       });
     </script>
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script>
+      document.querySelectorAll(".filter ul li a").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelectorAll(".filter ul li a").forEach((link) => {
+            //()=>{} or function(){}
+            link.classList.remove("on");
+          });
+          this.classList.add("on");
 
-    <!-- ------------------------ -->
-    <script src="https://cdn.jsdelivr.net/npm/is-inview@0.10.2/dist/is-inview.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+          var filters = this.getAttribute("data-filter");
+          filtering(filters);
+        });
+      });
 
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
-    <script type="module" src="./main.js"></script>
+      function filtering(filters) {
+        var items = document.querySelectorAll(".item");
+        items.forEach(function (i) {
+          if (filters === "*" || i.matches(filters)) {
+            i.style.display = "block";
+          } else {
+            i.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <script>
+      document.querySelectorAll(".item").forEach(function (i) {
+        i.addEventListener("click", function () {
+          const itemTxt = this.querySelector(".info");
+
+          if (itemTxt) {
+            const txtOpen = itemTxt.style.maxHeight !== "0px"; // 열려있는지 체크
+
+            // 닫혀 있는 상태 = 기본 값
+            document.querySelectorAll(".info").forEach((txt) => {
+              txt.style.maxHeight = "0";
+            });
+            document.querySelectorAll(".item").forEach((i) => {
+              i.classList.remove("on");
+            });
+
+            if (!txtOpen) {
+              itemTxt.style.maxHeight = itemTxt.scrollHeight + "px";
+              this.classList.add("on");
+            } else {
+              // 이미 열려 있다면 닫기
+              itemTxt.style.maxHeight = "0";
+              this.classList.remove("on");
+            }
+          }
+        });
+      });
+    </script>
+    <script type="module" src="./index.js"></script>
+    <script src="./"></script>
     <script></script>
   </body>
 </html>
