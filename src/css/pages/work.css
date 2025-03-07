@@ -2,7 +2,6 @@
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
-  border-top: 1px solid var(--black700);
   z-index: 2;
 }
 #work .sect_inner {

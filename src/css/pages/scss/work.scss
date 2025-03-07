@@ -11,12 +11,11 @@
 }
 
 #work {
-  // margin-top: 70px;
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
   // margin-bottom: var(--footer-spacing);
-  border-top: 1px solid var(--black700);
+  // border-top: 1px solid var(--black700);
   z-index: 2;
   .sect_inner {
     margin: auto;
@@ -179,7 +178,6 @@
   #work {
     padding: 6em 2em;
     .sect_inner {
-      // max-width: 90%;
       .filter {
         margin-top: 40px;
         flex-direction: column;
