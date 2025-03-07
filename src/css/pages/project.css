@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 700px) {
   #project {
-    height: 80vh;
+    border: 1px solid #000;
     padding: 20px 10px;
   }
   #project .sect_inner {
@@ -64,7 +64,7 @@
     overflow: visible !important;
     padding-top: 20px;
     border: 1px solid #000;
-    height: 550px;
+    height: 60vh;
   }
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
