@@ -64,13 +64,11 @@
     overflow: visible !important;
     padding-top: 20px;
     border: 1px solid #000;
-    height: 60vh;
   }
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
   }
   #project .sect_inner .swiper .swiper-slide .bg-img {
-    margin-bottom: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4392156863);
   }
   #project .sect_inner .swiper .swiper-slide .bg-img img {
@@ -100,7 +98,6 @@
     height: 14px;
     display: block;
     position: relative;
-    margin-top: 40px;
     display: block;
     border: 1px solid #000;
   }

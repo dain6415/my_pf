@@ -76,11 +76,11 @@
         overflow: visible !important;
         padding-top: 20px;
         border: 1px solid #000;
-        height: 60vh;
+        // min-height: 360px;
         .swiper-slide {
           transition: 0.4s;
           .bg-img {
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             box-shadow: 0 4px 12px #00000070;
             img {
               filter: grayscale(1);
@@ -113,7 +113,7 @@
           height: 14px;
           display: block;
           position: relative;
-          margin-top: 40px;
+          // margin-top: 40px;
           display: block;
           border: 1px solid #000;
           .swiper-pagination {
