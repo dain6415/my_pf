@@ -253,7 +253,7 @@
   }
   #intro .sect_inner .blend {
     pointer-events: none;
-    background-image: url(../../../img/sticker_texture_bg.jpg);
+    background-image: url(../../img/sticker_texture_bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 120%;
