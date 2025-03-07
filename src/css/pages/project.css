@@ -69,6 +69,7 @@
     transition: 0.4s;
   }
   #project .sect_inner .swiper .swiper-slide .bg-img {
+    margin-bottom: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4392156863);
   }
   #project .sect_inner .swiper .swiper-slide .bg-img img {
@@ -76,7 +77,6 @@
     transition: 0.4s;
   }
   #project .sect_inner .swiper .swiper-slide.swiper-slide-active {
-    margin-bottom: 20px;
     transform: translateY(-20px);
   }
   #project .sect_inner .swiper .swiper-slide.swiper-slide-active .bg-img img {

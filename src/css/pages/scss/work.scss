@@ -178,6 +178,7 @@
       max-width: 90%;
       .filter {
         margin-top: 40px;
+        flex-direction: column;
         p {
           font-size: 3.4vw;
         }
@@ -193,7 +194,7 @@
         }
       }
       .item-box {
-        margin-top: 40px;
+        margin-top: 20px;
         gap: 20px;
         .left {
           .item:nth-child(4) {

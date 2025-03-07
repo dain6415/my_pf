@@ -159,6 +159,7 @@
   }
   #work .sect_inner .filter {
     margin-top: 40px;
+    flex-direction: column;
   }
   #work .sect_inner .filter p {
     font-size: 3.4vw;
@@ -172,7 +173,7 @@
     font-size: 3.4vw;
   }
   #work .sect_inner .item-box {
-    margin-top: 40px;
+    margin-top: 20px;
     gap: 20px;
   }
   #work .sect_inner .item-box .left .item:nth-child(4) {
