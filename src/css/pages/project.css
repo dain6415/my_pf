@@ -21,29 +21,57 @@
   margin-left: auto;
   margin-right: auto;
 }
-#project .swiper-slide {
+#project .swiper .swiper-slide {
   font-size: 18px;
   height: calc((100% - 30px) / 2) !important;
   border: none;
+  position: relative;
 }
-#project .swiper-slide a {
+#project .swiper .swiper-slide .sticker {
+  width: 120px;
+  height: 40px;
+  background: var(--main-color);
+  opacity: 0.8;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(20deg);
+  z-index: 1;
+}
+#project .swiper .swiper-slide a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
   overflow: hidden;
 }
-#project .swiper-slide a.bg-img {
+#project .swiper .swiper-slide a.bg-img {
   width: 100%;
 }
-#project .swiper-slide a.bg-img img {
+#project .swiper .swiper-slide a.bg-img img {
   width: 100%;
 }
-#project .swiper-slide h4 {
+#project .swiper .swiper-slide h4 {
   font-weight: 600;
 }
-#project .swiper-slide h4 a {
+#project .swiper .swiper-slide h4 a {
   display: block;
+}
+#project .swiper .pagination-aria {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+#project .swiper .pagination-aria .swiper-pagination {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#project .swiper .pagination-aria .swiper-pagination span {
+  width: 10px;
+  height: 10px;
+}
+#project .swiper .pagination-aria .swiper-pagination span.swiper-pagination-bullet-active {
+  background: var(--main-color);
 }
 #project .sect_inner {
   margin: auto;
@@ -77,12 +105,16 @@
   #project .sect_inner .swiper .swiper-slide.swiper-slide-active .bg-img img {
     filter: grayscale(0);
   }
+  #project .sect_inner .swiper .swiper-slide.swiper-slide-active .txt .title {
+    font-size: 8vw;
+  }
   #project .sect_inner .swiper .swiper-slide .txt {
     text-align: center;
   }
   #project .sect_inner .swiper .swiper-slide .txt .title {
-    font-size: 8vw;
+    font-size: 6vw;
     margin-bottom: 6px;
+    transition: 0.3s;
   }
   #project .sect_inner .swiper .swiper-slide .txt p {
     font-size: 4vw;
@@ -90,34 +122,40 @@
     color: #999;
   }
   #project .sect_inner .swiper .pagination-aria {
-    width: 100%;
     height: 14px;
-    position: relative;
     margin-top: 20px;
-    display: block;
-  }
-  #project .sect_inner .swiper .pagination-aria .swiper-pagination {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #project .sect_inner .swiper .pagination-aria .swiper-pagination span {
-    background: var(--main-color);
-    width: 10px;
-    height: 10px;
   }
 }
 @media only screen and (min-width: 701px) {
-  #project {
-    background: #eee;
-  }
   #project .sect_inner {
     width: 90%;
+    padding-top: 6em;
+    padding-bottom: 10em;
   }
   #project .sect_inner .swiper {
     overflow-y: visible !important;
     padding-top: 20px;
+  }
+  #project .sect_inner .swiper .swiper-slide {
+    transition: 0.5s;
+  }
+  #project .sect_inner .swiper .swiper-slide:hover {
+    transform: translateY(-10px);
+  }
+  #project .sect_inner .swiper .swiper-slide:hover .bg-img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3137254902);
+  }
+  #project .sect_inner .swiper .swiper-slide .bg-img {
+    margin-bottom: 20px;
+    transition: 0.4s;
+  }
+  #project .sect_inner .swiper .swiper-slide .txt .title {
+    font-size: 2.8rem;
+    margin-bottom: 6px;
+  }
+  #project .sect_inner .swiper .swiper-slide .txt p {
+    font-size: 16px;
+    color: #999;
   }
   #project .sect_inner .swiper .pagination-aria {
     width: 100%;
@@ -137,25 +175,9 @@
     width: 10px;
     height: 10px;
   }
-  #project .sect_inner .swiper-slide {
-    transition: 0.5s;
-  }
-  #project .sect_inner .swiper-slide:hover {
-    transform: translateY(-10px);
-  }
-  #project .sect_inner .swiper-slide:hover .bg-img {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3137254902);
-  }
-  #project .sect_inner .swiper-slide .bg-img {
-    margin-bottom: 20px;
-    transition: 0.4s;
-  }
-  #project .sect_inner .swiper-slide .txt .title {
-    font-size: 2.8rem;
-    margin-bottom: 6px;
-  }
-  #project .sect_inner .swiper-slide .txt p {
-    font-size: 16px;
-    color: #999;
+}
+@media only screen and (min-width: 1301px) {
+  #project .sect_inner .swiper .pagination-aria {
+    display: none;
   }
 }/*# sourceMappingURL=project.css.map */

@@ -2,7 +2,6 @@
 :root {
   --mainEng-font: Pretendard Variable;
   --subEng-font: GmarketSansMedium;
-  /* --subEng-font: noto; */
   --mainKor-font: Pretendard Variable;
   --mainNum: "Cormorant Garamond";
 
@@ -42,6 +41,9 @@
 }
 
 body {
+  font-family: var(--subEng-font);
+  color: var(--black200_txt);
+
   text-rendering: optimizeLegibility;
   -webkit-font-smooting: antialiased;
   -webkit-text-size-adjust: 100%;

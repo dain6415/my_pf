@@ -7,6 +7,12 @@
 @import url(./src/css/pages/project.css);
 @import url(./src/css/pages/work.css);
 @import url(./src/css/pages/footer.css);
+@font-face {
+  font-family: 'Gothic_Goding';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Gothic_Goding.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* ========================== */
 /* 공통 스타일만*/
@@ -82,7 +88,7 @@ section {
   /* padding: 10rem 5% 0; */
 }
 @media only screen and (min-width: 701px) {
-  section:not(#about) {
+  section:not(#about):not(#project) {
     min-height: 900px;
   }
 }
@@ -99,6 +105,7 @@ section {
   grid-column: 2;
   line-height: 1;
   text-transform: uppercase;
+  /* font-family: 'Gothic_Goding'; */
   font-family: var(--subEng-font);
   font-weight: 900;
 }
@@ -113,14 +120,15 @@ section {
   }
 }
 @media only screen and (min-width: 701px) {
-  .sect_title {
-    border: 1px solid #000;
+  .sect_title h2{
+    font-size: 4rem;
+    margin-bottom: 60px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .sect_title h2 {
-    font-size: 1.5rem;
+    font-size: 6rem;
   }
 }
 

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 #intro {
   position: relative;
-  display: none;
 }
 #intro .home__down {
   width: 100px;
@@ -18,7 +17,6 @@
 }
 #intro .sect_inner {
   height: 100%;
-  background-color: var(--black100);
   text-align: center;
   overflow: hidden;
 }
@@ -425,11 +423,23 @@
     margin: auto;
     width: 100%;
   }
-  main section#intro .intro_title p {
-    text-align: center;
-    font-weight: 700;
+  main section#intro {
+    background: #eee;
   }
-  main section#intro .intro_title p.publisher {
+  main section#intro .title {
+    font-size: 8rem;
+    font-weight: 600;
     text-transform: uppercase;
+  }
+  main section#intro .stickers {
+    position: relative;
+  }
+  main section#intro .stickers .stick {
+    position: absolute;
+  }
+  main section#intro .stickers .stick.blue {
+    width: 500px;
+    right: 0;
+    top: 0;
   }
 }/*# sourceMappingURL=intro.css.map */

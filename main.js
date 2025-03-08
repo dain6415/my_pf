@@ -1,4 +1,4 @@
-import { header } from "./src/js/header.js";
+// import { header } from "./src/js/header.js";
 import { intro } from "./src/js/intro.js";
 import { project } from "./src/js/project.js";
 import { work } from "./src/js/work.js";
@@ -8,7 +8,7 @@ import { footer } from "./src/js/footer.js";
 // import { bgColor } from "./src/js/bg_color.js";
 
 window.addEventListener("load", function () {
-  header();
+  // header();
   intro();
   about(); // 순서를 기다리세요
   project();
