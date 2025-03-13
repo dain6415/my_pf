@@ -61,28 +61,13 @@
     <!-- cursor -->
     <div id="custom_cursor"></div>
     <!-- ************************ -->
-    <main>
-      <!-- intro -->
-      <section id="intro">
-        <div class="sect_inner">
-          <div class="title">
-            <p>publisher</p>
-          </div>
-          <div class="stickers">
-            <div class="sticker blue">
-              <img src="./src/img/SVG/blue_white.svg" alt="" />
-            </div>
-          </div>
+    <!-- header -->
+    <header id="header" role="banner">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#" target="_top"><span>HDAN</span></a>
         </div>
-      </section>
-
-      <nav class="header__mobile" role="navigation" aria-label="메인메뉴">
-        <div class="inner">
-          <div class="header__logo_mobile">
-            <a href="https://hongda88.netlify.app/" target="_self"
-              ><span>Dain's Portfolio</span></a
-            >
-          </div>
+        <nav class="header__nav" role="navigation" aria-label="메인메뉴">
           <ul>
             <li class="">
               <a href="#intro" class="on"><span>home</span></a>
@@ -98,13 +83,204 @@
             </li>
             <!-- <li><a href="#uxui">ux/ui</a></li> -->
           </ul>
-          <div class="close">
-            <span class="close_icon"></span>
-            <div class="close_bg_blend"></div>
+        </nav>
+        <div
+          class="header__nav_mobile"
+          id="headerToggle"
+          aria-controls="primary-menu"
+          aria-expanded="flase"
+          role="button"
+        >
+          <span class="mobile_menuBar"><span>menu</span></span>
+        </div>
+      </div>
+    </header>
+    <!-- 모바일용 메뉴바 -->
+    <nav class="header__mobile" role="navigation" aria-label="메인메뉴">
+      <div class="inner">
+        <div class="header__logo_mobile">
+          <a href="https://hongda88.netlify.app/" target="_self"
+            ><span>Dain's Portfolio</span></a
+          >
+        </div>
+        <ul>
+          <li>
+            <a href="#intro" class="on"><span>home</span></a>
+          </li>
+          <li>
+            <a href="#about"><span>about</span></a>
+          </li>
+          <li>
+            <a href="#project"><span>project</span></a>
+          </li>
+          <li>
+            <a href="#work"><span>work</span></a>
+          </li>
+        </ul>
+        <div class="close">
+          <span class="close_icon"></span>
+          <div class="close_bg_blend"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="header__mobile_filter"></div>
+
+    <!-- -------------------------- -->
+    <main>
+      <!-- intro -->
+      <section id="intro" data-bg="#f5f5f5">
+        <!-- <div class="title">
+          <p>publisher</p>
+        </div> -->
+        <!-- content -->
+        <div class="sect_inner">
+          <div class="blend">
+            <img src="./src/img/sticker_texture_bg.jpg" alt="" />
+          </div>
+          <div class="stickers">
+            <div class="sticker black1">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/texture2.jpeg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
+              </div>
+            </div>
+            <div class="sticker long1">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/texture2.jpeg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img
+                  src="./src/img/SVG/blue_long.svg"
+                  alt="인트로 스티커 이미지"
+                />
+              </div>
+            </div>
+            <div class="sticker blue1">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/texture2.jpeg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+              </div>
+            </div>
+            <div class="sticker black2">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/texture2.jpeg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img src="./src/img/SVG/black.svg" alt="인트로 스티커 이미지" />
+              </div>
+            </div>
+            <div class="sticker blue2">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/sticker_texture_bg.jpg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+              </div>
+            </div>
+            <div class="sticker long2">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/sticker_texture_bg.jpg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img
+                  src="./src/img/SVG/blue_long.svg"
+                  alt="인트로 스티커 이미지"
+                />
+              </div>
+            </div>
+            <div class="sticker blue3">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/sticker_texture_bg.jpg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img src="./src/img/SVG/blue2.svg" alt="인트로 스티커 이미지" />
+              </div>
+            </div>
+            <div class="sticker long3">
+              <div class="vertex">
+                <div class="t"></div>
+                <div class="b"></div>
+              </div>
+              <div class="sticker_wrap">
+                <div class="img_blend">
+                  <img
+                    src="./src/img/texture2.jpeg"
+                    alt="스티커 블렌드 이미지"
+                  />
+                </div>
+                <img
+                  src="./src/img/SVG/blue_long.svg"
+                  alt="인트로 스티커 이미지"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="intro_title">
+            <!-- <p class="web">web</p> -->
+            <p class="publisher">Publisher</p>
+            <!-- <p class="portfolio">portfolio</p> -->
+
+            <!-- <svg class="publisher-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 60">
+          <text x="10" y="40" font-size="80" fill="black">Publisher</text>
+        </svg> -->
+
+            <p class="portfolio">UI/UX portfolio</p>
           </div>
         </div>
-      </nav>
-      <div class="header__mobile_filter"></div>
+      </section>
 
       <!-- main ontents -->
       <!-- about -->
@@ -357,7 +533,7 @@
                     <ul>
                       <li>반응형</li>
                       <li>clone</li>
-                      <li>그린삭</li>
+                      <li>GSAP</li>
                     </ul>
                     <a
                       href="https://dain6415.github.io/project/w_yes24"
@@ -428,13 +604,6 @@
                       <li>clone</li>
                       <li>GSAP</li>
                     </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_iPadPro"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
                   </div>
                 </div>
               </div>
@@ -448,7 +617,7 @@
                 <div class="info">
                   <p class="date">2024.04.22</p>
                   <div class="img-box">
-                    <img src="" alt="" />
+                    <img src="./src/img/SVG/chil3.svg" alt="칠성사이다 로고" />
                   </div>
                   <div class="txt">
                     <p>
@@ -470,6 +639,13 @@
                       >view site
                     </a>
                   </div>
+                  <a
+                  href="https://dain6415.github.io/project/w_iPadPro"
+                  target="_blank"
+                  role="button"
+                  class="view-btn"
+                  >GO SITE</a
+                >
                 </div>
               </div>
               <div class="item clone 우담">
@@ -494,7 +670,7 @@
                     <ul>
                       <li>반응형</li>
                       <li>clone</li>
-                      <li>그린삭</li>
+                      <li>GSAP</li>
                     </ul>
                     <a
                       href="https://dain6415.github.io/project/w_woodam"
@@ -519,7 +695,7 @@
         </div>
         <div class="footer_info">
           <div class="top">
-            <p class="name">Hong Da In.</p>
+            <p class="name">Hong DaIn</p>
             <div class="txt">
               <p>
                 함께하는 성장을 추구하며 협력하는 팀원이 되겠습니다. <br />

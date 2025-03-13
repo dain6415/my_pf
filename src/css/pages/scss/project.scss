@@ -49,7 +49,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // border-radius: 20px;
+        border-radius: 20px;
         overflow: hidden;
       }
       a.bg-img {
@@ -153,9 +153,9 @@
     .sect_inner {
       width: 90%;
       padding-top: 6em;
-      padding-bottom: 10em;
+      padding-bottom: 12em;
       .swiper {
-        overflow-y: visible !important;
+        overflow: visible !important;
         padding-top: 20px;
         // overflow-x: hidden !important;
         .swiper-slide {
@@ -219,5 +219,9 @@
 }
 // -----------------------------------------------------------------------------------
 @media only screen and (min-width: 1400px) {
-
+#project{
+  .sect_inner{
+    max-width: 1380px;
+  }
+}
 }

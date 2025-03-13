@@ -25,7 +25,7 @@ export function work() {
     });
   }
 
-  // 필터
+  // 필터링 위치로 배경 움직이기 (칠성사이다 탭)
   function moveBg(activeBtn) {
     let thisF = document.querySelector(".this-filter");
     let left = activeBtn.offsetLeft; // 클릭한 버튼의 왼쪽 위치
@@ -59,48 +59,76 @@ export function work() {
       moveBg(activeBtn);
     }
   });
-}
-
-// 아이템박스 열고 닫고
-document.querySelectorAll(".item").forEach(function (i) {
-  i.addEventListener("click", function () {
-    const itemTxt = this.querySelector(".info");
-
-    if (itemTxt) {
-      // getComputedStyle로 현재(실제) maxHeight 값을 가져옴
-      // 왜냐 0이여야 열리는데 실제론 0이 아니여서 열리지 않음 + 두번째 클릭부터 열림 이슈
-      const currentH = window.getComputedStyle(itemTxt).maxHeight;
-
-      const txtOpen = currentH !== "0px"; // 열려있는지 체크
-
-      // 닫혀 있는 상태 = 기본 값
-      document.querySelectorAll(".info").forEach((txt) => {
-        txt.style.maxHeight = null;
-      });
-      document.querySelectorAll(".item").forEach((i) => {
-        i.classList.remove("on");
-      });
-
-      if (!txtOpen) {
-        itemTxt.style.maxHeight = itemTxt.scrollHeight + "px";
-        this.classList.add("on");
-      } else {
-        // 이미 열려 있다면 닫기
-        itemTxt.style.maxHeight = "0";
-        this.classList.remove("on");
+  
+  
+  // 아이템박스 열고 닫고
+  document.querySelectorAll(".item .title").forEach(function (i) {
+    i.addEventListener("click", function () {
+      const item = this.closest(".item"); // 가까운 형제
+      const itemTxt = item.querySelector(".info");
+  
+      if (itemTxt) {
+        // getComputedStyle로 현재(실제) maxHeight 값을 가져옴
+        // 왜냐 0이여야 열리는데 실제론 0이 아니여서 열리지 않음 + 두번째 클릭부터 열림 이슈
+  
+        const currentH = window.getComputedStyle(itemTxt).maxHeight;
+        const txtOpen = currentH !== "0px"; // 열려있는지 체크
+  
+        // 닫혀 있는 상태 = 기본 값
+        document.querySelectorAll(".item.on").forEach((openItem) => {
+          if (openItem !== item) { // 현재 클릭한 아이템이 아니라면 닫기
+            openItem.querySelector(".info").style.maxHeight = "0px";
+            openItem.classList.remove("on");
+          }
+        });
+  
+        if (!txtOpen) {
+          itemTxt.style.maxHeight = (itemTxt.scrollHeight + 20) + "px";
+          item.classList.add("on");
+        } else {
+          // 이미 열려 있다면 닫기
+          itemTxt.style.maxHeight = "0";
+          item.classList.remove("on");
+        }
       }
-    }
+    });
   });
-});
-
-// 반응형
-window.addEventListener("resize", function () {
-  document.querySelectorAll(".item.on").forEach(function (i) {
-    const itemTxt = i.querySelector(".info");
-    if (itemTxt) {
-      itemTxt.style.maxHeight = itemTxt.scrollHeight + "px"; // 열린 항목만 높이 재조정
-    }
+  
+  // 반응형
+  window.addEventListener("resize", function () {
+    document.querySelectorAll(".item.on").forEach(function (i) {
+      const itemTxt = i.querySelector(".info");
+      if (itemTxt) {
+        itemTxt.style.maxHeight = itemTxt.scrollHeight + "px"; // 열린 항목만 높이 재조정
+      }
+    });
   });
-});
+  
+  // 이미지 호버시 view 버튼 나타나기  
+  document.querySelectorAll(".view-btn").forEach((imgBox) => {
+    const hoverText = imgBox.querySelector(".hover-text");
+  
+    if (!hoverText) return; // hover-text가 없으면 실행 안 함
+  
+    imgBox.addEventListener("mousemove", (e) => {
+      const rect = imgBox.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+  
+      hoverText.style.left = `${x}px`;
+      hoverText.style.top = `${y}px`;
+    });
+  
+    imgBox.addEventListener("mouseenter", () => {
+      hoverText.style.display = "block"; 
+    });
+  
+    imgBox.addEventListener("mouseleave", () => {
+      hoverText.style.display = "none";
+    });
+  });
+  
+  // **************************************************
 
-// **************************************************
+
+}

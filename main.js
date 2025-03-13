@@ -1,4 +1,4 @@
-// import { header } from "./src/js/header.js";
+import { header } from "./src/js/header.js";
 import { intro } from "./src/js/intro.js";
 import { project } from "./src/js/project.js";
 import { work } from "./src/js/work.js";
@@ -8,7 +8,7 @@ import { footer } from "./src/js/footer.js";
 // import { bgColor } from "./src/js/bg_color.js";
 
 window.addEventListener("load", function () {
-  // header();
+  header();
   intro();
   about(); // 순서를 기다리세요
   project();
@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
   const customMouse = () => {
     if (mediaQuery.matches) {
       customCursor.style.display = "none";
-      this.document.body.style.cursor = "auto"; // 기본 마우스
+      document.body.style.cursor = "auto"; // 기본 마우스
     } else {
       customCursor.style.display = "block";
       this.document.body.style.cursor = "none";
@@ -87,7 +87,7 @@ window.addEventListener("load", function () {
 
   function raf(time) {
     lenis.raf(time);
-    requestAnimationFrame(raf);
+    requestAnimationFrame(raf); // Lenis만 애니메이션 프레임을 사용하도록 분리
   }
   requestAnimationFrame(raf);
 });

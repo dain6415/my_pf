@@ -17,10 +17,13 @@
 }
 #intro .sect_inner {
   height: 100%;
+  background-color: var(--black100);
+  background: #111;
   text-align: center;
   overflow: hidden;
 }
 #intro .sect_inner .blend {
+  display: none;
   pointer-events: none;
   mix-blend-mode: color-burn;
   width: 100%;

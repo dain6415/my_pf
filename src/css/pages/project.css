@@ -41,6 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
   overflow: hidden;
 }
 #project .swiper .swiper-slide a.bg-img {
@@ -130,10 +131,10 @@
   #project .sect_inner {
     width: 90%;
     padding-top: 6em;
-    padding-bottom: 10em;
+    padding-bottom: 12em;
   }
   #project .sect_inner .swiper {
-    overflow-y: visible !important;
+    overflow: visible !important;
     padding-top: 20px;
   }
   #project .sect_inner .swiper .swiper-slide {
@@ -179,5 +180,10 @@
 @media only screen and (min-width: 1301px) {
   #project .sect_inner .swiper .pagination-aria {
     display: none;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #project .sect_inner {
+    max-width: 1380px;
   }
 }/*# sourceMappingURL=project.css.map */

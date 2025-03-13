@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .image-link {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+  pointer-events: none; /* 텍스트에 대한 클릭 이벤트 방지 */
+}
+
+  </style>
+</head>
+<body>
+  <div class="image-link">
+    <img src="your-image.jpg" alt="이미지" class="image">
+    <span class="hover-text">Hover Text</span>
+  </div>
+  
+
+  <script>
+    const imageLink = document.querySelector(".image-link");
+const hoverText = imageLink.querySelector(".hover-text");
+
+imageLink.addEventListener("mousemove", (e) => {
+  // 마우스의 상대적 위치 계산
+  const x = e.clientX - imageLink.getBoundingClientRect().left;
+  const y = e.clientY - imageLink.getBoundingClientRect().top;
+
+  // hover-text 위치를 업데이트
+  hoverText.style.left = `${x}px`;
+  hoverText.style.top = `${y}px`;
+});
+
+imageLink.addEventListener("mouseenter", () => {
+  hoverText.style.display = "block";
+});
+
+imageLink.addEventListener("mouseleave", () => {
+  hoverText.style.display = "none";
+});
+
+  </script>
+</body>
+</html>

@@ -11,6 +11,7 @@
 }
 
 #work {
+  border: 1px solid #000;
   color: var(--black200_txt);
   position: relative;
   padding-bottom: 40px;
@@ -29,17 +30,17 @@
       ul {
         padding: 5px;
         border-radius: 10px;
-        background: #eee;
+        background: #ddd;
         position: relative;
         display: flex;
         gap: 2px;
-        .this-filter{
+        .this-filter {
           position: absolute;
           top: 50%;
           left: 0;
           transform: translateY(-50%);
           height: 80%;
-          background-color: #000000; 
+          background-color: #000000;
           border-radius: 8px;
           transition: 0.3s ease-in-out;
           z-index: 0;
@@ -67,10 +68,12 @@
       .item {
         border-radius: 20px;
         background: #fff;
+        position: relative;
+        // will-change: max-height;
         &:not(:last-child) {
           margin-bottom: 20px;
         }
-        &:hover{
+        &:hover {
           outline: 1px solid #333;
         }
         &.on {
@@ -83,6 +86,7 @@
               &::after {
                 width: 110%;
                 opacity: 1;
+
               }
             }
             .plus-icon {
@@ -91,12 +95,21 @@
           }
           .info {
             max-height: auto;
+            .img-box{
+              opacity: 1;
+              transition: .3s;
+              transition-delay: .2s;
+              // transition: .2s;
+              display: block;
+            }
+            .view-btn{
+              opacity: 1;
+            }
           }
         }
         .title {
           @include flex-c(space-between);
           transition: 0.3s;
-          // border: 1px solid #000;
           h4 {
             font-weight: 600;
             position: relative;
@@ -105,7 +118,7 @@
               content: "";
               position: absolute;
               top: 50%;
-              left: 0;
+              left: -5px;
               transform: translateY(-50%);
               height: 10px;
               width: 0;
@@ -153,10 +166,16 @@
           width: 100%;
           overflow: hidden;
           transition: 0.3s;
+          // position: relative;
           .img-box {
-            border: 1px solid #000;
-            width: 100%;
+            // border: 1px solid #000;
+            position: absolute;
+            transform-origin: center;
             display: none;
+            pointer-events: none;
+            &:hover{
+              transform: rotate(-40deg);
+            }
             img {
               width: 100%;
             }
@@ -166,17 +185,52 @@
           }
           .filter-tag {
             @include flex-c(space-between);
+            height: auto;
             ul {
               display: flex;
               li {
                 color: #999;
                 border-radius: 20px;
                 background: rgba(0, 0, 0, 0.05);
+                text-transform: uppercase;
               }
             }
-            a{
-              display: inline-block;
-            }
+          }
+          a.view-btn {
+            border: 1px solid #000;
+            position: absolute;
+            bottom: 15%;
+            right: -40px;
+            font-size: 20px;
+            z-index: 10;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: #111;
+            color: #fff;
+            transform: rotate(23deg);
+            opacity: 0;
+            transition: opacity .3s;
+            // &::after {
+            //   content: "";
+            //   position: absolute;
+            //   bottom: 0;
+            //   left: 50%;
+            //   width: 0;
+            //   height: 0;
+            //   border: 10px solid transparent;
+            //   border-top-color: #ce2828;
+            //   border-bottom: 0;
+            //   border-left: 0;
+            //   margin-left: 5px;
+            //   margin-bottom: -10px;
+            // }
+            // a {
+            //   display: inline-block;
+            //   svg {
+            //     display: none;
+            //     stroke: #333;
+            //   }
+            // }
           }
           .date {
             color: #999;
@@ -220,7 +274,7 @@
           }
         }
         .item {
-          padding: 30px 20px ;
+          padding: 30px 20px;
           .left,
           .right {
             width: 100%;
@@ -232,14 +286,13 @@
             .title {
               margin-bottom: 20px;
             }
-            .info {
-              max-height: auto;
-            }
+            // .info {
+            //   max-height: auto;
+            // }
           }
           .title {
             h4 {
-              font-size: 5vw;
-              font-size: clamp(20px, 24px, 24px);
+              font-size: clamp(16px, 20px, 24px);
               a {
                 padding: 10px 0;
                 gap: 10px;
@@ -263,7 +316,6 @@
             }
             .img-box {
               border: 1px solid #000;
-              height: 200px;
               margin-bottom: 20px;
             }
             .filter-tag {
@@ -274,7 +326,7 @@
                   padding: 6px 14px;
                 }
               }
-              a{
+              a {
                 padding: 6px 14px;
                 border-radius: 20px;
                 background: #111;
@@ -295,7 +347,6 @@
 @media only screen and (min-width: 701px) {
   #work {
     padding: 6rem 0 12rem;
-    border: 1px solid #00000038;
     .sect_inner {
       max-width: 95%;
       .filter {
@@ -331,7 +382,7 @@
                 transform: rotate(45deg);
               }
             }
-            .info{
+            .info {
               padding: 0 30px;
             }
           }
@@ -351,36 +402,25 @@
             }
           }
           .info {
-            .img-box{
-              height: 200px;
-              margin-bottom: 20px;
+            .img-box {
+              right: -8%;
+              bottom: -22%;
+              width: 56%;
+              transform: rotate(-34deg);
+              z-index: 10;
             }
             .txt {
               font-size: 16px;
               margin-bottom: 40px;
+              width: 60%;
             }
             .filter-tag {
               ul {
                 display: flex;
-                gap: 10px;
+                gap: 4px;
                 li {
                   font-size: 14px;
                   padding: 6px 20px;
-                }
-              }
-              a {
-                display: inline-block;
-                height: 100%;
-                // width: 25px;
-                font-size: 14px;
-                padding: 6px 20px;
-                border-radius: 20px;
-                border: 1px solid #000;
-                background: #333;
-                color: #fff;
-                svg {
-                  display: none;
-                  stroke: #333;
                 }
               }
             }
@@ -403,6 +443,7 @@
     padding: 6rem 0 12rem;
     .sect_inner {
       max-width: 1380px;
+      height: auto;
       .item-box {
         margin-top: 40px;
         .item {
@@ -424,20 +465,12 @@
               padding: 10px;
             }
           }
-          .info{
-            // display: flex;
-            .img-box{
-              height: 10px;
-            }
-            .txtttt{
-              .filter-tag{
-
-                .view-btn{
-                  display: none;
-                }
-              }
-            }
-          }
+          // .info {
+          //   // display: flex;
+          //   .img-box {
+          //     height: 10px;
+          //   }
+          // }
         }
       }
     }
