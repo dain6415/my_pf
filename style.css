@@ -40,6 +40,18 @@ body {
 main {
   position: relative;
   overflow-x: hidden;
+  background: var(--mainBg-color);
+  /* background: #fff; */
+}
+main .bg-texture{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  /* background: url('./src/img/bg-paper-texture.jpg') center/cover no-repeat; */
+  mix-blend-mode: multiply;
+  opacity: .5;
+  z-index: 1;
+  pointer-events: none;
 }
 a {
   cursor: none;
@@ -81,7 +93,8 @@ a {
 
 /* section -------------------- */
 section {
-  background: var(--mainBg-color);
+  background: var(--mainBg-color); 
+  /* background: #fff; */
 }
 section {
   width: 100%;
@@ -108,6 +121,7 @@ section {
   /* font-family: 'Gothic_Goding'; */
   font-family: var(--subEng-font);
   font-weight: 900;
+  
 }
 @media only screen and (max-width: 700px) {
   .sect_title {
@@ -129,6 +143,7 @@ section {
 @media only screen and (min-width: 1000px) {
   .sect_title h2 {
     font-size: 6rem;
+    font-weight: 900;
   }
 }
 

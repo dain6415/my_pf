@@ -6,6 +6,7 @@
 
 #about {
   // display: none;
+  margin-top: 20px;
   .sect_inner {
     height: 100%;
     margin: auto;
@@ -75,6 +76,9 @@
 @media only screen and (min-width: 1300px) {
   #about {
     // padding: 8rem 40px 12rem; 
+        border-radius: 20px;
+    width: 90%;
+    // border: 1px solid #000;
     .sect_inner{
       max-width: 1380px;
       .keyword {
