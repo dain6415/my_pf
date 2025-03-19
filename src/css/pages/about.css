@@ -17,6 +17,7 @@
 #about .sect_inner .info .txt {
   border-top: 1px solid var(--black600);
   padding-top: 10px;
+  line-height: 1.5;
 }
 #about .sect_inner .info .txt p {
   word-break: keep-all;
@@ -36,7 +37,7 @@
   }
   #about .sect_inner .info .txt {
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
   }
   #about .sect_inner .info .txt p:first-child {

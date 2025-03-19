@@ -23,6 +23,7 @@
       .txt {
         border-top: 1px solid var(--black600);
         padding-top: 10px;
+        line-height: 1.5;
         p{
           word-break: keep-all;
           color: var(--black500);
@@ -47,7 +48,7 @@
         }
         .txt{
           padding-top: 20px;
-          font-size: clamp(16px, 20px, 24px);
+          font-size: clamp(12px, 16px, 20px);
           text-align: center;
           p:first-child{
             padding-bottom: 20px;
