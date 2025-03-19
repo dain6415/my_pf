@@ -207,6 +207,7 @@
           }
           .txt {
             font-weight: 200;
+            line-height: 1.5
           }
           .filter-tag {
             @include flex-c(space-between);

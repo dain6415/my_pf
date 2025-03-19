@@ -189,6 +189,7 @@
 }
 #work .sect_inner .item-box .item .info .txt {
   font-weight: 200;
+  line-height: 1.5;
 }
 #work .sect_inner .item-box .item .info .filter-tag {
   display: flex;

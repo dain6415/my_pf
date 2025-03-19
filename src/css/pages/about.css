@@ -16,6 +16,10 @@
   font-weight: 600;
 }
 #about .sect_inner .info .txt {
+  border-top: 1px solid var(--black600);
+  padding-top: 10px;
+}
+#about .sect_inner .info .txt p {
   word-break: keep-all;
 }
 
@@ -40,19 +44,22 @@
 @media only screen and (min-width: 701px) {
   #about {
     padding: 6rem 0px 12rem;
+    max-width: 95%;
   }
   #about .keyword {
-    font-size: 2rem;
+    font-size: 4rem;
     line-height: 1.3;
+    margin-bottom: 40px;
   }
-  #about .txt1 {
-    margin-top: 3rem;
+  #about .txt {
+    height: 300px;
   }
-  #about .txt2 {
+  #about .txt p {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--black500);
     margin-top: 1rem;
-  }
-  #about .txt2 br {
-    display: none;
+    line-height: 1.5;
   }
 }
 @media only screen and (min-width: 1300px) {
@@ -64,18 +71,9 @@
     max-width: 1380px;
   }
   #about .sect_inner .keyword {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--black200_txt);
     opacity: 0.9;
     line-height: 1.3;
-  }
-  #about .sect_inner .txt1 {
-    margin-top: 2rem;
-  }
-  #about .sect_inner .txt2 {
-    margin-top: 0.5rem;
-  }
-  #about .sect_inner .txt2 br {
-    display: block;
   }
 }/*# sourceMappingURL=about.css.map */

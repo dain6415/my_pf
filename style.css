@@ -42,6 +42,8 @@ main {
   overflow-x: hidden;
   background: var(--mainBg-color);
   /* background: #fff; */
+  border-radius: 0 0 10px 50px ;
+  overflow: hidden;
 }
 main .bg-texture{
   width: 100%;

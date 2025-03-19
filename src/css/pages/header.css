@@ -54,7 +54,7 @@
     background: transparent;
     bottom: 20px;
     z-index: 1000;
-    border: 1px solid #fff;
+    border: 1px solid var(--black600);
     transition: background 0.3s;
   }
   #header:hover {
@@ -67,7 +67,7 @@
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--black600);
   }
   #header .header__inner .header__logo,
   #header .header__inner .header__nav {

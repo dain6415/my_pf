@@ -1,6 +1,8 @@
 @charset "UTF-8";
 #intro {
   position: relative;
+  padding: 20px 20px 90px;
+  background: var(--mainBg-color);
 }
 #intro .home__down {
   width: 100px;
@@ -18,12 +20,11 @@
 #intro .sect_inner {
   height: 100%;
   background-color: var(--black100);
-  background: #111;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
+  border-radius: 20px;
 }
 #intro .sect_inner .blend {
-  display: none;
   pointer-events: none;
   mix-blend-mode: color-burn;
   width: 100%;
@@ -239,6 +240,10 @@
   left: -13%;
   top: -23%;
 }
+#intro .sect_inner .publisher {
+  font-weight: 700;
+  color: var(--main-color);
+}
 
 @media only screen and (max-width: 700px) {
   #intro {
@@ -253,6 +258,7 @@
     flex-direction: column;
   }
   #intro .sect_inner .blend {
+    display: none;
     pointer-events: none;
     background-image: url(../../img/sticker_texture_bg.jpg);
     background-position: center;
@@ -372,7 +378,6 @@
   main section#intro .intro_title {
     transform: translateY(40px);
     color: var(--main-color);
-    mix-blend-mode: difference;
     text-transform: uppercase;
   }
   main section#intro .intro_title p.publisher {
@@ -425,9 +430,6 @@
     width: 1400px;
     margin: auto;
     width: 100%;
-  }
-  main section#intro {
-    background: #eee;
   }
   main section#intro .title {
     font-size: 8rem;

@@ -12,7 +12,8 @@
 
 #intro {
   position: relative;
-  // padding: 10px;
+  padding: 20px 20px 90px;
+  background: var(--mainBg-color);
   // display: none;
   .home__down {
     width: 100px;
@@ -32,12 +33,13 @@
     height: 100%;
     // background-color: var(--main-color);
     background-color: var(--black100);
-    background: #111;
+    // background: #111;
     // background: #eee;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
+    border-radius: 20px;
     .blend {
-      display: none;
+      // display: none;
       pointer-events: none;
       mix-blend-mode: color-burn;
       width: 100%;
@@ -287,6 +289,10 @@
         }
       }
     }
+    .publisher{
+      font-weight: 700;
+      color: var(--main-color);
+    }
   }
 }
 // ***************************************************************************************************************************
@@ -301,6 +307,7 @@
       flex-direction: column;
       // 이게 핸드폰은 상단 주소창이랑 하단의 메뉴바같은게 있어서 올릴 때, 내릴 때 높이의 차이가 존재함
       .blend {
+        display: none;
         pointer-events: none;
         background-image: url(../../img/sticker_texture_bg.jpg);
         background-position: center;
@@ -436,7 +443,7 @@
         .intro_title {
           transform: translateY(40px);
           color: var(--main-color);
-          mix-blend-mode: difference;
+          // mix-blend-mode: difference;
           text-transform: uppercase;
           // color: var(--mainBg-color);
           p.publisher {
@@ -524,7 +531,6 @@
         //   img {
         //     width: 100%;
         //   }
-        background:#eee;
         .title{
           // font-family: 'Gothic_Goding';
           font-size: 8rem;
