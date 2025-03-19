@@ -113,7 +113,7 @@ section {
   gap: 30px;
   position: relative;
   align-items: center;
-  color: var(--black700);
+  color: var(--black800);
 }
 .sect_title h2 {
   width: 100%;
