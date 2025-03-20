@@ -251,7 +251,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#intro .sect_inner .intro_title .publisher {
+#intro .sect_inner .intro_title p.publisher {
   font-family: "Panchang-Bold";
   color: var(--main-color);
   text-transform: uppercase;
@@ -374,10 +374,7 @@
   #intro .sect_inner .intro_title p.publisher {
     font-size: 10vw;
     font-weight: 700;
-    line-height: 1;
-  }
-  #intro .sect_inner .intro_title p.portfolio {
-    color: var(--black600);
+    font-family: "Panchang-Bold";
   }
   #intro .sect_inner .sticker-guide {
     font-size: 12px;
@@ -448,7 +445,7 @@
   main section#intro .sticker.long3 {
     transform: translate(67%, 150%) rotate(140deg);
   }
-  main section#intro .intro_title .publisher {
+  main section#intro .intro_title p.publisher {
     font-size: 15rem;
   }
   main section#intro .sticker-guide {
