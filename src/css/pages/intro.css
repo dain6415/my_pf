@@ -367,15 +367,12 @@
     transform: translate(38%, 100%) rotate(130deg);
   }
   #intro .sect_inner .intro_title {
-    color: var(--mainBg-color);
-    mix-blend-mode: difference;
-    text-transform: uppercase;
     z-index: 99;
     position: absolute;
     bottom: 20%;
   }
   #intro .sect_inner .intro_title p.publisher {
-    font-size: 14vw;
+    font-size: 10vw;
     font-weight: 700;
     line-height: 1;
   }
@@ -419,7 +416,7 @@
     height: 300px;
   }
   main section#intro .sticker.black1 {
-    transform: translate(-73%, 70%) rotate(-65deg);
+    transform: translate(-73%, 100%) rotate(-65deg);
     z-index: 2;
   }
   main section#intro .sticker.black2 {
