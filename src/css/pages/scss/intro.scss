@@ -12,9 +12,7 @@
 
 #intro {
   position: relative;
-  padding: 20px 20px 90px;
-  background: var(--mainBg-color);
-  // display: none;
+  // padding: 20px 20px 90px;
   .home__down {
     width: 100px;
     height: 100px;
@@ -31,15 +29,11 @@
   }
   .sect_inner {
     height: 100%;
-    // background-color: var(--main-color);
-    background-color: var(--black100);
-    // background: #111;
-    // background: #eee;
-    text-align: center;
+    margin: auto;
+    // text-align: center;
     overflow: visible;
-    border-radius: 20px;
     .blend {
-      // display: none;
+      display: none;
       pointer-events: none;
       mix-blend-mode: color-burn;
       width: 100%;
@@ -289,9 +283,45 @@
         }
       }
     }
-    .publisher{
-      font-weight: 700;
-      color: var(--main-color);
+    .in222{
+      display: none;
+      width: 100%;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      // opacity: .2;
+      // filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .2));
+    }
+    .intro_title{
+      position: absolute;
+      bottom: 24%;
+      left: 50%;
+      transform: translateX(-50%);
+      .publisher{
+        font-family: 'Panchang-Bold';
+        color: var(--main-color);
+        text-transform: uppercase;
+      }
+    }
+    .sticker-guide{
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--black400);
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }    
     }
   }
 }
@@ -373,7 +403,7 @@
           &.long2,
           &.long3 {
             width: 60%;
-            height: 6.5rem;
+            height: 13.3rem;
             // border: 1px solid #f00;
             .sticker_wrap {
               border-radius: 20px;
@@ -391,10 +421,7 @@
           }
         }
       }
-
       .intro_title {
-        // transform: translateY(60px);
-        // color: var(--main-color);
         color: var(--mainBg-color);
         mix-blend-mode: difference;
         text-transform: uppercase;
@@ -412,6 +439,11 @@
             color: var(--black600);
           }
         }
+      }
+      .sticker-guide{
+        font-size: clamp(11px, 12px, 14px);
+        bottom: 10%;
+        color: var(--black400);
       }
     }
   }
@@ -440,18 +472,6 @@
           z-index: 1000;
           pointer-events: none;
         }
-        .intro_title {
-          transform: translateY(40px);
-          color: var(--main-color);
-          // mix-blend-mode: difference;
-          text-transform: uppercase;
-          // color: var(--mainBg-color);
-          p.publisher {
-            font-size: 100px;
-            line-height: 1;
-          }
-        }
-
         .sticker {
           img {
             width: 100%;
@@ -503,6 +523,14 @@
             transform: translate(67%, 150%) rotate(140deg);
           }
         }
+        .intro_title {
+          .publisher {
+            font-size: 15rem;
+          }
+        }
+        .sticker-guide{
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -516,23 +544,7 @@
       margin: auto;
       width: 100%;
       &#intro {
-        // .intro_title {
-        //   p {
-        //     text-align: center;
-        //     font-weight: 700;
-        //     &.publisher {
-        //       // font-size: 270px;
-        //       text-transform: uppercase;
-        //     }
-        //   }
-        // }
-
-        // .sticker {
-        //   img {
-        //     width: 100%;
-        //   }
         .title{
-          // font-family: 'Gothic_Goding';
           font-size: 8rem;
           font-weight: 600;
           text-transform: uppercase;

@@ -10,22 +10,12 @@
   /* --main-color: #0051F4; */
   /* --main-color: rgb(0, 81, 244); */
   --main-color: #003fd1;
-  --main-color100: #276fff;
-  --main-color200: #4381fe;
-  --main-color300: #5990ff;
-  --main-color400: #6a9cff;
-  --main-color500: #7aa7ff;
-  --main-color600: #95b8ff;
-  
   --svg-main-color: #1f67f8;
 
   --subBg-color: #333;
   --sub-color-Oyellow: #ffa600;
 
   --white: #fff;
-  --white100r: #ddd;
-  --white200r: #bbb;
-
   --black: #000;
   --black100: #111;
   --black200_txt: #333;
@@ -47,5 +37,4 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smooting: antialiased;
   -webkit-text-size-adjust: 100%;
-  background-color: var(--mainBg-color);
 }

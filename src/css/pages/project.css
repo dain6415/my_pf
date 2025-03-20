@@ -128,9 +128,12 @@
   }
 }
 @media only screen and (min-width: 701px) {
+  #project {
+    height: 100vh;
+  }
   #project .sect_inner {
     width: 90%;
-    padding-top: 6em;
+    padding-top: 10em;
     padding-bottom: 12em;
   }
   #project .sect_inner .swiper {

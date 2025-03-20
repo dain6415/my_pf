@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .image-link {
-  position: relative;
-  display: inline-block;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Change</title>
+    <style>
+      section{
+        height: 100vh;
+        width: 100%;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="intro" data-bg="#111">인트로 섹션</section>
+      <section id="project" data-bg="#f5f5f5">프로젝트 섹션</section>
+      <section id="work" data-bg="#d0f0c0">워크 섹션</section>
+      <section id="about" data-bg="#ffdab9">어바웃 섹션</section>
+    </main>
 
-.image {
-  width: 100%;
-  height: auto;
-}
+    <!-- GSAP과 ScrollTrigger CDN 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 
-.hover-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: none;
-  pointer-events: none; /* 텍스트에 대한 클릭 이벤트 방지 */
-}
+    <script>
+      // 여기서 직접 GSAP와 ScrollTrigger를 사용한 JavaScript 작성
+      gsap.registerPlugin(ScrollTrigger);
 
-  </style>
-</head>
-<body>
-  <div class="image-link">
-    <img src="your-image.jpg" alt="이미지" class="image">
-    <span class="hover-text">Hover Text</span>
-  </div>
-  
+      document.querySelectorAll("section").forEach((item) => {
+        const color = item.getAttribute("data-bg"); // 섹션의 배경색 가져오기
 
-  <script>
-    const imageLink = document.querySelector(".image-link");
-const hoverText = imageLink.querySelector(".hover-text");
-
-imageLink.addEventListener("mousemove", (e) => {
-  // 마우스의 상대적 위치 계산
-  const x = e.clientX - imageLink.getBoundingClientRect().left;
-  const y = e.clientY - imageLink.getBoundingClientRect().top;
-
-  // hover-text 위치를 업데이트
-  hoverText.style.left = `${x}px`;
-  hoverText.style.top = `${y}px`;
-});
-
-imageLink.addEventListener("mouseenter", () => {
-  hoverText.style.display = "block";
-});
-
-imageLink.addEventListener("mouseleave", () => {
-  hoverText.style.display = "none";
-});
-
-  </script>
-</body>
+        ScrollTrigger.create({
+          trigger: item, // 각 섹션을 트리거로 설정
+          start: "top top", // 섹션이 화면 상단에 닿을 때
+          end: "bottom top", // 섹션이 화면 상단을 지나갈 때
+          scrub: true, // 스크롤에 맞춰 배경색 변화
+          onEnter: () =>
+            gsap.to(document.body, {
+              // 해당 섹션에 들어갈 때 배경색 변경
+              background: color,
+              duration: 0.5,
+            }),
+          onEnterBack: () =>
+            gsap.to(document.body, {
+              // 해당 섹션으로 돌아올 때 배경색 변경
+              background: color,
+              duration: 0.5,
+            }),
+        });
+      });
+    </script>
+  </body>
 </html>

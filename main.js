@@ -81,6 +81,33 @@ window.addEventListener("load", function () {
     // customCursor.style.opacity = "0";
   });
 
+  
+  // data - bg 바뀌기 ------------------------------------------
+  console.log(gsap); 
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.querySelectorAll("section").forEach((item) => {
+    const color = item.getAttribute("data-bg"); // 섹션의 배경색 가져오기
+
+    ScrollTrigger.create({
+      trigger: item, // 각 섹션을 트리거로 설정
+      start: "top 80%", // 섹션이 화면 상단에 닿을 때
+      end: "bottom 60%", // 섹션이 화면 상단을 지나갈 때
+      scrub: true, // 스크롤에 맞춰 배경색 변화
+      onEnter: () =>
+        gsap.to("main", {
+          background: color,
+          duration: 0.2,
+        }),
+      onEnterBack: () =>
+        gsap.to("main", {
+          background: color,
+          duration: 0.2,
+        }),
+      // markers: true
+    });
+  });
+
   // ------------------------------------------
   // lenis
   const lenis = new Lenis();
