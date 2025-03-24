@@ -15,8 +15,8 @@ window.addEventListener("load", function () {
   work();
   footer();
   // bgColor();
-
-  // *********************************************************************************************************************************************************************************************************************************
+  //------------------------------------------------------------------------------------
+  // ******************************************************************************************************************
   // mouse event
   const mouses = document.querySelectorAll("a"); /* 호버했을 때 size 변경용 */
   // 원래는 mouse_event라는 클래스를 썼는데 어차피 거의 a태그에 써서 필요가 없어졌음
@@ -81,9 +81,9 @@ window.addEventListener("load", function () {
     // customCursor.style.opacity = "0";
   });
 
-  
-  // data - bg 바뀌기 ------------------------------------------
-  console.log(gsap); 
+  //------------------------------------------------------------------------------------
+  // data - bg 바뀌기
+  // console.log(gsap);
   gsap.registerPlugin(ScrollTrigger);
 
   document.querySelectorAll("section").forEach((item) => {
@@ -107,7 +107,6 @@ window.addEventListener("load", function () {
       // markers: true
     });
   });
-
   // ------------------------------------------
   // lenis
   const lenis = new Lenis();

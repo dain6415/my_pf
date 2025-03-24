@@ -68,8 +68,10 @@ export function work() {
     const viewBtns = item.querySelectorAll(".view-btn");
     const svg = item.querySelector(".view-btn svg");
 
-    i.addEventListener("click", function () {
+    i.addEventListener("click", function (e) {
       if (itemTxt) {
+        if (e.target.closest(".view-btn")) return; // 만약 view-btn을 클릭했다면, info 열기/닫기 처리 안 함
+
         // getComputedStyle로 현재(실제) maxHeight 값을 가져옴
         // 왜냐 0이여야 열리는데 실제론 0이 아니여서 열리지 않음 + 두번째 클릭부터 열림 이슈
 
@@ -107,8 +109,14 @@ export function work() {
         }
       }
     });
-    //svg hover
+
+
     viewBtns.forEach(function (viewBtn) {
+      viewBtn.addEventListener("click", function(e){
+        window.open(viewBtn.getAttribute("href"), "_blank");
+        e.stopPropagation();
+      })
+
       viewBtn.addEventListener("mouseenter", function () {
         viewBtn.style.setProperty("--bg-color", "#ddd"); 
         // viewBtn.querySelector("svg").style.stroke = "#fff";
@@ -132,30 +140,5 @@ export function work() {
       }
     });
   });
-
-  // 이미지 호버시 view 버튼 나타나기
-  document.querySelectorAll(".view-btn").forEach((imgBox) => {
-    const hoverText = imgBox.querySelector(".hover-text");
-
-    if (!hoverText) return; // hover-text가 없으면 실행 안 함
-
-    imgBox.addEventListener("mousemove", (e) => {
-      const rect = imgBox.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      hoverText.style.left = `${x}px`;
-      hoverText.style.top = `${y}px`;
-    });
-
-    imgBox.addEventListener("mouseenter", () => {
-      hoverText.style.display = "block";
-    });
-
-    imgBox.addEventListener("mouseleave", () => {
-      hoverText.style.display = "none";
-    });
-  });
-
   // **************************************************
 }

@@ -26,7 +26,7 @@
 }
 #work .sect_inner .title-wrap .filter ul {
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 50px;
   background: #ddd;
   position: relative;
   display: flex;
@@ -39,7 +39,7 @@
   transform: translateY(-50%);
   height: 80%;
   background-color: #111;
-  border-radius: 8px;
+  border-radius: 50px;
   transition: 0.3s ease-in-out;
   z-index: 0;
 }

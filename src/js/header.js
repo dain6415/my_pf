@@ -15,8 +15,8 @@ export function header() {
       headerColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#ccc";
-        } else{
-          link.style.color = "#fff"; 
+        } else {
+          link.style.color = "#fff";
         }
       });
       homeBtn.style.color = "#fff";
@@ -26,14 +26,14 @@ export function header() {
       headerColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#666";
-        }else{
+        } else {
           link.style.color = "#fff";
         }
       });
       homeBtn.style.color = "#666";
       // 40 미만일 때 = 맨위! 인트로 -----
     } else {
-      header.style.background = ""; 
+      header.style.background = "";
       headerColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#666";
@@ -52,11 +52,11 @@ export function header() {
   // --------------------------------------------------------------------------------
   // nav li 클릭시 해당 위치로 스크롤 이동 + 부드럽게 이동
   let links = gsap.utils.toArray("nav ul li a");
-  let sections = gsap.utils.toArray("section"); 
+  let sections = gsap.utils.toArray("section");
 
   links.forEach((link) => {
     let elem = document.querySelector(link.getAttribute("href"));
-    console.log(elem);
+    // console.log(elem);
 
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -73,19 +73,19 @@ export function header() {
   });
 
   // 현재 화면에 보이는 섹션에 해당하는 링크 활성화
-window.addEventListener("scroll", function () {
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    const link = document.querySelector(`a[href="#${section.id}"]`);
-    
-    // 섹션이 화면에 들어오면 링크 활성화
-    if (rect.top <= 0 && rect.bottom > 0) {
-      link.classList.add("on");
-    } else {
-      link.classList.remove("on"); 
-    }
+  window.addEventListener("scroll", function () {
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const link = document.querySelector(`a[href="#${section.id}"]`);
+
+      // 섹션이 화면에 들어오면 링크 활성화
+      if (rect.top <= 0 && rect.bottom > 0) {
+        link.classList.add("on");
+      } else {
+        link.classList.remove("on");
+      }
+    });
   });
-});
 
   // 스크롤 방향에 따라 nav 보이기/숨기기-------------------------------------------
   const showNav = gsap
@@ -102,7 +102,8 @@ window.addEventListener("scroll", function () {
     end: document.querySelector("#footer").offsetTop - window.innerHeight,
     onUpdate: (self) => {
       if (
-        window.scrollY + window.innerHeight >= document.querySelector("#footer").offsetTop
+        window.scrollY + window.innerHeight >=
+        document.querySelector("#footer").offsetTop
       ) {
         showNav.play(); // 푸터에 도달하면 네비게이션 항상 보이게
       } else {
