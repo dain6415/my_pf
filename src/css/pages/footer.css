@@ -56,11 +56,11 @@
 
 @media only screen and (max-width: 700px) {
   #footer {
-    height: 60vh;
+    height: 70vh;
     text-align: center;
   }
   #footer .sect_inner {
-    bottom: 120px;
+    bottom: 15vh;
     border: 1px solid #0f0;
   }
   #footer .sect_inner .footer_info .top .name {
@@ -91,8 +91,8 @@
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.link > div {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   #footer .sect_inner .footer_info .bottom .f_b_txt.link > div img {
     width: 100%;
