@@ -60,23 +60,15 @@
     text-align: center;
   }
   #footer .sect_inner {
-    bottom: 14em;
-  }
-  #footer .sect_inner .thanku {
-    display: none;
-    font-size: 10vw;
-    text-align: 0;
-  }
-  #footer .sect_inner .footer_info .top {
-    font-size: 10vw;
+    bottom: 120px;
   }
   #footer .sect_inner .footer_info .top .name {
     font-weight: 600;
-    font-size: 10vw;
+    font-size: 40px;
     white-space: nowrap;
   }
   #footer .sect_inner .footer_info .top .txt {
-    font-size: 4vw;
+    font-size: 20px;
     padding-top: 20px;
     margin-bottom: 40px;
   }

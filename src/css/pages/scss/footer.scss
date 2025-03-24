@@ -10,7 +10,7 @@
   width: 100%;
   transition: transform 0.5s ease-out;
   z-index: -1;
-  transition: .2s;
+  transition: 0.2s;
   .sect_inner {
     width: 100%;
     // border: 1px solid #c03232;
@@ -58,7 +58,7 @@
               height: 100%;
               img {
                 opacity: 0.8;
-                &.git{
+                &.git {
                   filter: invert(1);
                 }
               }
@@ -76,24 +76,16 @@
     height: 60vh;
     text-align: center;
     .sect_inner {
-      bottom: 14em;
-      .thanku {
-        display: none;
-        font-size: 10vw;
-        text-align: abs($number: 0);
-      }
+      bottom: 120px;
       .footer_info {
         .top {
-          font-size: 10vw;
-          .name{
-            // font-weight: 500;
+          .name {
             font-weight: 600;
-        font-size: 10vw;
-        white-space: nowrap;
-        // letter-spacing: -13px;
+            font-size: clamp(30px, 40px, 42px);
+            white-space: nowrap;
           }
           .txt {
-            font-size: 4vw;
+            font-size: clamp(18px, 20px, 22px);
             padding-top: 20px;
             margin-bottom: 40px;
           }
@@ -106,7 +98,7 @@
             line-height: 2;
             &.copyright {
               font-weight: 100;
-              opacity: .6;
+              opacity: 0.6;
             }
             &.link {
               margin-top: 40px;
@@ -120,7 +112,7 @@
                 }
               }
             }
-            &.none{
+            &.none {
               display: none;
             }
           }
@@ -142,14 +134,14 @@
           padding-bottom: 80px;
           font-weight: 500;
           justify-content: space-between;
-          .name{
+          .name {
             font-size: 2rem;
             font-weight: 800;
           }
           .txt {
             padding-top: 10px;
             font-size: 2rem;
-            opacity: .8;
+            opacity: 0.8;
           }
         }
         .bottom {
@@ -160,11 +152,11 @@
 
           .f_b_txt {
             font-size: 1.6rem;
-            &.my_info{
+            &.my_info {
               width: 25%;
             }
             &.copyright {
-              opacity: .8;
+              opacity: 0.8;
               width: 50%;
               text-align: center;
             }
@@ -193,7 +185,7 @@
   }
 }
 //----------------------------------------------------------------------
-@media only screen and (min-width : 1400px) {
+@media only screen and (min-width: 1400px) {
   #footer {
     height: var(--footer-spacing);
     .sect_inner {
