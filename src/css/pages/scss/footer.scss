@@ -12,8 +12,8 @@
   z-index: -1;
   transition: .2s;
   .sect_inner {
-    // height: var(--footer-spacing);
     width: 100%;
+    // border: 1px solid #c03232;
 
     position: fixed;
     bottom: 0;
@@ -73,11 +73,10 @@
 // ***************************************************************************************************************************
 @media only screen and (max-width: 700px) {
   #footer {
-    height: 70vh;
+    height: 60vh;
     text-align: center;
     .sect_inner {
-      height: 70vh;
-      padding: 80px 20px 0;
+      bottom: 14em;
       .thanku {
         display: none;
         font-size: 10vw;
@@ -136,7 +135,8 @@
     height: var(--footer-spacing);
     .sect_inner {
       max-width: 95%;
-      padding-top: 8rem;
+      bottom: 146px;
+      // padding-top: 8rem;
       .footer_info {
         .top {
           padding-bottom: 80px;
@@ -189,6 +189,15 @@
           }
         }
       }
+    }
+  }
+}
+//----------------------------------------------------------------------
+@media only screen and (min-width : 1400px) {
+  #footer {
+    height: var(--footer-spacing);
+    .sect_inner {
+      max-width: 1380px;
     }
   }
 }

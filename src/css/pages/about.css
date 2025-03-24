@@ -67,10 +67,9 @@
     line-height: 1.5;
   }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1400px) {
   #about {
     border-radius: 20px;
-    width: 90%;
   }
   #about .sect_inner {
     max-width: 1380px;

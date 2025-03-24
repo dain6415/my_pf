@@ -65,7 +65,6 @@
 @media only screen and (min-width: 701px) {
   #about {
     padding: 6rem 0px 12rem;
-    // height: 600px;
     max-width: 95%;
     .keyword {
       font-size: 4rem;
@@ -87,12 +86,10 @@
   }
 }
 //----------------------------------------------------------------------
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1400px) {
   #about {
     // padding: 8rem 40px 12rem; 
     border-radius: 20px;
-    width: 90%;
-    // border: 1px solid #000;
     .sect_inner{
       max-width: 1380px;
       .keyword {

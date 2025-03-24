@@ -56,12 +56,11 @@
 
 @media only screen and (max-width: 700px) {
   #footer {
-    height: 70vh;
+    height: 60vh;
     text-align: center;
   }
   #footer .sect_inner {
-    height: 70vh;
-    padding: 80px 20px 0;
+    bottom: 14em;
   }
   #footer .sect_inner .thanku {
     display: none;
@@ -115,7 +114,7 @@
   }
   #footer .sect_inner {
     max-width: 95%;
-    padding-top: 8rem;
+    bottom: 146px;
   }
   #footer .sect_inner .footer_info .top {
     padding-bottom: 80px;
@@ -163,5 +162,13 @@
   #footer .sect_inner .footer_info .bottom .f_b_txt.link > div img {
     width: 100%;
     transition: 0.3s;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #footer {
+    height: var(--footer-spacing);
+  }
+  #footer .sect_inner {
+    max-width: 1380px;
   }
 }/*# sourceMappingURL=footer.css.map */
