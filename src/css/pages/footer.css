@@ -24,7 +24,6 @@
   text-transform: uppercase;
 }
 #footer .sect_inner .footer_info .top .txt {
-  font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -65,13 +64,13 @@
   }
   #footer .sect_inner .footer_info .top .name {
     font-weight: 600;
-    font-size: 40px;
+    font-size: 32px;
     white-space: nowrap;
   }
   #footer .sect_inner .footer_info .top .txt {
-    font-size: 20px;
+    font-size: 4vw;
     padding-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   #footer .sect_inner .footer_info .bottom {
     color: var(--white);
