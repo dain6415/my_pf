@@ -61,6 +61,7 @@
   }
   #footer .sect_inner {
     bottom: 120px;
+    border: 1px solid #0f0;
   }
   #footer .sect_inner .footer_info .top .name {
     font-weight: 600;
