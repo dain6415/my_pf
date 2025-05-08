@@ -50,7 +50,7 @@
   background-color: transparent;
   display: inline-block;
   border-radius: 10px;
-  color: var(--black600);
+  color: var(--black200_text);
   font-weight: 300;
   position: relative;
   z-index: 2;
