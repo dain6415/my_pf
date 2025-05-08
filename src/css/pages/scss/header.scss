@@ -19,11 +19,11 @@
   padding: 5px;
   border-radius: 50px;
   backdrop-filter: blur(10px);
-  .header__inner {
+  .header_inner {
     height: 100%;
     @include flex-c();
     gap: 10px;
-    .header__logo {
+    .header_logo {
       font-family: "GmarketSansMedium";
       padding: 10px 20px;
       color: #666;
@@ -71,17 +71,17 @@
     &:hover{
       background: rgba($color: #fff, $alpha: .5);
     }
-    .header__inner {
+    .header_inner {
       border-radius: 20px;
       width: 90px;
       @include flex-c(space-between);
       text-transform: uppercase;
       color: var(--black600);
-      .header__logo,
-      .header__nav {
+      .header_logo,
+      .header_nav {
         display: none;
       }
-      .header__nav_mobile {
+      .header_nav_mobile {
         display: block;
         padding: 10px;
         width: 100%;
@@ -98,7 +98,7 @@
     }
   }
   /* 모바일 메뉴 */
-  nav.header__mobile {
+  nav.header_mobile {
     width: 100%;
     padding: 10px;
     position: fixed;
@@ -120,7 +120,7 @@
       background: var(--main-color);
       border-radius: 20px;
       /* 모바일용 메뉴 햄버거 */
-      .header__logo_mobile {
+      .header_logo_mobile {
         color: var(--white);
         font-size: 1rem;
         font-weight: 500;
@@ -222,7 +222,7 @@
     }
   }
   /* 모바일 메뉴bg의 반투명 */
-  .header__mobile_filter {
+  .header_mobile_filter {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -245,25 +245,25 @@
 // ------------------------------------------------------------------------------------------------
 @media only screen and (min-width: 701px) {
   #header {
-    .header__inner {
-      .header__logo {
+    .header_inner {
+      .header_logo {
         font-size: 2rem;
       }
-      .header__nav {
+      .header_nav {
         font-size: 1.6rem;
       }
-      .header__nav_mobile {
+      .header_nav_mobile {
         display: none;
       }
     }
   }
-  nav.header__mobile{
+  nav.header_mobile{
     display: none;
   }
 }
 // ------------------------------------------------------------------------------------------------
 // @media only screen and (min-width: 1300px) {
-//   .header__inner{
+//   .header_inner{
 
 //   }
 // }

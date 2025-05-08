@@ -4,7 +4,7 @@ export function header() {
 
   window.addEventListener("scroll", function () {
     const headerColor = document.querySelectorAll("header nav li a");
-    const homeBtn = document.querySelector(".header__logo a");
+    const homeBtn = document.querySelector(".header_logo a");
     const footerTop = footer.offsetTop;
     const scrollY = window.scrollY;
     const windowH = window.innerHeight;
@@ -51,12 +51,11 @@ export function header() {
 
   // --------------------------------------------------------------------------------
   // nav li 클릭시 해당 위치로 스크롤 이동 + 부드럽게 이동
-  let links = gsap.utils.toArray("nav ul li a");
+  const links = gsap.utils.toArray("nav ul li a");
   let sections = gsap.utils.toArray("section");
 
   links.forEach((link) => {
-    let elem = document.querySelector(link.getAttribute("href"));
-    // console.log(elem);
+    let href = document.querySelector(link.getAttribute("href"));
 
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -64,7 +63,7 @@ export function header() {
       gsap.to(window, {
         duration: 1,
         scrollTo: {
-          y: elem,
+          y: href,
           offsetY: 0,
         },
         overwrite: "auto",
@@ -115,34 +114,34 @@ export function header() {
   // ------------------------------------------------------------------------------
   // ------------------------------------------------------------------------------
   // phon ver. nav -------------------------------------------
-  const mobileMeun = document.querySelector(".header__nav_mobile");
+  const mobileMenu = document.querySelector(".header_nav_mobile");
   const closeBtn = document.querySelector(".close");
-  const nav = document.querySelector("nav.header__mobile");
-  const filter = document.querySelector(".header__mobile_filter");
+  const mobileNav = document.querySelector("nav.header_mobile");
+  const filter = document.querySelector(".header_mobile_filter");
 
   const mediaQuery = window.matchMedia("(max-width: 700px)");
 
   const openMenu = (e) => {
     e.stopPropagation();
-    nav.classList.add("on");
+    mobileNav.classList.add("on");
     filter.classList.add("on");
   };
 
   const closeMenu = (e) => {
     e.stopPropagation();
-    nav.classList.remove("on");
+    mobileNav.classList.remove("on");
     filter.classList.remove("on");
   };
 
   function handleMobileNav() {
     if (mediaQuery.matches) {
-      mobileMeun.addEventListener("click", openMenu);
+      mobileMenu.addEventListener("click", openMenu);
       closeBtn.addEventListener("click", closeMenu);
     } else {
-      nav.classList.remove("on");
+      mobileNav.classList.remove("on");
       filter.classList.remove("on");
 
-      mobileMeun.removeEventListener("click", openMenu);
+      mobileMenu.removeEventListener("click", openMenu);
       closeBtn.removeEventListener("click", closeMenu);
     }
   }

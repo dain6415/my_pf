@@ -20,6 +20,5 @@ export function project() {
         spaceBetween: 20,
       },
     },
-    // loop: true,
   });
 }

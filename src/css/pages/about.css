@@ -16,12 +16,46 @@
 }
 #about .sect_inner .info .txt {
   border-top: 1px solid var(--black600);
-  padding-top: 10px;
   line-height: 1.5;
 }
 #about .sect_inner .info .txt p {
   word-break: keep-all;
   color: var(--black500);
+}
+#about .sect_inner .skils {
+  display: flex;
+}
+#about .sect_inner .skils ul {
+  display: flex;
+  gap: 10px;
+}
+#about .sect_inner .skils ul li {
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .sect_inner .skils ul li::before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110%;
+  z-index: 1;
+}
+#about .sect_inner .skils ul li:hover::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media only screen and (max-width: 700px) {
@@ -59,12 +93,25 @@
   }
   #about .txt {
     height: 300px;
+    padding-top: 40px;
   }
   #about .txt p {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 300;
+    line-height: 1.6;
+  }
+  #about .txt p:nth-child(2) {
     margin-top: 1rem;
-    line-height: 1.5;
+  }
+  #about .skils {
+    font-size: 2rem;
+  }
+  #about .skils ul li {
+    width: 50px;
+  }
+  #about .skils ul li img {
+    width: 100%;
+    margin-right: 8px;
   }
 }
 @media only screen and (min-width: 1400px) {

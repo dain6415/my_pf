@@ -20,19 +20,6 @@
   margin: auto;
   overflow: visible;
 }
-#intro .sect_inner .blend {
-  display: none;
-  pointer-events: none;
-  mix-blend-mode: color-burn;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-}
-#intro .sect_inner .blend img {
-  width: 100%;
-  height: 100%;
-}
 #intro .sect_inner .stickers {
   position: relative;
   width: 100%;
@@ -101,6 +88,8 @@
 }
 #intro .sect_inner .stickers .sticker.black1 .sticker_wrap, #intro .sect_inner .stickers .sticker.black2 .sticker_wrap, #intro .sect_inner .stickers .sticker.black3 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue1 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue2 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue3 .sticker_wrap {
   margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +199,8 @@
 #intro .sect_inner .stickers .sticker.long1 .sticker_wrap, #intro .sect_inner .stickers .sticker.long2 .sticker_wrap, #intro .sect_inner .stickers .sticker.long3 .sticker_wrap {
   margin: 20px;
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,6 +266,25 @@
     opacity: 1;
   }
 }
+#intro .blend_bg {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  pointer-events: none;
+  mix-blend-mode: color-burn;
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sticker_texture_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#intro .blend_bg img {
+  width: 100%;
+  height: 100%;
+}
 
 @media only screen and (max-width: 700px) {
   #intro {
@@ -283,30 +293,12 @@
   }
   #intro .sect_inner {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-  }
-  #intro .sect_inner .blend {
-    display: none;
-    pointer-events: none;
-    background-image: url(../../img/sticker_texture_bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 120%;
-    mix-blend-mode: color-burn;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 900;
-    overflow: hidden;
-  }
-  #intro .sect_inner .blend img {
-    width: 100%;
-    height: 100%;
   }
   #intro .sect_inner .stickers {
     top: 70px;
@@ -325,6 +317,8 @@
   }
   #intro .sect_inner .stickers .sticker.black1 .sticker_wrap, #intro .sect_inner .stickers .sticker.black2 .sticker_wrap, #intro .sect_inner .stickers .sticker.black3 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue1 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue2 .sticker_wrap, #intro .sect_inner .stickers .sticker.blue3 .sticker_wrap {
     margin: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,75 +375,62 @@
     bottom: 12%;
     color: var(--black400);
   }
+  #intro .blend_bg {
+    background-size: 120%;
+  }
 }
 @media only screen and (min-width: 701px) {
-  main section {
-    width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  main section#intro {
+  main #intro {
     height: 100vh;
   }
-  main section#intro .blend {
-    background-image: url(/src/img/sticker_texture_bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 120% 150%;
-    mix-blend-mode: color-burn;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    pointer-events: none;
-  }
-  main section#intro .sticker img {
+  main #intro .sticker img {
     width: 100%;
   }
-  main section#intro .sticker.black1, main section#intro .sticker.black2, main section#intro .sticker.black3, main section#intro .sticker.blue1, main section#intro .sticker.blue2, main section#intro .sticker.blue3 {
+  main #intro .sticker.black1, main #intro .sticker.black2, main #intro .sticker.black3, main #intro .sticker.blue1, main #intro .sticker.blue2, main #intro .sticker.blue3 {
     width: 300px;
     height: 300px;
   }
-  main section#intro .sticker.black1 {
+  main #intro .sticker.black1 {
     transform: translate(-73%, 100%) rotate(-65deg);
     z-index: 2;
   }
-  main section#intro .sticker.black2 {
+  main #intro .sticker.black2 {
     transform: translate(-4%, 23%) rotate(35deg);
   }
-  main section#intro .sticker.blue1 {
+  main #intro .sticker.blue1 {
     transform: translate(88%, 8%) rotate(165deg);
   }
-  main section#intro .sticker.blue2 {
+  main #intro .sticker.blue2 {
     transform: translate(-140%, 32%) rotate(-35deg);
   }
-  main section#intro .sticker.blue3 {
+  main #intro .sticker.blue3 {
     transform: translate(25%, 76%) rotate(15deg);
   }
-  main section#intro .sticker.long1, main section#intro .sticker.long2, main section#intro .sticker.long3 {
+  main #intro .sticker.long1, main #intro .sticker.long2, main #intro .sticker.long3 {
     width: 427px;
     height: 188px;
   }
-  main section#intro .sticker.long1 .sticker_wrap, main section#intro .sticker.long2 .sticker_wrap, main section#intro .sticker.long3 .sticker_wrap {
+  main #intro .sticker.long1 .sticker_wrap, main #intro .sticker.long2 .sticker_wrap, main #intro .sticker.long3 .sticker_wrap {
     border-radius: 26px;
   }
-  main section#intro .sticker.long1 {
+  main #intro .sticker.long1 {
     transform: translate(-137%, 146%) rotate(-153deg);
     z-index: 1;
   }
-  main section#intro .sticker.long2 {
+  main #intro .sticker.long2 {
     transform: translate(-53%, 38%) rotate(-20deg);
   }
-  main section#intro .sticker.long3 {
+  main #intro .sticker.long3 {
     transform: translate(67%, 150%) rotate(140deg);
   }
-  main section#intro .intro_title p.publisher {
+  main #intro .intro_title p.publisher {
     font-size: 15rem;
   }
-  main section#intro .sticker-guide {
+  main #intro .sticker-guide {
     font-size: 1.2rem;
+  }
+  main .blend_bg {
+    background-size: 120% 150%;
   }
 }
 @media only screen and (min-width: 900px) {

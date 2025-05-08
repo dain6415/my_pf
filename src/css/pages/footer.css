@@ -17,39 +17,36 @@
   line-height: 1;
   font-weight: 700;
 }
-#footer .sect_inner .footer_info {
+#footer .footer_info {
   color: var(--mainBg-color);
 }
-#footer .sect_inner .footer_info .top .name {
+#footer .footer_info .top .name {
   text-transform: uppercase;
 }
-#footer .sect_inner .footer_info .top .txt {
+#footer .footer_info .top .short_text {
   font-weight: 300;
   line-height: 1.5;
 }
-#footer .sect_inner .footer_info .bottom .f_b_txt {
+#footer .footer_info .bottom {
   line-height: 1.5;
   color: #999;
 }
-#footer .sect_inner .footer_info .bottom .f_b_txt a:hover {
+#footer .footer_info .bottom a:hover {
   text-decoration: underline;
 }
-#footer .sect_inner .footer_info .bottom .f_b_txt.copyright span {
+#footer .footer_info .bottom .copyright {
   font-weight: 100;
 }
-#footer .sect_inner .footer_info .bottom .f_b_txt.link {
+#footer .footer_info .bottom .link_box {
   display: flex;
   gap: 20px;
-  width: auto;
 }
-#footer .sect_inner .footer_info .bottom .f_b_txt.link a {
+#footer .footer_info .bottom .link_box .link_logo img {
   width: 100%;
   height: 100%;
-}
-#footer .sect_inner .footer_info .bottom .f_b_txt.link a img {
   opacity: 0.8;
 }
-#footer .sect_inner .footer_info .bottom .f_b_txt.link a img.git {
+#footer .footer_info .bottom .link_box .link_logo img.git {
   filter: invert(1);
 }
 
@@ -66,7 +63,7 @@
     font-size: 6vw;
     white-space: nowrap;
   }
-  #footer .sect_inner .footer_info .top .txt {
+  #footer .sect_inner .footer_info .top .short_text {
     font-size: 4vw;
     padding-top: 20px;
     margin-bottom: 20px;
@@ -74,29 +71,24 @@
   #footer .sect_inner .footer_info .bottom {
     color: var(--white);
     font-weight: 300;
-  }
-  #footer .sect_inner .footer_info .bottom .f_b_txt {
     font-size: 4vw;
     line-height: 2;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
+  #footer .sect_inner .footer_info .bottom .copyright {
     font-weight: 100;
     opacity: 0.6;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link {
+  #footer .sect_inner .footer_info .bottom .link_box {
     margin-top: 40px;
     justify-content: center;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div {
+  #footer .sect_inner .footer_info .bottom .link_box .link_logo {
     display: inline-block;
     width: 40px;
     height: 40px;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div img {
+  #footer .sect_inner .footer_info .bottom .link_box .link_logo img {
     width: 100%;
-  }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.none {
-    display: none;
   }
 }
 @media only screen and (min-width: 701px) {
@@ -107,50 +99,47 @@
     max-width: 95%;
     bottom: 146px;
   }
-  #footer .sect_inner .footer_info .top {
+  #footer .top {
     padding-bottom: 80px;
     font-weight: 500;
-    justify-content: space-between;
   }
-  #footer .sect_inner .footer_info .top .name {
+  #footer .top .name {
     font-size: 2rem;
     font-weight: 800;
   }
-  #footer .sect_inner .footer_info .top .txt {
+  #footer .top .short_text {
     padding-top: 10px;
-    font-size: 2rem;
     opacity: 0.8;
+    font-size: 2rem;
   }
-  #footer .sect_inner .footer_info .bottom {
+  #footer .bottom {
     display: flex;
     justify-content: space-between;
     color: var(--white);
     font-weight: 300;
-  }
-  #footer .sect_inner .footer_info .bottom .f_b_txt {
     font-size: 1.6rem;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.my_info {
+  #footer .bottom .my_info {
     width: 25%;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.copyright {
+  #footer .bottom .copyright {
     opacity: 0.8;
     width: 50%;
     text-align: center;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link {
+  #footer .link_box {
     width: 25%;
     justify-content: flex-end;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div {
+  #footer .link_box .link_logo {
     display: inline-block;
     width: 40px;
     height: 40px;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div:hover img {
+  #footer .link_box .link_logo:hover img {
     opacity: 0.6;
   }
-  #footer .sect_inner .footer_info .bottom .f_b_txt.link > div img {
+  #footer .link_box .link_logo img {
     width: 100%;
     transition: 0.3s;
   }

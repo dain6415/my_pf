@@ -52,15 +52,14 @@
 
   <body>
     <!-- cursor -->
-    <div id="custom_cursor"></div>
-    <!-- ************************ -->
+    <div id="custom_cursor" aria-hidden="true"></div>
     <!-- header -->
     <header id="header" role="banner">
-      <div class="header__inner">
-        <div class="header__logo">
+      <div class="header_inner">
+        <div class="header_logo">
           <a href="#" target="_top"><span>P.DA </span></a>
         </div>
-        <nav class="header__nav" role="navigation" aria-label="메인메뉴">
+        <nav class="header_nav" role="navigation" aria-label="메인메뉴">
           <ul>
             <li class="">
               <a href="#intro" class="on"><span>home</span></a>
@@ -78,7 +77,7 @@
           </ul>
         </nav>
         <div
-          class="header__nav_mobile"
+          class="header_nav_mobile"
           id="headerToggle"
           aria-controls="primary-menu"
           aria-expanded="flase"
@@ -89,9 +88,9 @@
       </div>
     </header>
     <!-- 모바일용 메뉴바 -->
-    <nav class="header__mobile" role="navigation" aria-label="메인메뉴">
+    <nav class="header_mobile" role="navigation" aria-label="메인메뉴">
       <div class="inner">
-        <div class="header__logo_mobile">
+        <div class="header_logo_mobile">
           <a href="https://hongda88.netlify.app/" target="_self"
             ><span>P.DA</span></a
           >
@@ -116,16 +115,15 @@
         </div>
       </div>
     </nav>
-    <div class="header__mobile_filter"></div>
+    <div class="header_mobile_filter"></div>
 
-    <!-- -------------------------- -->
     <main>
       <!-- <div class="bg-texture"></div> -->
       <!-- intro -->
       <section id="intro" data-bg="#111111">
         <!-- content -->
         <div class="sect_inner">
-          <div class="blend">
+          <div class="blend_bg">
             <img src="./src/img/sticker_texture_bg.jpg" alt="" />
           </div>
           <div class="stickers">
@@ -267,570 +265,15 @@
       </section>
 
       <!-- main ontents -->
-
-      <!-- project -->
-      <section id="project" data-bg="#f5f5f5">
-        <div class="sect_inner">
-          <div class="sect_title">
-            <h2 class="po_ab">project</h2>
-          </div>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a
-                  href="https://dain6415.github.io/project/p_NewJeans"
-                  target="_blank"
-                  role="button"
-                  class="bg-img"
-                >
-                  <img src="./src/img/work/new2.jpg" alt="뉴진스 배경 이미지" />
-                </a>
-                <div class="txt">
-                  <h4>
-                    <a
-                      href="https://dain6415.github.io/project/p_NewJeans"
-                      target="_blank"
-                      class="title"
-                      >NewJeans</a
-                    >
-                  </h4>
-                  <p>Grid, iframe을 활용한 뉴진스 홈페이지 리디자인</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="https://dain6415.github.io/project/p_SeMA/index.html"
-                  target="_blank"
-                  role="button"
-                  class="bg-img"
-                >
-                  <img
-                    src="./src/img/work/sema.jpg"
-                    alt="서울시립미술관 배경 이미지"
-                  />
-                </a>
-                <div class="txt">
-                  <h4>
-                    <a
-                      href="https://dain6415.github.io/project/p_SeMA/index.html"
-                      target="_blank"
-                      class="title"
-                      >서울시립미술관</a
-                    >
-                  </h4>
-                  <p>JAVA script를</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
-                  target="_blank"
-                  role="button"
-                  class="bg-img"
-                >
-                  <img src="./src/img/work/selmine.jpg" alt="배경 이미지" />
-                </a>
-                <div class="txt">
-                  <h4>
-                    <a
-                      href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
-                      target="_blank"
-                      class="title"
-                      >selmine</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="pagination-aria">
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- work -->
-      <section id="work" data-bg="#f5f5f5">
-        <div class="sect_inner">
-          <div class="title-wrap">
-            <div class="sect_title">
-              <h2 class="po_ab">work</h2>
-            </div>
-            <div class="filter">
-              <!-- <p>Filter</p> -->
-              <ul>
-                <span class="this-filter"></span>
-                <li class="">
-                  <button href="#" data-filter="*" class="on">all</button>
-                </li>
-                <li class="">
-                  <button href="#" data-filter=".clone">clone</button>
-                </li>
-                <li class="">
-                  <button href="#" data-filter=".responsive">responsive</button>
-                </li>
-                <li class="">
-                  <button href="#" data-filter=".create">create</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="item-box">
-            <div class="left">
-              <div class="item clone responsive ace">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/ace.jpg"
-                        alt="에이스 로고"
-                      />
-                    </div>
-                    <h4>에이스 침대</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_ace"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>swiper, tab을 적극 활용한 원페이지 클론 사이트입니다.</p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone responsive chugn">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/chung.jpg"
-                        alt="청와대 로고"
-                      />
-                    </div>
-                    <h4>청와대</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_cheongwadae"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      과거 청와대 홈페이지를 jQuery와 JavaScript로 클론 코딩한
-                      프로젝트입니다. Swiper를 활용해 다양한 인터랙션을
-                      구현하였습니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item create interior">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/interior.jpg"
-                        alt="인테리어 임시 이미지"
-                      />
-                    </div>
-                    <h4>인테리어</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_interior"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      특정 아티클을 클릭하면 Fetch API를 통해 외부 데이터를
-                      가져와 .scene 요소에 상세 내용을 표시하는 기능을 구현한
-                      스크립트입니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>Fetch API</li>
-                      <li>create</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone yes24">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/yes244.jpg"
-                        alt="예스24 로고"
-                      />
-                    </div>
-                    <h4>yes24</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_yes24"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="./src/img/SVG/SVG/y.svg" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>스와이퍼, flex를 활용한 원페이지 클론 사이트입니다.</p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="right">
-              <div class="item clone create responsive nonfiction">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/nonfiction.jpg"
-                        alt="논픽션 로고"
-                      />
-                    </div>
-                    <h4>논픽션</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_Nonfiction/index.html"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      논픽션 홈페이지를 리뉴얼한 사이트로 hover했을 때 fade가
-                      되는 일부 요소는 클론하였습니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>renewal</li>
-                      <li>clone</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone apple">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/apple.jpg"
-                        alt="애플 로고"
-                      />
-                    </div>
-                    <h4>iPad Pro</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_iPadPro"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="./src/img/SVG/SVG/a2.svg" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      GSAP, ScrollTrigger를 활용하여 애플의 아이패드 상세페이지
-                      일부를 클론 코딩한 사이트입니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>apple</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone chil">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/chil2.jpg"
-                        alt="칠성사이다 로고"
-                      />
-                    </div>
-                    <h4>칠성사이다</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_칠성사이다"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      칠성사이다 메인 페이지를 클론 코딩하여 Swiper를 활용한
-                      슬라이드 효과, 스크롤 시 스티키 UI, 패밀리 사이트 이동
-                      기능 등의 인터랙션을 구현하였습니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>clone</li>
-                      <li>jquery</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone woodam">
-                <div class="title">
-                  <div class="profile">
-                    <div class="Thumbnail">
-                      <img
-                        src="./src/img/SVG/logo_jpg/woodam.jpg"
-                        alt="우담라이팅 로고"
-                      />
-                    </div>
-                    <h4>우담라이팅</h4>
-                  </div>
-                  <a
-                    href="https://dain6415.github.io/project/w_woodam"
-                    target="_blank"
-                    role="button"
-                    class="view-btn"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      sldkfje sidjfs ldkfja;ldk fisjdflksdjfs idjflsdkf
-                      ssjlkdfja;sldkjf sdkj
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_woodam"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- about -->
       <section id="about" data-bg="#f5f5f5">
-        <div class="sect_inner">
+        <div class="sect_inner animate-up">
           <div class="sect_title">
-            <h2 class="po_ab">about</h2>
-          </div>
-          <div class="profile">
-            <p class="name">홍다인</p>
-            <p>1997.08.25</p>
-            <p>시각미디어디자인과</p>
-            <div class="img">
-              <img src="" alt="증명사진" />
-            </div>
+            <p class="title">about</p>
           </div>
           <div class="info">
             <p class="keyword">보다 나은 결과를 추구합니다</p>
-            <div class="txt">
+            <div class="text">
               <p>
                 어디서든 쉽게 볼 수 있지만, 그 자리에서도 자신만의 색을 지닌
                 스티커처럼, <br />변화에 유연하게 적응하면서도 자신만의 개성과
@@ -846,75 +289,689 @@
               </p>
             </div>
           </div>
+          <div class="skils">
+            <ul>
+              <li><img src="./src/img/SVG/skil/ai.svg" alt="" />illustrator</li>
+              <li><img src="./src/img/SVG/skil/ps.svg" alt="" />photoshop</li>
+              <li><img src="./src/img/SVG/skil/id.svg" alt="" />indesign</li>
+              <li><img src="./src/img/SVG/skil/html.svg" alt="" />html</li>
+              <li><img src="./src/img/SVG/skil/css.svg" alt="" />css</li>
+              <li><img src="./src/img/SVG/skil/js.svg" alt="" />javascript</li>
+            </ul>
+            <ul class="adobe">
+              <li class="hovertext" data-hover="illustrator">
+                <img src="./src/img/SVG/skil/ai.svg" alt="" />
+              </li>
+              <li class="hovertext" data-hover="photoshop">
+                <img src="./src/img/SVG/skil/ps.svg" alt="" />
+              </li>
+              <li class="hovertext" data-hover="indesign">
+                <img src="./src/img/SVG/skil/id.svg" alt="" />
+              </li>
+            </ul>
+            <ul class="web">
+              <li class="hovertext" data-hover="html">
+                <img src="./src/img/SVG/skil/html.svg" alt="" />
+              </li>
+              <li class="hovertext" data-hover="css">
+                <img src="./src/img/SVG/skil/css.svg" alt="" />
+              </li>
+              <li class="hovertext" data-hover="javascript">
+                <img src="./src/img/SVG/skil/js.svg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- project -->
+      <section id="project" data-bg="#f5f5f5">
+        <div class="sect_inner animate-up">
+          <div class="sect_title">
+            <p class="title">project</p>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a
+                  href="https://dain6415.github.io/project/p_NewJeans"
+                  aria-label="프로젝트 페이지로 이동"
+                  target="_blank"
+                  class="link_project"
+                >
+                  <span class="blind">뉴진스 페이지로 이동</span>
+                  <div class="img_box">
+                    <img
+                      src="./src/img/work/new2.jpg"
+                      alt="selmine 이미지"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="text_info">
+                    <div class="title">NewJeans</div>
+                    <p class="desc">
+                      Grid, iframe을 활용한 뉴진스 홈페이지 리디자인
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="https://dain6415.github.io/project/p_SeMA/index.html"
+                  aria-label="프로젝트 페이지로 이동"
+                  target="_blank"
+                  class="link_project"
+                >
+                  <span class="blind">서울시립미술관 페이지로 이동</span>
+                  <div class="img_box">
+                    <img
+                      src="./src/img/work/sema.jpg"
+                      alt="서울시립미술관 이미지"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="text_info">
+                    <div class="title">서울시립미술관</div>
+                    <p class="desc">JAVA script를</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
+                  aria-label="프로젝트 페이지로 이동"
+                  target="_blank"
+                  class="link_project"
+                >
+                  <span class="blind">셀마인드 피그마 페이지로 이동</span>
+                  <div class="img_box">
+                    <img
+                      src="./src/img/work/selmine.jpg"
+                      alt="selmine 이미지"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="text_info">
+                    <div class="title">selmine</div>
+                    <p class="desc">JAVA script를</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="pagination-aria">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- work -->
+      <section id="work" data-bg="#f5f5f5">
+        <div class="sect_inner animate-up">
+          <div class="title-wrap">
+            <div class="sect_title">
+              <p class="title">work</p>
+            </div>
+            <div class="filter">
+              <span class="this-filter" aria-hidden="true"></span>
+              <ul class="filter_list" role="listbox" aria-label="작업 필터">
+                <li class="filter_item">
+                  <button
+                    type="button"
+                    class="btn_filter"
+                    data-filter="*"
+                    role="option"
+                    aria-selected="true"
+                  >
+                    all
+                  </button>
+                </li>
+                <li class="filter_item">
+                  <button
+                    type="button"
+                    class="btn_filter"
+                    data-filter=".clone"
+                    role="option"
+                    aria-selected="false"
+                  >
+                    clone
+                  </button>
+                </li>
+                <li class="filter_item">
+                  <button
+                    type="button"
+                    class="btn_filter"
+                    data-filter=".responsive"
+                    role="option"
+                    aria-selected="false"
+                  >
+                    responsive
+                  </button>
+                </li>
+                <li class="filter_item">
+                  <button
+                    type="button"
+                    class="btn_filter"
+                    data-filter=".create"
+                    role="option"
+                    aria-selected="false"
+                  >
+                    create
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="left">
+              <div class="item clone responsive ace">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/ace.jpg"
+                        alt="에이스 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">에이스 침대</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_ace"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    Swiper와 탭 UI를 중심으로 구현한 원페이지 반응형 클론
+                    사이트입니다. 시각적인 구조와 인터랙션 구현에 초점을 맞춰
+                    제작했으며, 반응형 레이아웃을 통해 다양한 디바이스에서의
+                    사용자 경험을 고려했습니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">반응형</li>
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">GSAP</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item clone responsive chugn">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/chung.jpg"
+                        alt="청와대 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">청와대</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_cheongwadae"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    과거 청와대 홈페이지를 jQuery와 JavaScript로 클론 코딩한
+                    반응형 사이트입니다. Swiper를 활용한 슬라이드 UI 등 다양한
+                    인터랙션을 구현하였습니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">반응형</li>
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">GSAP</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item create interior">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/interior.jpg"
+                        alt="인테리어 임시 이미지"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">인테리어</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_interior"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    특정 아티클을 클릭하면 Fetch API를 통해 외부 데이터를
+                    가져와, .scene 요소에 상세 내용을 동적으로 표시하는 기능을
+                    구현한 스크립트입니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">Fetch API</li>
+                      <li class="tag_item">create</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item clone yes24">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/yes244.jpg"
+                        alt="예스24 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">yes 24</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_yes24"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    Swiper와 Flexbox를 활용해 예스24의 구조를 원페이지 형식으로
+                    클론 코딩한 사이트입니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">GSAP</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="item clone naver">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/naver.jpg"
+                        alt="네이버 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">NAVER</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_naver/index.html"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    사용자가 많은 네이버를 클론 코딩하며 실제 서비스의 구조와
+                    마크업 방식을 분석했습니다. 접근성과 시멘틱 구조를 고려한
+                    네이버의 HTML 구조를 그대로 따라 구현해보며 웹 표준에 대한
+                    이해를 높이는 데 집중했습니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">Markup</li>
+                      <li class="tag_item">웹 접근성</li>
+                      <li class="tag_item">fecth API</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item clone apple">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/apple.jpg"
+                        alt="애플 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">iPad Pro</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_iPadPro"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    GSAP과 ScrollTrigger를 활용하여 애플 iPad Pro 상세 페이지의
+                    일부를 클론 코딩한 작업입니다. 인터랙션과 스크롤 애니메이션
+                    구현에 중점을 두었습니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">apple</li>
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">GSAP</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item clone chil">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/chil2.jpg"
+                        alt="칠성사이다 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">칠성 사이다</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_칠성사이다"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p v class="desc">
+                    칠성사이다 메인 페이지를 클론 코딩하여 Swiper를 활용한
+                    슬라이드 효과, 스크롤 시 스티키 UI, 패밀리 사이트 이동 기능
+                    등의 인터랙션을 구현하였습니다.
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">jquery</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item clone woodam">
+                <div
+                  class="header_group"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <div class="profile">
+                    <div class="Thumbnail">
+                      <img
+                        src="./src/img/SVG/logo_jpg/woodam.jpg"
+                        alt="우담라이팅 로고"
+                      />
+                    </div>
+                    <div class="title_box">
+                      <div class="title">우담라이팅</div>
+                    </div>
+                  </div>
+                  <a
+                    href="https://dain6415.github.io/project/w_woodam"
+                    target="_blank"
+                    class="view_btn"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                      />
+                    </svg>
+                    <span class="blind">사이트로 이동하기</span>
+                  </a>
+                </div>
+                <div class="info" aria-hidden="true">
+                  <p class="date blind">2024.04.22</p>
+                  <p class="desc">
+                    우담라이팅 사이트를 시각적으로 클론 코딩한 작업입니다
+                  </p>
+                  <div class="filter-tag">
+                    <ul class="tag_list">
+                      <li class="tag_item">반응형</li>
+                      <li class="tag_item">clone</li>
+                      <li class="tag_item">GSAP</li>
+                    </ul>
+                    =
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer id="footer">
       <div class="sect_inner">
-        <div class="bg">
-          <!-- <p class="thanku">THANK U</p> -->
-        </div>
+        <div class="bg"></div>
         <div class="footer_info">
           <div class="top">
             <p class="name">Hong DaIn</p>
-            <div class="txt">
-              <p>
-                함께하는 성장을 추구하며 협력하는 팀원이 되겠습니다. <br />
-                소중한 시간을 내어 주셔서 감사합니다.
-              </p>
-            </div>
+            <p class="short_text">
+              함께하는 성장을 추구하며 협력하는 팀원이 되겠습니다. <br />
+              소중한 시간을 내어 주셔서 감사합니다.
+            </p>
           </div>
           <div class="bottom">
-            <div class="my_info f_b_txt">
-              <p class="">
-                <span>email :</span>
+            <dl class="my_info">
+              <dt class="sr-only">이메일</dt>
+              <dd>
+                <span aria-hidden="true">EMAIL :</span>
                 <a href="mailto:ekdlscjs4@naver.com">ekdlscjs4@naver.com</a>
-              </p>
-              <p class="">
-                <span>tell :</span>
+              </dd>
+              <dt class="sr-only">전화번호</dt>
+              <dd>
+                <span aria-hidden="true">TEL :</span>
                 <a href="tel:01085416415">010 8541 6415</a>
-              </p>
+              </dd>
+            </dl>
+            <div class="copyright">
+              &copy;&nbsp;2024 Hong-DaIn All Rights Reserved
             </div>
-            <div class="copyright f_b_txt">
-              <p><span>&copy;&nbsp;</span>2024 Hong-DaIn All Rights Reserved</p>
-            </div>
-            <div class="link f_b_txt">
-              <div class="">
-                <a href="https://github.com/dain6415/project">
-                  <img
-                    class="git"
-                    src="./src/img/github.png"
-                    alt="github 이미지"
-                  />
-                </a>
-              </div>
-              <div class="">
-                <a href="">
-                  <img
-                    src="./src/img/Notion_app_logo.png"
-                    alt="notion 이미지"
-                  />
-                </a>
-              </div>
+            <div class="link_box" aria-label="외부 사이트 링크">
+              <a href="https://github.com/dain6415/project" class="link_logo">
+                <img
+                  class="git"
+                  src="./src/img/github.png"
+                  alt="github 프로젝트 링크"
+                />
+              </a>
+              <a href="" class="link_logo">
+                <img src="./src/img/Notion_app_logo.png" alt="notion 링크" />
+              </a>
             </div>
             <!-- <div class="time_area">
               <span>한국시간</span>
               <time class="time" id="koTime" aria-label="현재 한국 시간"></time>
             </div> -->
-            <div class="none"></div>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- <div class="up_btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </div> -->
+    <button class="up_btn" aria-label="맨 위로 이동">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <!-- <div class="mCustomScrollbar content" data-mcs-theme="dark">
     </div> -->
 
-    <!-- -------------------------------------------------------------------------------------------- -->
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>

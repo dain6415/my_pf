@@ -22,32 +22,41 @@
 /* ========================== */
 html,
 body {
+  position: relative;
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  color: var(--black200_txt);
+  background: #111;
 
   cursor: none;
   scrollbar-width: 1px;
-  position: relative;
   font-size: 10px;
   font-family: var(--mainKor-font);
   line-height: 1.2;
-  color: var(--black200_txt);
   transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out;
-  background: #111;
   letter-spacing: -1px;
   /* 하..왜 여긴 또 이렇게 색을 줘야 하는지 이해가 안가네. 암튼 없으면 흰색으로 되니 푸터컬러랑 맞출것 */
 }
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /*  크기 계산에 border 포함 */
+  box-sizing: border-box;
 }
 main {
   position: relative;
   overflow-x: hidden;
-  /* background: var(--mainBg-color); */
-  border-radius: 0 0 60px 60px;
+}
+@media only screen and (max-width: 700px) {
+  main {
+    border-radius: 0 0 20px 20px;
+  }
+}
+@media only screen and (min-width: 701px) {
+  main {
+    border-radius: 0 0 60px 60px;
+  }
 }
 main .bg-texture {
   display: none;
@@ -63,10 +72,49 @@ main .bg-texture {
 a {
   cursor: none;
 }
+.blind {
+  display: none;
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.animate-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-up.hide {
+  opacity: 0;
+  transform: translateY(-10%); /* 위로 사라짐 */
+}
 /* -------------------------------------------------------------------------------- */
 /* section -------------------- */
 section {
   width: 100%;
+}
+@media only screen and (max-width: 700px) {
+    .sect_inner{
+      width: 90%;
+      padding-top: 10em;
+      padding-bottom: 12em;
+  }
+}
+@media only screen and (min-width: 701px) {
+    .sect_inner{
+      width: 90%;
+      padding-top: 10em;
+      padding-bottom: 12em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .sect_inner{
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
 }
 /* -------------------------------------------------------------------------------- */
 /*  sect_title ---------------------- */
@@ -76,7 +124,7 @@ section {
   align-items: center;
   color: var(--black800);
 }
-.sect_title h2 {
+.sect_title .title {
   width: 100%;
   grid-column: 2;
   line-height: 1;
@@ -90,19 +138,19 @@ section {
     text-align: center;
     margin-bottom: 40px;
   }
-  .sect_title h2 {
+  .sect_title .title {
     font-size: 8vw;
   }
 }
 @media only screen and (min-width: 701px) {
-  .sect_title h2 {
+  .sect_title .title {
     font-size: 4rem;
     margin-bottom: 60px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .sect_title h2 {
+  .sect_title .title {
     font-size: 6rem;
     font-weight: 900;
   }
@@ -111,26 +159,25 @@ section {
 /* -------------------------------------------------------------------------------- */
 /* 위로가기 버튼 ---------------------- */
 .up_btn {
-  width: 80px;
-  height: 80px;
-  border: 1px solid #000;
-  background: var(--main-color);
-  cursor: pointer;
-
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 999;
-
+  display: flex;
   align-items: center;
   justify-content: center;
-
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: -1;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid var(--black600);
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  color: var(--white);
   font-size: 2rem;
   font-weight: 900;
 }
 .up_btn:hover {
-  box-shadow: 0px 5px 10px rgba(0, 0, 255, 0.2);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
 }
 /* -------------------------------------------
 /*  */
@@ -142,16 +189,12 @@ nav.header__mobile.on ul li a.on {
 /* -------------------------------------------------------------------------------- */
 /* cursor -------------------- */
 #custom_cursor {
-  padding: 5px;
-  border-radius: 50%;
-  /* background: rgba(255, 255, 255, .6); */
-  /* mix-blend-mode: difference; */
-  background: var(--main-color);
-  /* filter: blur(5px); */
-  pointer-events: none;
   position: fixed;
   transform: translate(-50%, -50%);
   z-index: 99999;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  pointer-events: none;
   transition: padding 0.3s;
 }
 
@@ -163,10 +206,6 @@ nav.header__mobile.on ul li a.on {
   transform: translateY(-30px);
 }
 
-#custom_cursor.dragging {
-  background: rgba(255, 0, 0, 0.5); /* 드래그 중 빨간색 반투명 */
-  transform: scale(1.2); /* 크기를 키움 */
-}
 @media screen and (max-width: 700px) {
   body {
     cursor: none;

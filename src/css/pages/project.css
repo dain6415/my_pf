@@ -27,51 +27,38 @@
   border: none;
   position: relative;
 }
-#project .swiper .swiper-slide .sticker {
-  width: 120px;
-  height: 40px;
-  background: var(--main-color);
-  opacity: 0.8;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(20deg);
-  z-index: 1;
+#project .swiper .title {
+  font-weight: 600;
 }
-#project .swiper .swiper-slide a {
+#project .link_project .img_box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   overflow: hidden;
 }
-#project .swiper .swiper-slide a.bg-img {
+#project .link_project .img_box img {
   width: 100%;
 }
-#project .swiper .swiper-slide a.bg-img img {
-  width: 100%;
-}
-#project .swiper .swiper-slide h4 {
-  font-weight: 600;
-}
-#project .swiper .swiper-slide h4 a {
-  display: block;
-}
-#project .swiper .pagination-aria {
+#project .pagination-aria {
   width: 100%;
   position: relative;
   display: block;
 }
-#project .swiper .pagination-aria .swiper-pagination {
+#project .pagination-aria .swiper-pagination {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-#project .swiper .pagination-aria .swiper-pagination span {
+#project .pagination-aria .swiper-pagination span {
   width: 10px;
   height: 10px;
 }
-#project .swiper .pagination-aria .swiper-pagination span.swiper-pagination-bullet-active {
+#project .pagination-aria .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--main-color);
 }
 #project .sect_inner {
@@ -92,45 +79,42 @@
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
   }
-  #project .sect_inner .swiper .swiper-slide .bg-img {
+  #project .swiper-slide-active {
+    transform: translateY(-20px);
+  }
+  #project .swiper-slide-active .img_box img {
+    filter: grayscale(0);
+  }
+  #project .swiper-slide-active .txt .title {
+    font-size: 8vw;
+  }
+  #project .img_box {
     margin-bottom: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4392156863);
   }
-  #project .sect_inner .swiper .swiper-slide .bg-img img {
+  #project .img_box img {
     filter: grayscale(1);
     transition: 0.4s;
   }
-  #project .sect_inner .swiper .swiper-slide.swiper-slide-active {
-    transform: translateY(-20px);
-  }
-  #project .sect_inner .swiper .swiper-slide.swiper-slide-active .bg-img img {
-    filter: grayscale(0);
-  }
-  #project .sect_inner .swiper .swiper-slide.swiper-slide-active .txt .title {
-    font-size: 8vw;
-  }
-  #project .sect_inner .swiper .swiper-slide .txt {
+  #project .text_info {
     text-align: center;
   }
-  #project .sect_inner .swiper .swiper-slide .txt .title {
+  #project .text_info .title {
     font-size: 6vw;
     margin-bottom: 6px;
     transition: 0.3s;
   }
-  #project .sect_inner .swiper .swiper-slide .txt p {
+  #project .text_info .desc {
     font-size: 4vw;
     font-weight: 300;
     color: #999;
   }
-  #project .sect_inner .swiper .pagination-aria {
+  #project .pagination-aria {
     height: 14px;
     margin-top: 20px;
   }
 }
 @media only screen and (min-width: 701px) {
-  #project {
-    height: 100vh;
-  }
   #project .sect_inner {
     width: 90%;
     padding-top: 10em;
@@ -146,42 +130,42 @@
   #project .sect_inner .swiper .swiper-slide:hover {
     transform: translateY(-10px);
   }
-  #project .sect_inner .swiper .swiper-slide:hover .bg-img {
+  #project .sect_inner .swiper .swiper-slide:hover .img_box {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3137254902);
   }
-  #project .sect_inner .swiper .swiper-slide .bg-img {
+  #project .img_box {
     margin-bottom: 20px;
     transition: 0.4s;
   }
-  #project .sect_inner .swiper .swiper-slide .txt .title {
+  #project .text_info .title {
     font-size: 2.8rem;
     margin-bottom: 6px;
   }
-  #project .sect_inner .swiper .swiper-slide .txt p {
+  #project .text_info .desc {
     font-size: 16px;
     color: #999;
   }
-  #project .sect_inner .swiper .pagination-aria {
+  #project .pagination-aria {
     width: 100%;
     height: 14px;
     display: block;
     position: relative;
     margin-top: 60px;
   }
-  #project .sect_inner .swiper .pagination-aria .swiper-pagination {
+  #project .pagination-aria .swiper-pagination {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
   }
-  #project .sect_inner .swiper .pagination-aria .swiper-pagination span {
+  #project .pagination-aria .swiper-pagination span {
     background: var(--main-color);
     width: 10px;
     height: 10px;
   }
 }
 @media only screen and (min-width: 1301px) {
-  #project .sect_inner .swiper .pagination-aria {
+  #project .pagination-aria {
     display: none;
   }
 }
