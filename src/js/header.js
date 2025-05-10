@@ -111,20 +111,20 @@ export function header() {
   const mobileMenu = document.querySelector(".gnb_mobile_var");
   const closeBtn = document.querySelector(".close");
   const mobileNav = document.querySelector(".gnb_mobile");
-  const filter = document.querySelector(".gnb_mobile_filter");
+  const mobilBg = document.querySelector(".gnb_mobile_bg");
 
   const mediaQuery = window.matchMedia("(max-width: 700px)");
 
   const openMenu = (e) => {
     e.stopPropagation();
     mobileNav.classList.add("on");
-    filter.classList.add("on");
+    mobilBg.classList.add("on");
   };
 
   const closeMenu = (e) => {
     e.stopPropagation();
     mobileNav.classList.remove("on");
-    filter.classList.remove("on");
+    mobilBg.classList.remove("on");
   };
 
   function handleMobileNav() {
@@ -133,7 +133,7 @@ export function header() {
       closeBtn.addEventListener("click", closeMenu);
     } else {
       mobileNav.classList.remove("on");
-      filter.classList.remove("on");
+      mobilBg.classList.remove("on");
 
       mobileMenu.removeEventListener("click", openMenu);
       closeBtn.removeEventListener("click", closeMenu);

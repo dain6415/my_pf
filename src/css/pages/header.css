@@ -207,7 +207,7 @@
     transition: 0.2s;
   }
   /* 모바일 메뉴bg의 반투명 */
-  .gnb_mobile_filter {
+  .gnb_mobile_bg {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -220,7 +220,7 @@
     opacity: 0;
     transition: 0.5s;
   }
-  .gnb_mobile_filter.on {
+  .gnb_mobile_bg.on {
     opacity: 1;
     pointer-events: visible; /* on일 땐 배경이 클릭되면 안되니까!! */
   }
