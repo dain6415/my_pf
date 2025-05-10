@@ -54,31 +54,31 @@
     <!-- cursor -->
     <div id="custom_cursor" aria-hidden="true"></div>
     <!-- header -->
-    <header id="header" role="banner">
-      <div class="header_inner">
-        <div class="header_logo">
-          <a href="#" target="_top"><span>P.DA </span></a>
+    <header id="gnb" role="banner">
+      <div class="gnb_inner">
+        <div class="gnb_logo">
+          <a href="#" target="_top"><span>P.DA</span></a>
         </div>
-        <nav class="header_nav" role="navigation" aria-label="메인메뉴">
-          <ul>
-            <li class="">
-              <a href="#intro" class="on"><span>home</span></a>
+        <nav class="gnb" role="navigation" aria-label="메인메뉴">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#intro" class="nav_link on" aria-current="true"><span>home</span></a>
             </li>
-            <li class="">
-              <a href="#project"><span>project</span></a>
+            <li class="nav_item">
+              <a href="#about" class="nav_link" aria-current="false"><span>about</span></a>
             </li>
-            <li class="">
-              <a href="#work"><span>work</span></a>
+            <li class="nav_item">
+              <a href="#project" class="nav_link" aria-current="false"><span>project</span></a>
             </li>
-            <li class="">
-              <a href="#about"><span>about</span></a>
+            <li class="nav_item">
+              <a href="#work" class="nav_link" aria-current="false"><span>work</span></a>
             </li>
             <!-- <li><a href="#uxui">ux/ui</a></li> -->
           </ul>
         </nav>
         <div
-          class="header_nav_mobile"
-          id="headerToggle"
+          class="gnb_mobile_var"
+          id="gnb_mobileToggle"
           aria-controls="primary-menu"
           aria-expanded="flase"
           role="button"
@@ -88,25 +88,25 @@
       </div>
     </header>
     <!-- 모바일용 메뉴바 -->
-    <nav class="header_mobile" role="navigation" aria-label="메인메뉴">
-      <div class="inner">
-        <div class="header_logo_mobile">
+    <nav class="gnb_mobile" role="navigation" aria-label="모바일 메인메뉴">
+      <div class="gnb_mobile_inner">
+        <div class="gnb_logo">
           <a href="https://hongda88.netlify.app/" target="_self"
             ><span>P.DA</span></a
           >
         </div>
-        <ul>
-          <li>
-            <a href="#intro" class="on"><span>home</span></a>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="#intro" class=" nav_link on"  aria-current="false"><span>home</span></a>
           </li>
-          <li>
-            <a href="#project"><span>project</span></a>
+          <li class="nav_item">
+            <a href="#project" class="nav_link" aria-current="false"><span>project</span></a>
           </li>
-          <li>
-            <a href="#work"><span>work</span></a>
+          <li class="nav_item">
+            <a href="#work" class="nav_link" aria-current="false"><span>work</span></a>
           </li>
-          <li>
-            <a href="#about"><span>about</span></a>
+          <li class="nav_item">
+            <a href="#about" class="nav_link" aria-current="false"><span>about</span></a>
           </li>
         </ul>
         <div class="close">
@@ -115,7 +115,7 @@
         </div>
       </div>
     </nav>
-    <div class="header_mobile_filter"></div>
+    <div class="gnb_mobile_filter"></div>
 
     <main>
       <!-- <div class="bg-texture"></div> -->

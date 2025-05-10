@@ -3,34 +3,33 @@
   position: relative;
 }
 #intro .home__down {
+  position: absolute;
+  left: 50%;
+  bottom: 9%;
+  z-index: 10;
   width: 100px;
   height: 100px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%; /* 도형 형태를 유지하려면 필요 */
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 1px 1px 5px rgba(0, 0, 0, 0.1); /* 안쪽 블러 효과 */
-  position: absolute;
-  left: 50%;
-  bottom: 9%;
   transform: translateX(-50%);
-  z-index: 999;
   backdrop-filter: blur(10px);
 }
 #intro .sect_inner {
+  overflow: visible;
   height: 100%;
   margin: auto;
-  overflow: visible;
 }
 #intro .sect_inner .stickers {
   position: relative;
   width: 100%;
   height: 64%;
-  z-index: 10;
 }
 #intro .sect_inner .stickers .sticker {
   position: absolute;
   left: 48%;
-  transform-origin: center center;
   border: 2px solid transparent;
+  transform-origin: center center;
   transition: 0.05s;
   cursor: none;
 }
@@ -288,7 +287,6 @@
 
 @media only screen and (max-width: 700px) {
   #intro {
-    width: 100%;
     height: 100vh;
   }
   #intro .sect_inner {
@@ -301,9 +299,8 @@
     flex-direction: column;
   }
   #intro .sect_inner .stickers {
-    top: 70px;
     position: relative;
-    z-index: 10;
+    top: 70px;
   }
   #intro .sect_inner .stickers .sticker {
     left: 50%;
@@ -361,7 +358,6 @@
     transform: translate(38%, 100%) rotate(130deg);
   }
   #intro .sect_inner .intro_title {
-    z-index: 99;
     position: absolute;
     bottom: 20%;
   }
@@ -380,77 +376,72 @@
   }
 }
 @media only screen and (min-width: 701px) {
-  main #intro {
+  #intro {
     height: 100vh;
   }
-  main #intro .sticker img {
+  #intro .sticker img {
     width: 100%;
   }
-  main #intro .sticker.black1, main #intro .sticker.black2, main #intro .sticker.black3, main #intro .sticker.blue1, main #intro .sticker.blue2, main #intro .sticker.blue3 {
+  #intro .sticker.black1, #intro .sticker.black2, #intro .sticker.black3, #intro .sticker.blue1, #intro .sticker.blue2, #intro .sticker.blue3 {
     width: 300px;
     height: 300px;
   }
-  main #intro .sticker.black1 {
+  #intro .sticker.black1 {
     transform: translate(-73%, 100%) rotate(-65deg);
     z-index: 2;
   }
-  main #intro .sticker.black2 {
+  #intro .sticker.black2 {
     transform: translate(-4%, 23%) rotate(35deg);
   }
-  main #intro .sticker.blue1 {
+  #intro .sticker.blue1 {
     transform: translate(88%, 8%) rotate(165deg);
   }
-  main #intro .sticker.blue2 {
+  #intro .sticker.blue2 {
     transform: translate(-140%, 32%) rotate(-35deg);
   }
-  main #intro .sticker.blue3 {
+  #intro .sticker.blue3 {
     transform: translate(25%, 76%) rotate(15deg);
   }
-  main #intro .sticker.long1, main #intro .sticker.long2, main #intro .sticker.long3 {
+  #intro .sticker.long1, #intro .sticker.long2, #intro .sticker.long3 {
     width: 427px;
     height: 188px;
   }
-  main #intro .sticker.long1 .sticker_wrap, main #intro .sticker.long2 .sticker_wrap, main #intro .sticker.long3 .sticker_wrap {
+  #intro .sticker.long1 .sticker_wrap, #intro .sticker.long2 .sticker_wrap, #intro .sticker.long3 .sticker_wrap {
     border-radius: 26px;
   }
-  main #intro .sticker.long1 {
+  #intro .sticker.long1 {
     transform: translate(-137%, 146%) rotate(-153deg);
     z-index: 1;
   }
-  main #intro .sticker.long2 {
+  #intro .sticker.long2 {
     transform: translate(-53%, 38%) rotate(-20deg);
   }
-  main #intro .sticker.long3 {
+  #intro .sticker.long3 {
     transform: translate(67%, 150%) rotate(140deg);
   }
-  main #intro .intro_title p.publisher {
+  #intro .intro_title p.publisher {
     font-size: 15rem;
   }
-  main #intro .sticker-guide {
+  #intro .sticker-guide {
     font-size: 1.2rem;
   }
-  main .blend_bg {
+  .blend_bg {
     background-size: 120% 150%;
   }
 }
 @media only screen and (min-width: 900px) {
-  main section {
-    width: 1400px;
-    margin: auto;
-    width: 100%;
-  }
-  main section#intro .title {
+  #intro .title {
     font-size: 8rem;
     font-weight: 600;
     text-transform: uppercase;
   }
-  main section#intro .stickers {
+  #intro .stickers {
     position: relative;
   }
-  main section#intro .stickers .stick {
+  #intro .stickers .stick {
     position: absolute;
   }
-  main section#intro .stickers .stick.blue {
+  #intro .stickers .stick.blue {
     width: 500px;
     right: 0;
     top: 0;

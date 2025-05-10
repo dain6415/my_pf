@@ -94,6 +94,7 @@ a {
 /* section -------------------- */
 section {
   width: 100%;
+  margin: auto;
 }
 @media only screen and (max-width: 700px) {
     .sect_inner{
@@ -108,8 +109,8 @@ section {
 @media only screen and (min-width: 1000px) {
   .sect_inner{
     width: 1400px;
-    margin: auto;
     width: 100%;
+    margin: auto;
   }
 }
 /* -------------------------------------------------------------------------------- */

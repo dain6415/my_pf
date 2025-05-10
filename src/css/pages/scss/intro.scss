@@ -15,33 +15,32 @@
 #intro {
   position: relative;
   .home__down {
+    position: absolute;
+    left: 50%;
+    bottom: 9%;
+    z-index: 10;
     width: 100px;
     height: 100px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%; /* 도형 형태를 유지하려면 필요 */
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
       1px 1px 5px rgba(0, 0, 0, 0.1); /* 안쪽 블러 효과 */
-    position: absolute;
-    left: 50%;
-    bottom: 9%;
     transform: translateX(-50%);
-    z-index: 999;
     backdrop-filter: blur(10px);
   }
   .sect_inner {
+    overflow: visible;
     height: 100%;
     margin: auto;
-    overflow: visible;
     .stickers {
       position: relative;
       width: 100%;
       height: 64%;
-      z-index: 10;
       .sticker {
         position: absolute;
         left: 48%;
-        transform-origin: center center;
         border: 2px solid transparent;
+        transform-origin: center center;
         transition: 0.05s;
         cursor: none;
         &:hover {
@@ -335,7 +334,6 @@
 
 @media only screen and (max-width: 700px) {
   #intro {
-    width: 100%;
     height: 100vh;
     .sect_inner{
       height: 100%;
@@ -343,10 +341,8 @@
       flex-direction: column;
       // 이게 핸드폰은 상단 주소창이랑 하단의 메뉴바같은게 있어서 올릴 때, 내릴 때 높이의 차이가 존재함
       .stickers {
-        // border: 1px solid red;
-        top: 70px;
         position: relative;
-        z-index: 10;
+        top: 70px;
         .sticker {
           left: 50%;
           img {
@@ -408,7 +404,6 @@
         }
       }
       .intro_title {
-        z-index: 99;
         position: absolute;
         bottom: 20%;
         p.publisher {
@@ -431,99 +426,90 @@
 // ----------------------------------------------------------------------
 
 @media only screen and (min-width: 701px) {
-  main {
-    #intro {
-      height: 100vh;
-      .sticker {
-        img {
-          width: 100%;
-        }
-        &.black1,
-        &.black2,
-        &.black3,
-        &.blue1,
-        &.blue2,
-        &.blue3 {
-          width: 300px;
-          height: 300px;
-        }
-        &.black1 {
-          transform: translate(-73%, 100%) rotate(-65deg);
-          z-index: 2;
-        }
-        &.black2 {
-          transform: translate(-4%, 23%) rotate(35deg);
-        }
+  #intro {
+    height: 100vh;
+    .sticker {
+      img {
+        width: 100%;
+      }
+      &.black1,
+      &.black2,
+      &.black3,
+      &.blue1,
+      &.blue2,
+      &.blue3 {
+        width: 300px;
+        height: 300px;
+      }
+      &.black1 {
+        transform: translate(-73%, 100%) rotate(-65deg);
+        z-index: 2;
+      }
+      &.black2 {
+        transform: translate(-4%, 23%) rotate(35deg);
+      }
 
-        &.blue1 {
-          transform: translate(88%, 8%) rotate(165deg);
-        }
-        &.blue2 {
-          transform: translate(-140%, 32%) rotate(-35deg);
-        }
-        &.blue3 {
-          transform: translate(25%, 76%) rotate(15deg);
-        }
+      &.blue1 {
+        transform: translate(88%, 8%) rotate(165deg);
+      }
+      &.blue2 {
+        transform: translate(-140%, 32%) rotate(-35deg);
+      }
+      &.blue3 {
+        transform: translate(25%, 76%) rotate(15deg);
+      }
 
-        &.long1,
-        &.long2,
-        &.long3 {
-          width: 427px;
-          height: 188px;
-          .sticker_wrap {
-            border-radius: 26px;
-          }
-        }
-        &.long1 {
-          transform: translate(-137%, 146%) rotate(-153deg);
-          z-index: 1;
-        }
-        &.long2 {
-          transform: translate(-53%, 38%) rotate(-20deg);
-        }
-        &.long3 {
-          transform: translate(67%, 150%) rotate(140deg);
+      &.long1,
+      &.long2,
+      &.long3 {
+        width: 427px;
+        height: 188px;
+        .sticker_wrap {
+          border-radius: 26px;
         }
       }
-      .intro_title {
-        p.publisher {
-          font-size: 15rem;
-        }
+      &.long1 {
+        transform: translate(-137%, 146%) rotate(-153deg);
+        z-index: 1;
       }
-      .sticker-guide{
-        font-size: 1.2rem;
+      &.long2 {
+        transform: translate(-53%, 38%) rotate(-20deg);
+      }
+      &.long3 {
+        transform: translate(67%, 150%) rotate(140deg);
       }
     }
-    .blend_bg {
-      background-size: 120% 150%;
+    .intro_title {
+      p.publisher {
+        font-size: 15rem;
+      }
     }
+    .sticker-guide{
+      font-size: 1.2rem;
+    }
+  }
+  .blend_bg {
+    background-size: 120% 150%;
   }
 }
 // ----------------------------------------------------------------------
 
 @media only screen and (min-width: 900px) {
-  main {
-    section {
-      width: 1400px;
-      margin: auto;
-      width: 100%;
-      &#intro {
-        .title{
-          font-size: 8rem;
-          font-weight: 600;
-          text-transform: uppercase;
-        }
-        // }
-        .stickers{
-          position: relative;
-          .stick{
-            position: absolute;
-            &.blue{
-              width: 500px;
-              right: 0;
-              top: 0;
-            }
-          }
+  #intro {
+    .title{
+      font-size: 8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    // }
+    .stickers{
+      position: relative;
+      .stick{
+        position: absolute;
+        &.blue{
+          width: 500px;
+          right: 0;
+          top: 0;
         }
       }
     }

@@ -1,13 +1,10 @@
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-
 gsap.registerPlugin(Draggable);
 
 export function intro() {
-  // 초기 opacity 설정
   gsap.set("#intro .sticker", { opacity: 0 });
 
-  // 등장 애니메이션
   gsap.to("#intro .sticker", {
     opacity: 1,
     stagger: { each: 0.1, from: "start" },

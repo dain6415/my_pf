@@ -3,8 +3,8 @@ export function header() {
   const footer = document.querySelector("#footer");
 
   window.addEventListener("scroll", function () {
-    const headerColor = document.querySelectorAll("header nav li a");
-    const homeBtn = document.querySelector(".header_logo a");
+    const gnbMenusColor = document.querySelectorAll(".nav_link");
+    const gnbHomeBtn = document.querySelector(".gnb_logo a");
     const footerTop = footer.offsetTop;
     const scrollY = window.scrollY;
     const windowH = window.innerHeight;
@@ -12,29 +12,29 @@ export function header() {
     //만약 footer일때 -----
     if (scrollY + windowH > footerTop) {
       header.style.background = "rgba(255, 255, 255, 0.1)";
-      headerColor.forEach((link) => {
+      gnbMenusColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#ccc";
         } else {
           link.style.color = "#fff";
         }
       });
-      homeBtn.style.color = "#fff";
+      gnbHomeBtn.style.color = "#fff";
       // 스크롤이 40 이상일 때 ----- 켄텐츠에서는~
     } else if (scrollY > 40) {
       header.style.background = "rgba(0, 0, 0, .2)";
-      headerColor.forEach((link) => {
+      gnbMenusColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#666";
         } else {
           link.style.color = "#fff";
         }
       });
-      homeBtn.style.color = "#666";
+      gnbHomeBtn.style.color = "#666";
       // 40 미만일 때 = 맨위! 인트로 -----
     } else {
       header.style.background = "";
-      headerColor.forEach((link) => {
+      gnbMenusColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#666";
         }
@@ -43,11 +43,6 @@ export function header() {
     header.style.backdropFilter = "blur(10px)";
     header.style.transition = ".3s";
   });
-  // 버튼 활성화-------------------------------------------
-  function linkActive(link) {
-    links.forEach((el) => el.classList.remove("on"));
-    link.classList.add("on");
-  }
 
   // --------------------------------------------------------------------------------
   // nav li 클릭시 해당 위치로 스크롤 이동 + 부드럽게 이동
@@ -59,7 +54,6 @@ export function header() {
 
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      linkActive(link);
       gsap.to(window, {
         duration: 1,
         scrollTo: {
@@ -114,10 +108,10 @@ export function header() {
   // ------------------------------------------------------------------------------
   // ------------------------------------------------------------------------------
   // phon ver. nav -------------------------------------------
-  const mobileMenu = document.querySelector(".header_nav_mobile");
+  const mobileMenu = document.querySelector(".gnb_mobile_var");
   const closeBtn = document.querySelector(".close");
-  const mobileNav = document.querySelector("nav.header_mobile");
-  const filter = document.querySelector(".header_mobile_filter");
+  const mobileNav = document.querySelector(".gnb_mobile");
+  const filter = document.querySelector(".gnb_mobile_filter");
 
   const mediaQuery = window.matchMedia("(max-width: 700px)");
 
