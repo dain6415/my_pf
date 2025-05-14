@@ -236,16 +236,12 @@
   transform: translateX(-50%);
 }
 #intro .sect_inner .intro_title {
-  border: 1px solid #f00;
   position: absolute;
   bottom: 24%;
   left: 50%;
+  height: auto;
   color: var(--main-color);
-  background-image: url(../../img/SVG/publisher.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
   transform: translateX(-50%);
-  text-transform: uppercase;
 }
 #intro .sect_inner .sticker_guide {
   position: absolute;
@@ -286,6 +282,12 @@
   height: 100%;
 }
 
+@media only screen and (max-width: 400px) {
+  .stickers.long1 .sticker_wrap, .stickers.long2 .sticker_wrap, .stickers.long3 .sticker_wrap {
+    border-radius: 10px;
+    margin: 5%;
+  }
+}
 @media only screen and (max-width: 700px) {
   #intro {
     height: 100vh;
@@ -419,8 +421,7 @@
   }
   #intro .intro_title {
     width: 90%;
-    min-width: 1380px;
-    min-height: 201px;
+    max-width: 1200px;
   }
   #intro .sticker_guide {
     font-size: 1.2rem;
@@ -430,11 +431,6 @@
   }
 }
 @media only screen and (min-width: 900px) {
-  #intro .intro_title {
-    font-size: 14rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
   #intro .stickers {
     position: relative;
   }
