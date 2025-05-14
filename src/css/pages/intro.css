@@ -236,12 +236,15 @@
   transform: translateX(-50%);
 }
 #intro .sect_inner .intro_title {
+  border: 1px solid #f00;
   position: absolute;
   bottom: 24%;
   left: 50%;
-  transform: translateX(-50%);
-  font-family: "Panchang-Bold";
   color: var(--main-color);
+  background-image: url(../../img/SVG/publisher.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(-50%);
   text-transform: uppercase;
 }
 #intro .sect_inner .sticker_guide {
@@ -358,8 +361,8 @@
   #intro .sect_inner .intro_title {
     position: absolute;
     bottom: 20%;
-    font-size: 10vw;
-    font-weight: 700;
+    width: 90%;
+    height: 7%;
   }
   #intro .sect_inner .sticker_guide {
     font-size: 12px;
@@ -415,7 +418,9 @@
     transform: translate(67%, 150%) rotate(140deg);
   }
   #intro .intro_title {
-    font-size: 10vw;
+    width: 90%;
+    min-width: 1380px;
+    min-height: 201px;
   }
   #intro .sticker_guide {
     font-size: 1.2rem;
