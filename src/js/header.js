@@ -46,39 +46,57 @@ export function header() {
 
   // --------------------------------------------------------------------------------
   // nav li 클릭시 해당 위치로 스크롤 이동 + 부드럽게 이동
-  const links = gsap.utils.toArray("nav ul li a");
-  let sections = gsap.utils.toArray("section");
-
-  links.forEach((link) => {
-    let href = document.querySelector(link.getAttribute("href"));
-
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: {
-          y: href,
-          offsetY: 0,
-        },
-        overwrite: "auto",
+  const navLinks = gsap.utils.toArray(".gnb .nav_link");
+  const mobileLinks = gsap.utils.toArray(".gnb_mobile .nav_link");
+  
+  function addScrollHandler(links) {
+    links.forEach((link) => {
+      let href = document.querySelector(link.getAttribute("href"));
+  
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: {
+            y: href,
+            offsetY: 0,
+          },
+          overwrite: "auto",
+          onComplete: () => {
+            links.forEach((el) => {
+              el.setAttribute("aria-current", "false");
+            });
+            link.setAttribute("aria-current", "true");
+          },
+        });
       });
     });
-  });
+  }
+  
+  addScrollHandler(navLinks);
+  addScrollHandler(mobileLinks);
 
+  
   // 현재 화면에 보이는 섹션에 해당하는 링크 활성화
+  let sections = gsap.utils.toArray("section");
+
   window.addEventListener("scroll", function () {
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
-      const link = document.querySelector(`a[href="#${section.id}"]`);
-
-      // 섹션이 화면에 들어오면 링크 활성화
-      if (rect.top <= 0 && rect.bottom > 0) {
-        link.classList.add("on");
-      } else {
-        link.classList.remove("on");
-      }
+      const links = document.querySelectorAll(`a[href="#${section.id}"]`);
+  
+      links.forEach((link) => {
+        if (rect.top <= 0 && rect.bottom > 0) {
+          link.classList.add("on");
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.classList.remove("on");
+          link.setAttribute("aria-current", "false");
+        }
+      });
     });
   });
+  
 
   // 스크롤 방향에 따라 nav 보이기/숨기기-------------------------------------------
   const showNav = gsap
@@ -140,12 +158,6 @@ export function header() {
     }
   }
 
-  // 초기 실행 및 리사이즈 이벤트 연결
   handleMobileNav();
   window.addEventListener("resize", handleMobileNav);
-
-  // 네비게이션 클릭 시 이벤트 전파 방지
-  // nav.addEventListener("click", (e) => {
-  //   e.stopPropagation();
-  // });
 }

@@ -36,7 +36,7 @@ body {
   font-family: var(--mainKor-font);
   line-height: 1.2;
   transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out;
-  letter-spacing: -1px;
+  letter-spacing: -0.6px;
   /* 하..왜 여긴 또 이렇게 색을 줘야 하는지 이해가 안가네. 암튼 없으면 흰색으로 되니 푸터컬러랑 맞출것 */
 }
 *,
@@ -73,7 +73,12 @@ a {
   cursor: none;
 }
 .blind {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .animate-up {
@@ -108,8 +113,16 @@ section {
 }
 @media only screen and (min-width: 1000px) {
   .sect_inner{
-    width: 1400px;
-    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section{
+    width: 90%;
+  }
+  .sect_inner{
+    max-width: 1380px;
     margin: auto;
   }
 }

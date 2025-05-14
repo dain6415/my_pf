@@ -232,7 +232,7 @@
   #gnb .gnb_inner .gnb {
     font-size: 1.6rem;
   }
-  #gnb .gnb_inner .gnb_mobile {
+  #gnb .gnb_inner .gnb_mobile_var {
     display: none;
   }
   .gnb_mobile {

@@ -351,31 +351,36 @@
     gap: 4px;
   }
   #work .filter-tag .tag_list .tag_item {
-    font-size: 14px;
     padding: 6px 20px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #work .filter-tag .tag_list .tag_item {
     height: 30px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 1400px) {
   #work {
     padding: 6rem 0 12rem;
     border-radius: 20px;
-    width: 90%;
   }
   #work .sect_inner {
     max-width: 1380px;
   }
-  #work .sect_inner .item-box .item:not(:last-child) {
+  #work .item-box .item:not(:last-child) {
     margin-bottom: 20px;
   }
-  #work .sect_inner .item-box .item .title_box {
+  #work .item-box .item .title_box {
     font-size: 2.4rem;
   }
-  #work .sect_inner .item-box .item .title_box .title {
+  #work .item-box .item .title_box .title {
     padding: 10px 0;
     gap: 10px;
   }
-  #work .sect_inner .item-box .item .plus-icon {
+  #work .item-box .item .plus-icon {
     width: 40px;
     height: 40px;
   }

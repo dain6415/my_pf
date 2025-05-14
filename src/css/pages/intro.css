@@ -240,13 +240,11 @@
   bottom: 24%;
   left: 50%;
   transform: translateX(-50%);
-}
-#intro .sect_inner .intro_title p.publisher {
   font-family: "Panchang-Bold";
   color: var(--main-color);
   text-transform: uppercase;
 }
-#intro .sect_inner .sticker-guide {
+#intro .sect_inner .sticker_guide {
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -360,13 +358,10 @@
   #intro .sect_inner .intro_title {
     position: absolute;
     bottom: 20%;
-  }
-  #intro .sect_inner .intro_title p.publisher {
     font-size: 10vw;
     font-weight: 700;
-    font-family: "Panchang-Bold";
   }
-  #intro .sect_inner .sticker-guide {
+  #intro .sect_inner .sticker_guide {
     font-size: 12px;
     bottom: 12%;
     color: var(--black400);
@@ -419,10 +414,10 @@
   #intro .sticker.long3 {
     transform: translate(67%, 150%) rotate(140deg);
   }
-  #intro .intro_title p.publisher {
-    font-size: 15rem;
+  #intro .intro_title {
+    font-size: 10vw;
   }
-  #intro .sticker-guide {
+  #intro .sticker_guide {
     font-size: 1.2rem;
   }
   .blend_bg {
@@ -430,8 +425,8 @@
   }
 }
 @media only screen and (min-width: 900px) {
-  #intro .title {
-    font-size: 8rem;
+  #intro .intro_title {
+    font-size: 14rem;
     font-weight: 600;
     text-transform: uppercase;
   }
