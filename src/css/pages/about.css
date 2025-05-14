@@ -59,21 +59,20 @@
     padding: 6rem 20px 8rem;
   }
   #about .sect_inner .info .keyword {
-    font-size: 2rem;
     line-height: 1.3;
     text-align: center;
     padding-bottom: 20px;
     font-size: 28px;
   }
-  #about .sect_inner .info .txt {
+  #about .sect_inner .info .text {
     padding-top: 20px;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
   }
-  #about .sect_inner .info .txt p:first-child {
+  #about .sect_inner .info .text p:first-child {
     padding-bottom: 20px;
   }
-  #about .sect_inner .info .txt br {
+  #about .sect_inner .info .text br {
     display: none;
   }
 }

@@ -30,20 +30,17 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    p {
-      font-weight: 300;
-    }
     .this-filter {
-      border: 1px solid #000;
       position: absolute;
       top: 50%;
       left: 5px;
-      transform: translateY(-50%);
-      height: 80%;
-      background-color: var(--black100);
-      border-radius: 50px;
-      transition: 0.3s ease-in-out;
       z-index: 1;
+      height: 80%;
+      border: 1px solid #000;
+      border-radius: 50px;
+      background-color: var(--black100);
+      transform: translateY(-50%);
+      transition: 0.3s ease-in-out;
     }
     .filter_list {
       padding: 5px;
@@ -53,14 +50,16 @@
       display: flex;
       gap: 2px;
       .btn_filter {
-        border: none;
-        background-color: transparent;
         display: inline-block;
-        border-radius: 10px;
-        color: var(--black200_text);
-        font-weight: 300;
         position: relative;
         z-index: 2;
+        color: var(--black200_text);
+        border: none;
+        border-radius: 10px;
+        background-color: transparent;
+        font-weight: 300;
+        // text-transform: uppercase;
+        letter-spacing: -0.5px;
         transition: 0.3s ease-in-out;
         &[aria-selected="true"] {
           color: var(--white);
@@ -219,11 +218,6 @@
     .filter {
       margin-top: 40px;
       flex-direction: column;
-      p {
-        display: none;
-        font-size: 6vw;
-        margin-bottom: 10px;
-      }
       .this-filter {
         width: 51px; // js로 제어를 해야 하나
       }
