@@ -69,7 +69,7 @@
     font-size: 16px;
     text-align: center;
   }
-  #about .sect_inner .info .text p:first-child {
+  #about .sect_inner .info .text .text_scrollTrigger:first-child {
     padding-bottom: 20px;
   }
   #about .sect_inner .info .text br {
