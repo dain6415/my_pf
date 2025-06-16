@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GSAP Sticker Drag</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+      }
+
+      #canvas {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        border: 2px dashed #ccc;
+        overflow: hidden;
+      }
+
+      .sticker {
+        position: absolute;
+        cursor: grab;
+        user-select: none;
+        border: 2px solid transparent;
+        transform-origin: center center;
+        display: inline-block;
+      }
+      .sticker:hover {
+        border: 2px solid #007bff;
+      }
+      .sticker:hover .vertex {
+        opacity: 1;
+      }
+
+      .vertex {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+      }
+
+      .vertex .t::before,
+      .vertex .t::after,
+      .vertex .b::before,
+      .vertex .b::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border: 2px solid #007bff;
+        background: #fff;
+      }
+
+      /* 꼭짓점 위치 예시 */
+      .vertex .t::before {
+        top: -6px;
+        left: -6px;
+      }
+      .vertex .t::after {
+        top: -6px;
+        right: -6px;
+      }
+      .vertex .b::before {
+        bottom: -6px;
+        left: -6px;
+      }
+      .vertex .b::after {
+        bottom: -6px;
+        right: -6px;
+      }
+
+      .sticker_wrap {
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        margin: 10px;
+      }
+
+      /* 썸네일 크기 조절용 */
+      .sticker_1 {
+        width: 50px;
+      }
+
+      .sticker_2 {
+        width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sticker-list">
+      <img
+        class="sticker_1 sticker-option"
+        src="./src/img/stickers/black.svg"
+      />
+      <img
+        class="sticker_1 sticker-option"
+        src="./src/img/stickers/blue2.svg"
+      />
+      <img
+        class="sticker_2 sticker-option"
+        src="./src/img/stickers/blue_long.svg"
+      />
+    </div>
+
+    <div id="canvas"></div>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(Draggable);
+
+      const canvas = document.getElementById("canvas");
+      const stickers = document.querySelectorAll(".sticker-option");
+      let currentZ = 1;
+
+      stickers.forEach((sticker) => {
+        sticker.addEventListener("click", () => {
+          const stickerContainer = document.createElement("div");
+          stickerContainer.className = "sticker";
+
+          const vertex = document.createElement("div");
+          vertex.className = "vertex";
+          vertex.innerHTML = `
+            <div class="t"></div>
+            <div class="b"></div>
+          `;
+
+          const wrap = document.createElement("div");
+          wrap.className = "sticker_wrap";
+
+          const stickerImage = document.createElement("img");
+          stickerImage.src = sticker.src;
+
+          // 이미지 로드 후 크기 결정
+          stickerImage.onload = () => {
+            // 이미지 크기 조절
+            wrap.style.width = stickerImage.naturalWidth + "px";
+            wrap.style.height = stickerImage.naturalHeight + "px";
+
+            // 가운데 위치
+            stickerContainer.style.left = "50%";
+            stickerContainer.style.top = "50%";
+            stickerContainer.style.transform = `translate(-50%, -50%) rotate(${
+              (Math.random() - 0.5) * 320
+            }deg)`;
+
+            // z-index 조정
+            stickerContainer.style.zIndex = currentZ++;
+
+            wrap.appendChild(stickerImage);
+            stickerContainer.appendChild(vertex);
+            stickerContainer.appendChild(wrap);
+            canvas.appendChild(stickerContainer);
+
+            // 드래그 적용
+            Draggable.create(stickerContainer, {
+              type: "x,y",
+              bounds: canvas,
+              inertia: true,
+              onPress() {
+                gsap.set(this.target, {
+                  x: gsap.getProperty(this.target, "x"),
+                  y: gsap.getProperty(this.target, "y"),
+                });
+                this.target.style.zIndex = ++currentZ;
+              },
+            });
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

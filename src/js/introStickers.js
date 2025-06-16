@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 
-export function intro() {
+export function introStickers() {
   gsap.set("#intro .sticker", { opacity: 0 });
 
   gsap.to("#intro .sticker", {

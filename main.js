@@ -1,6 +1,6 @@
 import { customCursor } from "./src/js/customCursor.js";
 import { header } from "./src/js/header.js";
-import { intro } from "./src/js/intro.js";
+import { introStickers } from "./src/js/introStickers.js";
 import { about } from "./src/js/about.js";
 import { project } from "./src/js/project.js";
 import { work } from "./src/js/work.js";
@@ -11,7 +11,7 @@ import { footer } from "./src/js/footer.js";
 window.addEventListener("load", function () {
   customCursor();
   header();
-  intro();
+  introStickers();
   about();
   project();
   work();
