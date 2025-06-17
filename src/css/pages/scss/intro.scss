@@ -42,11 +42,14 @@
     }
     .sticker_guide {
       position: absolute;
-      bottom: 10%;
+      top: 12%;
       left: 50%;
       transform: translateX(-50%);
       color: var(--black400);
-      animation: blink 1.5s infinite;
+      animation: blink 3s infinite;
+      span{
+        display: block;
+      }
     }
     @keyframes blink {
       0% {
