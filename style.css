@@ -102,32 +102,33 @@ section {
   margin: auto;
 }
 @media only screen and (max-width: 700px) {
-    .sect_inner{
-      width: 98%;
+  .sect_inner {
+    width: 98%;
   }
 }
 @media only screen and (min-width: 701px) {
-  section{
+  section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    .sect_inner{
-      width: 90%;
   }
+  section .sect_inner {
+    width: 90%;
   }
 }
+/* section:not(:first-child)인 이유는 스티커때문 */
 @media only screen and (min-width: 1000px) {
-  .sect_inner{
+  section:not(:first-child) .sect_inner {
     max-width: 1400px;
     margin: auto;
   }
 }
 @media only screen and (min-width: 1400px) {
-  section{
+  section:not(:first-child) {
     width: 90%;
   }
-  .sect_inner{
+  section:not(:first-child) .sect_inner {
     max-width: 1380px;
     margin: auto;
   }

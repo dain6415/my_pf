@@ -32,262 +32,15 @@
     overflow: visible;
     height: 100%;
     margin: auto;
-    .stickers {
-      position: relative;
-      width: 100%;
-      height: 64%;
-      .sticker {
-        position: absolute;
-        left: 48%;
-        border: 2px solid transparent;
-        transform-origin: center center;
-        transition: 0.05s;
-        cursor: none;
-        &:hover {
-          border: 2px solid var(--main-color);
-          &.black1,
-          &.black2,
-          &.black3,
-          &.blue1,
-          &.blue2,
-          &.blue3 {
-            .vertex {
-              opacity: 1;
-            }
-          }
-          &.long1,
-          &.long2,
-          &.long3 {
-            .vertex {
-              opacity: 1;
-            }
-          }
-        }
-        &.black1,
-        &.black2,
-        &.black3,
-        &.blue1,
-        &.blue2,
-        &.blue3 {
-          .vertex {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            opacity: 0;
-            transition: 0.05s;
-            .t, .b{
-              &::before,
-              &::after{
-                content: "";
-                width: 14px;
-                height: 14px;
-                position: absolute;
-                background: #fff;
-                border: 2px solid var(--main-color);
-              }
-            }
-            .t {
-              &::before {
-                top: -7px;
-                left: -7px;
-              }
-              &::after {
-                top: -7px;
-                right: -7px;
-              }
-            }
-            .b {
-              &::before {
-                content: "";
-                width: 14px;
-                height: 14px;
-                position: absolute;
-                bottom: -7px;
-                left: -7px;
-                background: #fff;
-                border: 2px solid var(--main-color);
-              }
-              &::after {
-                content: "";
-                width: 14px;
-                height: 14px;
-                position: absolute;
-                bottom: -7px;
-                right: -7px;
-                background: #fff;
-                border: 2px solid var(--main-color);
-              }
-            }
-          }
-          .sticker_wrap {
-            margin: 20px;
-            @include flex-c();
-            overflow: hidden;
-            position: absolute;
-            box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.2);
-            border-radius: 50%;
-            background: var(--main-color);
-            .img_blend {
-              width: 200%;
-              position: absolute;
-              right: -40%;
-              top: 0;
-              mix-blend-mode: color-burn;
-            }
-            &.black1 {
-              z-index: 10;
-              background: var(--main-color);
-              border: 1px solid #000;
-              .img_blend {
-                width: 120%;
-                position: absolute;
-                left: -4%;
-                top: 28%;
-                transform: rotate(62deg);
-              }
-            }
-            &.black2 {
-              background: var(--main-color);
-              .img_blend {
-                width: 120%;
-                position: absolute;
-                left: -4%;
-                top: 28%;
-                transform: rotate(62deg);
-              }
-            }
-            &.black3 {
-              transform: rotate(45deg);
-              background: var(--main-color);
-            }
-
-            &.blue1 {
-              background: #ddd;
-              .img_blend {
-                width: 200%;
-                position: absolute;
-                left: -76%;
-                top: -22%;
-                transform: rotate(140deg);
-              }
-            }
-            &.blue2 {
-              background: #ddd;
-              .img_blend {
-                width: 120%;
-                position: absolute;
-                left: -4%;
-                top: 28%;
-                transform: rotate(62deg);
-              }
-            }
-            &.blue3 {
-              background: #ddd;
-              .img_blend {
-                width: 160%;
-                position: absolute;
-              }
-            }
-          }
-        }
-        &.long1,
-        &.long2,
-        &.long3 {
-          .vertex {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            // @include po-c();
-            opacity: 0;
-            transition: 0.05s;
-
-            .t,
-            .b {
-              &::before,
-              &::after {
-                content: "";
-                width: 14px;
-                height: 14px;
-                position: absolute;
-                background: #fff;
-                border: 2px solid var(--main-color);
-              }
-            }
-
-            .t {
-              &::before {
-                top: -7px;
-                left: -7px;
-              }
-              &::after {
-                top: -7px;
-                right: -7px;
-              }
-            }
-            .b {
-              &::before {
-                bottom: -7px;
-                left: -7px;
-              }
-              &::after {
-                bottom: -7px;
-                right: -7px;
-              }
-            }
-          }
-
-          .sticker_wrap {
-            margin: 20px;
-            width: 90%;
-            @include flex-c();
-            overflow: hidden;
-            position: absolute;
-            background: var(--main-color);
-
-            .img_blend {
-              position: absolute;
-              mix-blend-mode: color-burn;
-              width: 160%;
-              img {
-                width: 100%;
-              }
-            }
-
-            &.long1 .img_blend {
-              left: 0%;
-              bottom: 0%;
-            }
-            &.long2 .img_blend {
-              left: -8%;
-              top: 7%;
-            }
-            &.long3 .img_blend {
-              left: -13%;
-              top: -23%;
-            }
-          }
-        }
-      }
-    }
-    .in222{
-      display: none;
-      width: 100%;
+    .intro_title {
       position: absolute;
-      bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%);
-      // opacity: .2;
-      // filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .2));
-    }
-    .intro_title{
-      position: absolute;
-      bottom: 24%;
+      top: 50%;
       left: 50%;
       height: auto;
       color: var(--main-color);
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
     }
-    .sticker_guide{
+    .sticker_guide {
       position: absolute;
       bottom: 10%;
       left: 50%;
@@ -304,7 +57,105 @@
       }
       100% {
         opacity: 1;
-      }    
+      }
+    }
+  }
+  .sticker_list_box {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 100;
+    transform: translateX(-50%);
+    .sticker_list{
+      @include flex-c();
+      gap: 20px;
+      margin: 20px 20px;
+      padding: 20px 40px;
+      border: 1px solid var(--black400);
+      border-radius: 50px;
+      background: (255, 255, 255, 0.5);
+    }
+    .list_item{
+      transition: .2s;
+      &:hover{
+        // outline: 2px solid #ff0;
+        transform: scale(1.2);
+      }
+    }
+    .circle{
+      border-radius: 50%;
+    }
+    .oblong{
+      border-radius: 8px;
+    }
+    .circle,
+    .oblong{
+      vertical-align: top;
+      height: 40px;
+      svg{
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+  #sticker_canvas{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .sticker {
+    display: inline-block;
+    position: absolute;
+    border: 2px solid transparent;
+    transform-origin: center center;
+    cursor: grab;
+    &:hover {
+      border: 2px solid #007bff;
+      .vertex {
+        opacity: 1;
+      }
+    }
+    .vertex {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+      .t::before,
+      .t::after,
+      .b::before,
+      .b::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border: 2px solid #007bff;
+        background: #fff;
+      }
+      .t::before {
+        top: -6px;
+        left: -6px;
+      }
+      .t::after {
+        top: -6px;
+        right: -6px;
+      }
+      .b::before {
+        bottom: -6px;
+        left: -6px;
+      }
+      .b::after {
+        bottom: -6px;
+        right: -6px;
+      }
+    }
+    .sticker_wrap {
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      margin: 20px;
     }
   }
   .blend_bg {
@@ -328,8 +179,8 @@
   }
 }
 // ***************************************************************************************************************************
-@media only screen and (max-width: 400px){
-  .stickers{
+@media only screen and (max-width: 400px) {
+  .stickers {
     &.long1,
     &.long2,
     &.long3 {
@@ -339,12 +190,12 @@
       }
     }
   }
-} 
+}
 
 @media only screen and (max-width: 700px) {
   #intro {
     height: 100vh;
-    .sect_inner{
+    .sect_inner {
       height: 100%;
       @include flex-c(flex-start);
       flex-direction: column;
@@ -414,11 +265,11 @@
       .intro_title {
         position: absolute;
         bottom: 20%;
-        
+
         width: 90%;
         height: 7%;
       }
-      .sticker_guide{
+      .sticker_guide {
         font-size: clamp(11px, 12px, 14px);
         bottom: 12%;
         color: var(--black400);
@@ -489,7 +340,7 @@
       width: 90%;
       max-width: 1200px;
     }
-    .sticker_guide{
+    .sticker_guide {
       font-size: 1.2rem;
     }
   }
@@ -501,11 +352,11 @@
 
 @media only screen and (min-width: 900px) {
   #intro {
-    .stickers{
+    .stickers {
       position: relative;
-      .stick{
+      .stick {
         position: absolute;
-        &.blue{
+        &.blue {
           width: 500px;
           right: 0;
           top: 0;
