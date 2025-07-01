@@ -48,8 +48,9 @@
             }
             &.on {
               background: var(--main-color);
-              color: #fff;
-              font-weight: 600;
+              span{
+                color: #fff;
+              }
             }
           }
         }
@@ -244,10 +245,14 @@
       }
       .gnb {
         font-size: 1.6rem;
+        font-weight: 300;
       }
       .gnb_mobile_var {
         display: none;
       }
+    }
+    .nav_item{
+      height: 40px;
     }
   }
   .gnb_mobile{

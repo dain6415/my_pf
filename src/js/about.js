@@ -8,49 +8,17 @@ export function about() {
     });
   });
 
-  
-  gsap.registerPlugin(ScrollTrigger);
+  const aboutSticker = document.querySelector('.mini_sticker');
 
-  const aboutTrigger = document.querySelectorAll(".text_scrollTrigger");
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: aboutTrigger[0],
-      start: "top 80%", 
-      end: "bottom 50%",
-      scrub: true, 
+  Draggable.create(aboutSticker, {
+    type: "x,y",
+    inertia: true,
+    onPress() {
+      gsap.set(this.target, {
+        x: gsap.getProperty(this.target, "x"),
+        y: gsap.getProperty(this.target, "y"),
+      });
+      this.target.style.zIndex = ++currentZ;
     },
   });
-
-  aboutTrigger.forEach((textElement) => {
-    let combinedText = "";
-
-    textElement.childNodes.forEach((child) => {
-      if (child.nodeType === Node.TEXT_NODE) {
-        combinedText += child.textContent.trim(); 
-      } else if (child.nodeType === Node.ELEMENT_NODE) {
-        combinedText += child.textContent.trim();
-      }
-    });
-
-    const splitText = combinedText
-      .split("")
-      .map((char) => `<span>${char}</span>`)
-      .join("");
-
-    textElement.innerHTML = splitText;
-
-    const chars = textElement.querySelectorAll("span");
-
-    tl.from(
-      chars,
-      {
-        color: "#ddd",
-        stagger: 1, 
-        duration: 1, 
-      },
-      "+=0.5"
-    );
-  });
-
 }

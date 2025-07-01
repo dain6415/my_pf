@@ -6,8 +6,6 @@ import { project } from "./src/js/project.js";
 import { work } from "./src/js/work.js";
 import { footer } from "./src/js/footer.js";
 
-// import { bgColor } from "./src/js/bg_color.js";
-
 window.addEventListener("load", function () {
   customCursor();
   header();
@@ -26,7 +24,7 @@ window.addEventListener("load", function () {
     const color = item.getAttribute("data-bg"); // 섹션의 배경색 가져오기
 
     const introSection = color === '#111111';
-    const stickerList = introSection ? '#666':'#999';
+    const stickerList = introSection ? '#666':'#ccc';
 
     ScrollTrigger.create({
       trigger: item, // 각 섹션을 트리거로 설정
@@ -66,10 +64,13 @@ window.addEventListener("load", function () {
   requestAnimationFrame(raf);
 
   // 맨 위로 올라오기
-  document.querySelector(".up_btn").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  document.querySelectorAll(".up_btn").forEach((btn)=>{
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  )
 
   let observer = new IntersectionObserver(
     function (entries) {

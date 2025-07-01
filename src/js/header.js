@@ -3,7 +3,7 @@ export function header() {
   const footer = document.querySelector("#footer");
 
   window.addEventListener("scroll", function () {
-    const gnbMenusColor = document.querySelectorAll(".nav_link");
+    const gnbMenusColor = document.querySelectorAll(".nav_link .up_btn");
     const gnbHomeBtn = document.querySelector(".gnb_logo a");
     const footerTop = footer.offsetTop;
     const scrollY = window.scrollY;
@@ -27,7 +27,7 @@ export function header() {
         if (!link.classList.contains("on")) {
           link.style.color = "#666";
         } else {
-          link.style.color = "#fff";
+          link.style.color = "#999";
         }
       });
       gnbHomeBtn.style.color = "#666";
@@ -95,32 +95,6 @@ export function header() {
         }
       });
     });
-  });
-  
-
-  // 스크롤 방향에 따라 nav 보이기/숨기기-------------------------------------------
-  const showNav = gsap
-    .from("header", {
-      yPercent: 200, // y를 아래로 200px 내림
-      paused: true, // 멈춤
-      duration: 0.3, // 3초 뒤
-    })
-    .progress(1);
-
-  ScrollTrigger.create({
-    start: "top top",
-    // end: 9999,
-    end: document.querySelector("#footer").offsetTop - window.innerHeight,
-    onUpdate: (self) => {
-      if (
-        window.scrollY + window.innerHeight >=
-        document.querySelector("#footer").offsetTop
-      ) {
-        showNav.play(); // 푸터에 도달하면 네비게이션 항상 보이게
-      } else {
-        self.direction === -1 ? showNav.play() : showNav.reverse();
-      }
-    },
   });
 
   // ------------------------------------------------------------------------------

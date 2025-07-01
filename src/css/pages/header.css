@@ -43,8 +43,9 @@
 }
 #gnb .gnb_inner .gnb .nav_list .nav_item .nav_link.on {
   background: var(--main-color);
+}
+#gnb .gnb_inner .gnb .nav_list .nav_item .nav_link.on span {
   color: #fff;
-  font-weight: 600;
 }
 
 @media only screen and (max-width: 700px) {
@@ -231,9 +232,13 @@
   }
   #gnb .gnb_inner .gnb {
     font-size: 1.6rem;
+    font-weight: 300;
   }
   #gnb .gnb_inner .gnb_mobile_var {
     display: none;
+  }
+  #gnb .nav_item {
+    height: 40px;
   }
   .gnb_mobile {
     display: none;
