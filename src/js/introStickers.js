@@ -26,8 +26,13 @@ export function introStickers() {
       const stickerSvg = originalSvg.cloneNode(true);
 
       const vb = stickerSvg.viewBox.baseVal;
-      const width = vb.width;
-      const height = vb.height;
+      let width = vb.width;
+      let height = vb.height;
+
+      if (window.innerWidth <= 700) {
+        width = width / 2;
+        height = height / 2;
+      }
 
       wrap.style.width = width + "px";
       wrap.style.height = height + "px";
@@ -67,28 +72,41 @@ export function introStickers() {
       });
     });
   });
-    // 스크롤 방향에 따라 nav 보이기/숨기기-------------------------------------------
-    const showNav = gsap.to(".sticker_list_box", {
-      y: 0,
-      autoAlpha: 1,
-      paused: true,
-      duration: 0.3,
-    });
 
-    showNav.progress(1).pause();
-    
-    ScrollTrigger.create({
-      start: "top top",
-      end: document.querySelector("#footer").offsetTop - window.innerHeight,
-      onUpdate: (self) => {
-        if (
-          window.scrollY + window.innerHeight >=
-          document.querySelector("#footer").offsetTop
-        ) {
-          showNav.play();
-        } else {
-          self.direction === -1 ? showNav.play() : showNav.reverse();
-        }
-      },
-    });
+  let isMobile = window.innerWidth <= 700;
+
+  window.addEventListener("resize", () => {
+    const nowMobile = window.innerWidth <= 700;
+
+    if (nowMobile !== isMobile) {
+      const allStickers = document.querySelectorAll("#sticker_canvas .sticker");
+      allStickers.forEach((sticker) => sticker.remove());
+    }
+
+    isMobile = nowMobile;
+  });
+  // 스크롤 방향에 따라 nav 보이기/숨기기-------------------------------------------
+  const showNav = gsap.to(".sticker_list_box", {
+    y: 0,
+    autoAlpha: 1,
+    paused: true,
+    duration: 0.3,
+  });
+
+  showNav.progress(1).pause();
+
+  ScrollTrigger.create({
+    start: "top top",
+    end: document.querySelector("#footer").offsetTop - window.innerHeight,
+    onUpdate: (self) => {
+      if (
+        window.scrollY + window.innerHeight >=
+        document.querySelector("#footer").offsetTop
+      ) {
+        showNav.play();
+      } else {
+        self.direction === -1 ? showNav.play() : showNav.reverse();
+      }
+    },
+  });
 }
