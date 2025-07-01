@@ -45,7 +45,6 @@
 }
 #intro .sect_inner .sticker_guide {
   position: absolute;
-  top: 12%;
   left: 50%;
   transform: translateX(-50%);
   color: var(--black400);
@@ -241,8 +240,7 @@
   }
   #intro .sect_inner .sticker_guide {
     font-size: 12px;
-    bottom: 12%;
-    color: var(--black400);
+    top: 92px;
   }
   #intro .sticker_list_box .sticker_list {
     gap: 10px;
@@ -251,7 +249,7 @@
   }
   #intro .sticker_list_box .circle,
   #intro .sticker_list_box .oblong {
-    height: 20px;
+    height: 30px;
   }
   #intro .blend_bg {
     background-size: 120%;
@@ -321,6 +319,7 @@
   }
   .sticker_guide {
     font-size: 1.6rem;
+    top: 12%;
   }
   .sticker_guide .drag {
     padding-top: 6px;
