@@ -69,16 +69,15 @@
 }
 
 @media only screen and (max-width: 700px) {
+  #project {
+    padding: 6em 2em;
+  }
   #project .sect_inner .swiper {
     overflow: visible !important;
     padding-top: 20px;
   }
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
-  }
-  #project .sect_inner .swiper .img_box img {
-    height: 100vh;
-    object-fit: cover;
   }
   #project .sect_inner .swiper .pc_img {
     display: none;
