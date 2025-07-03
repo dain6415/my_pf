@@ -15,8 +15,8 @@ export function introStickers() {
       const vertex = document.createElement("div");
       vertex.className = "vertex";
       vertex.innerHTML = `
-            <div class="t"></div>
-            <div class="b"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
             `;
 
       const wrap = document.createElement("div");
@@ -73,17 +73,32 @@ export function introStickers() {
     });
   });
 
-  let isMobile = window.innerWidth <= 700;
+  const portfolioMark = document.querySelector('.portfolio_mark');
+
+  Draggable.create(portfolioMark, {
+    type:'x,y',
+    inertia:true,
+    onPress() {
+      gsap.set(this.target, {
+        x: gsap.getProperty(this.target, "x"),
+        y: gsap.getProperty(this.target, "y"),
+      });
+      this.target.style.zIndex = 999;
+    },
+  })
+
+  // 초기화 ------------------
+  let mobileMood = window.innerWidth <= 700;
 
   window.addEventListener("resize", () => {
     const nowMobile = window.innerWidth <= 700;
 
-    if (nowMobile !== isMobile) {
+    if (nowMobile !== mobileMood) {
       const allStickers = document.querySelectorAll("#sticker_canvas .sticker");
       allStickers.forEach((sticker) => sticker.remove());
     }
 
-    isMobile = nowMobile;
+    mobileMood = nowMobile;
   });
   // 스크롤 방향에 따라 nav 보이기/숨기기-------------------------------------------
   const showNav = gsap.to(".sticker_list_box", {

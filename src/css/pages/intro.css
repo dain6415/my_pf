@@ -42,16 +42,28 @@
 }
 #intro .sect_inner .portfolio_mark {
   transform: translateY(-35%);
+  border: 2px solid transparent;
+  transform-origin: center center;
+}
+#intro .sect_inner .portfolio_mark .vertex {
+  position: absolute;
+  top: 0;
+}
+#intro .sect_inner .portfolio_mark:hover {
+  border: 2px solid #007bff;
+}
+#intro .sect_inner .portfolio_mark:hover .vertex {
+  opacity: 1;
 }
 #intro .sect_inner .sticker_guide {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--black400);
+  color: var(--black600);
   text-align: center;
 }
 #intro .sect_inner .sticker_guide .drag {
-  animation: blink 3s infinite;
+  animation: blink 1.5s infinite;
 }
 #intro .sect_inner .sticker_guide span {
   display: block;
@@ -146,41 +158,6 @@
 #intro .sticker:hover .vertex {
   opacity: 1;
 }
-#intro .sticker .vertex {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-#intro .sticker .vertex .t::before,
-#intro .sticker .vertex .t::after,
-#intro .sticker .vertex .b::before,
-#intro .sticker .vertex .b::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #007bff;
-  background: #fff;
-}
-#intro .sticker .vertex .t::before {
-  top: -6px;
-  left: -6px;
-}
-#intro .sticker .vertex .t::after {
-  top: -6px;
-  right: -6px;
-}
-#intro .sticker .vertex .b::before {
-  bottom: -6px;
-  left: -6px;
-}
-#intro .sticker .vertex .b::after {
-  bottom: -6px;
-  right: -6px;
-}
 #intro .sticker .sticker_wrap {
   position: relative;
   top: 0;
@@ -188,6 +165,41 @@
   overflow: visible;
   margin: 20px;
   transform-origin: center;
+}
+#intro .vertex {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+#intro .vertex .top::before,
+#intro .vertex .top::after,
+#intro .vertex .bottom::before,
+#intro .vertex .bottom::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #007bff;
+  background: #fff;
+}
+#intro .vertex .top::before {
+  top: -6px;
+  left: -6px;
+}
+#intro .vertex .top::after {
+  top: -6px;
+  right: -6px;
+}
+#intro .vertex .bottom::before {
+  bottom: -6px;
+  left: -6px;
+}
+#intro .vertex .bottom::after {
+  bottom: -6px;
+  right: -6px;
 }
 #intro .blend_bg {
   display: none;

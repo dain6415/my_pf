@@ -50,15 +50,27 @@
     }
     .portfolio_mark {
       transform: translateY(-35%);
+      border: 2px solid transparent;
+      transform-origin: center center;
+      .vertex{
+        position: absolute;
+        top: 0;
+      }
+      &:hover {
+        border: 2px solid #007bff;
+        .vertex {
+          opacity: 1;
+        }
+      }
     }
     .sticker_guide {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      color: var(--black400);
+      color: var(--black600);
       text-align: center;
       .drag {
-        animation: blink 3s infinite;
+        animation: blink 1.5s infinite;
       }
       span {
         display: block;
@@ -149,41 +161,6 @@
         opacity: 1;
       }
     }
-    .vertex {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      pointer-events: none;
-      .t::before,
-      .t::after,
-      .b::before,
-      .b::after {
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        border: 2px solid #007bff;
-        background: #fff;
-      }
-      .t::before {
-        top: -6px;
-        left: -6px;
-      }
-      .t::after {
-        top: -6px;
-        right: -6px;
-      }
-      .b::before {
-        bottom: -6px;
-        left: -6px;
-      }
-      .b::after {
-        bottom: -6px;
-        right: -6px;
-      }
-    }
     .sticker_wrap {
       position: relative;
       top: 0;
@@ -191,6 +168,41 @@
       overflow: visible;
       margin: 20px;
       transform-origin: center;
+    }
+  }
+  .vertex {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    .top::before,
+    .top::after,
+    .bottom::before,
+    .bottom::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #007bff;
+      background: #fff;
+    }
+    .top::before {
+      top: -6px;
+      left: -6px;
+    }
+    .top::after {
+      top: -6px;
+      right: -6px;
+    }
+    .bottom::before {
+      bottom: -6px;
+      left: -6px;
+    }
+    .bottom::after {
+      bottom: -6px;
+      right: -6px;
     }
   }
   .blend_bg {
