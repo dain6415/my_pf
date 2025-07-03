@@ -5,8 +5,6 @@
   transform: translate(-50%, -50%);
 }
 @mixin flex-c($justify: center) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: $justify;
   align-items: center;
@@ -34,7 +32,7 @@
     margin: auto;
     .intro_title_wrap {
       @include flex-c();
-      flex-wrap: wrap;
+      flex-direction: column;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -43,14 +41,20 @@
         width: 100%;
         vertical-align: top;
       }
+      .text{
+        display: none;
+        color: var(--main-color);
+        text-align: center;
+        font-size: 1.2rem;
+      }
     }
     .intro_title {
       width: 100%;
       height: auto;
     }
     .portfolio_mark {
-      transform: translateY(-35%);
       border: 2px solid transparent;
+      transform: translateY(-35%);
       transform-origin: center center;
       .vertex{
         position: absolute;
@@ -334,7 +338,8 @@
       max-width: 1200px;
     }
     .portfolio_mark {
-      width: 600px;
+      width: 48%;
+      max-width: 600px;
     }
     .sticker_list_box {
       .sticker_list {

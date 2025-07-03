@@ -24,50 +24,53 @@
       .text_scrollTrigger {
         word-break: keep-all;
         color: var(--black100);
-        strong{
+        strong {
           font-weight: 600;
         }
       }
     }
-    .mini_sticker{
+    .mini_sticker {
       display: inline-block;
       overflow: visible;
       border: 1px solid #f00;
-      color:transparent;
-      
+      color: transparent;
     }
   }
   .skils {
     display: flex;
     .design,
     .dev {
-      border: 1px solid #000;
+      // border: 1px solid #000;
+      border: 1px solid transparent;
     }
-    ul {
+    .skil_list {
       display: flex;
       gap: 10px;
-      li {
+      .skil_item {
         display: inline-block;
         position: relative;
         @include flex-c();
-        &::before {
-          content: attr(data-hover);
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 110%;
-          z-index: 1;
-          visibility: hidden;
-          width: auto;
-          padding: 5px 10px;
-          color: var(--black200_txt);
-          border-radius: 5px;
-          opacity: 0;
-        }
-        &:hover::before {
-          opacity: 1;
-          visibility: visible;
-        }
+        background-image: url(/src/img/adobe_logo.jpg);
+        background-repeat: no-repeat;
+        // border: 1px solid #000;
+        // &::before {
+        //   content: attr(data-hover);
+        //   position: absolute;
+        //   left: 50%;
+        //   transform: translateX(-50%);
+        //   top: 110%;
+        //   z-index: 1;
+        //   visibility: hidden;
+        //   width: auto;
+        //   padding: 5px 10px;
+        //   color: var(--black200_txt);
+        //   border-radius: 5px;
+        //   opacity: 0;
+        // }
+        // &:hover::before {
+        //   opacity: 1;
+        //   visibility: visible;
+        // }
       }
     }
   }
@@ -93,6 +96,39 @@
         }
       }
     }
+    .skil_list {
+      .skil_item {
+        display: inline-block;
+        position: relative;
+        @include flex-c();
+        width: 50px;
+        height: 50px;
+        background-size: 280px 280px;
+        background-position: -512px -512px;
+        border-radius: 10px;
+        &[data-hover="illustrator"] {
+          background-position: -15px -14px;
+        }
+        &[data-hover="photoshop"] {
+          background-position: -101px -14px;
+        }
+        &[data-hover="indesign"] {
+          background-position: -187px -14px;
+        }
+        &[data-hover="figma"] {
+          background-position: -101px -185px;
+        }
+        &[data-hover="HTML"] {
+          background-position: -187px -99px;
+        }
+        &[data-hover="CSS"] {
+          background-position: -101px -99px;
+        }
+        &[data-hover="JAVAscript"] {
+          background-position: -15px -185px;
+        }
+      }
+    }
   }
 }
 //----------------------------------------------------------------------
@@ -102,7 +138,9 @@
       font-size: 4rem;
       line-height: 1.3;
       margin-bottom: 40px;
-      br{display: none;}
+      br {
+        display: none;
+      }
     }
     .text {
       padding-top: 40px;
@@ -122,9 +160,37 @@
     .skils {
       margin-top: 40px;
       font-size: 2rem;
-      ul {
-        li {
-          width: 50px;
+      .skil_list {
+        .skil_item {
+          display: inline-block;
+          position: relative;
+          @include flex-c();
+          width: 80px;
+          height: 80px;
+          background-size: 280px 280px;
+          background-position: -512px -512px;
+          border-radius: 20px;
+          &[data-hover="illustrator"] {
+            background-position: -15px -14px;
+          }
+          &[data-hover="photoshop"] {
+            background-position: -101px -14px;
+          }
+          &[data-hover="indesign"] {
+            background-position: -187px -14px;
+          }
+          &[data-hover="figma"] {
+            background-position: -101px -185px;
+          }
+          &[data-hover="HTML"] {
+            background-position: -187px -99px;
+          }
+          &[data-hover="CSS"] {
+            background-position: -101px -99px;
+          }
+          &[data-hover="JAVAscript"] {
+            background-position: -15px -185px;
+          }
         }
       }
     }

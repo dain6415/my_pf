@@ -108,11 +108,16 @@ section {
   }
 }
 @media only screen and (min-width: 701px) {
-  section {
-    height: 100vh;
+  section{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  section:not(:even) {
+    height: 100vh;
+  }
+  section:nth-child(2) {
+    height: 80vh;
   }
   section .sect_inner {
     width: 90%;

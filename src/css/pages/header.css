@@ -30,13 +30,14 @@
   gap: 5px;
 }
 #gnb .gnb_inner .gnb .nav_list .nav_item .nav_link {
+  display: inline-block;
   position: relative;
   transform-origin: right;
-  display: inline-block;
-  padding: 10px 20px;
   border-radius: 50px;
   color: #666;
   transition: color 0.3s;
+  padding: 10px 20px;
+  white-space: nowrap;
 }
 #gnb .gnb_inner .gnb .nav_list .nav_item .nav_link:hover {
   color: #999;

@@ -21,12 +21,10 @@
   margin: auto;
 }
 #intro .sect_inner .intro_title_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,13 +34,19 @@
   width: 100%;
   vertical-align: top;
 }
+#intro .sect_inner .intro_title_wrap .text {
+  display: none;
+  color: var(--main-color);
+  text-align: center;
+  font-size: 1.2rem;
+}
 #intro .sect_inner .intro_title {
   width: 100%;
   height: auto;
 }
 #intro .sect_inner .portfolio_mark {
-  transform: translateY(-35%);
   border: 2px solid transparent;
+  transform: translateY(-35%);
   transform-origin: center center;
 }
 #intro .sect_inner .portfolio_mark .vertex {
@@ -88,8 +92,6 @@
   z-index: 100;
 }
 #intro .sticker_list_box .sticker_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,8 +229,6 @@
   }
   #intro .sect_inner {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -318,7 +318,8 @@
     max-width: 1200px;
   }
   #intro .portfolio_mark {
-    width: 600px;
+    width: 48%;
+    max-width: 600px;
   }
   #intro .sticker_list_box .sticker_list {
     gap: 20px;
