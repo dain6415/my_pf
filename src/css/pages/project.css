@@ -79,6 +79,9 @@
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
   }
+  #project .sect_inner .swiper .pc_img {
+    display: none;
+  }
   #project .swiper-slide-active {
     transform: translateY(-20px);
   }
@@ -132,6 +135,12 @@
   }
   #project .sect_inner .swiper .swiper-slide:hover .img_box {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3137254902);
+  }
+  #project .sect_inner .swiper .pc_img {
+    display: block;
+  }
+  #project .sect_inner .swiper .mobile_img {
+    display: none;
   }
   #project .img_box {
     margin-bottom: 20px;

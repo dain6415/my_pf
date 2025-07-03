@@ -89,6 +89,9 @@
         .swiper-slide {
           transition: 0.4s;
         }
+        .pc_img{
+          display: none;
+        }
       }
     }
     .swiper-slide-active {
@@ -149,6 +152,12 @@
               box-shadow: 0 10px 20px #00000050;
             }
           }
+        }
+        .pc_img{
+          display: block;
+        }
+        .mobile_img{
+          display: none;
         }
       }
     }
