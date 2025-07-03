@@ -31,21 +31,16 @@
 #about .skils_wrap {
   display: flex;
 }
-#about .skils_wrap .skils {
-  display: flex;
-}
 #about .skils_wrap .design,
 #about .skils_wrap .dev {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  white-space: nowrap;
 }
 #about .skils_wrap .skil {
   box-sizing: border-box;
   border: 1px solid var(--black600);
   font-weight: 600;
-  white-space: nowrap;
 }
 #about .skil_name {
   color: var(--black600);
@@ -150,6 +145,10 @@
     font-size: 2rem;
     width: 100%;
   }
+  #about .skils_wrap .design,
+  #about .skils_wrap .dev {
+    white-space: nowrap;
+  }
   #about .skils_wrap .design .skil_name {
     padding-right: 10px;
   }
@@ -178,8 +177,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
   }
   #about .skils {
+    display: flex;
     justify-content: center;
     padding-left: 4vw;
   }
