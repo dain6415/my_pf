@@ -20,6 +20,7 @@
     }
     .text {
       border-top: 1px solid var(--black600);
+      border-bottom: 1px solid var(--black600);
       line-height: 1.5;
       .text_scrollTrigger {
         word-break: keep-all;
@@ -36,42 +37,54 @@
       color: transparent;
     }
   }
-  .skils {
+  .skils_wrap {
     display: flex;
+    .skils {
+      // border: 1px solid #000;
+      display: flex;
+    }
     .design,
     .dev {
-      // border: 1px solid #000;
-      border: 1px solid transparent;
+      @include flex-c(flex-start);
+      white-space: nowrap;
     }
-    .skil_list {
-      display: flex;
-      gap: 10px;
-      .skil_item {
-        display: inline-block;
-        position: relative;
-        @include flex-c();
-        background-image: url(/src/img/adobe_logo.jpg);
-        background-repeat: no-repeat;
-        // border: 1px solid #000;
-        // &::before {
-        //   content: attr(data-hover);
-        //   position: absolute;
-        //   left: 50%;
-        //   transform: translateX(-50%);
-        //   top: 110%;
-        //   z-index: 1;
-        //   visibility: hidden;
-        //   width: auto;
-        //   padding: 5px 10px;
-        //   color: var(--black200_txt);
-        //   border-radius: 5px;
-        //   opacity: 0;
-        // }
-        // &:hover::before {
-        //   opacity: 1;
-        //   visibility: visible;
-        // }
-      }
+    .skil {
+      box-sizing: border-box;
+      border: 1px solid var(--black600);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+  .skil_name {
+    color: var(--black600);
+  }
+  .skil_list {
+    display: flex;
+    gap: 10px;
+    .skil_item {
+      display: inline-block;
+      position: relative;
+      @include flex-c();
+      background-image: url(/src/img/adobe_logo.jpg);
+      background-repeat: no-repeat;
+      // &::before {
+      //   content: attr(data-hover);
+      //   position: absolute;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   top: 110%;
+      //   z-index: 1;
+      //   visibility: hidden;
+      //   width: auto;
+      //   padding: 5px 10px;
+      //   color: var(--black200_txt);
+      //   border-radius: 5px;
+      //   opacity: 0;
+      // }
+      // &:hover::before {
+      //   opacity: 1;
+      //   visibility: visible;
+      // }
     }
   }
 }
@@ -96,36 +109,39 @@
         }
       }
     }
+    .skil {
+      width: 50px;
+      height: 50px;
+      border-radius: 11px;
+      font-size: clamp(14px, 16px, 18px);
+    }
     .skil_list {
       .skil_item {
-        display: inline-block;
-        position: relative;
-        @include flex-c();
         width: 50px;
         height: 50px;
-        background-size: 280px 280px;
+        background-size: 176px 176px;
         background-position: -512px -512px;
-        border-radius: 10px;
+        border-radius: 11px;
         &[data-hover="illustrator"] {
-          background-position: -15px -14px;
+          background-position: -10px -9px;
         }
         &[data-hover="photoshop"] {
-          background-position: -101px -14px;
+          background-position: -64px -9px;
         }
         &[data-hover="indesign"] {
-          background-position: -187px -14px;
+          background-position: -118px -9px;
         }
         &[data-hover="figma"] {
-          background-position: -101px -185px;
+          background-position: -64px -117px;
         }
         &[data-hover="HTML"] {
-          background-position: -187px -99px;
+          background-position: -64px -63px;
         }
         &[data-hover="CSS"] {
-          background-position: -101px -99px;
+          background-position: -118px -63px;
         }
         &[data-hover="JAVAscript"] {
-          background-position: -15px -185px;
+          background-position: -10px -117px;
         }
       }
     }
@@ -157,40 +173,143 @@
         }
       }
     }
-    .skils {
-      margin-top: 40px;
+    .skils_wrap {
+      padding-top: 40px;
+      padding-bottom: 40px;
       font-size: 2rem;
-      .skil_list {
-        .skil_item {
-          display: inline-block;
-          position: relative;
-          @include flex-c();
-          width: 80px;
-          height: 80px;
-          background-size: 280px 280px;
-          background-position: -512px -512px;
-          border-radius: 20px;
-          &[data-hover="illustrator"] {
-            background-position: -15px -14px;
-          }
-          &[data-hover="photoshop"] {
-            background-position: -101px -14px;
-          }
-          &[data-hover="indesign"] {
-            background-position: -187px -14px;
-          }
-          &[data-hover="figma"] {
-            background-position: -101px -185px;
-          }
-          &[data-hover="HTML"] {
-            background-position: -187px -99px;
-          }
-          &[data-hover="CSS"] {
-            background-position: -101px -99px;
-          }
-          &[data-hover="JAVAscript"] {
-            background-position: -15px -185px;
-          }
+      width: 100%;
+      .design .skil_name {
+        padding-right: 10px;
+      }
+      .dev .skil_name {
+        padding-right: 10px;
+      }
+      .design {
+        padding-right: 20px;
+        margin-right: 20px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%) rotate(20deg);
+          border-right: 1px solid var(--black200_txt);
+          width: 1px;
+          height: 20px;
+        }
+      }
+    }
+    .skil {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      @include flex-c();
+    }
+    .skils {
+      justify-content: center;
+      padding-left: 4vw;
+    }
+    .skil_name{
+      display: none;
+    }
+    .skil_list {
+      .skil_item {
+        width: 64px;
+        height: 64px;
+        background-size: 231px 231px;
+        background-position: -512px -512px;
+        border-radius: 20px;
+        &[data-hover="illustrator"] {
+          background-position: -12px -12px;
+        }
+        &[data-hover="photoshop"] {
+          background-position: -83px -12px;
+        }
+        &[data-hover="indesign"] {
+          background-position: -154px -12px;
+        }
+        &[data-hover="figma"] {
+          background-position: -83px -153px;
+        }
+        &[data-hover="HTML"] {
+          background-position: -83px -82px;
+        }
+        &[data-hover="CSS"] {
+          background-position: -154px -82px;
+        }
+        &[data-hover="JAVAscript"] {
+          background-position: -12px -152px;
+        }
+      }
+    }
+  }
+}
+//----------------------------------------------------------------------
+@media only screen and (min-width: 900px) {
+  #about {
+    .skils_wrap {
+      .design .skil_name {
+        padding-right: 20px;
+      }
+      .dev .skil_name {
+        padding-right: 20px;
+      }
+      .design {
+        padding-right: 40px;
+        margin-right: 40px;
+      }
+    }
+    .skil_name{
+      display:inline-block;
+    }
+  }
+}
+//----------------------------------------------------------------------
+@media only screen and (min-width: 1000px) {
+  #about {
+    .skils_wrap {
+      .design .skil_name {
+        padding-right: 40px;
+      }
+      .dev .skil_name {
+        padding-right: 40px;
+      }
+    }
+    .skil {
+      width: 78px;
+      height: 78px;
+    }
+    .skils{
+      padding-left: 5vw;
+    }
+    .skil_list {
+      .skil_item {
+        width: 78px;
+        height: 78px;
+        background-size: 280px 280px;
+        background-position: -512px -512px;
+        border-radius: 10px;
+        &[data-hover="illustrator"] {
+          background-position: -15px -14px;
+        }
+        &[data-hover="photoshop"] {
+          background-position: -101px -14px;
+        }
+        &[data-hover="indesign"] {
+          background-position: -187px -14px;
+        }
+        &[data-hover="figma"] {
+          background-position: -101px -185px;
+        }
+        &[data-hover="HTML"] {
+          background-position: -101px -99px;
+        }
+        &[data-hover="CSS"] {
+          background-position: -187px -99px;
+        }
+        &[data-hover="JAVAscript"] {
+          background-position: -15px -185px;
         }
       }
     }

@@ -12,6 +12,7 @@
 }
 #about .info .text {
   border-top: 1px solid var(--black600);
+  border-bottom: 1px solid var(--black600);
   line-height: 1.5;
 }
 #about .info .text .text_scrollTrigger {
@@ -27,18 +28,33 @@
   border: 1px solid #f00;
   color: transparent;
 }
-#about .skils {
+#about .skils_wrap {
   display: flex;
 }
-#about .skils .design,
-#about .skils .dev {
-  border: 1px solid transparent;
+#about .skils_wrap .skils {
+  display: flex;
 }
-#about .skils .skil_list {
+#about .skils_wrap .design,
+#about .skils_wrap .dev {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+}
+#about .skils_wrap .skil {
+  box-sizing: border-box;
+  border: 1px solid var(--black600);
+  font-weight: 600;
+  white-space: nowrap;
+}
+#about .skil_name {
+  color: var(--black600);
+}
+#about .skil_list {
   display: flex;
   gap: 10px;
 }
-#about .skils .skil_list .skil_item {
+#about .skil_list .skil_item {
   display: inline-block;
   position: relative;
   display: flex;
@@ -69,38 +85,39 @@
   #about .info .text .text_scrollTrigger:first-child {
     padding-bottom: 20px;
   }
-  #about .skil_list .skil_item {
-    display: inline-block;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #about .skil {
     width: 50px;
     height: 50px;
-    background-size: 280px 280px;
+    border-radius: 11px;
+    font-size: 16px;
+  }
+  #about .skil_list .skil_item {
+    width: 50px;
+    height: 50px;
+    background-size: 176px 176px;
     background-position: -512px -512px;
-    border-radius: 10px;
+    border-radius: 11px;
   }
   #about .skil_list .skil_item[data-hover=illustrator] {
-    background-position: -15px -14px;
+    background-position: -10px -9px;
   }
   #about .skil_list .skil_item[data-hover=photoshop] {
-    background-position: -101px -14px;
+    background-position: -64px -9px;
   }
   #about .skil_list .skil_item[data-hover=indesign] {
-    background-position: -187px -14px;
+    background-position: -118px -9px;
   }
   #about .skil_list .skil_item[data-hover=figma] {
-    background-position: -101px -185px;
+    background-position: -64px -117px;
   }
   #about .skil_list .skil_item[data-hover=HTML] {
-    background-position: -187px -99px;
+    background-position: -64px -63px;
   }
   #about .skil_list .skil_item[data-hover=CSS] {
-    background-position: -101px -99px;
+    background-position: -118px -63px;
   }
   #about .skil_list .skil_item[data-hover=JAVAscript] {
-    background-position: -15px -185px;
+    background-position: -10px -117px;
   }
 }
 @media only screen and (min-width: 701px) {
@@ -127,41 +144,132 @@
   #about .text .text_scrollTrigger:not(:first-child) {
     margin-top: 1rem;
   }
-  #about .skils {
-    margin-top: 40px;
+  #about .skils_wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-size: 2rem;
+    width: 100%;
   }
-  #about .skils .skil_list .skil_item {
-    display: inline-block;
+  #about .skils_wrap .design .skil_name {
+    padding-right: 10px;
+  }
+  #about .skils_wrap .dev .skil_name {
+    padding-right: 10px;
+  }
+  #about .skils_wrap .design {
+    padding-right: 20px;
+    margin-right: 20px;
     position: relative;
+  }
+  #about .skils_wrap .design:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    border-right: 1px solid var(--black200_txt);
+    width: 1px;
+    height: 20px;
+  }
+  #about .skil {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
-    background-size: 280px 280px;
+  }
+  #about .skils {
+    justify-content: center;
+    padding-left: 4vw;
+  }
+  #about .skil_name {
+    display: none;
+  }
+  #about .skil_list .skil_item {
+    width: 64px;
+    height: 64px;
+    background-size: 231px 231px;
     background-position: -512px -512px;
     border-radius: 20px;
   }
-  #about .skils .skil_list .skil_item[data-hover=illustrator] {
+  #about .skil_list .skil_item[data-hover=illustrator] {
+    background-position: -12px -12px;
+  }
+  #about .skil_list .skil_item[data-hover=photoshop] {
+    background-position: -83px -12px;
+  }
+  #about .skil_list .skil_item[data-hover=indesign] {
+    background-position: -154px -12px;
+  }
+  #about .skil_list .skil_item[data-hover=figma] {
+    background-position: -83px -153px;
+  }
+  #about .skil_list .skil_item[data-hover=HTML] {
+    background-position: -83px -82px;
+  }
+  #about .skil_list .skil_item[data-hover=CSS] {
+    background-position: -154px -82px;
+  }
+  #about .skil_list .skil_item[data-hover=JAVAscript] {
+    background-position: -12px -152px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #about .skils_wrap .design .skil_name {
+    padding-right: 20px;
+  }
+  #about .skils_wrap .dev .skil_name {
+    padding-right: 20px;
+  }
+  #about .skils_wrap .design {
+    padding-right: 40px;
+    margin-right: 40px;
+  }
+  #about .skil_name {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #about .skils_wrap .design .skil_name {
+    padding-right: 40px;
+  }
+  #about .skils_wrap .dev .skil_name {
+    padding-right: 40px;
+  }
+  #about .skil {
+    width: 78px;
+    height: 78px;
+  }
+  #about .skils {
+    padding-left: 5vw;
+  }
+  #about .skil_list .skil_item {
+    width: 78px;
+    height: 78px;
+    background-size: 280px 280px;
+    background-position: -512px -512px;
+    border-radius: 10px;
+  }
+  #about .skil_list .skil_item[data-hover=illustrator] {
     background-position: -15px -14px;
   }
-  #about .skils .skil_list .skil_item[data-hover=photoshop] {
+  #about .skil_list .skil_item[data-hover=photoshop] {
     background-position: -101px -14px;
   }
-  #about .skils .skil_list .skil_item[data-hover=indesign] {
+  #about .skil_list .skil_item[data-hover=indesign] {
     background-position: -187px -14px;
   }
-  #about .skils .skil_list .skil_item[data-hover=figma] {
+  #about .skil_list .skil_item[data-hover=figma] {
     background-position: -101px -185px;
   }
-  #about .skils .skil_list .skil_item[data-hover=HTML] {
-    background-position: -187px -99px;
-  }
-  #about .skils .skil_list .skil_item[data-hover=CSS] {
+  #about .skil_list .skil_item[data-hover=HTML] {
     background-position: -101px -99px;
   }
-  #about .skils .skil_list .skil_item[data-hover=JAVAscript] {
+  #about .skil_list .skil_item[data-hover=CSS] {
+    background-position: -187px -99px;
+  }
+  #about .skil_list .skil_item[data-hover=JAVAscript] {
     background-position: -15px -185px;
   }
 }

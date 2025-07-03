@@ -173,6 +173,7 @@
   #project {
     border-radius: 20px;
     width: 90%;
+    overflow: visible;
   }
   #project .sect_inner {
     max-width: 1380px;
