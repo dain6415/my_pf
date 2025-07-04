@@ -19,8 +19,8 @@
       font-weight: 600;
     }
     .text {
-      border-top: 1px solid var(--black600);
-      border-bottom: 1px solid var(--black600);
+      border-top: 1px solid var(--black700);
+      border-bottom: 1px solid var(--black700);
       line-height: 1.5;
       .text_scrollTrigger {
         word-break: keep-all;
@@ -45,12 +45,12 @@
     }
     .skil {
       box-sizing: border-box;
-      border: 1px solid var(--black600);
+      border: 1px solid var(--black700);
       font-weight: 600;
     }
   }
   .skil_name {
-    color: var(--black600);
+    color: var(--black700);
   }
   .skil_list {
     display: flex;
@@ -127,7 +127,7 @@
     }
     .skil_name{
       font-size: clamp(12px, 14px, 18px);
-      width: 50px;
+      width: 60px;
     }
     .skil_list {
       .skil_item {
@@ -212,7 +212,7 @@
           right: 0;
           top: 50%;
           transform: translateY(-50%) rotate(20deg);
-          border-right: 1px solid var(--black600);
+          border-right: 1px solid var(--black700);
           width: 1px;
           height: 20px;
         }

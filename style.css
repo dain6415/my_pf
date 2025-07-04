@@ -149,7 +149,6 @@ section {
 }
 .sect_title .title {
   width: 100%;
-  /* grid-column: 2; */
   line-height: 1;
   text-transform: uppercase;
   font-family: var(--subEng-font);
@@ -159,7 +158,7 @@ section {
   .sect_title {
     display: block;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .sect_title .title {
     font-size: clamp(16px, 20px, 28pc);
@@ -167,17 +166,12 @@ section {
 }
 @media only screen and (min-width: 701px) {
   .sect_title .title {
-    font-size: 4rem;
-    margin-bottom: 60px;
+    font-size: 3.2rem;
+    margin-bottom: 40px;
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  .sect_title .title {
-    font-size: 6rem;
-    font-weight: 900;
-  }
-}
+
 
 /* -------------------------------------------------------------------------------- */
 /* 위로가기 버튼 ---------------------- */
