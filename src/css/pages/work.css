@@ -168,8 +168,8 @@
 #work .header_group .view_btn svg {
   position: relative;
   z-index: 1;
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
 }
 #work .header_group .view_btn::before {
   content: "";
@@ -177,8 +177,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
-  height: 120%;
+  width: 48px;
+  height: 48px;
   border-radius: 50px;
   background-color: var(--bg-color, transparent);
   transition: 0.2s;
