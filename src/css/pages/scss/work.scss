@@ -171,9 +171,11 @@
       padding: 6px;
       transition: 0.3s;
       transform: rotate(0);
+      border: 1px solid #000;
       svg {
         position: relative;
         z-index: 1;
+        border: 1px solid #000;
       }
       &::before {
         content: "";
