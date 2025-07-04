@@ -113,7 +113,7 @@ section {
     justify-content: center;
     align-items: center;
   }
-  section:not(:even) {
+  section:not(:nth-child(2)) {
     height: 100vh;
   }
   section:nth-child(2) {
@@ -162,7 +162,7 @@ section {
     margin-bottom: 40px;
   }
   .sect_title .title {
-    font-size: 8vw;
+    font-size: clamp(16px, 20px, 28pc);
   }
 }
 @media only screen and (min-width: 701px) {

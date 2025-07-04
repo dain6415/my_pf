@@ -6,5 +6,16 @@ export function project() {
       el: ".swiper-pagination",
       clickable: true,
     },
-  }); 
+    breakpoints: {
+      0: {
+        spaceBetween: 8,
+      },
+      701: {
+        spaceBetween: 20,
+      },
+      1300: {
+        spaceBetween: 20,
+      },
+    },
+  });
 }
