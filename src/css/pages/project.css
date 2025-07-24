@@ -16,6 +16,8 @@
   color: var(--black200_txt);
 }
 #project .swiper {
+  position: relative;
+  overflow: visible;
   width: 100%;
   height: 100%;
   margin-left: auto;
@@ -23,12 +25,89 @@
 }
 #project .swiper .swiper-slide {
   font-size: 18px;
-  height: calc((100% - 30px) / 2) !important;
   border: none;
   position: relative;
+  opacity: 0;
+  transition: 0.1s;
+}
+#project .swiper .swiper-slide.on {
+  opacity: 1;
+}
+#project .swiper:hover .swiper_btn {
+  opacity: 1;
+  background: #000;
 }
 #project .swiper .title {
   font-weight: 600;
+}
+#project .swiper_btn {
+  position: absolute;
+  top: 46%;
+  left: 0;
+  width: 100px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+#project .swiper_btn .btn {
+  width: 80px;
+  height: 80px;
+  padding: 14px;
+  border: 1px dotted var(--black400);
+  border-radius: 50%;
+}
+#project .swiper_btn .btn::after {
+  display: none;
+}
+#project .swiper_btn .btn .next,
+#project .swiper_btn .btn .prev {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background: var(--black400);
+  border-radius: 20px;
+}
+#project .swiper_btn .btn .next::before, #project .swiper_btn .btn .next::after,
+#project .swiper_btn .btn .prev::before,
+#project .swiper_btn .btn .prev::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: var(--black400);
+  border-radius: 20px;
+}
+#project .swiper_btn .btn .next {
+  transform-origin: right;
+}
+#project .swiper_btn .btn .next::before {
+  transform: rotate(45deg);
+  bottom: 7px;
+  right: -2px;
+}
+#project .swiper_btn .btn .next::after {
+  transform: rotate(-45deg);
+  top: 7px;
+  right: -2px;
+}
+#project .swiper_btn .btn .prev {
+  transform-origin: left;
+}
+#project .swiper_btn .btn .prev::before {
+  transform: rotate(-45deg);
+  bottom: 7px;
+  left: -2px;
+}
+#project .swiper_btn .btn .prev::after {
+  transform: rotate(45deg);
+  top: 7px;
+  left: -2px;
+}
+#project .text_info {
+  opacity: 0;
+}
+#project .text_info.on {
+  opacity: 1;
 }
 #project .link_project .img_box {
   width: 100%;
@@ -44,22 +123,22 @@
   width: 100%;
 }
 #project .pagination-aria {
-  width: 100%;
-  position: relative;
   display: block;
+  position: relative;
+  width: 48px;
 }
 #project .pagination-aria .swiper-pagination {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 #project .pagination-aria .swiper-pagination span {
   width: 10px;
   height: 10px;
 }
-#project .pagination-aria .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--main-color);
+#project .pagination-aria .swiper-pagination-fraction {
+  color: #999;
+  font-size: 24px;
+  font-weight: 200;
 }
 #project .sect_inner {
   margin: auto;
@@ -73,37 +152,34 @@
     padding: 6em 2em;
   }
   #project .sect_inner .swiper {
+    width: 60%;
     overflow: visible !important;
     padding-top: 20px;
   }
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.4s;
   }
-  #project .sect_inner .swiper .pc_img {
-    display: none;
-  }
-  #project .swiper-slide-active {
-    transform: translateY(-20px);
-  }
-  #project .swiper-slide-active .img_box img {
-    filter: grayscale(0);
-  }
-  #project .swiper-slide-active .txt .title {
-    font-size: 8vw;
-  }
-  #project .img_box {
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4392156863);
+  #project .text_container {
+    position: relative;
+    height: 140px;
   }
   #project .img_box img {
     filter: grayscale(1);
     transition: 0.4s;
   }
+  #project .shadow {
+    filter: drop-shadow(4px 6px 2px rgba(0, 0, 0, 0.2));
+  }
   #project .text_info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
     text-align: center;
+    transform: translateX(-50%);
   }
   #project .text_info .title {
-    font-size: 6vw;
+    font-size: 24px;
     margin-bottom: 6px;
     transition: 0.3s;
   }
@@ -111,6 +187,10 @@
     font-size: 4vw;
     font-weight: 300;
     color: #999;
+  }
+  #project .swiper_btn .btn {
+    width: 60px;
+    height: 60px;
   }
   #project .pagination-aria {
     height: 14px;
@@ -123,59 +203,63 @@
     padding-top: 10em;
     padding-bottom: 12em;
   }
+  #project .sect_inner .swiper_container {
+    display: flex;
+    justify-content: space-between;
+  }
   #project .sect_inner .swiper {
-    overflow: visible !important;
-    padding-top: 20px;
+    width: 40%;
+    margin: 0;
   }
   #project .sect_inner .swiper .swiper-slide {
     transition: 0.5s;
   }
-  #project .sect_inner .swiper .swiper-slide:hover {
-    transform: translateY(-10px);
+  #project .sect_inner .swiper .shadow {
+    filter: drop-shadow(7px 8px 3px rgba(0, 0, 0, 0.2));
   }
-  #project .sect_inner .swiper .swiper-slide:hover .img_box {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3137254902);
-  }
-  #project .sect_inner .swiper .pc_img {
-    display: block;
-  }
-  #project .sect_inner .swiper .mobile_img {
-    display: none;
+  #project .sect_inner .swiper .sema {
+    padding: 20px;
   }
   #project .img_box {
     margin-bottom: 20px;
     transition: 0.4s;
   }
+  #project .text_container {
+    position: relative;
+    width: 50%;
+  }
+  #project .text_container .text_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   #project .text_info .title {
-    font-size: 2.8rem;
-    margin-bottom: 6px;
+    font-size: 48px;
+    margin-bottom: 12px;
   }
   #project .text_info .desc {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5;
     color: #999;
   }
+  #project .text_info ul {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+  }
   #project .pagination-aria {
-    width: 100%;
-    height: 14px;
-    display: block;
-    position: relative;
-    margin-top: 60px;
+    height: 34px;
+    display: inline-block;
   }
   #project .pagination-aria .swiper-pagination {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 200px;
+    left: 0%;
   }
   #project .pagination-aria .swiper-pagination span {
-    background: var(--main-color);
     width: 10px;
     height: 10px;
-  }
-}
-@media only screen and (min-width: 1301px) {
-  #project .pagination-aria {
-    display: none;
   }
 }
 @media only screen and (min-width: 1400px) {

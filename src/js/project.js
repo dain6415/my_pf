@@ -1,21 +1,39 @@
 export function project() {
-  new Swiper(".mySwiper", {
+  const swiper = new Swiper(".mySwiper", {
+    // effect: "fade",
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
     slidesPerView: 1,
-    spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      type: "fraction",
     },
-    breakpoints: {
-      0: {
-        spaceBetween: 8,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      init: function () {
+        updateActiveClasses(this);
       },
-      701: {
-        spaceBetween: 20,
-      },
-      1300: {
-        spaceBetween: 20,
+      slideChange: function () {
+        updateActiveClasses(this);
       },
     },
   });
+
+  function updateActiveClasses(swiper) {
+    const activeIndex = swiper.realIndex;
+
+    // 슬라이드에 .on 클래스
+    swiper.slides.forEach((slide, idx) => {
+      slide.classList.toggle("on", idx === activeIndex);
+    });
+
+    // 텍스트에 .on 클래스
+    document.querySelectorAll(".text_container .text_info").forEach((el, idx) => {
+      el.classList.toggle("on", idx === activeIndex);
+    });
+  }
 }
