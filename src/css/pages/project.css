@@ -33,6 +33,14 @@
 #project .swiper .swiper-slide.on {
   opacity: 1;
 }
+#project .swiper .swiper-slide.on .img_box img {
+  filter: grayscale(0);
+  transition: 0.4s;
+}
+#project .swiper .swiper-slide .img_box img {
+  filter: grayscale(1);
+  transition: 0.4s;
+}
 #project .swiper:hover .swiper_btn {
   opacity: 1;
   background: #000;
