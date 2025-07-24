@@ -38,13 +38,12 @@
       border: none;
       position: relative;
       opacity: 0;
-      transition: 0.1s;
       &.on {
         opacity: 1;
         .img_box {
           img {
             filter: grayscale(0);
-            transition: 0.4s;
+            transition: 0.3s;
           }
         }
       }
@@ -60,9 +59,6 @@
         opacity: 1;
         background: #000;
       }
-    }
-    .title {
-      font-weight: 600;
     }
   }
   .swiper_btn {
@@ -132,6 +128,9 @@
     &.on {
       opacity: 1;
     }
+    .title {
+      font-weight: 500;
+    }
   }
   .link_project {
     .img_box {
@@ -187,8 +186,8 @@
     .text_container {
       position: relative;
       height: 200px;
-      // border: 1px solid #000;
       word-break: keep-all;
+      // border: 1px solid #000;
       br {
         display: none;
       }

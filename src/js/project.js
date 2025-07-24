@@ -1,10 +1,7 @@
 export function project() {
   const swiper = new Swiper(".mySwiper", {
-    // effect: "fade",
-    // fadeEffect: {
-    //   crossFade: true,
-    // },
     slidesPerView: 1,
+    speed: 500,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",

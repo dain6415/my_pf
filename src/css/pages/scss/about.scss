@@ -24,9 +24,10 @@
       line-height: 1.5;
       .text_scrollTrigger {
         word-break: keep-all;
-        color: var(--black100);
+        color: var(--black200_txt);
         strong {
-          font-weight: 600;
+          font-weight: 700;
+          color: var(--black100);
         }
       }
     }
@@ -88,7 +89,7 @@
     padding: 6em 2em;
     @include flex-c();
     .title{
-      text-align: left;
+      text-align: center;
     }
     .info {
       .keyword {
@@ -96,6 +97,7 @@
         padding-bottom: 20px;
         font-size: clamp(16px, 28px, 28px);
         word-break: keep-all;
+        text-align: center;
         br{
           display: none;
         }
@@ -103,6 +105,7 @@
       .text {
         padding-top: 20px;
         font-size: clamp(12px, 16px, 20px);
+        text-align: center;
         .text_scrollTrigger {
           word-break: break-all;
           padding-bottom: 20px;

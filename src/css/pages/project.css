@@ -28,14 +28,13 @@
   border: none;
   position: relative;
   opacity: 0;
-  transition: 0.1s;
 }
 #project .swiper .swiper-slide.on {
   opacity: 1;
 }
 #project .swiper .swiper-slide.on .img_box img {
   filter: grayscale(0);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 #project .swiper .swiper-slide .img_box img {
   filter: grayscale(1);
@@ -44,9 +43,6 @@
 #project .swiper:hover .swiper_btn {
   opacity: 1;
   background: #000;
-}
-#project .swiper .title {
-  font-weight: 600;
 }
 #project .swiper_btn {
   position: absolute;
@@ -116,6 +112,9 @@
 }
 #project .text_info.on {
   opacity: 1;
+}
+#project .text_info .title {
+  font-weight: 500;
 }
 #project .link_project .img_box {
   width: 100%;
