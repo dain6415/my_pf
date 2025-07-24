@@ -136,7 +136,7 @@
   height: 10px;
 }
 #project .pagination-aria .swiper-pagination-fraction {
-  color: #999;
+  color: var(--black600);
   font-size: 24px;
   font-weight: 200;
 }
@@ -152,7 +152,7 @@
     padding: 6em 2em;
   }
   #project .sect_inner .swiper {
-    width: 60%;
+    width: 80%;
     overflow: visible !important;
     padding-top: 20px;
   }
@@ -161,22 +161,19 @@
   }
   #project .text_container {
     position: relative;
-    height: 140px;
+    height: 200px;
+    word-break: keep-all;
   }
-  #project .img_box img {
-    filter: grayscale(1);
-    transition: 0.4s;
-  }
-  #project .shadow {
-    filter: drop-shadow(4px 6px 2px rgba(0, 0, 0, 0.2));
+  #project .text_container br {
+    display: none;
   }
   #project .text_info {
     position: absolute;
     top: 0;
     left: 50%;
     width: 100%;
-    text-align: center;
     transform: translateX(-50%);
+    text-align: center;
   }
   #project .text_info .title {
     font-size: 24px;
@@ -184,17 +181,39 @@
     transition: 0.3s;
   }
   #project .text_info .desc {
-    font-size: 4vw;
+    font-size: 16px;
     font-weight: 300;
-    color: #999;
+    color: var;
+  }
+  #project .text_info ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    font-size: 16px;
+    color: var(--black600);
+  }
+  #project .img_box img {
+    transition: 0.4s;
+  }
+  #project .shadow {
+    filter: drop-shadow(4px 6px 2px rgba(0, 0, 0, 0.2));
   }
   #project .swiper_btn .btn {
     width: 60px;
     height: 60px;
   }
   #project .pagination-aria {
-    height: 14px;
     margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+  }
+  #project .pagination-aria .swiper-pagination-fraction {
+    color: var(--black700);
+    font-size: 20px;
+    font-weight: 200;
   }
 }
 @media only screen and (min-width: 701px) {
@@ -241,7 +260,7 @@
     font-size: 20px;
     font-weight: 200;
     line-height: 1.5;
-    color: #999;
+    color: var(--black600);
   }
   #project .text_info ul {
     display: flex;
