@@ -67,15 +67,11 @@
     justify-content: center;
     align-items: center;
   }
-  #about .title {
-    text-align: center;
-  }
   #about .info .keyword {
     line-height: 1.3;
     padding-bottom: 20px;
     font-size: 28px;
     word-break: keep-all;
-    text-align: center;
   }
   #about .info .keyword br {
     display: none;
@@ -83,7 +79,6 @@
   #about .info .text {
     padding-top: 20px;
     font-size: 16px;
-    text-align: center;
   }
   #about .info .text .text_scrollTrigger {
     word-break: break-all;

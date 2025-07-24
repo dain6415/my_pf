@@ -159,7 +159,7 @@
     padding: 6em 2em;
   }
   #project .sect_inner .swiper {
-    width: 80%;
+    width: 70%;
     overflow: visible !important;
     padding-top: 20px;
   }
@@ -180,7 +180,6 @@
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
-    text-align: center;
   }
   #project .text_info .title {
     font-size: 24px;

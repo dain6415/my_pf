@@ -175,7 +175,7 @@
     padding: 6em 2em;
     .sect_inner {
       .swiper {
-        width: 80%;
+        width: 70%;
         overflow: visible !important;
         padding-top: 20px;
         .swiper-slide {
@@ -198,7 +198,6 @@
       left: 50%;
       width: 100%;
       transform: translateX(-50%);
-      text-align: center;
       .title {
         font-size: clamp(20px, 24px, 28px);
         margin-bottom: 6px;
