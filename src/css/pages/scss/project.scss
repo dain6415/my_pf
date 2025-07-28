@@ -37,22 +37,6 @@
       font-size: 18px;
       border: none;
       position: relative;
-      opacity: 0;
-      &.on {
-        opacity: 1;
-        .img_box {
-          img {
-            filter: grayscale(0);
-            transition: 0.3s;
-          }
-        }
-      }
-      .img_box {
-        img {
-          filter: grayscale(1);
-          transition: 0.4s;
-        }
-      }
     }
     &:hover {
       .swiper_btn {
@@ -187,7 +171,7 @@
       position: relative;
       height: 200px;
       word-break: keep-all;
-      // border: 1px solid #000;
+      border: 1px solid #000;
       br {
         display: none;
       }
@@ -208,26 +192,20 @@
         font-weight: 300;
         color: var;
       }
-      ul{
+      ul {
         display: flex;
         justify-content: center;
         gap: 20px;
         padding-top: 20px;
         font-size: clamp(14px, 16px, 20px);
         color: var(--black600);
-
-      }
-    }
-    .img_box {
-      img {
-        // filter: grayscale(1);
-        transition: 0.4s;
       }
     }
     .shadow {
       filter: drop-shadow(4px 6px 2px rgba(0, 0, 0, 0.2));
     }
     .swiper_btn {
+      border: 1px solid #000;
       .btn {
         width: 60px;
         height: 60px;
@@ -264,6 +242,16 @@
         margin: 0;
         .swiper-slide {
           transition: 0.5s;
+          opacity: 0;
+          &.on {
+            opacity: 1;
+            .img_box {
+              img {
+                filter: grayscale(0);
+                transition: 0.3s;
+              }
+            }
+          }
         }
         .shadow {
           filter: drop-shadow(7px 8px 3px rgba(0, 0, 0, 0.2));
@@ -276,6 +264,10 @@
     .img_box {
       margin-bottom: 20px;
       transition: 0.4s;
+      img {
+        filter: grayscale(1);
+        transition: 0.4s;
+      }
     }
     .text_container {
       // border: 1px solid #000;

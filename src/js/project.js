@@ -1,6 +1,7 @@
 export function project() {
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
+    spaceBetween:100,
     speed: 500,
     pagination: {
       el: ".swiper-pagination",
@@ -18,6 +19,9 @@ export function project() {
         updateActiveClasses(this);
       },
     },
+    // breakpoints: {
+
+    // },
   });
 
   function updateActiveClasses(swiper) {
