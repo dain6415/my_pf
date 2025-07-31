@@ -1,81 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IntersectionObserver 차이</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    .scroll-box {
-      width: 300px;
-      height: 200px;
-      border: 2px solid black;
-      overflow: visible;
-    }
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
 
-    .spacer {
-      height: 600px;
-    }
+      body {
+        background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
 
-    .target {
-      height: 100px;
-      background-color: tomato;
-      text-align: center;
-      line-height: 100px;
-      color: white;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
 
-  <div class="scroll-box">
-    <div class="spacer"></div>
-    <div class="target">🎯 Target</div>
-    <div class="spacer"></div>
-  </div>
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  <script>
-    const target = document.querySelector('.target');
-    const scrollBox = document.querySelector('.scroll-box');
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper_container{
+        display: flex;
+      }
+      .text_container{
+        width: 40%;
+        position: relative;
+      }
+      .text_info{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .swiper{
+        width: 55%;
+      }
+    </style>
+  </head>
 
-    // 옵저버 1: root null (브라우저 화면 기준)
-    const observerNull = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.backgroundColor = 'gray';
-          entry.target.textContent = '❌ root: null 감지됨';
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.5
+  <body>
+    <!-- Swiper -->
+    <div class="swiper_container">
+      <div class="text_container">
+        <div class="text_info on" data-index="0">
+          <div class="title">NewJeans</div>
+          <p class="desc">
+            반응형 Grid 레이아웃과 iframe 삽입을 통해<br />
+            뉴진스의 ‘Supernatural’ 앨범을 주제로 한 아티스트 홈페이지를
+            <br />구조적으로 리디자인하고 퍼블리싱하였습니다.
+          </p>
+          <ul>
+            <li>#grid</li>
+            <li>#iframe</li>
+            <li>#newjeans</li>
+          </ul>
+        </div>
+        <div class="text_info" data-index="1">
+          <div class="title">서울시립미술관</div>
+          <p class="desc">다크/라이트모드 전환 기능을 구현한 리디자인</p>
+        </div>
+        <div class="text_info" data-index="2">
+          <div class="title">selmine</div>
+          <p class="desc">
+            복약 시간 설정과 정보 제공을 위한 복약 관리 앱 UI 디자인
+          </p>
+        </div>
+        <div class="pagination-aria">
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide on">
+            <a
+              href="https://dain6415.github.io/project/p_NewJeans"
+              aria-label="프로젝트 페이지로 이동"
+              target="_blank"
+              class="link_project"
+            >
+              <span class="blind">뉴진스 페이지로 이동</span>
+              <div class="img_box shadow">
+                <img
+                  class="pc_img"
+                  src="./src/img/project/nj_thum.png"
+                  alt="뉴진스 이미지"
+                  aria-hidden="true"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide on">
+            <a
+              href="https://dain6415.github.io/project/p_NewJeans"
+              aria-label="프로젝트 페이지로 이동"
+              target="_blank"
+              class="link_project"
+            >
+              <span class="blind">뉴진스 페이지로 이동</span>
+              <div class="img_box shadow">
+                <img
+                  class="pc_img"
+                  src="./src/img/project/nj_thum.png"
+                  alt="뉴진스 이미지"
+                  aria-hidden="true"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide on">
+            <a
+              href="https://dain6415.github.io/project/p_NewJeans"
+              aria-label="프로젝트 페이지로 이동"
+              target="_blank"
+              class="link_project"
+            >
+              <span class="blind">뉴진스 페이지로 이동</span>
+              <div class="img_box shadow">
+                <img
+                  class="pc_img"
+                  src="./src/img/project/nj_thum.png"
+                  alt="뉴진스 이미지"
+                  aria-hidden="true"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+       const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 100,
+    centeredSlides: true,
+    speed: 500,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      init: function () {
+        updateActiveClasses(this);
+      },
+      slideChange: function () {
+        updateActiveClasses(this);
+      },
+    },
+    // breakpoints: {
+
+    // },
+  });
+
+  function updateActiveClasses(swiper) {
+    const activeIndex = swiper.realIndex;
+
+    // 슬라이드에 .on 클래스
+    swiper.slides.forEach((slide, idx) => {
+      slide.classList.toggle("on", idx === activeIndex);
     });
 
-    // 옵저버 2: root 요소 기준 (스크롤박스 내부)
-    const observerBox = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.backgroundColor = 'green';
-          entry.target.textContent = '✅ root: box 감지됨';
-        }
-      });
-    }, {
-      root: scrollBox,
-      threshold: 0.5
+    // 텍스트에 .on 클래스
+    document.querySelectorAll(".text_container .text_info").forEach((el, idx) => {
+      el.classList.toggle("on", idx === activeIndex);
     });
-
-    // 둘 다 연결해보기
-    observerNull.observe(target);
-    observerBox.observe(target);
-  </script>
-</body>
+  }
+    </script>
+  </body>
 </html>

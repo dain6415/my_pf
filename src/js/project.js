@@ -1,7 +1,8 @@
 export function project() {
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween:100,
+    spaceBetween: 100,
+    centeredSlides: true,
     speed: 500,
     pagination: {
       el: ".swiper-pagination",
