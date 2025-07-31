@@ -15,28 +15,9 @@
   position: relative;
   color: var(--black200_txt);
 }
-#project .swiper {
-  width: 100%;
-  height: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
-#project .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #444;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#project .swiper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 #project .swiper_container {
   background: var(--black100);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 #project .swiper_container .text_container {
   position: relative;
@@ -45,8 +26,68 @@
   position: absolute;
   top: 0;
   left: 0;
+  color: var(--black700);
+  display: none;
+}
+#project .swiper_container .text_container .text_info.on {
+  display: block;
+}
+#project .swiper_container .text_container .text_info.expand .desc {
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 #project .swiper_container .text_container .text_info .title {
+  font-weight: 500;
+  color: var(--white);
+}
+#project .swiper_container .text_container .text_info .desc {
+  font-weight: 100;
+  line-height: 1.5;
+  color: var(--black800);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#project .swiper_container .text_container .text_info .desc p {
+  margin-bottom: 10px;
+}
+#project .swiper_container .text_container .text_info .more {
+  display: block;
+  text-decoration: underline;
+  color: var(--black400);
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#project .swiper_container .text_container .text_info .more:hover {
+  color: var(--black800);
+}
+#project .swiper_container .text_container .text_info .tag {
+  display: none;
+}
+#project .swiper_container .swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+#project .swiper_container .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#project .swiper_container .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#project .bold {
+  font-weight: 500;
   color: var(--white);
 }
 #project .swiper_btn {
@@ -112,19 +153,6 @@
   top: 7px;
   left: -2px;
 }
-#project .text_info {
-  color: var(--black700);
-  opacity: 0;
-}
-#project .text_info.on {
-  opacity: 1;
-}
-#project .text_info .title {
-  font-weight: 500;
-}
-#project .text_info .tag {
-  display: none;
-}
 #project .link_project .img_box {
   width: 100%;
   display: -webkit-box;
@@ -151,7 +179,7 @@
   height: 10px;
 }
 #project .pagination-aria .swiper-pagination-fraction {
-  color: var(--black600);
+  color: var(--black400);
   font-size: 24px;
   font-weight: 200;
 }
@@ -183,37 +211,43 @@
   #project .swiper_container .swiper .swiper-slide .pc_img {
     display: none;
   }
+  #project .swiper_container .swiper .swiper-slide .img_box {
+    border-radius: 10px;
+  }
   #project .swiper_container .text_container {
     position: relative;
-    height: 160px;
     word-break: keep-all;
     border: 1px solid #000;
   }
   #project .swiper_container .text_container br {
     display: none;
   }
-  #project .swiper_container .text_info {
+  #project .swiper_container .text_container .text_info {
     position: absolute;
     top: 0;
     left: 0;
   }
-  #project .swiper_container .text_info .title {
+  #project .swiper_container .text_container .text_info .title {
     font-size: 32px;
     margin-bottom: 10px;
     transition: 0.3s;
   }
-  #project .swiper_container .text_info .desc {
+  #project .swiper_container .text_container .text_info .desc {
     font-size: 16px;
     font-weight: 300;
     word-break: break-all;
     line-height: 1.4;
   }
-  #project .swiper_container .text_info ul {
+  #project .swiper_container .text_container .text_info ul {
     justify-content: center;
     gap: 20px;
     padding-top: 20px;
     font-size: 16px;
     color: var(--black600);
+  }
+  #project .swiper_container .text_container .text_info .more {
+    font-size: 14px;
+    padding-top: 10px;
   }
   #project .swiper_btn {
     border: 1px solid #000;
@@ -225,7 +259,7 @@
   #project .pagination-aria {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 8px;
   }
   #project .pagination-aria .swiper-pagination-fraction {
     color: var(--black700);
@@ -262,6 +296,7 @@
   }
   #project .sect_inner .swiper .img_box {
     transition: 0.4s;
+    border-radius: 20px;
   }
   #project .sect_inner .swiper .img_box img {
     filter: grayscale(1);
@@ -269,12 +304,11 @@
   }
   #project .swiper_container {
     flex-direction: column;
+    gap: 20px;
   }
   #project .text_container {
     display: block;
     width: 100%;
-    border: 1px solid #000;
-    height: 200px;
   }
   #project .text_container .text_info {
     position: absolute;
@@ -282,14 +316,15 @@
     left: 0;
   }
   #project .text_container .text_info .title {
-    font-size: 48px;
+    font-size: 32px;
     margin-bottom: 12px;
   }
-  #project .text_container .text_info .desc {
+  #project .text_container .text_info .desc,
+  #project .text_container .text_info .more {
     font-size: 20px;
-    font-weight: 200;
-    line-height: 1.5;
-    color: var(--black600);
+  }
+  #project .text_container .text_info .more {
+    padding-top: 10px;
   }
   #project .text_container .text_info ul {
     gap: 10px;
@@ -352,7 +387,7 @@
     position: absolute;
     text-align: right;
     right: 0;
-    top: 10px;
+    top: -6px;
   }
   #project .pagination-aria .swiper-pagination span {
     width: 10px;
@@ -363,6 +398,7 @@
   #project .swiper_container {
     flex-direction: row;
     padding: 80px;
+    gap: 0;
   }
   #project .swiper_container .swiper {
     width: 58%;
@@ -372,8 +408,9 @@
   }
   #project .swiper_container .pagination-aria {
     position: absolute;
-    left: 0;
-    bottom: -80px;
+    right: 4px;
+    top: 9px;
+    width: 45px;
   }
   #project .swiper_container .pagination-aria .swiper-pagination {
     text-align: left;
