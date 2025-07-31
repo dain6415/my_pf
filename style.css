@@ -145,7 +145,7 @@ section {
   gap: 30px;
   position: relative;
   align-items: center;
-  color: var(--black800);
+  color: var(--black700);
 }
 .sect_title .title {
   width: 100%;
