@@ -1,4 +1,4 @@
-import { customCursor } from "./src/js/customCursor.js";
+ import { customCursor } from "./src/js/customCursor.js";
 import { header } from "./src/js/header.js";
 import { introStickers } from "./src/js/introStickers.js";
 import { about } from "./src/js/about.js";

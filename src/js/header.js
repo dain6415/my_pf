@@ -3,7 +3,9 @@ export function header() {
   const footer = document.querySelector("#footer");
 
   window.addEventListener("scroll", function () {
-    const gnbMenusColor = document.querySelectorAll(".nav_link .up_btn");
+    const gnbMenusColor = document.querySelectorAll(".pc_nav_list .nav_link");
+    const gnbMobileColor = document.querySelector(".gnb_mobile_var span");
+    const gnbUpColor = document.querySelectorAll(".up_btn");
     const gnbHomeBtn = document.querySelector(".gnb_logo a");
     const footerTop = footer.offsetTop;
     const scrollY = window.scrollY;
@@ -12,25 +14,33 @@ export function header() {
     //만약 footer일때 -----
     if (scrollY + windowH > footerTop) {
       header.style.background = "rgba(255, 255, 255, 0.1)";
+    
       gnbMenusColor.forEach((link) => {
-        if (!link.classList.contains("on")) {
-          link.style.color = "#ccc";
-        } else {
-          link.style.color = "#fff";
-        }
+        link.style.color = "#fff";
       });
+    
+      gnbUpColor.forEach((link) => {
+        link.style.color = "#fff";
+        link.style.border = "1px solid #fff";
+      });
+      
       gnbHomeBtn.style.color = "#fff";
-      // 스크롤이 40 이상일 때 ----- 켄텐츠에서는~
-    } else if (scrollY > 40) {
+      gnbMobileColor.style.color = "#fff";
+    }
+    else if (scrollY > 40) {
       header.style.background = "rgba(0, 0, 0, .2)";
       gnbMenusColor.forEach((link) => {
         if (!link.classList.contains("on")) {
           link.style.color = "#666";
-        } else {
-          link.style.color = "#999";
         }
       });
+      gnbUpColor.forEach((link) => {
+        link.style.color = "#666";
+        link.style.border = "1px solid #666";
+      });
+      
       gnbHomeBtn.style.color = "#666";
+      gnbMobileColor.style.color = "#666";
       // 40 미만일 때 = 맨위! 인트로 -----
     } else {
       header.style.background = "";

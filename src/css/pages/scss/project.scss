@@ -26,9 +26,9 @@
   height: 100%;
   position: relative;
   color: var(--black200_txt);
-  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   .text_container {
     position: relative;
+    z-index: 10;
     .text_info {
       position: absolute;
       top: 0;
@@ -82,52 +82,78 @@
     height: 100%;
     margin-left: 0;
     margin-right: 0;
+    overflow: visible;
     .swiper-slide {
       text-align: center;
       font-size: 18px;
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-        display: block;
+      pointer-events: none;
+      &.on{
+        pointer-events:auto;
+      }
+    }
+    .link_project {
+      .img_box {
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px rgba(0, 63, 209, 0.2);
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include flex-c();
+        overflow: hidden;
+        img {
+          width: 100%;
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
 }
 .swiper_btn {
   position: absolute;
-  top: 46%;
-  left: 0;
-  width: 100px;
-  opacity: 1;
-  transition: opacity 0.3s;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
   z-index: 1;
   .btn {
     width: 80px;
     height: 80px;
     padding: 14px;
-    // border: 1px dotted var(--black400);
+    border: 1px solid var(--main-color);
+    background: rgba(244, 240, 240, 0.05);
+    // opacity: 0.9;
     border-radius: 50%;
+    &:hover{
+      // opacity: 0.8;
+      background: rgba(244, 240, 240, 0.5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    &.swiper-button-prev {
+      left: 0;
+    }
+    &.swiper-button-next {
+      right: 0;
+    }
     &::after {
       display: none;
     }
     .next,
     .prev {
-      position: relative;
       width: 40px;
       height: 2px;
-      background: var(--black400);
+      background: var(--main-color);
       border-radius: 20px;
+      position: relative;
       &::before,
       &::after {
         content: "";
         position: absolute;
         width: 50%;
         height: 2px;
-        background: var(--black400);
+        background: var(--main-color);
         border-radius: 20px;
       }
     }
@@ -144,6 +170,7 @@
         right: -2px;
       }
     }
+
     .prev {
       transform-origin: left;
       &::before {
@@ -159,16 +186,7 @@
     }
   }
 }
-.link_project {
-  .img_box {
-    width: 100%;
-    @include flex-c();
-    overflow: hidden;
-    img {
-      width: 100%;
-    }
-  }
-}
+
 .pagination-aria {
   display: block;
   position: relative;
@@ -207,13 +225,17 @@
         width: 100%;
         padding-top: 40px;
         .swiper-slide {
-          transition: 0.4s;
+          transition: 0.2s;
           .pc_img {
             display: none;
           }
           .img_box {
             border-radius: 10px;
           }
+        }
+        .swiper_btn{
+          display: none;
+          width: 100%;
         }
       }
       .text_container {
@@ -274,12 +296,11 @@
   #project {
     .sect_inner {
       width: 90%;
-      padding-top: 10em;
+      margin-top: 10em;
       .swiper_container {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        border-radius: 50px;
         gap: 40px;
       }
       .swiper {
@@ -338,49 +359,6 @@
       .btn {
         width: 80px;
         height: 80px;
-        .next,
-        .prev {
-          position: relative;
-          width: 40px;
-          height: 2px;
-          background: var(--black400);
-          border-radius: 20px;
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-            width: 50%;
-            height: 2px;
-            background: var(--black400);
-            border-radius: 20px;
-          }
-        }
-        .next {
-          transform-origin: right;
-          &::before {
-            transform: rotate(45deg);
-            bottom: 7px;
-            right: -2px;
-          }
-          &::after {
-            transform: rotate(-45deg);
-            top: 7px;
-            right: -2px;
-          }
-        }
-        .prev {
-          transform-origin: left;
-          &::before {
-            transform: rotate(-45deg);
-            bottom: 7px;
-            left: -2px;
-          }
-          &::after {
-            transform: rotate(45deg);
-            top: 7px;
-            left: -2px;
-          }
-        }
       }
     }
     .pagination-aria {
@@ -403,7 +381,7 @@
 // -----------------------------------------------------------------------------------
 @media only screen and (min-width: 1200px) {
   #project {
-    .sect_inner{
+    .sect_inner {
       .swiper_container {
         flex-direction: row;
         gap: 0;
@@ -411,7 +389,7 @@
           width: 58%;
         }
         .text_container {
-          width: 40%;
+          width: 36%;
         }
         .pagination-aria {
           position: absolute;

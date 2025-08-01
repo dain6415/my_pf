@@ -21,7 +21,7 @@
   padding: 10px 20px;
   color: #666;
 }
-#gnb .gnb_inner .gnb .nav_list {
+#gnb .gnb_inner .gnb .pc_nav_list {
   text-transform: uppercase;
   color: var(--black600);
   display: flex;
@@ -29,23 +29,22 @@
   align-items: center;
   gap: 5px;
 }
-#gnb .gnb_inner .gnb .nav_list .nav_item .nav_link {
+#gnb .gnb_inner .gnb .pc_nav_list .nav_item .nav_link {
   display: inline-block;
   position: relative;
   transform-origin: right;
   border-radius: 50px;
-  color: #666;
   transition: color 0.3s;
   padding: 10px 20px;
   white-space: nowrap;
 }
-#gnb .gnb_inner .gnb .nav_list .nav_item .nav_link:hover {
+#gnb .gnb_inner .gnb .pc_nav_list .nav_item .nav_link:hover {
   color: #999;
 }
-#gnb .gnb_inner .gnb .nav_list .nav_item .nav_link.on {
+#gnb .gnb_inner .gnb .pc_nav_list .nav_item .nav_link.on {
   background: var(--main-color);
 }
-#gnb .gnb_inner .gnb .nav_list .nav_item .nav_link.on span {
+#gnb .gnb_inner .gnb .pc_nav_list .nav_item .nav_link.on span {
   color: #fff;
 }
 
@@ -68,7 +67,6 @@
     align-items: center;
     width: 90px;
     border-radius: 20px;
-    color: var(--black600);
     text-transform: uppercase;
   }
   #gnb .gnb_inner .gnb_logo,
@@ -123,32 +121,35 @@
     display: inline-block;
     font-size: 4vw;
   }
-  .gnb_mobile .nav_list {
+  .gnb_mobile .gnb_logo,
+  .gnb_mobile .mobile_nav_list {
+    color: var(--white);
+    font-size: 20px;
+  }
+  .gnb_mobile .mobile_nav_list {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 20px;
-    color: var(--white);
-    font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
   }
-  .gnb_mobile .nav_list .nav_link {
+  .gnb_mobile .mobile_nav_list .nav_link {
     display: inline-block;
     font-size: 20px;
     position: relative;
     opacity: 1;
     transition: opacity 0.5s ease, color 0.5s ease; /* opacity와 color에 대해 부드러운 전환 효과 추가 */
   }
-  .gnb_mobile .nav_list .nav_link:hover {
+  .gnb_mobile .mobile_nav_list .nav_link:hover {
     color: var(--white);
     opacity: 1;
   }
-  .gnb_mobile .nav_list .nav_link:hover::after {
+  .gnb_mobile .mobile_nav_list .nav_link:hover::after {
     width: 100%;
     left: 0;
   }
-  .gnb_mobile .nav_list .nav_link::after {
+  .gnb_mobile .mobile_nav_list .nav_link::after {
     content: "";
     width: 0%;
     height: 2px;

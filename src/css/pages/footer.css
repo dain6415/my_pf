@@ -1,5 +1,5 @@
 #footer {
-  background: #111;
+  background: var(--main-color);
   position: relative;
   width: 100%;
   transition: transform 0.5s ease-out;
@@ -29,7 +29,7 @@
 }
 #footer .footer_info .bottom {
   line-height: 1.5;
-  color: #999;
+  color: var(--mainBg-color);
 }
 #footer .footer_info .bottom a:hover {
   text-decoration: underline;

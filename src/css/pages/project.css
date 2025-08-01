@@ -17,6 +17,7 @@
 }
 #project .text_container {
   position: relative;
+  z-index: 10;
 }
 #project .text_container .text_info {
   position: absolute;
@@ -68,6 +69,7 @@
   height: 100%;
   margin-left: 0;
   margin-right: 0;
+  overflow: visible;
 }
 #project .swiper .swiper-slide {
   text-align: center;
@@ -75,39 +77,64 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
-#project .swiper .swiper-slide img {
-  display: block;
+#project .swiper .swiper-slide.on {
+  pointer-events: auto;
+}
+#project .swiper .link_project .img_box {
+  box-shadow: 0 5px 10px rgba(0, 63, 209, 0.2);
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#project .swiper .link_project .img_box img {
+  width: 100%;
+  display: block;
   height: 100%;
   object-fit: cover;
 }
 
 .swiper_btn {
   position: absolute;
-  top: 46%;
-  left: 0;
-  width: 100px;
-  opacity: 1;
-  transition: opacity 0.3s;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
   z-index: 1;
 }
 .swiper_btn .btn {
   width: 80px;
   height: 80px;
   padding: 14px;
+  border: 1px solid var(--main-color);
+  background: rgba(244, 240, 240, 0.05);
   border-radius: 50%;
+}
+.swiper_btn .btn:hover {
+  background: rgba(244, 240, 240, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.swiper_btn .btn.swiper-button-prev {
+  left: 0;
+}
+.swiper_btn .btn.swiper-button-next {
+  right: 0;
 }
 .swiper_btn .btn::after {
   display: none;
 }
 .swiper_btn .btn .next,
 .swiper_btn .btn .prev {
-  position: relative;
   width: 40px;
   height: 2px;
-  background: var(--black400);
+  background: var(--main-color);
   border-radius: 20px;
+  position: relative;
 }
 .swiper_btn .btn .next::before, .swiper_btn .btn .next::after,
 .swiper_btn .btn .prev::before,
@@ -116,7 +143,7 @@
   position: absolute;
   width: 50%;
   height: 2px;
-  background: var(--black400);
+  background: var(--main-color);
   border-radius: 20px;
 }
 .swiper_btn .btn .next {
@@ -144,19 +171,6 @@
   transform: rotate(45deg);
   top: 7px;
   left: -2px;
-}
-
-.link_project .img_box {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.link_project .img_box img {
-  width: 100%;
 }
 
 .pagination-aria {
@@ -201,13 +215,17 @@
     padding-top: 40px;
   }
   #project .swiper_container .swiper .swiper-slide {
-    transition: 0.4s;
+    transition: 0.2s;
   }
   #project .swiper_container .swiper .swiper-slide .pc_img {
     display: none;
   }
   #project .swiper_container .swiper .swiper-slide .img_box {
     border-radius: 10px;
+  }
+  #project .swiper_container .swiper .swiper_btn {
+    display: none;
+    width: 100%;
   }
   #project .swiper_container .text_container {
     position: relative;
@@ -261,13 +279,12 @@
 @media only screen and (min-width: 701px) {
   #project .sect_inner {
     width: 90%;
-    padding-top: 10em;
+    margin-top: 10em;
   }
   #project .sect_inner .swiper_container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    border-radius: 50px;
     gap: 40px;
   }
   #project .sect_inner .swiper .swiper-slide {
@@ -321,50 +338,6 @@
     width: 80px;
     height: 80px;
   }
-  #project .swiper_btn .btn .next,
-  #project .swiper_btn .btn .prev {
-    position: relative;
-    width: 40px;
-    height: 2px;
-    background: var(--black400);
-    border-radius: 20px;
-  }
-  #project .swiper_btn .btn .next::before, #project .swiper_btn .btn .next::after,
-  #project .swiper_btn .btn .prev::before,
-  #project .swiper_btn .btn .prev::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 2px;
-    background: var(--black400);
-    border-radius: 20px;
-  }
-  #project .swiper_btn .btn .next {
-    transform-origin: right;
-  }
-  #project .swiper_btn .btn .next::before {
-    transform: rotate(45deg);
-    bottom: 7px;
-    right: -2px;
-  }
-  #project .swiper_btn .btn .next::after {
-    transform: rotate(-45deg);
-    top: 7px;
-    right: -2px;
-  }
-  #project .swiper_btn .btn .prev {
-    transform-origin: left;
-  }
-  #project .swiper_btn .btn .prev::before {
-    transform: rotate(-45deg);
-    bottom: 7px;
-    left: -2px;
-  }
-  #project .swiper_btn .btn .prev::after {
-    transform: rotate(45deg);
-    top: 7px;
-    left: -2px;
-  }
   #project .pagination-aria {
     display: inline-block;
     width: 100%;
@@ -390,7 +363,7 @@
     width: 58%;
   }
   #project .sect_inner .swiper_container .text_container {
-    width: 40%;
+    width: 36%;
   }
   #project .sect_inner .swiper_container .pagination-aria {
     position: absolute;
