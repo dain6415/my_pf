@@ -7,6 +7,7 @@
 
   --mainBg-color: #f5f5f5;
   --sBg-color: #ebebeb;
+  /* --main-color: rgb(0, 63, 209); */
   --main-color: #003fd1;
   --svg-main-color: #1f67f8;
 
@@ -35,4 +36,205 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smooting: antialiased;
   -webkit-text-size-adjust: 100%;
+}
+main {
+  position: relative;
+  overflow-x: visible;
+  background: #f5f5f5;
+}
+@media only screen and (max-width: 700px) {
+  main {
+    border-radius: 0 0 20px 20px;
+  }
+}
+@media only screen and (min-width: 701px) {
+  main {
+    border-radius: 0 0 60px 60px;
+  }
+}
+main .bg-texture {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url("./src/img/bg-paper-texture.jpg") center/cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+a {
+  cursor: none;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.animate-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-up.hide {
+  opacity: 0;
+  transform: translateY(-10%);
+}
+/* -------------------------------------------------------------------------------- */
+/* section -------------------- */
+section {
+  width: 100%;
+  margin: auto;
+}
+@media only screen and (max-width: 700px) {
+  .sect_inner {
+    width: 98%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section:not(:nth-child(2)) {
+    height: 100vh;
+  }
+  section:nth-child(2) {
+    height: 80vh;
+  }
+  section .sect_inner {
+    width: 90%;
+  }
+}
+/* section:not(:first-child)인 이유는 스티커때문 */
+@media only screen and (min-width: 1000px) {
+  section:not(:first-child) .sect_inner {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section:not(:first-child) {
+    width: 90%;
+  }
+  section:not(:first-child) .sect_inner {
+    max-width: 1380px;
+    margin: auto;
+  }
+}
+/* -------------------------------------------------------------------------------- */
+/*  sect_title ---------------------- */
+.sect_title {
+  gap: 30px;
+  position: relative;
+  align-items: center;
+  color: var(--black700);
+}
+.sect_title .title {
+  width: 100%;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--subEng-font);
+  font-weight: 900;
+}
+@media only screen and (max-width: 700px) {
+  .sect_title {
+    display: block;
+    /* text-align: center; */
+    margin-bottom: 30px;
+  }
+  .sect_title .title {
+    font-size: clamp(16px, 20px, 28pc);
+  }
+}
+@media only screen and (min-width: 701px) {
+  .sect_title .title {
+    font-size: 3.2rem;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+/* -------------------------------------------------------------------------------- */
+/* 위로가기 버튼 ---------------------- */
+.up_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--black600);
+  cursor: pointer;
+}
+.pc_up_btn {
+  width: 40px;
+  height: 40px;
+
+  color: #666;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width:700px) {
+  .mobile_up_btn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+
+    width: 54px;
+    height: 54px;
+
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 900;
+
+    z-index: -1;
+  }
+}
+.up_btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+/* ------------------------------------------- */
+nav.header__mobile.on ul li a.on {
+  color: var(--white);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* cursor -------------------- */
+#custom_cursor {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  pointer-events: none;
+  transition: padding 0.3s;
+}
+
+#custom_cursor.on {
+  padding: calc(100px / 2);
+}
+#custom_cursor.on span {
+  height: 12px;
+  transform: translateY(-30px);
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    cursor: none;
+  }
+}
+.bold {
+  font-weight: 700;
+  color: var(--black200_txt);
 }
