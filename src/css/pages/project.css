@@ -279,7 +279,8 @@
 @media only screen and (min-width: 701px) {
   #project .sect_inner {
     width: 90%;
-    margin-top: 10em;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   #project .sect_inner .swiper_container {
     display: flex;
@@ -320,8 +321,8 @@
     left: 0;
   }
   #project .text_container .text_info .title {
-    font-size: 32px;
-    margin-bottom: 12px;
+    font-size: 42px;
+    margin-bottom: 20px;
   }
   #project .text_container .text_info .desc,
   #project .text_container .text_info .more {
@@ -347,11 +348,13 @@
     position: absolute;
     text-align: right;
     right: 0;
-    top: -6px;
+    top: 2px;
+    color: var(--black700);
   }
   #project .pagination-aria .swiper-pagination span {
     width: 10px;
     height: 10px;
+    color: var(--black700);
   }
 }
 @media only screen and (min-width: 1200px) {

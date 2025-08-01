@@ -296,7 +296,8 @@
   #project {
     .sect_inner {
       width: 90%;
-      margin-top: 10em;
+      margin-top: 100px;
+      margin-bottom: 100px;
       .swiper_container {
         display: flex;
         justify-content: space-between;
@@ -339,8 +340,8 @@
         top: 0;
         left: 0;
         .title {
-          font-size: 32px;
-          margin-bottom: 12px;
+          font-size: 42px;
+          margin-bottom: 20px;
         }
         .desc,
         .more {
@@ -369,10 +370,12 @@
         position: absolute;
         text-align: right;
         right: 0;
-        top: -6px;
+        top: 2px;
+        color: var(--black700);
         span {
           width: 10px;
           height: 10px;
+          color: var(--black700);
         }
       }
     }
