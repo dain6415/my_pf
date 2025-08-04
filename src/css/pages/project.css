@@ -284,6 +284,8 @@
 @media only screen and (min-width: 701px) {
   #project .sect_inner {
     width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   #project .sect_inner .swiper_container {
     display: flex;

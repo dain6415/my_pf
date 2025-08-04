@@ -114,9 +114,7 @@ section {
     justify-content: center;
     align-items: center;
   }
-  /* section:not(:nth-child(2)) {
-    height: 100vh;
-  } */
+
   section:nth-child(2) {
     height: 80vh;
   }
@@ -166,7 +164,7 @@ section {
 }
 @media only screen and (min-width: 701px) {
   .sect_title .title {
-    font-size: 3.2rem;
+    font-size: 24px;
     margin-bottom: 60px;
   }
 }
