@@ -83,7 +83,6 @@
   pointer-events: auto;
 }
 #project .swiper .link_project .img_box {
-  box-shadow: 0 5px 10px rgba(0, 63, 209, 0.2);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +90,12 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+#project .swiper .link_project .img_box.nj, #project .swiper .link_project .img_box.sel {
+  box-shadow: 0 5px 10px rgba(0, 63, 209, 0.2);
+}
+#project .swiper .link_project .img_box.sema {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 #project .swiper .link_project .img_box img {
   width: 100%;
@@ -279,8 +284,6 @@
 @media only screen and (min-width: 701px) {
   #project .sect_inner {
     width: 90%;
-    margin-top: 100px;
-    margin-bottom: 100px;
   }
   #project .sect_inner .swiper_container {
     display: flex;
