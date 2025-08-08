@@ -1,9 +1,9 @@
-#project ul .project_itme {
+#project ul .project_item {
   display: flex;
   overflow: hidden;
   transition: width 0.5s ease;
 }
-#project ul .project_itme button {
+#project ul .project_item button {
   position: relative;
   display: flex;
 }
@@ -19,7 +19,8 @@
 }
 #project ul .img_box .project_title {
   text-align: left;
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 @media only screen and (max-width: 700px) {
@@ -33,11 +34,11 @@
     gap: 24px;
     width: 100%;
   }
-  #project ul .project_itme {
+  #project ul .project_item {
     display: flex;
     width: 100%;
   }
-  #project ul .project_itme button {
+  #project ul .project_item button {
     position: relative;
     display: flex;
     gap: 5px;
@@ -50,7 +51,6 @@
 }
 @media only screen and (min-width: 701px) {
   #project {
-    margin-top: 210px;
     margin-bottom: 100px;
   }
   #project ul {
@@ -60,12 +60,12 @@
     flex-wrap: wrap;
     width: 100%;
   }
-  #project ul .project_itme .project_title {
+  #project ul .project_item .project_title {
     margin-top: 4px;
     font-size: 20px;
     font-weight: 500;
   }
-  #project ul .project_itme button {
+  #project ul .project_item button {
     position: relative;
     display: flex;
     gap: 5px;
@@ -87,12 +87,12 @@
 }
 @media screen and (min-width: 1200px) {
   #project {
-    margin-top: 320px;
+    margin-top: 300px;
   }
   #project ul {
     grid-template-columns: repeat(4, 1fr);
   }
-  #project ul .project_itme button {
+  #project ul .project_item button {
     gap: 5px;
   }
 }/*# sourceMappingURL=project.css.map */

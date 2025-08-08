@@ -3,9 +3,11 @@
 @import url(/src/css/pages/about.css);
 @import url(/src/css/pages/project.css);
 @import url(/src/css/pages/work.css);
+@import url(/src/css/pages/modal.css);
 
 :root {
   --main-color: #0073ff;
+  --main-color2: #3791ff;
 }
 /* ========================== */
 /* 공통 스타일만*/
@@ -13,23 +15,22 @@
 html,
 body {
   position: relative;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  color: var(--main-color);
+  color: var(--main-color2);
   background: #f4f4f4;
-  transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out;
   letter-spacing: -0.6px;
 
   line-height: 1.4;
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   font-size: 10px;
   
-  cursor: none;
   scrollbar-width: 1px;
 }
 *,
@@ -41,12 +42,8 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--main-color);
 }
 
-a {
-  cursor: none;
-}
 button {
   background: none;
   border: none;
@@ -65,17 +62,14 @@ button {
   pointer-events: none;
 }
 .noise::after {
+  content: "";
   position: absolute;
   top: -10rem;
   left: -10rem;
   width: calc(100% + 20rem);
   height: calc(100% + 20rem);
-  animation: noise_noise__N0mbn var(--bd-time-transition-1000) steps(2)
-    infinite;
   background-image: url(./src/img/noise.e8298e81.png);
   background-position: 50%;
-  content: "";
-  will-change: transform;
 }
 .blind {
   position: absolute;
@@ -97,7 +91,7 @@ button {
 .intro {
   margin-top: 20px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h2 {

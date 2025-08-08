@@ -16,7 +16,8 @@
       padding: 8px;
       &:hover {
         background: rgba($color: #0073ff, $alpha: 0.1);
-        font-weight: 500;
+        color: var(--main-color);
+        font-weight: 600;
       }
     }
     span {

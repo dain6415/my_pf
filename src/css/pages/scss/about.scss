@@ -2,14 +2,15 @@
   .pf_title_wrap {
     display: grid;
     font-weight: bold;
-  }
-  .pf {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
-    text-transform: uppercase;
+    color: var(--main-color);
+    .pf {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      text-transform: uppercase;
+    }
   }
   .labels,
   .values,
@@ -26,7 +27,8 @@
   }
   .values,
   .category {
-    font-weight: 600;
+    color: var(--main-color);
+    font-weight: 700;
     span {
       font-weight: 300;
       text-transform: uppercase;

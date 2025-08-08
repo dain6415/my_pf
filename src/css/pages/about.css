@@ -1,8 +1,9 @@
 #about .pf_title_wrap {
   display: grid;
   font-weight: bold;
+  color: var(--main-color);
 }
-#about .pf {
+#about .pf_title_wrap .pf {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -25,7 +26,8 @@
 }
 #about .values,
 #about .category {
-  font-weight: 600;
+  color: var(--main-color);
+  font-weight: 700;
 }
 #about .values span,
 #about .category span {

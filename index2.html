@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dain's Portfolio</title>
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
     <link rel="stylesheet" href="./src/css/base/public/reset.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <!--  -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -101,7 +101,7 @@
           </li>
         </ul>
       </section>
-      <script>
+      <!-- <script>
         const projectLis = document.querySelectorAll(".project_itme");
 
         projectLis.forEach((li) => {
@@ -112,37 +112,29 @@
             li.setAttribute("aria-expanded", "true");
           });
         });
-      </script>
+      </script> -->
 
       <div id="modal">
-        <div class="modal_container">
-          <div class="modal_title_wrap">
-            <h1 class="modal_title"></h1>
-            <button class="close_btn" aria-label="모달 닫기"><span></span></button>
-          </div>
-          <ul class="labels">
-            <li id="label_year" class="capital_letter">year</li>
-            <li id="label_tag" class="capital_letter">tag</li>
-          </ul>
-          <ul class="values">
-            <li aria-labelledby="label_year"></li>
-            <li aria-labelledby="label_tag"></li>
-          </ul>
-          <div id="project_desc">
-            <p class="text"></p>
-            <p id="site_label">
-              <span class="label_text">site :</span>
-              <a href="" aria-labelledby="site_label" target="_blank" class="site_view underline"></a>
-            </p>
-            <p id="label_notion">
-              <span class="label_text">notion:</span>
-              <a href="" aria-labelledby="label_notion" target="_blank" class="notion_view underline"></a>
-            </p>
-            <figure class="img_box"></figure>
+        <div class="modal_title_wrap">
+          <h1 class="modal_title"></h1>
+          <div class="pf">
+            <p>publisher portfolio</p>
+            <p>2024-2025</p>
           </div>
         </div>
+        <ul class="labels">
+          <li id="label_year" class="capital_letter">year</li>
+          <li id="label_tag" class="capital_letter">tag</li>
+        </ul>
+        <ul class="values">
+          <li aria-labelledby="label_year"></li>
+          <li aria-labelledby="label_tag"></li>
+        </ul>
+        <p class="text"></p>
+        <figure class="img_box"></figure>
+        <button class="close-btn" aria-label="모달 닫기">×</button>
       </div>
-      <script src="./modal.js"></script>
+      <!-- <script src="./modal.js"></script> -->
 
       <section id="work" aria-labelledby="sect_work">
         <h2 id="sect_work">: work</h2>

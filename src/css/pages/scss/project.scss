@@ -1,6 +1,6 @@
 #project {
   ul {
-    .project_itme {
+    .project_item {
       display: flex;
       overflow: hidden;
       transition: width 0.5s ease;
@@ -20,7 +20,8 @@
       }
       .project_title {
         text-align: left;
-        font-weight: 500;
+        font-weight: 700;
+        color: var(--main-color);
       }
     }
   }
@@ -35,7 +36,7 @@
       flex-direction: column;
       gap: 24px;
       width: 100%;
-      .project_itme {
+      .project_item {
         display: flex;
         width: 100%;
         button {
@@ -55,7 +56,6 @@
 
 @media only screen and (min-width: 701px) {
   #project {
-    margin-top: 210px;
     margin-bottom: 100px;
     ul {
       display: grid;
@@ -63,7 +63,7 @@
       gap: 40px 5px;
       flex-wrap: wrap;
       width: 100%;
-      .project_itme {
+      .project_item {
         .project_title {
           margin-top: 4px;
           font-size: 20px;
@@ -96,10 +96,10 @@
 
 @media screen and (min-width: 1200px) {
   #project {
-    margin-top: 320px;
+    margin-top: 300px;
     ul {
       grid-template-columns: repeat(4, 1fr);
-      .project_itme {
+      .project_item {
         button {
           gap: 5px;
         }
