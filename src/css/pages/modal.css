@@ -106,9 +106,13 @@
 #modal #project_desc {
   overflow-y: auto;
 }
+#modal #project_desc .text {
+  word-break: keep-all;
+}
 #modal .site_view,
 #modal .notion_view {
-  font-weight: 500;
+  color: var(--main-color);
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 700px) {
@@ -186,6 +190,9 @@
     gap: 5px;
     font-size: 16px;
     padding: 10px 0;
+  }
+  #modal #project_desc {
+    margin-top: 20px;
   }
   #modal .img_box {
     margin-top: 100px;

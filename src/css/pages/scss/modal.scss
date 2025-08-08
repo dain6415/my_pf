@@ -106,11 +106,15 @@
   }
   #project_desc {
     overflow-y: auto; 
+    .text{
+      word-break: keep-all;
+    }
   }
 
   .site_view,
   .notion_view {
-    font-weight: 500;
+    color: var(--main-color);
+    font-weight: 600;
   }
 }
 
@@ -192,6 +196,9 @@
       gap: 5px;
       font-size: 16px;
       padding: 10px 0;
+    }
+    #project_desc{
+      margin-top: 20px;
     }
     .img_box{
       margin-top: 100px;
