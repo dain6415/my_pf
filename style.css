@@ -1,22 +1,12 @@
 @charset "UTF-8";
-@import url(./src/css/base/public/reset.css);
-@import url(./src/css/base/public/vars.css);
-@import url(./src/css/pages/intro.css);
-@import url(./src/css/pages/header.css);
-@import url(./src/css/pages/about.css);
-@import url(./src/css/pages/project.css);
-@import url(./src/css/pages/work.css);
-@import url(./src/css/pages/footer.css);
-/* @import 'bulma/css/bulma.css'; */
+@import url(/src/css/base/public/font.css);
+@import url(/src/css/pages/about.css);
+@import url(/src/css/pages/project.css);
+@import url(/src/css/pages/work.css);
 
-@font-face {
-  font-family: "Gothic_Goding";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Gothic_Goding.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+:root {
+  --main-color: #0073ff;
 }
-
 /* ========================== */
 /* 공통 스타일만*/
 /* ========================== */
@@ -27,14 +17,17 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: var(--black200_txt);
-  background: var(--main-color);
-
-  font-size: 10px;
-  font-family: var(--mainKor-font);
-  line-height: 1.2;
+  color: var(--main-color);
+  background: #f4f4f4;
   transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out;
   letter-spacing: -0.6px;
+
+  line-height: 1.4;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10px;
   
   cursor: none;
   scrollbar-width: 1px;
@@ -44,201 +37,83 @@ body {
 *::after {
   box-sizing: border-box;
 }
-main {
-  position: relative;
-  overflow: hidden;
-  background: #f5f5f5;
-  box-shadow:0 10px 40px rgba(0, 0, 0, 0.3);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--main-color);
 }
-@media only screen and (max-width: 700px) {
-  main {
-    border-radius: 0 0 20px 20px;
-  }
-}
-@media only screen and (min-width: 701px) {
-  main {
-    border-radius: 0 0 60px 60px;
-  }
-}
-main .bg-texture {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  background: url("./src/img/bg-paper-texture.jpg") center/cover no-repeat;
-  mix-blend-mode: multiply;
-  opacity: 0.5;
-  z-index: 1;
-  pointer-events: none;
-}
+
 a {
   cursor: none;
+}
+button {
+  background: none;
+  border: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.noise::after {
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  animation: noise_noise__N0mbn var(--bd-time-transition-1000) steps(2)
+    infinite;
+  background-image: url(./src/img/noise.e8298e81.png);
+  background-position: 50%;
+  content: "";
+  will-change: transform;
 }
 .blind {
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+  border: 0;
 }
-
-.animate-up {
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-.animate-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-.animate-up.hide {
-  opacity: 0;
-  transform: translateY(-10%);
-}
-/* -------------------------------------------------------------------------------- */
-/* section -------------------- */
-section {
-  width: 100%;
-  margin: auto;
-}
-@media only screen and (max-width: 700px) {
-  .sect_inner {
-    width: 98%;
-  }
-}
-@media only screen and (min-width: 701px) {
-  section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  section:nth-child(2) {
-    height: 80vh;
-  }
-  section .sect_inner {
-    width: 90%;
-  }
-}
-/* section:not(:first-child)인 이유는 스티커때문 */
-@media only screen and (min-width: 1000px) {
-  section:not(:first-child) .sect_inner {
-    max-width: 1400px;
-    margin: auto;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  section:not(:first-child) {
-    width: 90%;
-  }
-  section:not(:first-child) .sect_inner {
-    max-width: 1380px;
-    margin: auto;
-  }
-}
-/* -------------------------------------------------------------------------------- */
-/*  sect_title ---------------------- */
-.sect_title {
-  gap: 30px;
-  position: relative;
-  align-items: center;
-  color: var(--black700);
-  font-weight: bold;
-  font-family: var(--subEng-font);
-  line-height: 1;
-  text-transform: uppercase;
-}
-@media only screen and (max-width: 700px) {
-  .sect_title {
-    display: block;
-    margin-bottom: 30px;
-    font-size: clamp(16px, 20px, 28pc);
-  }
-}
-@media only screen and (min-width: 701px) {
-  .sect_title {
-    font-size: 24px;
-  }
-  .sect_title:not(3) {
-    margin-bottom: 60px;
-  }
-}
-
-
-
-/* -------------------------------------------------------------------------------- */
-/* 위로가기 버튼 ---------------------- */
-.up_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: transparent;
-  border-radius: 50%;
-  border: 1px solid var(--black600);
-  cursor: pointer;
-}
-.pc_up_btn {
-  width: 40px;
-  height: 40px;
-
-  color: #666;
-  font-size: 1.6rem;
-}
-@media only screen and (max-width:700px) {
-  .mobile_up_btn {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-
-    width: 54px;
-    height: 54px;
-
-    color: var(--white);
-    font-size: 2rem;
-    font-weight: 900;
-
-    z-index: -1;
-  }
-}
-.up_btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-/* ------------------------------------------- */
-nav.header__mobile.on ul li a.on {
-  color: var(--white);
-}
-
-/* -------------------------------------------------------------------------------- */
-/* cursor -------------------- */
-#custom_cursor {
-  position: fixed;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
-  border-radius: 50%;
-  background-color: var(--main-color);
-  pointer-events: none;
-  transition: padding 0.3s;
-}
-
-#custom_cursor.on {
-  padding: calc(100px / 2);
-}
-#custom_cursor.on span {
-  height: 12px;
-  transform: translateY(-30px);
-}
-
-@media screen and (max-width: 700px) {
-  body {
-    cursor: none;
-  }
-}
-
 
 .bold {
   font-weight: 700;
   color: var(--black200_txt);
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .container {
+    padding: 40px;
+  }
 }
