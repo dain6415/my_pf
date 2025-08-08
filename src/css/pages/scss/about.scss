@@ -15,19 +15,80 @@
     }
   }
   .info {
+    line-height: 2.5;
     .keyword {
       font-weight: 600;
+      margin: 0;
     }
     .text {
-      border-top: 1px solid var(--black700);
-      border-bottom: 1px solid var(--black700);
-      line-height: 1.5;
+      padding: 0;
+      position: relative;
+      .information{
+        display: flex;
+        gap: 80px;
+        .infor{
+          font-size: 20px;
+        }
+      }
       .text_scrollTrigger {
         word-break: keep-all;
         color: var(--black400);
+        margin: 0;
         strong {
           font-weight: 700;
           color: var(--black100);
+        }
+      }
+      .skils{
+        padding: 0;
+        font-size: 20px;
+        justify-content: flex-start;
+        height: 100%;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        text-transform: uppercase;
+        .skil_box{
+          width: 300px;
+          height: calc(100px - 1px);
+          margin-top: 1px;
+          @include flex-c();
+          border-right: 1px solid #000;
+          background: #f4f4f4;
+        }
+      }
+      .skils_box{
+        width: 100%;
+        .web,
+        .design {
+          font-size: 20px;
+          display: flex;
+          padding-left: 20px;
+          p{
+            width: 200px;
+          }
+          ul{
+            display: flex;
+            gap: 40px;
+          }
+        }
+        .web{
+          border-bottom: 1px solid #000;
+        }
+      }
+      .line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 49px;
+        pointer-events: none;
+        z-index: -1;
+        span{
+          height: 1px;
+          // background: #f00;
+          background: var(--black100);
+          
         }
       }
     }
@@ -89,28 +150,27 @@
     padding: 6em 2em;
     @include flex-c();
     .info {
+      line-height: 2;
       .keyword {
-        line-height: 1.3;
-        padding-bottom: 20px;
-        font-size: clamp(16px, 28px, 28px);
+        line-height: 1.4;
+        font-size: 24px;
         word-break: keep-all;
-        br{
-          display: none;
-        }
       }
       .text {
-        padding-top: 20px;
-        font-size: clamp(12px, 16px, 20px);
+        font-size: 15px;
+        line-height: 2;
         .text_scrollTrigger {
           word-break: break-all;
-          padding-bottom: 20px;
-          br{
+          br {
             display: none;
           }
         }
+        .line{
+          gap: 29px;
+        }
       }
     }
-    .skils_wrap{
+    .skils_wrap {
       padding: 20px 0;
     }
     .skil {
@@ -120,10 +180,10 @@
       border-radius: 11px;
       font-size: clamp(14px, 16px, 18px);
     }
-    .design{
+    .design {
       margin-bottom: 10px;
     }
-    .skil_name{
+    .skil_name {
       font-size: clamp(12px, 14px, 18px);
       width: 60px;
     }
@@ -162,17 +222,19 @@
 //----------------------------------------------------------------------
 @media only screen and (min-width: 701px) {
   #about {
-    .sect_inner{
+    .sect_inner {
       margin-top: 100px;
       margin-bottom: 100px;
     }
     .keyword {
-      font-size: 4rem;
-      line-height: 1.3;
       margin-bottom: 40px;
+      font-size: 20px;
       br {
         display: none;
       }
+    }
+    .keyword{
+      font-size: 32px;
     }
     .text {
       padding-top: 40px;
@@ -180,12 +242,17 @@
       .text_scrollTrigger {
         font-size: 2rem;
         font-weight: 300;
-        line-height: 1.6;
         br {
           display: none;
         }
-        &:not(:first-child) {
-          margin-top: 1rem;
+        // &:not(:first-child) {
+          //   margin-top: 1rem;
+          // }
+        }
+        .line{
+          top: 80px;
+          .maxW5{
+          display: none;
         }
       }
     }
@@ -270,6 +337,11 @@
 //----------------------------------------------------------------------
 @media only screen and (min-width: 900px) {
   #about {
+    .line{
+      .w9{
+        display: none;
+      }
+    }
     .skils_wrap {
       .design .skil_name {
         padding-right: 20px;
@@ -338,16 +410,12 @@
   }
 }
 //----------------------------------------------------------------------
-@media only screen and (min-width: 1400px) {
-  #about {
-    border-radius: 20px;
-    .sect_inner {
-      .keyword {
-        font-size: 4rem;
-        color: var(--black200_txt);
-        opacity: 0.9;
-        line-height: 1.3;
-      }
+@media only screen and (min-width: 1300px) {
+#about {
+  .line{
+    .w13{
+      display: none;
     }
   }
+}
 }

@@ -6,12 +6,12 @@
 #work .sect_inner {
   margin: auto;
 }
-#work .sect_inner .title-wrap {
+#work .sect_inner .title_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#work .sect_inner .title-wrap .title {
+#work .sect_inner .title_wrap .title {
   margin: 0;
 }
 #work .filter {
@@ -35,7 +35,6 @@
 #work .filter .filter_list {
   padding: 5px;
   border-radius: 50px;
-  background-color: var(--black800);
   position: relative;
   display: flex;
   gap: 2px;
@@ -58,7 +57,6 @@
 }
 #work .item-box .item {
   border-radius: 20px;
-  background-color: var(--white);
   position: relative;
 }
 #work .item-box .item:not(:last-child) {
@@ -77,7 +75,7 @@
   line-height: 1.5;
   word-break: break-all;
   letter-spacing: -0.6px;
-  color: var(--black800);
+  color: var(--black300);
 }
 #work .item-box .item .info .date {
   color: var(--black600);
@@ -86,6 +84,9 @@
 #work .item.on {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3764705882);
   background-color: var(--black100);
+  color: var(--white);
+}
+#work .item.on .header_group .title {
   color: var(--white);
 }
 #work .item.on .header_group .view_btn::before {
@@ -115,13 +116,12 @@
   gap: 20px;
 }
 #work .header_group .profile .Thumbnail {
+  display: none;
   border-radius: 10px;
   overflow: hidden;
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 4px;
 }
 #work .header_group .profile .Thumbnail img {
   height: 100%;
@@ -139,7 +139,6 @@
   transform: translateY(-50%);
   height: 10px;
   width: 0;
-  background-color: #bef264;
   transition: 0.3s ease;
   mix-blend-mode: multiply;
 }
@@ -203,10 +202,10 @@
   #work {
     padding: 6rem 2rem;
   }
-  #work .sect_inner .title-wrap {
+  #work .sect_inner .title_wrap {
     flex-direction: column;
   }
-  #work .sect_inner .title-wrap .sect_title {
+  #work .sect_inner .title_wrap .sect_title {
     margin-bottom: 0;
   }
   #work .filter {
@@ -285,8 +284,9 @@
     max-width: 90%;
     margin-top: 100px;
   }
-  #work .sect_inner .title-wrap {
+  #work .sect_inner .title_wrap {
     margin-bottom: 60px;
+    align-items: center;
   }
   #work .filter p {
     font-size: 2rem;
@@ -300,29 +300,14 @@
   }
   #work .item-box {
     margin-top: 40px;
-    display: flex;
     gap: 20px;
   }
   #work .item-box .left,
   #work .item-box .right {
     width: calc(50% - 10px);
   }
-  #work .item-box .item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  #work .item-box .item .info .img-box {
-    right: -8%;
-    bottom: 2%;
-    width: 56%;
-    transform: rotate(-34deg);
-    z-index: 10;
-  }
-  #work .item-box .item .info .desc {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-  }
-  #work .item-box .item .info .date {
-    font-size: 16px;
+  #work .item-box .item {
+    width: 100%;
   }
   #work .item.on {
     padding-bottom: 30px;
@@ -363,19 +348,5 @@
   }
   #work .sect_inner {
     max-width: 1380px;
-  }
-  #work .item-box .item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  #work .item-box .item .title_box {
-    font-size: 2.4rem;
-  }
-  #work .item-box .item .title_box .title {
-    padding: 10px 0;
-    gap: 10px;
-  }
-  #work .item-box .item .plus-icon {
-    width: 40px;
-    height: 40px;
   }
 }/*# sourceMappingURL=work.css.map */

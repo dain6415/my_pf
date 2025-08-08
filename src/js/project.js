@@ -37,26 +37,11 @@ export function project() {
       el.classList.toggle("on", idx === activeIndex);
     });
 
-    // ✅ 여기 추가: 텍스트 높이 자동 조정
     const activeText = textInfos[activeIndex];
     const textContainer = document.querySelector(".text_container");
     textContainer.style.height = activeText.scrollHeight + "px";
   }
 
-  const projectTextMore = document.querySelectorAll(".text_info .more");
-
-  projectTextMore.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const parent = btn.closest(".text_info");
-      const isExpand = parent.classList.toggle("expand");
-  
-      btn.textContent = isExpand ? "접기" : "더보기";
-  
-      // ✅ 펼치거나 접을 때 높이 다시 계산
-      const textContainer = document.querySelector(".text_container");
-      textContainer.style.height = parent.scrollHeight + "px";
-    });
-  });
   window.addEventListener("resize", () => {
     const activeText = document.querySelector(".text_info.on");
     const textContainer = document.querySelector(".text_container");

@@ -1,208 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- Demo styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-      html,
       body {
-        position: relative;
-        height: 100%;
-      }
-
-      body {
-        background: #000;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-      }
-
-      .swiper {
+        background: #f4f4f4;
         width: 100%;
         height: 100%;
       }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #444;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .swiper_container{
-        display: flex;
-      }
-      .text_container{
-        width: 40%;
-        position: relative;
-      }
-      .text_info{
-        position: absolute;
+      .noise {
+        position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
       }
-      .swiper{
-        width: 55%;
+      .noise::after {
+        content: "";
+        position: absolute;
+        top: -10rem;
+        left: -10rem;
+        width: calc(100% + 20rem);
+        height: calc(100% + 20rem);
+        background-image: url(./src/img/noise.e8298e81.png);
+        background-position: 50%;
+        background-repeat: repeat;
+        background-size: 300px;
+      }
+      @keyframes noise_noise__N0mbn {
+        0% {
+          transform: translate3d(0, 9rem, 0);
+        }
+
+        10% {
+          transform: translate3d(-1rem, -4rem, 0);
+        }
+
+        20% {
+          transform: translate3d(-8rem, 2rem, 0);
+        }
+
+        30% {
+          transform: translate3d(9rem, -9rem, 0);
+        }
+
+        40% {
+          transform: translate3d(-2rem, 7rem, 0);
+        }
+
+        50% {
+          transform: translate3d(-9rem, -4rem, 0);
+        }
+
+        60% {
+          transform: translate3d(2rem, 6rem, 0);
+        }
+
+        70% {
+          transform: translate3d(7rem, -8rem, 0);
+        }
+
+        80% {
+          transform: translate3d(-9rem, 1rem, 0);
+        }
+
+        90% {
+          transform: translate3d(6rem, -5rem, 0);
+        }
+
+        to {
+          transform: translate3d(-7rem, 0, 0);
+        }
+      }
+      #sticker_canvas {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #f7f7f7;
+        overflow: hidden;
+      }
+
+      .note {
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        background: #c9f100;
+        /* border: 1px solid #000000; */
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+        padding: 8px;
+        box-sizing: border-box;
+        resize: none;
+      }
+
+      .note textarea {
+        width: 100%;
+        height: 90%;
+        border: none;
+        background: transparent;
+        resize: none;
+        font-family: inherit;
+        font-size: 14px;
+        outline: none;
+      }
+
+      .note .resizer {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+        cursor: se-resize;
       }
     </style>
   </head>
-
   <body>
-    <!-- Swiper -->
-    <div class="swiper_container">
-      <div class="text_container">
-        <div class="text_info on" data-index="0">
-          <div class="title">NewJeans</div>
-          <p class="desc">
-            반응형 Grid 레이아웃과 iframe 삽입을 통해<br />
-            뉴진스의 ‘Supernatural’ 앨범을 주제로 한 아티스트 홈페이지를
-            <br />구조적으로 리디자인하고 퍼블리싱하였습니다.
-          </p>
-          <ul>
-            <li>#grid</li>
-            <li>#iframe</li>
-            <li>#newjeans</li>
-          </ul>
-        </div>
-        <div class="text_info" data-index="1">
-          <div class="title">서울시립미술관</div>
-          <p class="desc">다크/라이트모드 전환 기능을 구현한 리디자인</p>
-        </div>
-        <div class="text_info" data-index="2">
-          <div class="title">selmine</div>
-          <p class="desc">
-            복약 시간 설정과 정보 제공을 위한 복약 관리 앱 UI 디자인
-          </p>
-        </div>
-        <div class="pagination-aria">
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide on">
-            <a
-              href="https://dain6415.github.io/project/p_NewJeans"
-              aria-label="프로젝트 페이지로 이동"
-              target="_blank"
-              class="link_project"
-            >
-              <span class="blind">뉴진스 페이지로 이동</span>
-              <div class="img_box shadow">
-                <img
-                  class="pc_img"
-                  src="./src/img/project/nj_thum.png"
-                  alt="뉴진스 이미지"
-                  aria-hidden="true"
-                />
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide on">
-            <a
-              href="https://dain6415.github.io/project/p_NewJeans"
-              aria-label="프로젝트 페이지로 이동"
-              target="_blank"
-              class="link_project"
-            >
-              <span class="blind">뉴진스 페이지로 이동</span>
-              <div class="img_box shadow">
-                <img
-                  class="pc_img"
-                  src="./src/img/project/nj_thum.png"
-                  alt="뉴진스 이미지"
-                  aria-hidden="true"
-                />
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide on">
-            <a
-              href="https://dain6415.github.io/project/p_NewJeans"
-              aria-label="프로젝트 페이지로 이동"
-              target="_blank"
-              class="link_project"
-            >
-              <span class="blind">뉴진스 페이지로 이동</span>
-              <div class="img_box shadow">
-                <img
-                  class="pc_img"
-                  src="./src/img/project/nj_thum.png"
-                  alt="뉴진스 이미지"
-                  aria-hidden="true"
-                />
-              </div>
-            </a>
-          </div>
-        </div>
-    </div>
-    </div>
+    <div class="noise"></div>
+    <div id="sticker_canvas"></div>
+    <button id="add_note">피드백 종이 만들기</button>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Draggable Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
-       const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 100,
-    centeredSlides: true,
-    speed: 500,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      init: function () {
-        updateActiveClasses(this);
-      },
-      slideChange: function () {
-        updateActiveClasses(this);
-      },
-    },
-    // breakpoints: {
+      const canvas = document.getElementById("sticker_canvas");
+      const addNoteBtn = document.getElementById("add_note");
 
-    // },
-  });
+      let currentZ = 1;
 
-  function updateActiveClasses(swiper) {
-    const activeIndex = swiper.realIndex;
+      addNoteBtn.addEventListener("click", () => {
+        const note = document.createElement("div");
+        note.className = "note";
 
-    // 슬라이드에 .on 클래스
-    swiper.slides.forEach((slide, idx) => {
-      slide.classList.toggle("on", idx === activeIndex);
-    });
+        note.innerHTML = `
+      <textarea placeholder="피드백을 입력하세요..."></textarea>
+      <div class="resizer"></div>
+    `;
 
-    // 텍스트에 .on 클래스
-    document.querySelectorAll(".text_container .text_info").forEach((el, idx) => {
-      el.classList.toggle("on", idx === activeIndex);
-    });
-  }
+        // 중앙 위치
+        const canvasRect = canvas.getBoundingClientRect();
+        const x = window.innerWidth / 2 + window.scrollX - canvasRect.left;
+        const y = window.innerHeight / 2 + window.scrollY - canvasRect.top;
+
+        note.style.left = `${x}px`;
+        note.style.top = `${y}px`;
+        note.style.transform = `translate(-50%, -50%)`;
+        note.style.zIndex = currentZ++;
+
+        canvas.appendChild(note);
+
+        // 드래그 기능
+        Draggable.create(note, {
+          type: "x,y",
+          inertia: true,
+          allowEventDefault: true,
+          onPress() {
+            gsap.set(this.target, {
+              x: gsap.getProperty(this.target, "x"),
+              y: gsap.getProperty(this.target, "y"),
+            });
+            this.target.style.zIndex = ++currentZ;
+          },
+        });
+
+        // 리사이즈 기능
+        // makeResizable(note);
+      });
+
+      function makeResizable(note) {
+        const resizer = note.querySelector(".resizer");
+
+        let isResizing = false;
+
+        resizer.addEventListener("mousedown", (e) => {
+          isResizing = true;
+
+          const startX = e.clientX;
+          const startY = e.clientY;
+          const startWidth = parseInt(
+            document.defaultView.getComputedStyle(note).width,
+            10
+          );
+          const startHeight = parseInt(
+            document.defaultView.getComputedStyle(note).height,
+            10
+          );
+
+          function doDrag(e) {
+            if (!isResizing) return;
+
+            note.style.width = `${startWidth + e.clientX - startX}px`;
+            note.style.height = `${startHeight + e.clientY - startY}px`;
+          }
+
+          function stopDrag() {
+            isResizing = false;
+            window.removeEventListener("mousemove", doDrag);
+            window.removeEventListener("mouseup", stopDrag);
+          }
+
+          window.addEventListener("mousemove", doDrag);
+          window.addEventListener("mouseup", stopDrag);
+        });
+      }
     </script>
   </body>
 </html>

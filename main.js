@@ -1,4 +1,4 @@
- import { customCursor } from "./src/js/customCursor.js";
+import { customCursor } from "./src/js/customCursor.js";
 import { header } from "./src/js/header.js";
 import { introStickers } from "./src/js/introStickers.js";
 import { about } from "./src/js/about.js";
@@ -27,13 +27,12 @@ window.addEventListener("load", function () {
   requestAnimationFrame(raf);
 
   // 맨 위로 올라오기
-  document.querySelectorAll(".up_btn").forEach((btn)=>{
+  document.querySelectorAll(".up_btn").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  }
-  )
+  });
 
   let observer = new IntersectionObserver(
     function (entries) {
@@ -47,9 +46,8 @@ window.addEventListener("load", function () {
     },
     { threshold: 0.1 }
   );
-  
+
   document.querySelectorAll(".animate-up").forEach((el) => {
     observer.observe(el);
   });
 });
-

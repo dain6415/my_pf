@@ -45,24 +45,34 @@
         }
       }
       .title {
-        font-weight: 500;
+        font-weight: 600;
         color: var(--black200_txt);
       }
+      ul {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-start;
+        font-size: 12px;
+        color:var(--black700);
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        line-height: 2.5;
+      }
       .desc {
-        font-weight: 200;
+        font-weight: 300;
         line-height: 1.5;
-        color: var(--black300);
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        p {
+        color: var(--black500);
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 3;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        p:not(:last-child) {
           margin-bottom: 10px;
         }
       }
       .more {
-        display: inline-block;
+        display: none;
         text-decoration: underline;
         color: var(--black400);
         font-weight: 300;
@@ -90,8 +100,8 @@
       justify-content: center;
       align-items: center;
       pointer-events: none;
-      &.on{
-        pointer-events:auto;
+      &.on {
+        pointer-events: auto;
       }
     }
     .link_project {
@@ -99,13 +109,6 @@
         width: 100%;
         @include flex-c();
         overflow: hidden;
-        &.nj,
-        &.sel{
-          box-shadow: 0 5px 10px rgba(0, 63, 209, 0.2);
-        }
-        &.sema{
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
         img {
           width: 100%;
           display: block;
@@ -131,7 +134,7 @@
     background: rgba(244, 240, 240, 0.05);
     // opacity: 0.9;
     border-radius: 50%;
-    &:hover{
+    &:hover {
       // opacity: 0.8;
       background: rgba(244, 240, 240, 0.5);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -225,7 +228,6 @@
       width: 100%;
     }
     .swiper_container {
-      border-radius: 20px;
       .swiper {
         width: 100%;
         padding-top: 40px;
@@ -234,11 +236,8 @@
           .pc_img {
             display: none;
           }
-          .img_box {
-            border-radius: 10px;
-          }
         }
-        .swiper_btn{
+        .swiper_btn {
           display: none;
           width: 100%;
         }
@@ -255,21 +254,21 @@
           left: 0;
           .title {
             font-size: clamp(24px, 32px, 42px);
-            margin-bottom: 10px;
             transition: 0.3s;
+            padding-bottom: 16px;
           }
           .desc {
-            font-size: clamp(14px, 16px, 20px);
+            font-size: clamp(14px, 15px, 16px);
             font-weight: 300;
             word-break: break-all;
             line-height: 1.4;
           }
           ul {
-            justify-content: center;
             gap: 20px;
-            padding-top: 20px;
-            font-size: clamp(14px, 16px, 20px);
-            color: var(--black600);
+            font-size: clamp(12px, 12px, 14px);
+            margin-bottom: 16px;
+            line-height: 2.5;
+            
           }
           .more {
             font-size: 14px;
@@ -329,7 +328,6 @@
         }
         .img_box {
           transition: 0.4s;
-          border-radius: 20px;
           img {
             filter: grayscale(1);
             transition: 0.4s;
@@ -340,6 +338,7 @@
     .text_container {
       display: block;
       width: 100%;
+      margin-bottom: 20px;
       .text_info {
         position: absolute;
         top: 0;
@@ -358,6 +357,7 @@
         ul {
           gap: 10px;
           font-size: 20px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -391,14 +391,7 @@
   #project {
     .sect_inner {
       .swiper_container {
-        flex-direction: row;
         gap: 0;
-        .swiper {
-          width: 58%;
-        }
-        .text_container {
-          width: 36%;
-        }
         .pagination-aria {
           position: absolute;
           right: 4px;
@@ -415,7 +408,6 @@
 // -----------------------------------------------------------------------------------
 @media only screen and (min-width: 1400px) {
   #project {
-    border-radius: 20px;
     width: 90%;
     overflow: visible;
     .sect_inner {
