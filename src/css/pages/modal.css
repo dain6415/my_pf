@@ -15,7 +15,7 @@
   transform: translate(-50%, -50%);
   background: #f4f4f4;
   overflow-y: auto;
-  border: 1px solid #0f0;
+  border: 1px solid #f00;
 }
 #modal::before {
   content: "";
