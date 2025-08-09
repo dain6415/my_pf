@@ -5,7 +5,7 @@ export function modal() {
       tag: "#ifram  #퓨처리즘",
       title: "NewJeans<br> 앨범 프로모션 <br class='minW7'>사이트 리디자인",
       text: "뉴진스의 ‘Supernatural’ 앨범을 주제로 공식 홈페이지리디자인한 프로젝트입니다. <br>앨범이 지닌 레트로한 분위기를 시각적으로 표현하기 위해 레트로 퓨처리즘을 디자인 콘셉트로 설정하고, 컬러 팔레트, 타이포그래피, 레이아웃 등에 이를 반영하였습니다.",
-      img: "/src/img/project/nj.jpg",
+      img: "../src/img/project/nj.jpg",
       site: "https://dain6415.github.io/project/p_NewJeans",
       notion: "https://www.notion.so/NewJeans-2482421107e780169eb2e2fb40622742",
       alt:"뉴진스 사이트 목업"
