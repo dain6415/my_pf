@@ -14,7 +14,6 @@
     transform: translate(-50%, -50%);
     background: #f4f4f4;
     overflow-y: auto;
-    border: 1px solid #f00;
   }
   &::before {
     content: "";
@@ -149,7 +148,6 @@
     }
     #project_desc {
       margin-top: 20px;
-      max-height: 600px;
       .label_text {
         display: inline-block;
         width: 60px;

@@ -15,7 +15,6 @@
   transform: translate(-50%, -50%);
   background: #f4f4f4;
   overflow-y: auto;
-  border: 1px solid #f00;
 }
 #modal::before {
   content: "";
@@ -146,7 +145,6 @@
   }
   #modal #project_desc {
     margin-top: 20px;
-    max-height: 600px;
   }
   #modal #project_desc .label_text {
     display: inline-block;
