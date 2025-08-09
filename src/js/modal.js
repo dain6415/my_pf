@@ -1,4 +1,4 @@
-export default function modal() {
+export function modal() {
   const project = [
     {
       year: "2025",
@@ -47,7 +47,7 @@ export default function modal() {
     valueItems[1].textContent = data.tag;
 
     modalEl.querySelector(".img_box").innerHTML = 
-      `<img src="${data.img}" alt="${data.tag} 이미지" />`;
+      `<img src="${data.jpg}" alt="${data.title} 이미지" />`;
 
     modalEl.classList.add("show");
   }
