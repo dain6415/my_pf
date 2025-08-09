@@ -109,6 +109,11 @@
 #modal #project_desc .text {
   word-break: keep-all;
 }
+#modal .label_text {
+  display: inline-block;
+  width: 80px;
+  text-transform: uppercase;
+}
 #modal .site_view,
 #modal .notion_view {
   color: var(--main-color);
@@ -151,10 +156,10 @@
     width: 60px;
   }
   #modal #project_desc .img_box {
-    margin-top: 80px;
+    margin-top: 40px;
   }
   #modal #site_label {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   #modal #label_notion {
     padding-top: 2px;
@@ -194,13 +199,13 @@
     margin-top: 20px;
   }
   #modal .img_box {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   #modal #project_desc {
     max-height: 600px;
   }
   #modal #site_label {
-    margin-top: 20px;
+    margin-top: 80px;
   }
   #modal #label_notion {
     padding-top: 4px;
