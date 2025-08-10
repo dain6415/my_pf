@@ -26,7 +26,6 @@
   }
 }
 
-
 @media only screen and (max-width: 700px) {
   #work {
     .work_header,
@@ -51,6 +50,7 @@
 // ---------------------------
 @media only screen and (min-width: 701px) {
   #work {
+    margin-top: 100px;
     .work_header,
     .work_item {
       grid-template-columns: repeat(4, 1fr);
@@ -68,3 +68,8 @@
   }
 }
 // ---------------------------
+@media only screen and (min-width: 1200px) {
+  #work {
+    margin-top: 120px;
+  }
+}

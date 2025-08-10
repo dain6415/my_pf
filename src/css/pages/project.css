@@ -1,11 +1,17 @@
 #project ul .project_item {
   display: flex;
-  overflow: hidden;
   transition: width 0.5s ease;
+  position: relative;
 }
 #project ul .project_item button {
   position: relative;
   display: flex;
+}
+#project ul .project_item:hover .project_title {
+  font-weight: 500;
+}
+#project ul .project_item:hover .img_box img {
+  opacity: 0.8;
 }
 #project ul .img_box {
   vertical-align: top;
@@ -16,11 +22,12 @@
 #project ul .img_box img {
   width: 100%;
   padding: 0;
+  transition: opacity 0.3s;
 }
 #project ul .img_box .project_title {
   text-align: left;
-  font-weight: 700;
   color: var(--main-color);
+  word-break: keep-all;
 }
 
 @media only screen and (max-width: 700px) {
@@ -50,10 +57,6 @@
   }
 }
 @media only screen and (min-width: 701px) {
-  #project {
-    margin-top: 250px;
-    margin-bottom: 100px;
-  }
   #project ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -64,7 +67,6 @@
   #project ul .project_item .project_title {
     margin-top: 4px;
     font-size: 20px;
-    font-weight: 500;
   }
   #project ul .project_item button {
     position: relative;
@@ -74,10 +76,6 @@
   }
 }
 @media screen and (min-width: 900px) {
-  #project {
-    margin-top: 270px;
-    margin-bottom: 120px;
-  }
   #project ul {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -87,9 +85,6 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  #project {
-    margin-top: 300px;
-  }
   #project ul {
     grid-template-columns: repeat(4, 1fr);
   }
