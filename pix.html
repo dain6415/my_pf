@@ -1,0 +1,169 @@
+<!-- save as pixelated-demo.html and open in browser -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pixelated Desktop Demo</title>
+<style>
+  body {
+    background:#2d2d2f;
+    color:#fff;
+    font-family: system-ui, Arial, sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+  }
+
+  .desktop {
+    width:920px; /* 데스크탑 레이아웃 너비 예시 */
+    background:#2b2b2c;
+    padding:40px;
+    border-radius:6px;
+    box-shadow:0 8px 30px rgba(0,0,0,.6);
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    align-items:start;
+  }
+
+  .icon {
+    width:220px;
+    text-align:center;
+    user-select:none;
+  }
+
+  .label {
+    margin-top:12px;
+    font-size:18px;
+    line-height:1.1;
+    color:#f1f1f1;
+  }
+
+  /* Canvas box */
+  .pixel-canvas {
+    display:block;
+    width:220px;   /* 보여지는 크기 (CSS px) */
+    height:132px;
+    background:#161616;
+    border-radius:6px;
+    box-shadow: inset 0 -4px 8px rgba(0,0,0,.6);
+    image-rendering: pixelated; /* fallback for browsers */
+  }
+
+  /* 작은 아이콘 (굿즈 등) */
+  .small {
+    width:120px;
+    height:120px;
+  }
+
+  /* Hover 느낌 (데스크탑에서) */
+  .icon:hover .pixel-canvas {
+    transform: translateY(-4px);
+    transition: transform .18s ease;
+  }
+
+  /* 버튼 시각 효과(선택적으로) */
+  .play-btn {
+    margin-top:8px;
+    display:inline-block;
+    padding:6px 12px;
+    background:#00d1ff;
+    color:#001;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,.4);
+  }
+
+</style>
+</head>
+<body>
+  <div class="desktop" id="desktop">
+    <!-- 6 icons -->
+    <div class="icon">
+      <canvas class="pixel-canvas" data-src="https://picsum.photos/id/1011/1200/800" data-base-w="110" data-base-h="66"></canvas>
+      <div class="label">MV<br><small>Supernatural</small></div>
+    </div>
+
+    <div class="icon">
+      <canvas class="pixel-canvas" data-src="https://picsum.photos/id/1015/1200/800" data-base-w="110" data-base-h="66"></canvas>
+      <div class="label">Photo<br><small>How Sweet</small></div>
+    </div>
+
+    <div class="icon">
+      <canvas class="pixel-canvas" data-src="https://picsum.photos/id/1016/1200/800" data-base-w="110" data-base-h="66"></canvas>
+      <div class="label">Photo<br><small>Supernatural</small></div>
+    </div>
+
+    <div class="icon">
+      <canvas class="pixel-canvas small" data-src="https://picsum.photos/id/1025/600/600" data-base-w="60" data-base-h="60"></canvas>
+      <div class="label">STREAMING</div>
+    </div>
+
+    <div class="icon">
+      <canvas class="pixel-canvas small" data-src="./src/img/project/nj.jpg" data-base-w="60" data-base-h="60"></canvas>
+      <div class="label">Goods</div>
+    </div>
+
+    <div class="icon">
+      <canvas class="pixel-canvas small" data-src="./src/img/project/selmine.jpg" data-base-w="60" data-base-h="60"></canvas>
+      <div class="label">Phoning</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <canvas id="pixelate-layer" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;"></canvas>
+  
+  <script>
+    async function pixelateScreen() {
+      const canvas = document.getElementById('pixelate-layer');
+      const dpr = window.devicePixelRatio || 1;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+  
+      // 캔버스 실제 크기 조정
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+  
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+  
+      // 화면 캡쳐
+      const snapshot = await html2canvas(document.body, { scale: 1 });
+  
+      // 픽셀화하려는 크기 (base pixel size)
+      const baseW = 120;  // 낮은 해상도로 축소
+      const baseH = Math.round((baseW / width) * height);
+  
+      // 임시 오프스크린 캔버스
+      const off = document.createElement('canvas');
+      off.width = baseW;
+      off.height = baseH;
+      const offCtx = off.getContext('2d');
+      offCtx.imageSmoothingEnabled = false;
+  
+      // 화면 캡쳐본을 낮은 해상도로 축소
+      offCtx.drawImage(snapshot, 0, 0, baseW, baseH);
+  
+      // 그걸 다시 원래 크기로 확대해서 그리기 (픽셀화 효과)
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(off, 0, 0, baseW, baseH, 0, 0, canvas.width, canvas.height);
+    }
+  
+    // 초기 및 리사이즈 시 픽셀화 적용
+    function initPixelateLayer() {
+      pixelateScreen();
+      window.addEventListener('resize', () => {
+        pixelateScreen();
+      });
+    }
+  
+    document.addEventListener('DOMContentLoaded', initPixelateLayer);
+  </script>
+  
+</body>
+</html>
