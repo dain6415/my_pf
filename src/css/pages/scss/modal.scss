@@ -55,12 +55,11 @@
   }
   .labels {
     border-top: 1px solid var(--main-color);
-  }
-  .labels {
     text-transform: uppercase;
   }
   .values {
     font-weight: 700;
+    letter-spacing: -.2px;
     color: var(--main-color);
     span {
       text-transform: uppercase;

@@ -56,12 +56,11 @@
 }
 #modal .labels {
   border-top: 1px solid var(--main-color);
-}
-#modal .labels {
   text-transform: uppercase;
 }
 #modal .values {
   font-weight: 700;
+  letter-spacing: -0.2px;
   color: var(--main-color);
 }
 #modal .values span {

@@ -1,769 +1,317 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hongda88.netlify.app/" />
-    <meta property="og:title" content="Dain's Portfolio" />
-    <meta name="keywords" content="portfolio, publisher" />
-    <meta property="og:site_name" content="Site Name" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dain's Portfolio</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/2e471157d2.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Link Swiper's CSS -->
+    <meta name="description" content="웹 퍼블리셔 홍다인의 포트폴리오. 반응형 웹, 인터랙션 구현, 퍼블리싱 프로젝트 작업 소개 사이트입니다.">
+    <meta name="keywords" content="웹 퍼블리셔, 퍼블리싱, 프론트엔드, 반응형 웹, 포트폴리오, HTML, CSS, JavaScript">
+    <meta name="author" content="홍다인">
+    <meta property="og:title" content="홍다인 | 웹 퍼블리셔 포트폴리오">
+    <meta property="og:description" content="반응형 웹, 인터랙션 구현, 퍼블리싱 프로젝트 작업 소개 사이트">
+    <!-- <meta property="og:image" content="https://dain6415.github.io/my_pf/"> -->
+    <meta property="og:url" content="https://dain6415.github.io/my_pf/">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dain6415.github.io/my_pf/">
+    <!-- css -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+KR:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./output.css">
-    <!-- Demo styles -->
-    <style>
-      @import url("https://fonts.cdnfonts.com/css/hey-november");
-      html,
-      body {
-        position: relative;
-        height: 100vh;
-      }
-      body {
-        background: var(--mainBg-color);
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-      .swiper-slide {
-        border-bottom: 1px solid #000;
-        /* height: calc((100% - 30px) / 2) !important; */
-      }
-    </style>
-    <script type="module" crossorigin src="/assets/index-CB3TdAXT.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DMUn-GS-.css">
+    <script type="module" crossorigin src="/assets/index-D65DMx1n.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BB4U_90p.css">
   </head>
-
   <body>
-    <!-- cursor -->
-    <div id="custom_cursor"></div>
-    <!-- ************************ -->
-    <main>
-      <!-- intro -->
-      <section id="intro" data-bg="#f5f5f5">
-        <!-- header -->
-        <header id="header" role="banner">
-          <div class="header__inner">
-            <div class="header__logo">
-              <a href="#" target="_top"><span>HDAN</span></a>
-            </div>
-            <nav class="header__nav" role="navigation" aria-label="메인메뉴">
-              <ul>
-                <li class="">
-                  <a href="#intro" class="on"><span>home</span></a>
-                </li>
-                <li class="">
-                  <a href="#about"><span>about</span></a>
-                </li>
-                <li class="">
-                  <a href="#project"><span>project</span></a>
-                </li>
-                <li class="">
-                  <a href="#work"><span>work</span></a>
-                </li>
-                <!-- <li><a href="#uxui">ux/ui</a></li> -->
-              </ul>
-            </nav>
-            <div
-              class="header__nav_mobile"
-              id="headerToggle"
-              aria-controls="primary-menu"
-              aria-expanded="flase"
-              role="button"
-            >
-              <span class="mobile_menuBar"><span>menu</span></span>
+    <div class="noise"></div>
+    <div class="container">
+      <div class="flex_box">
+        <section id="about">
+          <div class="pf_title_wrap">
+            <h1 class="pf_title">
+              : 디자인을 기반으로 <br />웹에 새로운 가능성을 실현합니다
+            </h1>
+            <div class="pf">
+              <p>publisher portfolio</p>
+              <p>2024-2025</p>
             </div>
           </div>
-        </header>
-        <!-- content -->
-        <div class="sect_inner">
-          <div class="blend">
-            <img src="/assets/sticker_texture_bg-C93OSTAs.jpg" alt="" />
-          </div>
-          <div class="stickers">
-            <div class="sticker black1">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/texture2-obHKeZ9f.jpeg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img src="/assets/black-CbOSoEtv.svg" alt="인트로 스티커 이미지" />
-              </div>
-            </div>
-            <div class="sticker long1">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/texture2-obHKeZ9f.jpeg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzcuMTEgMTc4LjM1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzBmNThlYzt9LmNscy0ye2ZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9LmNscy0ze2ZvbnQtc2l6ZToyOC4xOXB4O2ZvbnQtZmFtaWx5OlByZXRlbmRhcmQtQm9sZCwgUHJldGVuZGFyZDtmb250LXdlaWdodDo3MDA7fS5jbHMtNHtsZXR0ZXItc3BhY2luZzotMC4wNGVtO30uY2xzLTV7bGV0dGVyLXNwYWNpbmc6LTAuMDRlbTt9LmNscy02e2xldHRlci1zcGFjaW5nOi0wLjAzZW07fS5jbHMtN3tsZXR0ZXItc3BhY2luZzotMC4wNGVtO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXJ0Ym9hcmQgMjYgY29weSA4PC90aXRsZT48cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSI0NzcuMTEiIGhlaWdodD0iMTc4LjM1IiByeD0iMzUuNTYiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjE2MC43MiIgeT0iLTEzOC4wNCIgd2lkdGg9IjE1NS42NyIgaGVpZ2h0PSI0NTQuNDMiIHJ4PSIyNC4yMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzI3LjczIC0xNDkuMzgpIHJvdGF0ZSg5MCkiLz48dGV4dCBjbGFzcz0iY2xzLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIwMy4wOSA2OC4xNikiPkhPTUUgSVMgPHRzcGFuIHg9IjAiIHk9IjMwLjA3Ij5NWSA8L3RzcGFuPjx0c3BhbiBjbGFzcz0iY2xzLTQiIHg9IjUwLjk4IiB5PSIzMC4wNyI+VzwvdHNwYW4+PHRzcGFuIHg9Ijc4LjAzIiB5PSIzMC4wNyI+T1JMPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy01IiB4PSIxMzIuNDYiIHk9IjMwLjA3Ij5EPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy02IiB4PSIxNTAuOTciIHk9IjMwLjA3Ij4sPC90c3Bhbj48dHNwYW4geD0iMCIgeT0iNjAuMTQiPkkmYXBvcztNIEEgSE9NRUJPPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy03IiB4PSIxOTMuMzQiIHk9IjYwLjE0Ij5EPC90c3Bhbj48dHNwYW4geD0iMjExLjg5IiB5PSI2MC4xNCI+WTwvdHNwYW4+PC90ZXh0Pjxwb2x5Z29uIHBvaW50cz0iMTcxLjk3IDE0Ny41MiAxMTEuNjQgMTQ3LjUyIDUxLjMxIDE0Ny41MiA1MS4zMSAxMjMuMjIgNTEuMzEgNjIuODkgMTExLjY0IDMwLjgzIDE3MS45NyA2Mi44OSAxNzEuOTcgMTIzLjIyIDE3MS45NyAxNDcuNTIiLz48L3N2Zz4="
-                  alt="인트로 스티커 이미지"
-                />
-              </div>
-            </div>
-            <div class="sticker blue1">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/texture2-obHKeZ9f.jpeg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img src="/assets/blue2-D3OZ8zG3.svg" alt="인트로 스티커 이미지" />
-              </div>
-            </div>
-            <div class="sticker black2">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/texture2-obHKeZ9f.jpeg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img src="/assets/black-CbOSoEtv.svg" alt="인트로 스티커 이미지" />
-              </div>
-            </div>
-            <div class="sticker blue2">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/sticker_texture_bg-C93OSTAs.jpg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img src="/assets/blue2-D3OZ8zG3.svg" alt="인트로 스티커 이미지" />
-              </div>
-            </div>
-            <div class="sticker long2">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/sticker_texture_bg-C93OSTAs.jpg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzcuMTEgMTc4LjM1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzBmNThlYzt9LmNscy0ye2ZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9LmNscy0ze2ZvbnQtc2l6ZToyOC4xOXB4O2ZvbnQtZmFtaWx5OlByZXRlbmRhcmQtQm9sZCwgUHJldGVuZGFyZDtmb250LXdlaWdodDo3MDA7fS5jbHMtNHtsZXR0ZXItc3BhY2luZzotMC4wNGVtO30uY2xzLTV7bGV0dGVyLXNwYWNpbmc6LTAuMDRlbTt9LmNscy02e2xldHRlci1zcGFjaW5nOi0wLjAzZW07fS5jbHMtN3tsZXR0ZXItc3BhY2luZzotMC4wNGVtO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXJ0Ym9hcmQgMjYgY29weSA4PC90aXRsZT48cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSI0NzcuMTEiIGhlaWdodD0iMTc4LjM1IiByeD0iMzUuNTYiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjE2MC43MiIgeT0iLTEzOC4wNCIgd2lkdGg9IjE1NS42NyIgaGVpZ2h0PSI0NTQuNDMiIHJ4PSIyNC4yMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzI3LjczIC0xNDkuMzgpIHJvdGF0ZSg5MCkiLz48dGV4dCBjbGFzcz0iY2xzLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIwMy4wOSA2OC4xNikiPkhPTUUgSVMgPHRzcGFuIHg9IjAiIHk9IjMwLjA3Ij5NWSA8L3RzcGFuPjx0c3BhbiBjbGFzcz0iY2xzLTQiIHg9IjUwLjk4IiB5PSIzMC4wNyI+VzwvdHNwYW4+PHRzcGFuIHg9Ijc4LjAzIiB5PSIzMC4wNyI+T1JMPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy01IiB4PSIxMzIuNDYiIHk9IjMwLjA3Ij5EPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy02IiB4PSIxNTAuOTciIHk9IjMwLjA3Ij4sPC90c3Bhbj48dHNwYW4geD0iMCIgeT0iNjAuMTQiPkkmYXBvcztNIEEgSE9NRUJPPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy03IiB4PSIxOTMuMzQiIHk9IjYwLjE0Ij5EPC90c3Bhbj48dHNwYW4geD0iMjExLjg5IiB5PSI2MC4xNCI+WTwvdHNwYW4+PC90ZXh0Pjxwb2x5Z29uIHBvaW50cz0iMTcxLjk3IDE0Ny41MiAxMTEuNjQgMTQ3LjUyIDUxLjMxIDE0Ny41MiA1MS4zMSAxMjMuMjIgNTEuMzEgNjIuODkgMTExLjY0IDMwLjgzIDE3MS45NyA2Mi44OSAxNzEuOTcgMTIzLjIyIDE3MS45NyAxNDcuNTIiLz48L3N2Zz4="
-                  alt="인트로 스티커 이미지"
-                />
-              </div>
-            </div>
-            <div class="sticker blue3">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/sticker_texture_bg-C93OSTAs.jpg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img src="/assets/blue2-D3OZ8zG3.svg" alt="인트로 스티커 이미지" />
-              </div>
-            </div>
-            <div class="sticker long3">
-              <div class="vertex">
-                <div class="t"></div>
-                <div class="b"></div>
-              </div>
-              <div class="sticker_wrap">
-                <div class="img_blend">
-                  <img
-                    src="/assets/texture2-obHKeZ9f.jpeg"
-                    alt="스티커 블렌드 이미지"
-                  />
-                </div>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzcuMTEgMTc4LjM1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzBmNThlYzt9LmNscy0ye2ZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9LmNscy0ze2ZvbnQtc2l6ZToyOC4xOXB4O2ZvbnQtZmFtaWx5OlByZXRlbmRhcmQtQm9sZCwgUHJldGVuZGFyZDtmb250LXdlaWdodDo3MDA7fS5jbHMtNHtsZXR0ZXItc3BhY2luZzotMC4wNGVtO30uY2xzLTV7bGV0dGVyLXNwYWNpbmc6LTAuMDRlbTt9LmNscy02e2xldHRlci1zcGFjaW5nOi0wLjAzZW07fS5jbHMtN3tsZXR0ZXItc3BhY2luZzotMC4wNGVtO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXJ0Ym9hcmQgMjYgY29weSA4PC90aXRsZT48cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSI0NzcuMTEiIGhlaWdodD0iMTc4LjM1IiByeD0iMzUuNTYiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjE2MC43MiIgeT0iLTEzOC4wNCIgd2lkdGg9IjE1NS42NyIgaGVpZ2h0PSI0NTQuNDMiIHJ4PSIyNC4yMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzI3LjczIC0xNDkuMzgpIHJvdGF0ZSg5MCkiLz48dGV4dCBjbGFzcz0iY2xzLTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIwMy4wOSA2OC4xNikiPkhPTUUgSVMgPHRzcGFuIHg9IjAiIHk9IjMwLjA3Ij5NWSA8L3RzcGFuPjx0c3BhbiBjbGFzcz0iY2xzLTQiIHg9IjUwLjk4IiB5PSIzMC4wNyI+VzwvdHNwYW4+PHRzcGFuIHg9Ijc4LjAzIiB5PSIzMC4wNyI+T1JMPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy01IiB4PSIxMzIuNDYiIHk9IjMwLjA3Ij5EPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy02IiB4PSIxNTAuOTciIHk9IjMwLjA3Ij4sPC90c3Bhbj48dHNwYW4geD0iMCIgeT0iNjAuMTQiPkkmYXBvcztNIEEgSE9NRUJPPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy03IiB4PSIxOTMuMzQiIHk9IjYwLjE0Ij5EPC90c3Bhbj48dHNwYW4geD0iMjExLjg5IiB5PSI2MC4xNCI+WTwvdHNwYW4+PC90ZXh0Pjxwb2x5Z29uIHBvaW50cz0iMTcxLjk3IDE0Ny41MiAxMTEuNjQgMTQ3LjUyIDUxLjMxIDE0Ny41MiA1MS4zMSAxMjMuMjIgNTEuMzEgNjIuODkgMTExLjY0IDMwLjgzIDE3MS45NyA2Mi44OSAxNzEuOTcgMTIzLjIyIDE3MS45NyAxNDcuNTIiLz48L3N2Zz4="
-                  alt="인트로 스티커 이미지"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="intro_title">
-            <!-- <p class="web">web</p> -->
-            <p class="publisher">Publisher</p>
-            <!-- <p class="portfolio">portfolio</p> -->
-
-            <!-- <svg class="publisher-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 60">
-              <text x="10" y="40" font-size="80" fill="black">Publisher</text>
-            </svg> -->
-
-            <p class="portfolio">UI/UX portfolio</p>
-          </div>
-        </div>
-      </section>
-
-      <nav class="header__mobile" role="navigation" aria-label="메인메뉴">
-        <div class="inner">
-          <div class="header__logo_mobile">
-            <a href="https://hongda88.netlify.app/" target="_self"
-              ><span>Dain's Portfolio</span></a
-            >
-          </div>
-          <ul>
-            <li class="">
-              <a href="#intro" class="on"><span>home</span></a>
-            </li>
-            <li class="">
-              <a href="#about"><span>about</span></a>
-            </li>
-            <li class="">
-              <a href="#project"><span>project</span></a>
-            </li>
-            <li class="">
-              <a href="#work"><span>work</span></a>
-            </li>
-            <!-- <li><a href="#uxui">ux/ui</a></li> -->
+          <ul class="labels">
+            <li id="label_name" class="capital_letter">name</li>
+            <li id="label_birth" class="capital_letter">birth</li>
+            <li id="label_phone" class="capital_letter">phone</li>
+            <li id="label_email" class="capital_letter">e-mail</li>
           </ul>
-          <div class="close">
-            <span class="close_icon"></span>
-            <div class="close_bg_blend"></div>
+          <ul class="values">
+            <li aria-labelledby="label_name">홍다인 / Hong Dain</li>
+            <li aria-labelledby="label_birth" class="right">1997. 08. 25</li>
+            <li class="underline" aria-labelledby="label_phone">
+              <a href="tel:01085416415" aria-label="핸드폰 번호"
+                >010 8541 6415</a
+              >
+            </li>
+            <li class="underline right" aria-labelledby="label_email">
+              <a href="mailto:ekdlscjs4@naver.com" aria-label="이메일"
+                >ekdlscjs4@naver.com</a
+              >
+            </li>
+          </ul>
+          <div class="skills" role="group" aria-labelledby="skills-label">
+            <span id="skills_label" class="skills_label">Skills:</span>
+            <span class="category">
+              <span>(web)</span> HTML, CSS, JavaScript
+            </span>
+            <span class="category">
+              <span>(design)</span> Illustrator, Photoshop, Figma, InDesign
+            </span>
           </div>
-        </div>
-      </nav>
-      <div class="header__mobile_filter"></div>
-
-      <!-- main ontents -->
-      <!-- about -->
-      <section id="about" data-bg="#000">
-        <div class="sect_inner">
-          <div class="sect_title">
-            <p class="po_ab">about me.</p>
-          </div>
-          <div class="info">
-            <p class="keyword">보다 나은 결과를 추구합니다</p>
-            <p class="txt txt1">
+          <div class="intro">
+            <p>
               어디서든 쉽게 볼 수 있지만, 그 자리에서도 자신만의 색을 지닌
-              스티커처럼, 변화에 유연하게 적응하면서도 자신만의 개성과 역량을
+              스티커처럼 , 변화에 유연하게 적응하면서도 자신만의 개성과 역량을
               온전히 발휘할 수 있는 퍼블리셔가 되고 싶습니다.
             </p>
-            <p class="txt txt2">
-              빠르게 변화하는 웹 환경 속에서 트렌드를 읽고 적극적으로 배우며
-              적응하는 동시에, 디자인을 전공한 강점을 살려 단순한 구현을 넘어
-              사용자 경험을 고려한 웹을 만들어 나가겠습니다.<br />
-              개발과 디자인의 균형을 맞추며, 더욱 완성도 높은 결과물을 만들어
-              내는 것이 저의 목표입니다.
+            <p>
+              단순히 시각적인 결과물로 끝내는 것이 아닌, 웹이라는 공간에 직접
+              구현하며 내 작업이 실체화되는 과정에 흥미를 느꼈습니다.
+            </p>
+            <p>
+              디자인 전공이라는 강점을 바탕으로, 단순한 구현을 넘어 사용자
+              경험까지 고려한 웹을 만들어 나가고자 합니다.
+            </p>
+            <p>
+              웹과 디자인의 균형을 통해 완성도 있는 결과물을 구현하며,
+              퍼블리셔로서의 경험을 쌓아 프론트엔드까지 소화할 수 있는 인재로
+              성장하고 싶습니다.
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- project -->
-      <section id="project" data-bg="#000">
-        <div class="sect_inner">
-          <div class="sect_title">
-            <h2 class="po_ab">project.</h2>
-          </div>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a
-                  href="https://dain6415.github.io/project/p_NewJeans"
-                  target="_blank"
-                  role="button"
-                  class="bg-img"
-                >
-                  <img src="/assets/new2-D1AEre24.jpg" alt="뉴진스 배경 이미지" />
-                </a>
-                <div class="txt">
-                  <h4>
-                    <a
-                      href="https://dain6415.github.io/project/p_NewJeans"
-                      target="_blank"
-                      class="title"
-                      >NewJeans</a
-                    >
-                  </h4>
-                  <p>Grid, iframe을 활용한 뉴진스 홈페이지 리디자인</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="https://dain6415.github.io/project/p_SeMA/index.html"
-                  target="_blank"
-                  role="button"
-                  class="bg-img"
-                >
-                  <img
-                    src="/assets/sema-fVCUjJnH.jpg"
-                    alt="서울시립미술관 배경 이미지"
-                  />
-                </a>
-                <div class="txt">
-                  <h4>
-                    <a
-                      href="https://dain6415.github.io/project/p_SeMA/index.html"
-                      target="_blank"
-                      class="title"
-                      >서울시립미술관</a
-                    >
-                  </h4>
-                  <p>JAVA script를</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <a
-                  href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
-                  target="_blank"
-                  role="button"
-                  class="bg-img"
-                >
-                  <img src="/assets/selmine-ZRLLJUH7.jpg" alt="배경 이미지" />
-                </a>
-                <div class="txt">
-                  <h4>
-                    <a
-                      href="https://www.figma.com/proto/qpzNqZsmUHgq9hscTeajLL/selmine?node-id=240-58&p=f&t=BKE1wjlIn9MFkXZB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=240%3A58&show-proto-sidebar=1"
-                      target="_blank"
-                      class="title"
-                      >selmine</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="pagination-aria">
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <section id="project" aria-labelledby="sect_project">
+          <h2 id="sect_project">: project</h2>
+          <ul>
+            <li class="project_item" aria-expanded="true">
+              <button>
+                <figure class="img_box">
+                  <img src="/assets/nj-D9XioFMu.jpg" alt="" />
+                  <figcaption class="project_title">
+                    NewJeans 앨범 프로포션 사이트 리디자인
+                  </figcaption>
+                </figure>
+              </button>
+            </li>
+            <li class="project_item" aria-expanded="false">
+              <button>
+                <figure class="img_box">
+                  <img src="/assets/sema-Clz9zaaW.jpg" alt="" />
+                  <figcaption class="project_title">
+                    서울시립미술관 사이트 리다지인
+                  </figcaption>
+                </figure>
+              </button>
+            </li>
+            <li class="project_item" aria-expanded="false">
+              <button>
+                <figure class="img_box">
+                  <img src="/assets/selmine-CSBIlpyS.jpg" alt="" />
+                  <figcaption class="project_title">selmine</figcaption>
+                </figure>
+              </button>
+            </li>
+          </ul>
+        </section>
+        <script>
+          const projectLis = document.querySelectorAll(".project_itme");
 
-      <!-- work -->
-      <section id="work" data-bg="#000">
-        <div class="sect_inner">
-          <div class="sect_title">
-            <h2 class="po_ab">work.</h2>
-          </div>
-          <div class="filter">
-            <p>Filter</p>
-            <ul>
-              <li class="">
-                <a href="#" data-filter="*" class="on">all</a>
-              </li>
-              <li class="">
-                <a href="#" data-filter=".clone">clone</a>
-              </li>
-              <li class="">
-                <a href="#" data-filter=".responsive">responsive</a>
-              </li>
-              <li class="">
-                <a href="#" data-filter=".create">create</a>
-              </li>
-            </ul>
-          </div>
-          <div class="item-box">
-            <div class="left">
-              <div class="item clone responsive 에이">
-                <div class="title">
-                  <h4>에이스 침대 <span>ACE</span></h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>swiper, tab을 적극 활용한 클론 사이트입니다.</p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_ace"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >site view
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone responsive 청">
-                <div class="title">
-                  <h4>청와대</h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      과거 청와대 홈페이지를 jQuery와 JavaScript로 클론 코딩한
-                      프로젝트입니다. Swiper를 활용해 다양한 인터랙션을
-                      구현하였습니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_cheongwadae"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="item create 인테">
-                <div class="title">
-                  <h4>인테리어<span>interior</span></h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      특정 아티클을 클릭하면, 해당 아티클의 외부 데이터를 Fetch
-                      API를 통해 불러와 .scene 요소에 상세 내용을 보여주는
-                      기능을 구현한 스크립트입니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>Fetch API</li>
-                      <li>create</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_cheongwadae"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone 24">
-                <div class="title">
-                  <h4>
-                    <a target="_blank" role="button"
-                      >예스24<span>yes24</span> (미완)</a
-                    >
-                  </h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>스와이퍼를</p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>그린삭</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_yes24"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="right">
-              <div class="item clone create responsive 논">
-                <div class="title">
-                  <h4>논픽션<span>Nonfiction</span></h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      논픽션 홈페이지를 리뉴얼한 사이트로 일부 요소는
-                      클론하였습니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>renewal</li>
-                      <li>clone</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_Nonfiction/index.html"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone 애플">
-                <div class="title">
-                  <h4>iPad Pro</h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      GSAP, ScrollTrigger를 활용하여 애플의 아이패드 상세페이지
-                      일부를 클론 코딩한 사이트입니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>apple</li>
-                      <li>clone</li>
-                      <li>GSAP</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_iPadPro"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone 칠성">
-                <div class="title">
-                  <h4>칠성사이다</h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      칠성사이다 메인 페이지를 클론 코딩하여 Swiper를 활용한
-                      슬라이드 효과, 스티키, 패밀리 사이트 접속 연결 등을
-                      구현하였습니다.
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>clone</li>
-                      <li>jquery</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_칠성사이다"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="item clone 우담">
-                <div class="title">
-                  <h4>우담라이팅</h4>
-                  <div class="plus-icon">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="info">
-                  <p class="date">2024.04.22</p>
-                  <div class="img-box">
-                    <img src="" alt="" />
-                  </div>
-                  <div class="txt">
-                    <p>
-                      sldkfje sidjfs ldkfja;ldk fisjdflksdjfs idjflsdkf
-                      ssjlkdfja;sldkjf sdkj
-                    </p>
-                  </div>
-                  <div class="filter-tag">
-                    <ul>
-                      <li>반응형</li>
-                      <li>clone</li>
-                      <li>그린삭</li>
-                    </ul>
-                    <a
-                      href="https://dain6415.github.io/project/w_woodam"
-                      target="_blank"
-                      role="button"
-                      class="view-btn"
-                      >view site
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+          projectLis.forEach((li) => {
+            li.addEventListener("click", () => {
+              projectLis.forEach((item) => {
+                item.setAttribute("aria-expanded", "false");
+              });
+              li.setAttribute("aria-expanded", "true");
+            });
+          });
+        </script>
+      </div>
 
-    <footer id="footer">
-      <div class="sect_inner">
-        <div class="bg">
-          <!-- <p class="thanku">THANK U</p> -->
-        </div>
-        <div class="footer_info">
-          <div class="top">
-            <p class="name">Hong Da In.</p>
-            <div class="txt">
-              <p>
-                함께하는 성장을 추구하며 협력하는 팀원이 되겠습니다. <br />
-                소중한 시간을 내어 주셔서 감사합니다.
-              </p>
-            </div>
+      <div id="modal">
+        <div class="modal_container">
+          <div class="modal_title_wrap">
+            <h1 class="modal_title"></h1>
+            <button class="close_btn" aria-label="모달 닫기">
+              <span></span>
+            </button>
           </div>
-          <div class="bottom">
-            <div class="my_info f_b_txt">
-              <p class="">
-                <a href="mailto:ekdlscjs4@naver.com">ekdlscjs4@naver.com</a>
-              </p>
-              <p class="">
-                <a href="tel:01085416415">010 8541 6415</a>
-              </p>
-            </div>
-            <div class="copyright f_b_txt">
-              <p><span>&copy;&nbsp;</span>2024 Hong-DaIn All Rights Reserved</p>
-            </div>
-            <div class="link f_b_txt">
-              <div class="">
-                <a href="https://github.com/dain6415/project">
-                  <img
-                    class="git"
-                    src="/assets/github-DkTr3Tul.png"
-                    alt="github 이미지"
-                  />
-                </a>
-              </div>
-              <div class="">
-                <a href="">
-                  <img
-                    src="/assets/Notion_app_logo-DGBL8szj.png"
-                    alt="notion 이미지"
-                  />
-                </a>
-              </div>
-            </div>
-            <!-- <div class="time_area">
-              <span>한국시간</span>
-              <time class="time" id="koTime" aria-label="현재 한국 시간"></time>
-            </div> -->
-            <div class="none"></div>
+          <ul class="labels">
+            <li id="label_year" class="capital_letter">year</li>
+            <li id="label_tag" class="capital_letter">tag</li>
+          </ul>
+          <ul class="values">
+            <li aria-labelledby="label_year"></li>
+            <li aria-labelledby="label_tag"></li>
+          </ul>
+          <div id="project_desc">
+            <p class="text"></p>
+            <p id="site_label">
+              <span class="label_text">site :</span>
+              <a
+                href=""
+                aria-labelledby="site_label"
+                target="_blank"
+                class="site_view underline"
+              ></a>
+            </p>
+            <p id="label_notion">
+              <span class="label_text">notion :</span>
+              <a
+                href=""
+                aria-labelledby="label_notion"
+                target="_blank"
+                class="notion_view underline"
+              ></a>
+            </p>
+            <figure class="img_box"></figure>
           </div>
         </div>
       </div>
-    </footer>
 
-    <!-- <div class="up_btn">
-      <i class="fa-solid fa-arrow-up"></i>
-    </div> -->
-    <!-- <div class="mCustomScrollbar content" data-mcs-theme="dark">
-    </div> -->
-
-    <!-- -------------------------------------------------------------------------------------------- -->
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-
-    <!-- ------------------------ -->
-    <script src="https://cdn.jsdelivr.net/npm/is-inview@0.10.2/dist/is-inview.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <section id="work" aria-labelledby="sect_work">
+        <h2 id="sect_work">: work</h2>
+        <div class="">
+          <ul class="work_header" role="row">
+            <li role="columnheader" class="number">number</li>
+            <li role="columnheader" class="brnad">brnad</li>
+            <li role="columnheader" class="desc">desc</li>
+            <li role="columnheader" class="icon">icon</li>
+          </ul>
+          <ul id="workList" role="rowgroup">
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_ace"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">01</span>
+                <span role="cell" class="brnad">에이스 침대</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon" aria-hidden="true">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_cheongwadae"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">02</span>
+                <span role="cell" class="brnad">청와대</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon" aria-hidden="true">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_naver"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">03</span>
+                <span role="cell" class="brnad">NAVER</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon" aria-hidden="true">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_iPadPro"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">04</span>
+                <span role="cell" class="brnad">iPad Pro</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon" aria-hidden="true">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_칠성사이다"
+                class="work_item"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">05</span>
+                <span role="cell" class="brnad">칠성사이다</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon" aria-hidden="true">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_yes24"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">06</span>
+                <span role="cell" class="brnad">yes 24</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_interior"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">07</span>
+                <span role="cell" class="brnad">인테리어</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon">dsd</span>
+              </a>
+            </li>
+            <li role="row">
+              <a
+                href="https://dain6415.github.io/project/w_woodam"
+                class="work_item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="blind">새 창에서 열림</span>
+                <span role="cell" class="number">08</span>
+                <span role="cell" class="brnad">우담리이팅</span>
+                <span role="cell" class="desc">dfsdf</span>
+                <span role="cell" class="icon">dsd</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script>
+      window.addEventListener("resize", () => {
+        console.log(`현재 화면 너비: ${window.innerWidth}px`);
+      });
+    </script>
   </body>
 </html>

@@ -116,6 +116,9 @@ h2 {
   .container {
     padding: 40px;
   }
+  .flex_box{
+    gap: 140px;
+  }
 }
 @media only screen and (min-width:1200px) {
   .flex_box{
