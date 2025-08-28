@@ -86,7 +86,7 @@
   #about .skills .category span {
     display: none;
   }
-  #about .intro p {
+  #about .intro p:not(:last-child) {
     font-size: 15px;
     padding-bottom: 10px;
   }

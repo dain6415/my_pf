@@ -108,8 +108,12 @@
 #modal #project_desc {
   overflow-y: auto;
 }
-#modal #project_desc .text {
-  word-break: keep-all;
+#modal #project_desc .text p:not(:last-child) {
+  padding-bottom: 10px;
+}
+#modal #project_desc .text b {
+  color: var(--main-color);
+  font-weight: 600;
 }
 #modal .label_text {
   display: inline-block;
@@ -120,6 +124,8 @@
 #modal .notion_view {
   color: var(--main-color);
   font-weight: 600;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 @media only screen and (max-width: 700px) {

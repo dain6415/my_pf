@@ -88,7 +88,7 @@
       }
     }
     .intro {
-      p {
+      p:not(:last-child) {
         font-size: 15px;
         padding-bottom: 10px;
       }

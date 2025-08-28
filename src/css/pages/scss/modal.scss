@@ -109,7 +109,13 @@
   #project_desc {
     overflow-y: auto;
     .text {
-      word-break: keep-all;
+      p:not(:last-child){
+        padding-bottom: 10px;
+      }
+      b{
+        color: var(--main-color);
+        font-weight: 600;
+      }
     }
   }
   .label_text {
@@ -121,6 +127,8 @@
   .notion_view {
     color: var(--main-color);
     font-weight: 600;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 }
 
