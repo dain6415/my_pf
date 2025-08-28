@@ -73,7 +73,6 @@
   width: 100%;
 }
 #modal .img_box img {
-  height: 340px;
   object-fit: cover;
 }
 #modal .underline:hover {
@@ -159,11 +158,11 @@
   }
   #modal #project_desc .img_box {
     margin-top: 40px;
+    flex-direction: column;
   }
   #modal #project_desc .img_box img {
     display: block;
     max-width: 100%;
-    height: 240px;
   }
   #modal #site_label {
     margin-top: 60px;
@@ -207,6 +206,9 @@
   }
   #modal .img_box {
     margin-top: 50px;
+  }
+  #modal .img_box img {
+    height: 300px;
   }
   #modal #project_desc {
     max-height: 600px;
