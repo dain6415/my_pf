@@ -106,7 +106,9 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
-
+footer p:not(:last-child) {
+  padding-bottom: 10px;
+}
 
 /* ------------------------------------ */
 @media only screen and (max-width: 700px) {
@@ -131,6 +133,10 @@ h2 {
   footer{
     margin-top: 32px;
     font-size: 14px;
+  }
+
+  footer br {
+    display: none;
   }
 }
 @media only screen and (min-width: 1200px) {
