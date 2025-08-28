@@ -32,11 +32,11 @@ export function modal() {
       ],
       img: [
         {
-          src: "https://dain6415.github.io/my_pf/src/img/project/sema_pc.jpg",
+          src: "https://dain6415.github.io/my_pf/src/img/project/sema_pc.png",
           alt: "서울시립미술관 PC 사이트",
         },
         {
-          src: "https://dain6415.github.io/my_pf/src/img/project/sema_mobile.jpg",
+          src: "https://dain6415.github.io/my_pf/src/img/project/sema_mobile.png",
           alt: "서울시립미술관 Mobile 사이트",
         },
       ],
