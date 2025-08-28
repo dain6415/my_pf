@@ -1,3 +1,6 @@
+#work {
+  border-bottom: 1px solid var(--main-color);
+}
 #work .work_header,
 #work .work_item {
   display: grid;

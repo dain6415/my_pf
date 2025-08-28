@@ -82,9 +82,7 @@
           </div>
           <div class="intro">
             <p>
-              어디서든 쉽게 볼 수 있지만, 그 자리에서도 자신만의 색을 지닌
-              스티커처럼 , 변화에 유연하게 적응하면서도 자신만의 개성과 역량을
-              온전히 발휘할 수 있는 퍼블리셔가 되고 싶습니다.
+              다양한 환경과 요구에 유연하게 대응하며, 자기만의 전문성을 갖춘 퍼블리셔가 되고 싶습니다.
             </p>
             <p>
               단순히 시각적인 결과물로 끝내는 것이 아닌, 웹이라는 공간에 직접
@@ -327,119 +325,19 @@
         </div>
       </section>
 
-      <!-- memo -->
-      <div id="memo">
-        <h1>나만 보는 투두 리스트</h1>
-        <p>이 리스트는 오직 나만 볼 수 있습니다.</p>
-      </div>
-  
-      <div id="privateContainer">
-        <h2>나만 보는 메모</h2>
-        <input type="text" id="newMemo" placeholder="메모 입력 후 Enter" />
-        <ul id="privateList"></ul>
-      </div>
+      <footer>
+        <p>앞으로도 끊임없이 배우며 발전하는 퍼블리셔가 되겠습니다.</p>
+        <p>소중한 시간을 내어주셔서 감사합니다.</p>
+      </footer>
+
     </div>
-    <script>
-      const newMemoInput = document.getElementById("newMemo");
-    const privateList = document.getElementById("privateList");
-    
-    // 로컬스토리지에서 불러오기
-    let myMemos = JSON.parse(localStorage.getItem("myMemos") || "[]");
-    
-    const userId = "dainhong"; // 예: 로그인 시 발급
-    
-    // --- 렌더링 함수 ---
-    function renderMemos(memos) {
-      privateList.innerHTML = "";
-      memos.forEach((memo, index) => {
-        const li = document.createElement("li");
-        li.textContent = memo.content || memo; // 서버: memo.content, 로컬: memo
-    
-        const delBtn = document.createElement("button");
-        delBtn.textContent = "삭제";
-        delBtn.addEventListener("click", () => {
-          if (memo.id) {
-            // 서버 메모 삭제
-            deleteMemo(memo.id);
-          } else {
-            // 로컬 메모 삭제
-            myMemos.splice(index, 1);
-            saveMemos();
-            renderMemos(myMemos);
-          }
-        });
-    
-        li.appendChild(delBtn);
-        privateList.appendChild(li);
-      });
-    }
-    
-    // --- 로컬 저장 ---
-    function saveMemos() {
-      localStorage.setItem("myMemos", JSON.stringify(myMemos));
-    }
-    
-    // --- 입력 이벤트 ---
-    newMemoInput.addEventListener("keyup", (e) => {
-      if (e.key === "Enter" && newMemoInput.value.trim() !== "") {
-        const content = newMemoInput.value.trim();
-        newMemoInput.value = "";
-    
-        // 서버 연동
-        addMemo(content);
-    
-        // 로컬에도 저장 (서버 없을 경우 대비)
-        myMemos.push(content);
-        saveMemos();
-        renderMemos(myMemos);
-      }
-    });
-    
-    // --- 서버 연동 함수 ---
-    async function loadMemos() {
-      try {
-        const res = await fetch(`/memo?userId=${userId}`);
-        const memos = await res.json(); // [{id, content}]
-        renderMemos(memos);
-      } catch (err) {
-        console.log("서버 로드 실패, 로컬 사용:", err);
-        renderMemos(myMemos);
-      }
-    }
-    
-    async function addMemo(content) {
-      try {
-        await fetch("/memo", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ userId, content }),
-        });
-        loadMemos();
-      } catch (err) {
-        console.log("서버 저장 실패, 로컬만 저장됨:", err);
-      }
-    }
-    
-    async function deleteMemo(memoId) {
-      try {
-        await fetch(`/memo/${memoId}`, { method: "DELETE" });
-        loadMemos();
-      } catch (err) {
-        console.log("서버 삭제 실패, 로컬만 반영됨:", err);
-      }
-    }
-    
-    // --- 초기 렌더링 ---
-    renderMemos(myMemos);
-    loadMemos();
-    
-    </script>
+
+    <!-- script -->
     <script>
       window.addEventListener("resize", () => {
         console.log(`현재 화면 너비: ${window.innerWidth}px`);
       });
     </script>
-
     <script type="module" src="./main.js"></script>
   </body>
 </html>
