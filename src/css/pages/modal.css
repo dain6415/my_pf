@@ -79,13 +79,13 @@
   text-decoration: underline;
 }
 #modal .close_btn {
+  justify-self: flex-end;
   position: relative;
-  text-align: right;
-  right: 0;
-}
-#modal .close_btn span {
   width: 40px;
   height: 40px;
+}
+#modal .close_btn span {
+  width: 100%;
   padding: 6px;
   display: inline-block;
   position: relative;
@@ -104,6 +104,9 @@
 }
 #modal .close_btn span::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+#modal .close_btn:hover {
+  border: 1px solid #000;
 }
 #modal #project_desc {
   overflow-y: auto;

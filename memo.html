@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나만 보는 피드백 종이</title>
+  <style>
+    body {
+      background: #f4f4f4;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    #sticker_canvas {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: #f7f7f7;
+      overflow: auto;
+    }
+
+    .note {
+      position: absolute;
+      width: 300px;
+      height: 100px;
+      background: #c9f100;
+      box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .note textarea {
+      width: 100%;
+      height: 80%;
+      border: none;
+      background: transparent;
+      resize: none;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .note .delete-btn {
+      display: block;
+      margin-top: 4px;
+      padding: 2px 6px;
+      font-size: 12px;
+      cursor: pointer;
+      background: #ff4d4f;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+    }
+
+    #add_note {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div id="sticker_canvas"></div>
+  <button id="add_note">피드백 종이 만들기</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+
+  <script>
+    const canvas = document.getElementById("sticker_canvas");
+    const addNoteBtn = document.getElementById("add_note");
+    let currentZ = 1;
+
+    // 노트 생성
+    function createNote(data = {}) {
+      const note = document.createElement("div");
+      note.className = "note";
+      note.innerHTML = `
+        <textarea placeholder="피드백을 입력하세요...">${data.content || ""}</textarea>
+        <button class="delete-btn">삭제</button>
+      `;
+
+      const canvasRect = canvas.getBoundingClientRect();
+      const x = data.x || window.innerWidth / 2 + window.scrollX - canvasRect.left;
+      const y = data.y || window.innerHeight / 2 + window.scrollY - canvasRect.top;
+      note.style.left = `${x}px`;
+      note.style.top = `${y}px`;
+      note.style.transform = `translate(-50%, -50%)`;
+      note.style.zIndex = currentZ++;
+
+      canvas.appendChild(note);
+
+      // 드래그
+      Draggable.create(note, {
+        type: "x,y",
+        inertia: true,
+        allowEventDefault: true,
+        onPress() { this.target.style.zIndex = ++currentZ; },
+      });
+
+      // 삭제
+      note.querySelector(".delete-btn").addEventListener("click", () => {
+        note.remove();
+        saveNotes();
+      });
+    }
+
+    // 저장
+    function saveNotes() {
+      const notes = [];
+      document.querySelectorAll(".note").forEach(note => {
+        notes.push({
+          x: note.style.left,
+          y: note.style.top,
+          content: note.querySelector("textarea").value
+        });
+      });
+      localStorage.setItem("myNotes", JSON.stringify(notes));
+    }
+
+    // 불러오기
+    function loadNotes() {
+      const notes = JSON.parse(localStorage.getItem("myNotes") || "[]");
+      notes.forEach(data => createNote(data));
+    }
+
+    addNoteBtn.addEventListener("click", () => {
+      createNote();
+      saveNotes();
+    });
+
+    canvas.addEventListener("input", saveNotes);
+    window.addEventListener("load", loadNotes);
+  </script>
+</body>
+</html>

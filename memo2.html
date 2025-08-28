@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나만 보는 투두 리스트</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #f4f4f4;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      #todoContainer {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        background: #fff;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 8px 8px 0 0;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      #newTodo {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      ul#todoList {
+        list-style: none;
+        margin: 10px 0 0 0;
+        padding: 0;
+        max-height: 150px;
+        overflow-y: auto;
+      }
+
+      ul#todoList li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 8px;
+        margin-bottom: 4px;
+        background: #e6f7ff;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      ul#todoList li button {
+        background: #ff4d4f;
+        border: none;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>나만 보는 투두 리스트</h1>
+      <p>이 리스트는 오직 나만 볼 수 있습니다.</p>
+    </div>
+
+    <div id="todoContainer">
+      <input type="text" id="newTodo" placeholder="할 일을 입력하고 Enter" />
+      <ul id="todoList"></ul>
+    </div>
+
+    <script>
+      const newTodoInput = document.getElementById("newTodo");
+      const todoList = document.getElementById("todoList");
+
+      // 로컬스토리지에서 불러오기
+      let todos = JSON.parse(localStorage.getItem("myTodos") || "[]");
+
+      function renderTodos() {
+        todoList.innerHTML = "";
+        todos.forEach((todo, index) => {
+          const li = document.createElement("li");
+          li.textContent = todo;
+
+          const delBtn = document.createElement("button");
+          delBtn.textContent = "삭제";
+          delBtn.addEventListener("click", () => {
+            todos.splice(index, 1);
+            saveTodos();
+            renderTodos();
+          });
+
+          li.appendChild(delBtn);
+          todoList.appendChild(li);
+        });
+      }
+
+      function saveTodos() {
+        localStorage.setItem("myTodos", JSON.stringify(todos));
+      }
+
+      newTodoInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter" && newTodoInput.value.trim() !== "") {
+    todos.push(newTodoInput.value.trim());
+    newTodoInput.value = "";
+    saveTodos();
+    renderTodos();
+  }
+});
+      // 초기 렌더링
+      renderTodos();
+    </script>
+  </body>
+</html>

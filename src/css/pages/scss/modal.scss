@@ -79,12 +79,12 @@
   }
 
   .close_btn {
+    justify-self: flex-end;
     position: relative;
-    text-align: right;
-    right: 0;
+    width: 40px;
+    height: 40px;
     span {
-      width: 40px;
-      height: 40px;
+      width: 100%;
       padding: 6px;
       display: inline-block;
       position: relative;
@@ -104,6 +104,9 @@
       &::after {
         transform: translate(-50%, -50%) rotate(-45deg);
       }
+    }
+    &:hover{
+      border: 1px solid #000;
     }
   }
   #project_desc {
