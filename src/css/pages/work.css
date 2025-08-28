@@ -1,10 +1,13 @@
 #work .work_header,
 #work .work_item {
   display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
 }
-#work .work_header .icon,
-#work .work_item .icon {
-  text-align: right;
+#work .work_header .desc,
+#work .work_item .desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #work .work_header {
   border-top: 1px solid var(--main-color);
@@ -26,13 +29,12 @@
 @media only screen and (max-width: 700px) {
   #work .work_header,
   #work .work_item {
-    grid-template-columns: repeat(3, 1fr);
     gap: 4px;
     font-size: 15px;
   }
   #work .work_header .desc,
   #work .work_item .desc {
-    display: none;
+    width: 120px;
   }
   #work .work_header {
     padding: 8px 6px;
@@ -47,7 +49,6 @@
   }
   #work .work_header,
   #work .work_item {
-    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     font-size: 16px;
   }
@@ -56,6 +57,9 @@
   }
   #work #workList li {
     padding: 8px;
+  }
+  .desc {
+    width: 230px;
   }
 }
 @media only screen and (min-width: 1200px) {

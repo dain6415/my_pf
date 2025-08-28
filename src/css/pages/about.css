@@ -99,6 +99,7 @@
   }
   #about .pf_title {
     font-size: 32px;
+    word-break: keep-all;
   }
   #about .pf {
     font-size: 16px;
