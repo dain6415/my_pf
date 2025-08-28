@@ -3,24 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>나만 보는 투두 리스트</title>
+    <title>피드백 + 나만 보는 메모</title>
     <style>
       body {
         margin: 0;
         font-family: sans-serif;
         background: #f4f4f4;
-        height: 100vh;
         display: flex;
         flex-direction: column;
+        height: 100vh;
       }
 
-      #content {
+      #feedbackContainer {
         flex: 1;
-        padding: 20px;
         overflow-y: auto;
+        padding: 20px;
       }
 
-      #todoContainer {
+      #feedbackContainer h2,
+      #privateContainer h2 {
+        margin-top: 0;
+      }
+
+      .feedbackItem {
+        background: #fff9c4;
+        padding: 10px;
+        margin-bottom: 6px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      #privateContainer {
         position: fixed;
         bottom: 0;
         left: 50%;
@@ -33,7 +46,7 @@
         box-sizing: border-box;
       }
 
-      #newTodo {
+      #newMemo {
         width: 100%;
         padding: 8px;
         font-size: 14px;
@@ -41,17 +54,18 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         outline: none;
+        margin-bottom: 6px;
       }
 
-      ul#todoList {
+      ul#privateList {
         list-style: none;
-        margin: 10px 0 0 0;
+        margin: 0;
         padding: 0;
         max-height: 150px;
         overflow-y: auto;
       }
 
-      ul#todoList li {
+      ul#privateList li {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -62,7 +76,7 @@
         font-size: 14px;
       }
 
-      ul#todoList li button {
+      ul#privateList li button {
         background: #ff4d4f;
         border: none;
         color: white;
@@ -74,56 +88,122 @@
     </style>
   </head>
   <body>
-    <div id="content">
-      <h1>나만 보는 투두 리스트</h1>
-      <p>이 리스트는 오직 나만 볼 수 있습니다.</p>
+    <!-- 공용 피드백 영역 (읽기 전용) -->
+    <div id="feedbackContainer">
+      <h2>공용 피드백</h2>
+      <div id="feedbackList">
+        <!-- 다른 사람이 남긴 피드백 예시 -->
+        <div class="feedbackItem">
+          이 부분 색상을 조금 더 밝게 하면 좋겠어요.
+        </div>
+        <div class="feedbackItem">
+          버튼 클릭 시 애니메이션이 조금 느린 것 같아요.
+        </div>
+        <div class="feedbackItem">폰트 크기를 조금 키워보세요.</div>
+      </div>
     </div>
 
-    <div id="todoContainer">
-      <input type="text" id="newTodo" placeholder="할 일을 입력하고 Enter" />
-      <ul id="todoList"></ul>
+    <!-- 나만 보는 메모 영역 -->
+    <div id="privateContainer">
+      <h2>나만 보는 메모</h2>
+      <input type="text" id="newMemo" placeholder="메모 입력 후 Enter" />
+      <ul id="privateList"></ul>
     </div>
 
-    <script>
-      const newTodoInput = document.getElementById("newTodo");
-      const todoList = document.getElementById("todoList");
+<script>
+  const newMemoInput = document.getElementById("newMemo");
+const privateList = document.getElementById("privateList");
 
-      // 로컬스토리지에서 불러오기
-      let todos = JSON.parse(localStorage.getItem("myTodos") || "[]");
+// 로컬스토리지에서 불러오기
+let myMemos = JSON.parse(localStorage.getItem("myMemos") || "[]");
 
-      function renderTodos() {
-        todoList.innerHTML = "";
-        todos.forEach((todo, index) => {
-          const li = document.createElement("li");
-          li.textContent = todo;
+const userId = "dainhong"; // 예: 로그인 시 발급
 
-          const delBtn = document.createElement("button");
-          delBtn.textContent = "삭제";
-          delBtn.addEventListener("click", () => {
-            todos.splice(index, 1);
-            saveTodos();
-            renderTodos();
-          });
+// --- 렌더링 함수 ---
+function renderMemos(memos) {
+  privateList.innerHTML = "";
+  memos.forEach((memo, index) => {
+    const li = document.createElement("li");
+    li.textContent = memo.content || memo; // 서버: memo.content, 로컬: memo
 
-          li.appendChild(delBtn);
-          todoList.appendChild(li);
-        });
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "삭제";
+    delBtn.addEventListener("click", () => {
+      if (memo.id) {
+        // 서버 메모 삭제
+        deleteMemo(memo.id);
+      } else {
+        // 로컬 메모 삭제
+        myMemos.splice(index, 1);
+        saveMemos();
+        renderMemos(myMemos);
       }
+    });
 
-      function saveTodos() {
-        localStorage.setItem("myTodos", JSON.stringify(todos));
-      }
+    li.appendChild(delBtn);
+    privateList.appendChild(li);
+  });
+}
 
-      newTodoInput.addEventListener("keyup", (e) => {
-  if (e.key === "Enter" && newTodoInput.value.trim() !== "") {
-    todos.push(newTodoInput.value.trim());
-    newTodoInput.value = "";
-    saveTodos();
-    renderTodos();
+// --- 로컬 저장 ---
+function saveMemos() {
+  localStorage.setItem("myMemos", JSON.stringify(myMemos));
+}
+
+// --- 입력 이벤트 ---
+newMemoInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter" && newMemoInput.value.trim() !== "") {
+    const content = newMemoInput.value.trim();
+    newMemoInput.value = "";
+
+    // 서버 연동
+    addMemo(content);
+
+    // 로컬에도 저장 (서버 없을 경우 대비)
+    myMemos.push(content);
+    saveMemos();
+    renderMemos(myMemos);
   }
 });
-      // 초기 렌더링
-      renderTodos();
-    </script>
+
+// --- 서버 연동 함수 ---
+async function loadMemos() {
+  try {
+    const res = await fetch(`/memo?userId=${userId}`);
+    const memos = await res.json(); // [{id, content}]
+    renderMemos(memos);
+  } catch (err) {
+    console.log("서버 로드 실패, 로컬 사용:", err);
+    renderMemos(myMemos);
+  }
+}
+
+async function addMemo(content) {
+  try {
+    await fetch("/memo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, content }),
+    });
+    loadMemos();
+  } catch (err) {
+    console.log("서버 저장 실패, 로컬만 저장됨:", err);
+  }
+}
+
+async function deleteMemo(memoId) {
+  try {
+    await fetch(`/memo/${memoId}`, { method: "DELETE" });
+    loadMemos();
+  } catch (err) {
+    console.log("서버 삭제 실패, 로컬만 반영됨:", err);
+  }
+}
+
+// --- 초기 렌더링 ---
+renderMemos(myMemos);
+loadMemos();
+
+</script>
   </body>
 </html>
